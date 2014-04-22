@@ -22,7 +22,11 @@ define('categories', ['l10n', 'models'], function(l10n, models) {
         {slug: 'social', name: gettext('Social')},
         {slug: 'sports', name: gettext('Sports')},
         {slug: 'travel', name: gettext('Travel')},
-        {slug: 'utilities', name: gettext('Utilities')}
+        {slug: 'utilities', name: gettext('Utilities')},
+
+        {slug: 'tarako-games', name: gettext('Games')},
+        {slug: 'tarako-tools', name: gettext('Tools')},
+        {slug: 'tarako-lifestyle', name: gettext('Lifestyle')},
     ];
     console.groupCollapsed('Casting categories to model cache...');
     catModels.cast(categories);
