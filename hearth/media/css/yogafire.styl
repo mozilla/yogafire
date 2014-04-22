@@ -1,0 +1,89 @@
+@import 'lib';
+
+.category-nav {
+    background: $faint-gray;
+    font-size: 0;
+    list-style: none;
+    text-align: center;
+    width: 100%;
+
+    li {
+        background-position: center 10px;
+        background-repeat: no-repeat;
+        background-size: 27px 27px;
+        display: inline-block;
+        width: 25%;
+
+        &.home {
+            background-image: url(/media/img/yogafire/category/home.svg);
+        }
+        &.games {
+            background-image: url(/media/img/yogafire/category/games.svg);
+            background-position: center 12px;
+            background-size: 33px 24px;
+        }
+        &.lifestyle {
+            background-image: url(/media/img/yogafire/category/lifestyle.svg);
+            background-position: center 13px;
+            background-size: 32px 23px;
+        }
+        &.tools {
+            background-image: url(/media/img/yogafire/category/tools.svg);
+        }
+    }
+    a {
+        color: #1A1A1A;
+        display: block;
+        font-size: 15px;
+        margin: 0 auto;
+        padding-top: 40px;
+
+        b {
+            border-bottom: 3px solid transparent;
+            display: inline-block;
+            font-weight: 400;
+            padding-bottom: 3px;
+        }
+    }
+}
+
+/* Active state category nav. */
+[data-page-type="root"] .category-nav .home,
+[data-page-type~="games"] .category-nav .games,
+[data-page-type~="lifestyle"] .category-nav .lifestyle,
+[data-page-type~="tools"] .category-nav .tools {
+    a {
+        color: #4CB1FF;
+    }
+    b {
+        border-bottom: 3px solid #4CB1FF;
+    }
+}
+[data-page-type="root"] .category-nav .home {
+    background-image: url(/media/img/yogafire/category/home-active.svg);
+}
+[data-page-type~="games"] .category-nav .games {
+    background-image: url(/media/img/yogafire/category/games-active.svg);
+}
+[data-page-type~="lifestyle"] .category-nav .lifestyle {
+    background-image: url(/media/img/yogafire/category/lifestyle-active.svg);
+}
+[data-page-type~="tools"] .category-nav .tools {
+    background-image: url(/media/img/yogafire/category/tools-active.svg);
+}
+
+.category main ol,
+.featured main ol,
+.results main ol {
+    list-style: none;
+}
+
+.category main li,
+.featured main li,
+.results main li {
+    font-size: 14px;
+    line-height: 16px;
+    margin-top: 10px;
+    min-height: 70px;
+    width: 100%;
+}
