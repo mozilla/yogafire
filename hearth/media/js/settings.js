@@ -1,4 +1,4 @@
-define('settings', ['l10n', 'settings_local', 'settings_yogafire',  'underscore'], function(l10n, settings_local, settings_yogafire, _) {
+define('settings', ['l10n', 'settings_local', 'underscore'], function(l10n, settings_local, _) {
     var gettext = l10n.gettext;
 
     var base_settings = JSON.parse(document.body.getAttribute('data-settings') || '{}');
@@ -81,11 +81,11 @@ define('settings', ['l10n', 'settings_local', 'settings_yogafire',  'underscore'
         pagination_error_template: 'errors/pagination.html',
 
         // Switches for features.
-        payments_enabled: true,
+        payments_enabled: false,
         tracking_enabled: false,
         action_tracking_enabled: true,
         upsell_enabled: true,
-        newsletter_enabled: true,
+        newsletter_enabled: false,
         cache_rewriting_enabled: true,
         potatolytics_enabled: false,
 
