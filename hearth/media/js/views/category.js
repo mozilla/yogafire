@@ -16,7 +16,7 @@ define('views/category',
             builder.z('title', name);
         }
 
-        builder.z('type', 'root');
+        builder.z('type', 'root ' + category);
         builder.z('show_cats', true);
         builder.z('cat', category);
 
@@ -24,7 +24,7 @@ define('views/category',
             delete params.src;
         }
 
-        builder.start('category/main.html', {
+        builder.start('category_yogafire/main.html', {
             category: category,
             endpoint: urls.api.unsigned.url('category', [category], params),
             sort: params.sort,

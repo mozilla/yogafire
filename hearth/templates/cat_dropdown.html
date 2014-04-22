@@ -1,3 +1,22 @@
+<!--
 <div class="dropdown secondary-header">
   <a class="cat-all cat-icon cur-cat" data-cat-slug="all" href="#">{{ _('All Categories') }}</a>
 </div>
+-->
+
+{% macro header_link(route, slug, name) %}
+ <li class="{{ slug }}">
+   <a href="{{ route }}" data-category="{{ slug }}"><b>{{ name }}</b></a>
+ </li>
+{% endmacro %}
+
+{% macro category_link(slug, name) %}
+  {{ header_link(url('category', [slug]), slug, name) }}
+{% endmacro %}
+
+<ul class="category-nav">
+  {{ header_link(url('homepage'), 'home', _('Home')) }}
+  {{ category_link('games', _('Games')) }}
+  {{ category_link('tools', _('Tools')) }}
+  {{ category_link('lifestyle', _('Lifestyle')) }}
+</ul>
