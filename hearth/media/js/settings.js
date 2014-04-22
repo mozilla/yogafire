@@ -1,4 +1,4 @@
-define('settings', ['l10n', 'settings_local', 'underscore'], function(l10n, settings_local, _) {
+define('settings', ['l10n', 'settings_local', 'settings_yogafire',  'underscore'], function(l10n, settings_local, settings_yogafire, _) {
     var gettext = l10n.gettext;
 
     var base_settings = JSON.parse(document.body.getAttribute('data-settings') || '{}');
