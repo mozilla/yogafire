@@ -3,7 +3,6 @@
 
 <div class="main feedback modal c">
   <div>
-    {% include 'settings/nav.html' %}
     <form method="post" class="feedback-form form-modal">
       <p class="brform simple-field c">
         <textarea name="feedback" required></textarea>
@@ -20,17 +19,6 @@
         {% elif capabilities.firefoxAndroid %}
           <a href="https://support.mozilla.org/kb/install-android-apps-using-marketplace" class="button alt" target="_blank">{{ _('Get Help') }}</a>
         {% endif %}
-
-      </li>
-      <li>
-        <a href="{{ url('privacy') }}" class="button alt">
-          {{ _('Privacy Policy') }}</a>
-        </a>
-      </li>
-      <li>
-        <a href="{{ url('terms') }}" class="button alt">
-          {{ _('Terms of Use') }}
-        </a>
       </li>
     </ul>
   </div>

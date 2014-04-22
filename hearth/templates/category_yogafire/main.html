@@ -32,4 +32,14 @@
     {% endif %}
   </p>
 {% end %}
-</section>
+
+{% if not category %}
+  <section class="support-list">
+    <a href="{{ url('feedback') }}" class="button alt">
+      {{ _('Feedback') }}
+    </a>
+    <a href="{{ url('terms') }}" class="button alt">
+      {{ _('Terms of Use') }}
+    </a>
+  </section>
+{% endif %}
