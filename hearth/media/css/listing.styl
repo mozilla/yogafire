@@ -218,7 +218,7 @@ $dot-size = 13px;
 
 .island {
     background: #fff;
-    box-shadow: 0 1px 1px $cement-gray;
+    border-bottom: 1px solid $cement-gray;
     font-size: 15px;
     line-height: 16px;
 }
@@ -421,7 +421,7 @@ grid-style() {
     }
 
     .island {
-        border-radius: 10px;
+        border-radius: 5px;
     }
 
     .category {
@@ -456,8 +456,8 @@ grid-style() {
         grid-style();
         li.item {
             background: none;
+            border: 0;
             border-radius: 0;
-            box-shadow: none;
             margin: 0;
             .mkt-tile {
                 padding: 0;
@@ -552,8 +552,8 @@ grid-style() {
     }
     li.item {
         background: #fff;
+        border-bottom: 1px solid $cement-gray;
         border-radius: 5px;
-        box-shadow: 0 1px 1px $cement-gray;
         margin: 10px 10px 0;
         position: relative;
         &:hover {
@@ -757,8 +757,8 @@ ratings-sidebar() {
         padding: 0 10px;
     }
     .category.gallery {
-        // On desktop we like a nice box-shadow.
-        box-shadow: none;
+        // On desktop we like a nice border.
+        border: 0;
     }
     .category.gallery .featured-header {
         padding: 5px 0;
