@@ -4,19 +4,18 @@
 
 {% set source = category or 'all' %}
 
-{% defer (url=endpoint|urlunparam(['sort']), pluck='featured', as='collection') %}
+{% defer (url=endpoint|urlunparam(['sort']), pluck='objects', as='app') %}
   <ol class="container listing grid-if-desktop search-listing c">
-    <header class="featured-header c">
-      <h3>{{ _('Featured Apps') }}</h3>
-    </header>
-    {% set featured_apps = this.length and this[0].apps %}
-    {% if featured_apps and featured_apps.length %}
-      {% for result in featured_apps %}
-        <li class="item result app c">
-          {{ market_tile(result, link=true, src=source + '-' + (sort or 'popular'), tray=False) }}
-        </li>
-      {% endfor %}
+    {% if not category %}
+      <header class="featured-header c">
+        <h3>{{ _('Featured Apps') }}</h3>
+      </header>
     {% endif %}
+    {% for result in this %}
+      <li class="item result app c">
+        {{ market_tile(result, link=true, src=source + '-' + (sort or 'popular'), tray=False) }}
+      </li>
+    {% endfor %}
   </ol>
 {% placeholder %}
   <p class="spinner padded alt"></p>

@@ -25,17 +25,17 @@
         &.home {
             background-image: url(/media/img/yogafire/category/home.svg);
         }
-        &.games {
+        &.tarako-games {
             background-image: url(/media/img/yogafire/category/games.svg);
             background-position: center 12px;
             background-size: 33px 24px;
         }
-        &.lifestyle {
+        &.tarako-lifestyle {
             background-image: url(/media/img/yogafire/category/lifestyle.svg);
             background-position: center 13px;
             background-size: 32px 23px;
         }
-        &.tools {
+        &.tarako-tools {
             background-image: url(/media/img/yogafire/category/tools.svg);
         }
     }
@@ -56,10 +56,7 @@
 }
 
 /* Active state category nav. */
-[data-page-type="root"] .category-nav .home,
-[data-page-type~="games"] .category-nav .games,
-[data-page-type~="lifestyle"] .category-nav .lifestyle,
-[data-page-type~="tools"] .category-nav .tools {
+active_category() {
     a {
         color: #4CB1FF;
     }
@@ -68,15 +65,19 @@
     }
 }
 [data-page-type="root"] .category-nav .home {
+    active_category();
     background-image: url(/media/img/yogafire/category/home-active.svg);
 }
-[data-page-type~="games"] .category-nav .games {
+[data-page-type~="tarako-games"] .category-nav .tarako-games {
+    active_category();
     background-image: url(/media/img/yogafire/category/games-active.svg);
 }
-[data-page-type~="lifestyle"] .category-nav .lifestyle {
+[data-page-type~="tarako-lifestyle"] .category-nav .tarako-lifestyle {
+    active_category();
     background-image: url(/media/img/yogafire/category/lifestyle-active.svg);
 }
-[data-page-type~="tools"] .category-nav .tools {
+[data-page-type~="tarako-tools"] .category-nav .tarako-tools {
+    active_category();
     background-image: url(/media/img/yogafire/category/tools-active.svg);
 }
 
