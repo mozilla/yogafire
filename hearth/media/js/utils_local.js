@@ -1,0 +1,23 @@
+define('utils_local', ['defer'], function(defer) {
+    function checkOnline() {
+        // `navigator.onLine` is always accurate in Chrome,
+        // but of course it's *never* accurate in Firefox
+        // (bug 654579, bug 756364). Yeah, I know - sad times.
+        var def = defer.Deferred();
+        var i = new Image();
+
+        i.src = 'media/img/dummy.gif?' + +new Date();
+        i.onload = function() {
+            def.resolve();
+        };
+        i.onerror = function() {
+            def.reject();
+        };
+        def.reject(); // Todo, nuke this. For testing locally only.
+        return def.promise();
+    }
+
+    return {
+        checkOnline: checkOnline
+    }
+});
