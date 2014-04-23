@@ -6,7 +6,7 @@ module.exports = function(grunt) {
   grunt.initConfig({
     fetchdb: {
       options: {
-        data_dest: settings.db_dir + '/latest.json'
+        data_dest: settings.db_dir + '/preloaded.json'
       }
     }
   });
@@ -19,7 +19,7 @@ module.exports = function(grunt) {
                                 'static JSON file to disk', function() {
     var done = this.async();
     var options = this.options();
-    db.fetchLatest(options.data_dest).then(function() {
+    db.fetch(options.data_dest).then(function() {
       grunt.log.writeln(
         'File ' + utils.color('cyan', options.data_dest) + ' created.');
       done();

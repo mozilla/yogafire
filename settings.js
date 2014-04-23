@@ -8,7 +8,9 @@ var settings = {
 };
 
 settings.db_dir = settings.frontend_dir + '/db';
-settings.downloads_dir = settings.frontend_dir + '/downloads';
+
+settings.downloads_url = '/downloads';
+settings.downloads_dir = settings.frontend_dir + settings.downloads_url;
 
 settings.db_transformer = function(data) {
   return dbTransformer(settings, data);
