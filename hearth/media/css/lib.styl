@@ -57,19 +57,6 @@ $seavan-salt-white = #e7e7e7;
 $salt-flat-white = #f1f1f1;
 $steam-white = #fffefe;
 
-// Used for content ratings for games in Brazil.
-// You can use them elsewhere when you want colourful boxes.
-// Don't be a square.
-$box-green = #00b963;
-$box-blue = #00d5ff;
-$box-yellow = #ffd300;
-$box-orange = #ff7c00;
-$box-red = #ff2600;
-
-
-$btn-b = #44A5E1;
-$btn-b-dark = #267CC2;
-$btn-b-lite = saturate(spin($btn-b, 4), 4%);
 
 // Font Stacks
 $open-stack = "Fira Sans OT", "Fira Sans", FiraSansWeb, sans-serif;
@@ -271,7 +258,7 @@ spinner(type = '') {
     } else if (type == 'alt') {
         spinner-alt-image();
     } else if (type == 'install') {
-        height: 18px;
+        height: 24px;
         margin: 2px 0;
         spinner-install-image();
         width: 18px;
@@ -353,20 +340,12 @@ diagonal-lines($bgcolor='#fff') {
     background: $bgcolor url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+Cjxzdmcgd2lkdGg9IjEyMCIgaGVpZ2h0PSIxMjAiIHZpZXdCb3g9IjAgMCAxMjAgMTIwIgogICAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIgogICAgIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KCTxkZWZzPgogICAgCTxwYXR0ZXJuIGlkPSJkaWFnb25hbEhhdGNoIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIiB3aWR0aD0iNCIgaGVpZ2h0PSI0Ij4KICAgIAkJPGcgc3R5bGU9ImZpbGw6I2ZmZjsgc3Ryb2tlOiNmN2Y3Zjc7IHN0cm9rZS13aWR0aDoxIj4KICAJCQkJPHBhdGggZD0iTS0xLDEgbDIsLTIiIC8+CiAgCQkJCTxwYXRoIGQ9Ik0wLDQgbDQsLTQiIC8+CiAgICAgICAgICAgCQk8cGF0aCBkPSJNMyw1IGwyLC0yIiAvPgogICAgICAgICAgICA8L2c+CgkJPC9wYXR0ZXJuPgogICAgPC9kZWZzPgoJPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNkaWFnb25hbEhhdGNoKSAiLz4KPC9zdmc+');
 }
 
-btn-shadow() {
-    box-shadow: 0, 0 -2px 0 0 rgba(255,255,255,.1) inset;
-}
-
-alt-btn-shadow() {
-    box-shadow: 0 1px 0 #fff, 0 1px 1px $salt-flat-white inset;
-}
-
 btn-shadow-active() {
-    box-shadow: 0 2px 0 0 rgba(0,0,0,.2) inset, 0 12px 24px 6px rgba(0,0,0,.2) inset, 0 0 2px 2px rgba(0,0,0,.2) inset;
+    box-shadow: 0 2px 0 0 rgba(0,0,0,.1) inset, 0 12px 24px 6px rgba(0,0,0,.2) inset, 0 0 2px 2px rgba(0,0,0,.2) inset;
 }
 
 fatten() {
-    height: 48px;
+    height: 40px;
     padding: 0 32px;
 }
 
@@ -375,7 +354,7 @@ glow($glowColor, $glowSize) {
 }
 
 alt-btn-hover-focus() {
-    gradient-two-color(darken(#fff, 10%), darken($seavan-salt-white, 10%));
+    background: darken($seavan-salt-white, 10%);
 }
 
 alt-btn-hover-focus-active() {
@@ -384,7 +363,7 @@ alt-btn-hover-focus-active() {
 
 alt-btn-active() {
     btn-shadow-active();
-    border: 1px solid darken($primer-gray, 10%);
+    border-bottom-color: darken($primer-gray, 10%);
 }
 
 dropdown() {
