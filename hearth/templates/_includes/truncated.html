@@ -1,0 +1,17 @@
+<div class="{{ class }} truncated">
+  <span>{{ visible_line }}</span>
+  {% if more %}
+    {% if hidden_lines.length > 1 %}
+      <a class="truncated-more">{{ _('more', 'more') }}</a>
+      <div class="hidden">
+        {% for line in hidden_lines %}
+          {% if not line %}
+            <br>
+          {% else %}
+            <p>{{ line|safe }}</p>
+          {% endif %}
+        {% endfor %}
+      </div>
+    {% endif %}
+  {% endif %}
+</div>

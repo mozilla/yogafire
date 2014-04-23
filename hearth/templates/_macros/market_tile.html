@@ -25,7 +25,7 @@
   </div>
 {% endmacro %}
 
-{% macro market_tile(app, link=False, src=None, classes=None, data_attrs=None, tray=True) %}
+{% macro market_tile(app, link=False, src=None, classes=None, data_attrs=None, tray=True, description=False) %}
   {% set tag = 'a' if link and app.slug else 'div' %}
   {% set classes = classes or [] %}
   <{{ tag }} class="product mkt-tile {{ classes|join(' ') }}"
@@ -86,7 +86,13 @@
     {% for notice in app_incompat(app) %}
       <div class="bad-app">{{ notice }}</div>
     {% endfor %}
+
   </{{ tag }}>
+
+  {% if description %}
+    {{ app.description|summarise('market-tile-description', false)|safe }}
+  {% endif %}
+
   {% if tray and len(app.previews) %}
     <div class="tray previews full {{ 'single' if len(app.previews) == 1 }}">
       {{ preview_tray(app, src) }}

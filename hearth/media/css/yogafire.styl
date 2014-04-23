@@ -8,6 +8,15 @@
     }
 }
 
+@media $narrower-than-desktop {
+    .market-tile-description {
+        color: #797979;
+        font-size: 14px;
+        line-height: 20px;
+        padding: 10px;
+    }
+}
+
 .category-nav {
     background: #e0e0e0;
     font-size: 0;
@@ -67,18 +76,22 @@ active_category() {
 [data-page-type="root"] .category-nav .home {
     active_category();
     background-image: url(/media/img/yogafire/category/home-active.svg);
+    pointer-events: none;
 }
 [data-page-type~="tarako-games"] .category-nav .tarako-games {
     active_category();
     background-image: url(/media/img/yogafire/category/games-active.svg);
+    pointer-events: none;
 }
 [data-page-type~="tarako-lifestyle"] .category-nav .tarako-lifestyle {
     active_category();
     background-image: url(/media/img/yogafire/category/lifestyle-active.svg);
+    pointer-events: none;
 }
 [data-page-type~="tarako-tools"] .category-nav .tarako-tools {
     active_category();
     background-image: url(/media/img/yogafire/category/tools-active.svg);
+    pointer-events: none;
 }
 
 .category main ol,

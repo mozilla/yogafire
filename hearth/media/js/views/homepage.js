@@ -37,7 +37,6 @@ define('views/homepage',
             app_cast: app_models.cast
         }).done(function() {
             newsletter.init();
-            clamp(document.querySelector('.collection + .desc'), 7);
         });
     };
 });

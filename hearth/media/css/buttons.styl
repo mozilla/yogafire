@@ -8,7 +8,7 @@
     background: #4cb1ff;
     border: 0;
     border-bottom: 1px solid #1793e5;
-    border-radius: 3px;
+    border-radius: 5px;
     display: inline-block;
     ellipsis();
     font: 400 15px/48px $open-stack;
@@ -41,6 +41,7 @@
     &.manage {
         background: #DA5132;
         border-bottom-color: #A91300;
+
         &:hover, &:focus {
             background: darken(#DA5132, 10%);
         }
@@ -55,6 +56,7 @@
         background: $seavan-salt-white;
         border-bottom-color: $primer-gray;
         color: $london-fog-gray;
+
         &:hover, &:focus {
             alt-btn-hover-focus();
         }
@@ -69,6 +71,7 @@
     // Waiting/Loading spinner.
     &.loading-submit {
         position: relative;
+
         &:after {
             content: "";
             display: block;
@@ -91,7 +94,8 @@
         spinner('install');
     }
 
-    &:hover, &:focus {
+    &:not([disabled]):hover,
+    &:not([disabled]):focus {
         background: darken(#4cb1ff, 10%);
         text-decoration: none;
     }
@@ -128,9 +132,14 @@
 @media (max-width: 600px) {
     .button {
         padding: 0 15px;
+
         &.fat {
             display: block;
             width: 100%;
         }
     }
+}
+
+[data-page-type~="root"] .listing .mkt-tile .button {
+    height: 30px;
 }

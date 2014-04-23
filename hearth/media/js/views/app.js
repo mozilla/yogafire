@@ -53,7 +53,7 @@ define('views/app',
 
     return function(builder, args) {
         var slug = args[0];
-        builder.start('detail/main.html', {
+        builder.start('detail/main_yogafire.html', {
             iarc: iarc,
             slug: slug
         });
@@ -101,16 +101,6 @@ define('views/app',
                 console.warn('app object is falsey and is not being tracked');
             }
 
-        }).onload('ratings', function() {
-            var reviews = $('.detail .reviews li');
-            if (reviews.length >= 3) {
-                for (var i = 0; i < reviews.length - 2; i += 2) {
-                    var hgt = Math.max(reviews.eq(i).find('.review-inner').height(),
-                                       reviews.eq(i + 1).find('.review-inner').height());
-                    reviews.eq(i).find('.review-inner').height(hgt);
-                    reviews.eq(i + 1).find('.review-inner').height(hgt);
-                }
-            }
         });
         sync = false;
     };
