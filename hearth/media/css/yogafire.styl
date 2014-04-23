@@ -9,7 +9,7 @@
 }
 
 @media $narrower-than-desktop {
-    .market-tile-description {
+    [data-page-type~="root"] .market-tile-description {
         color: #797979;
         font-size: 14px;
         line-height: 20px;
@@ -119,4 +119,31 @@ active_category() {
         margin: 10px 10px 0;
         width: unquote('calc(100% - 20px)');
     }
+}
+
+.detail.prose {
+    margin-top: 10px;
+
+    div {
+        padding-bottom: 10px;
+    }
+    p {
+        margin: 0;
+    }
+}
+
+.infobox.support {
+    border: 0;
+    padding: 10px 0;
+
+    ul.c li {
+        padding: 0;
+        float: none;
+        margin: 10px 10px 0;
+        width: unquote('calc(100% - 20px)');
+    }
+}
+
+.detail .content-ratings-wrapper {
+    border: 0;
 }

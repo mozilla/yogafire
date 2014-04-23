@@ -90,7 +90,7 @@
   </{{ tag }}>
 
   {% if description %}
-    {{ app.description|summarise('market-tile-description', false)|safe }}
+    {{ app.description|translate(app)|summarise('market-tile-description', false)|safe }}
   {% endif %}
 
   {% if tray and len(app.previews) %}

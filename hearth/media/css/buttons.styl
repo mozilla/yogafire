@@ -19,6 +19,11 @@
     text-align: center;
     text-decoration: none;
 
+    &:hover,
+    &:focus {
+        text-decoration: none;
+    }
+
     &.launch {
         background: #82c80a;
         border-bottom-color: darken(#82c80a, 15%);
@@ -57,10 +62,13 @@
         border-bottom-color: $primer-gray;
         color: $london-fog-gray;
 
-        &:hover, &:focus {
+        &:hover,
+        &:focus {
             alt-btn-hover-focus();
         }
-        &:hover, &:focus, &:active {
+        &:hover,
+        &:focus,
+        &:active {
             alt-btn-hover-focus-active();
         }
         &:active {
@@ -89,15 +97,9 @@
         pointer-events: auto;
     }
 
-    .spin {
-        display: inline-block;
-        spinner('install');
-    }
-
-    &:not([disabled]):hover,
-    &:not([disabled]):focus {
+    &:not([disabled]):not(.alt):hover,
+    &:not([disabled]):not(.alt):focus {
         background: darken(#4cb1ff, 10%);
-        text-decoration: none;
     }
     &:not([disabled]):active {
         btn-shadow-active();
@@ -105,8 +107,13 @@
         border: 0;
         color: $london-fog-gray;
     }
+
     &:focus {
         background: red;
+    }
+    .spin {
+        display: inline-block;
+        spinner('install');
     }
 }
 
