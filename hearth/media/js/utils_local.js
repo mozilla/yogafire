@@ -13,7 +13,6 @@ define('utils_local', ['defer'], function(defer) {
         i.onerror = function() {
             def.reject();
         };
-        def.reject(); // Todo, nuke this. For testing locally only.
         return def.promise();
     }
 
