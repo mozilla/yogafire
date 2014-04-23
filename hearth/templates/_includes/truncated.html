@@ -2,7 +2,7 @@
   <span>{{ visible_line }}</span>
   {% if more %}
     {% if hidden_lines.length > 1 %}
-      <a class="truncated-more">{{ _('more', 'more') }}</a>
+      <a class="truncated-more">{{ _('...more') }}</a>
       <div class="hidden">
         {% for line in hidden_lines %}
           {% if not line %}

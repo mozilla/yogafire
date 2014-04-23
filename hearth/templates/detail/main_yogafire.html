@@ -5,7 +5,7 @@
 
 {% set endpoint = api('app', [slug]) %}
 
-<div class="detail" itemscope itemtype="http://schema.org/SoftwareApplication">
+<div class="detail top" itemscope itemtype="http://schema.org/SoftwareApplication">
   <section class="main product-details listing expanded c">
     {% defer (url=endpoint, as='app', key=slug, id='app-data') %}
       {{ market_tile(this, src='detail') }}

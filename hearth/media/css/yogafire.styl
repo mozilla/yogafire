@@ -121,29 +121,54 @@ active_category() {
     }
 }
 
-.detail.prose {
-    margin-top: 10px;
+[data-page-type~="detail"] {
+    .detail.top {
+        background: none;
+        box-shadow: none;
 
-    div {
-        padding-bottom: 10px;
+        .listing.product-details {
+            background: none;
+        }
+        .mkt-tile {
+            border-radius: 10px;
+            box-shadow: 0px 1px 1px $cement-gray;
+            z-index: 6;
+        }
+        .tray.previews {
+            height: auto;
+            padding: 0 0 10px;
+
+            &:before,
+            &:after {
+                border: 0;
+            }
+        }
     }
-    p {
-        margin: 0;
+    .detail.prose {
+        margin-top: 10px;
+
+        div {
+            padding-bottom: 10px;
+        }
+        p {
+            margin: 0;
+        }
+        h3 {
+            margin: 0 0 10px;
+        }
     }
-}
+    .infobox.support {
+        border: 0;
+        padding: 10px 0;
 
-.infobox.support {
-    border: 0;
-    padding: 10px 0;
-
-    ul.c li {
-        padding: 0;
-        float: none;
-        margin: 10px 10px 0;
-        width: unquote('calc(100% - 20px)');
+        ul.c li {
+            padding: 0;
+            float: none;
+            margin: 10px 10px 0;
+            width: unquote('calc(100% - 20px)');
+        }
     }
-}
-
-.detail .content-ratings-wrapper {
-    border: 0;
+    .detail .content-ratings-wrapper {
+        border: 0;
+    }
 }
