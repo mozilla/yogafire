@@ -25,6 +25,9 @@ test: clean compile
 # Fireplace (real packaged app)
 package: clean
 	@rm -rf TMP
+	@rm -rf hearth/downloads/icons/*
+	@rm -rf hearth/downloads/screenshots/*
+	@rm -rf hearth/downloads/thumbnails/*
 	@mkdir -p TMP
 	@cp -r hearth TMP/hearth
 
