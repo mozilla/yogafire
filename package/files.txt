@@ -5,6 +5,9 @@ app-icons/90.png
 app-icons/120.png
 app-icons/128.png
 db/preloaded.json
+downloads/icons/
+downloads/screenshots/
+downloads/thumbnails/
 media/css/include.css
 media/css/splash.css
 media/img/btn_spinner.png
