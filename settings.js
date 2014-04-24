@@ -2,7 +2,6 @@ var dbTransformer = require('./lib/db-transformer');
 
 var settings = {
   debug: true,
-  db_url: 'https://marketplace-dev.allizom.org/api/v1/fireplace/collection/curated/?region=restofworld',
   frontend_dir: 'hearth',
   use_data_uris: true
 };

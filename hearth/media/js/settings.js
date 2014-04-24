@@ -153,7 +153,10 @@ define('settings', ['l10n', 'settings_local', 'underscore'], function(l10n, sett
         // in the form {name: 'foo', slug: 'bar'}
         carrier: null,
 
-        offline_data_path: '/db/preloaded.json',
+        offline_homepage: '/db/preloaded.json',
+        offline_games: '/db/games.json',
+        offline_tools: '/db/tools.json',
+        offline_lifestyle: '/db/lifestyle.json',
         tarako_featured_api: 'https://marketplace.firefox.com/api/v1/fireplace/collection/tarako-featured/?cache=1&vary=0',
     });
 });

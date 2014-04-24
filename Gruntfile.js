@@ -5,9 +5,28 @@ var settings = require('./settings');
 module.exports = function(grunt) {
   grunt.initConfig({
     fetchdb: {
-      options: {
-        data_dest: settings.db_dir + '/preloaded.json'
-      }
+      options: [
+        {
+          data_dest: settings.db_dir + '/home.json',
+          data_src: 'https://marketplace.firefox.com/api/v1/fireplace/collection/tarako-featured/?region=restofworld',
+          slug: 'home',
+        },
+        {
+          data_dest: settings.db_dir + '/games.json',
+          data_src: 'https://marketplace-dev.allizom.org/api/v1/fireplace/search/featured/?cat=tarako-games',
+          slug: 'games',
+        },
+        {
+          data_dest: settings.db_dir + '/tools.json',
+          data_src: 'https://marketplace-dev.allizom.org/api/v1/fireplace/search/featured/?cat=tarako-tools',
+          slug: 'tools',
+        },
+        {
+          data_dest: settings.db_dir + '/lifestyle.json',
+          data_src: 'https://marketplace-dev.allizom.org/api/v1/fireplace/search/featured/?cat=tarako-lifestyle',
+          slug: 'lifestyle',
+        },
+      ]
     }
   });
 
@@ -19,19 +38,29 @@ module.exports = function(grunt) {
                                 'static JSON file to disk', function() {
     var done = this.async();
     var options = this.options();
-    db.fetch(options.data_dest).then(function() {
-      grunt.log.writeln(
-        'File ' + utils.color('cyan', options.data_dest) + ' created.');
-      done();
-    }, function(err) {
-      grunt.log.writeln(utils.color('red',
-        'File ' + options.file_dest + ' failed to be created: ' + err));
-      done();
-    }).catch(function(err) {
-      grunt.log.writeln(utils.color('red', 'lib/db failed: ' + err));
-      done();
-    });
 
+    var counter = 0;
+    function check_done() {
+      if (counter++ == Object.keys(options).length - 1) {
+        done();
+      }
+    }
+
+    for (var i = 0; i < Object.keys(options).length; i++) {
+      var category = options[i];
+      db.fetch(category.data_dest, category.data_src, category.slug).then(function() {
+        grunt.log.writeln(
+          'File ' + utils.color('cyan', category.data_dest) + ' created.');
+        check_done();
+      }, function(err) {
+        grunt.log.writeln(utils.color('red',
+          'File ' + category.data_dest + ' failed to be created: ' + err));
+        check_done();
+      }).catch(function(err) {
+        grunt.log.writeln(utils.color('red', 'lib/db failed: ' + err));
+        check_done();
+      });
+    }
   });
 
   grunt.registerTask('default', ['fetchdb']);

@@ -40,7 +40,7 @@ define('views/homepage',
             build(settings.tarako_featured_api, 'apps');
         }).fail(function() {
             // Offline.
-            build(settings.offline_data_path, 'apps');
+            build(settings.offline_homepage, 'apps');
         });
     };
 });

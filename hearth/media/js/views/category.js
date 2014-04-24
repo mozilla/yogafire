@@ -24,6 +24,24 @@ define('views/category',
             delete params.src;
         }
 
+        function build(_endpoint, pluck) {
+            builder.start('category_yogafire/main.html', {
+                app_cast: app_models.cast,
+                category: category,
+                endpoint: _endpoint,
+                pluck: pluck,
+                sort: params.sort,
+            });
+        }
+
+        utils_local.checkOnline().done(function() {
+            // Online.
+            build(urls.api.unsigned.url('category', [category], params), 'objects');
+        }).fail(function() {
+            // Offline.
+            build(settings['offline_' + category] , 'apps');
+        });
+
         builder.start('category_yogafire/main.html', {
             category: category,
             endpoint: urls.api.unsigned.url('category', [category], params),
