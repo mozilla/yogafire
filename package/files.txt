@@ -5,6 +5,9 @@ app-icons/90.png
 app-icons/120.png
 app-icons/128.png
 db/preloaded.json
+downloads/icons/
+downloads/screenshots/
+downloads/thumbnails/
 media/css/include.css
 media/css/splash.css
 media/img/btn_spinner.png
@@ -65,6 +68,7 @@ media/img/pretty/stars_large.svg
 media/img/pretty/stars_small.svg
 media/img/pretty/tick-white.svg
 media/img/pretty/tick.svg
+media/img/yogafire/categories.png
 media/js/include.js
 media/js/l10n.js
 media/locales/ar.js
