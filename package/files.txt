@@ -4,7 +4,6 @@ app-icons/60.png
 app-icons/90.png
 app-icons/120.png
 app-icons/128.png
-db/homepage.json
 db/preloaded.json
 media/css/include.css
 media/css/splash.css

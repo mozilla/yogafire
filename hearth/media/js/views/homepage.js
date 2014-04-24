@@ -1,6 +1,6 @@
 define('views/homepage',
-    ['format', 'jquery', 'l10n', 'log', 'models', 'settings', 'textoverflowclamp', 'underscore', 'urls', 'utils', 'utils_local'],
-    function(format, $, l10n, log, models, settings, clamp, _, urls, utils, utils_local) {
+    ['format', 'l10n', 'log', 'models', 'urls', 'utils_local'],
+    function(format, l10n, log, models, urls, utils_local) {
     'use strict';
 
     var gettext = l10n.gettext;
