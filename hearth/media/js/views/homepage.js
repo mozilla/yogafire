@@ -1,6 +1,6 @@
 define('views/homepage',
-    ['format', 'l10n', 'log', 'models', 'urls', 'utils_local'],
-    function(format, l10n, log, models, urls, utils_local) {
+    ['format', 'l10n', 'log', 'models', 'settings', 'urls', 'utils_local'],
+    function(format, l10n, log, models, settings, urls, utils_local) {
     'use strict';
 
     var gettext = l10n.gettext;
