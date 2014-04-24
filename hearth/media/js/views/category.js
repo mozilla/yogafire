@@ -1,6 +1,6 @@
 define('views/category',
-    ['models', 'textoverflowclamp', 'settings', 'tracking', 'underscore', 'urls', 'utils', 'utils_local', 'z'],
-    function(models, clamp, settings, tracking, _, urls, utils, utils_local, z) {
+    ['models', 'settings', 'tracking', 'urls', 'utils', 'utils_local', 'z'],
+    function(models, settings, tracking, urls, utils, utils_local, z) {
     'use strict';
 
     var cat_models = models('category');
@@ -31,8 +31,6 @@ define('views/category',
                 endpoint: _endpoint,
                 pluck: pluck,
                 sort: params.sort,
-            }).done(function() {
-                clamp(document.querySelector('.collection + .desc'), 7);
             });
         }
 
