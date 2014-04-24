@@ -43,6 +43,7 @@ hearth/media/include.css
 hearth/media/include.js
 hearth/media/js/include.js
 hearth/templates.js
+hearth/db/*.json
 hearth/db/**/*.json
 hearth/downloads/**/*.gif
 hearth/downloads/**/*.jp*
