@@ -153,7 +153,7 @@ define('settings', ['l10n', 'settings_local', 'underscore'], function(l10n, sett
         // in the form {name: 'foo', slug: 'bar'}
         carrier: null,
 
-        offline_homepage: '/db/preloaded.json',
+        offline_homepage: '/db/home.json',
         'offline_tarako-games': '/db/games.json',
         'offline_tarako-tools': '/db/tools.json',
         'offline_tarako-lifestyle': '/db/lifestyle.json',
