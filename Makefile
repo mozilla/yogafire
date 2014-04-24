@@ -39,6 +39,7 @@ package: clean
 	@pushd TMP && grunt fetchdb && popd
 
 	@cp -r hearth/downloads TMP/hearth/
+	@rm -rf TMP/hearth/downloads/screenshots
 
 	@# We have to have a temp file to work around a bug in Mac's version of sed :(
 	@sed -i'.bak' -e 's/"Marketplace"/"$(NAME)"/g' TMP/hearth/manifest.webapp
