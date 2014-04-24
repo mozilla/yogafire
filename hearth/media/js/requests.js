@@ -32,15 +32,12 @@ define('requests',
 
         function response(xhr) {
             var data = xhr.responseText;
-            if ((xhr.getResponseHeader('Content-Type') || '').split(';', 1)[0] === 'application/json') {
-                try {
-                    return JSON.parse(data);
-                } catch(e) {
-                    // Oh well.
-                    return {};
-                }
+            try {
+                return JSON.parse(data);
+            } catch(e) {
+                // Oh well.
+                return data || null;
             }
-            return data || null;
         }
 
         function error() {
