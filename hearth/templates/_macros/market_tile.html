@@ -36,9 +36,9 @@
     {% if link %}itemscope itemtype="http://schema.org/SoftwareApplication"{% endif %}>
     {% if not imgAlreadyDeferred(app.icons['64']) %}
       {# Defer image loading. #}
-      <img class="icon deferred" src="{{ media('fireplace/img/pretty/rocket.png') }}" alt="" data-src="{{ app.icons['64'] }}" height="64" width="64" itemprop="image">
+      <img class="icon deferred" src="{{ media('fireplace/img/pretty/rocket.png') }}" alt="" data-src="{{ app.icons['64'] or app.icon }}" height="64" width="64" itemprop="image">
     {% else %}
-      <img class="icon" alt="" src="{{ app.icons['64'] }}" height="64" width="64" itemprop="image">
+      <img class="icon" alt="" src="{{ app.icons['64'] or app.icon }}" height="64" width="64" itemprop="image">
     {% endif %}
     <div class="info">
       <h3 itemprop="name">{{ app.name|translate(app) }}</h3>
