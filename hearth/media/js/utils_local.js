@@ -6,7 +6,7 @@ define('utils_local', [], function() {
         var def = $.Deferred();
         var i = new Image();
 
-        i.src = 'media/img/dummy.gif?' + +new Date();
+        i.src = 'https://marketplace.cdn.mozilla.net/media/fireplace/img/dummy.gif?' + +new Date();
         i.onload = function() {
             def.resolve();
         };
