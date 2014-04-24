@@ -68,6 +68,7 @@ media/img/pretty/stars_large.svg
 media/img/pretty/stars_small.svg
 media/img/pretty/tick-white.svg
 media/img/pretty/tick.svg
+media/img/yogafire/categories.png
 media/js/include.js
 media/js/l10n.js
 media/locales/ar.js
