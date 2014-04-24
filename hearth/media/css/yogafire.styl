@@ -25,27 +25,22 @@
     width: 100%;
 
     li {
-        background-position: center 10px;
+        background-image: url(/media/img/yogafire/categories.png);
         background-repeat: no-repeat;
-        background-size: 27px 27px;
         display: inline-block;
         width: 25%;
 
         &.home {
-            background-image: url(/media/img/yogafire/category/home.svg);
+            background-position: center -151px;
         }
         &.tarako-games {
-            background-image: url(/media/img/yogafire/category/games.svg);
-            background-position: center 12px;
-            background-size: 33px 24px;
+            background-position: center -11px;
         }
         &.tarako-lifestyle {
-            background-image: url(/media/img/yogafire/category/lifestyle.svg);
-            background-position: center 13px;
-            background-size: 32px 23px;
+            background-position: center -291px;
         }
         &.tarako-tools {
-            background-image: url(/media/img/yogafire/category/tools.svg);
+            background-position: center -431px;
         }
     }
     a {
@@ -73,24 +68,25 @@ active_category() {
         border-bottom: 3px solid #4CB1FF;
     }
 }
+
 [data-page-type="root"] .category-nav .home {
     active_category();
-    background-image: url(/media/img/yogafire/category/home-active.svg);
+    background-position: center -221px;
     pointer-events: none;
 }
 [data-page-type~="tarako-games"] .category-nav .tarako-games {
     active_category();
-    background-image: url(/media/img/yogafire/category/games-active.svg);
+    background-position: center -81px;
     pointer-events: none;
 }
 [data-page-type~="tarako-lifestyle"] .category-nav .tarako-lifestyle {
     active_category();
-    background-image: url(/media/img/yogafire/category/lifestyle-active.svg);
+    background-position: center -361px;   
     pointer-events: none;
 }
 [data-page-type~="tarako-tools"] .category-nav .tarako-tools {
     active_category();
-    background-image: url(/media/img/yogafire/category/tools-active.svg);
+    background-position: center -501px;
     pointer-events: none;
 }
 
