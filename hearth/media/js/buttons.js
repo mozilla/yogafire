@@ -292,8 +292,8 @@ define('buttons',
         }
         z.apps[manifest_url] = installer;
 
-        // L10n: "Launch" as in "Launch the app"
-        setButton($button, gettext('Launch'), 'launch install');
+        // L10n: "Open" as in "Open the app"
+        setButton($button, gettext('Open'), 'launch install');
     }
 
     function revertUninstalled() {
