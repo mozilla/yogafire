@@ -1,6 +1,6 @@
 define('views/category',
-    ['models', 'textoverflowclamp', 'tracking', 'underscore', 'urls', 'utils', 'z'],
-    function(models, clamp, tracking, _, urls, utils, z) {
+    ['models', 'textoverflowclamp', 'settings', 'tracking', 'underscore', 'urls', 'utils', 'utils_local', 'z'],
+    function(models, clamp, settings, tracking, _, urls, utils, utils_local, z) {
     'use strict';
 
     var cat_models = models('category');
@@ -31,6 +31,8 @@ define('views/category',
                 endpoint: _endpoint,
                 pluck: pluck,
                 sort: params.sort,
+            }).done(function() {
+                clamp(document.querySelector('.collection + .desc'), 7);
             });
         }
 
@@ -40,15 +42,6 @@ define('views/category',
         }).fail(function() {
             // Offline.
             build(settings['offline_' + category] , 'apps');
-        });
-
-        builder.start('category_yogafire/main.html', {
-            category: category,
-            endpoint: urls.api.unsigned.url('category', [category], params),
-            sort: params.sort,
-            app_cast: app_models.cast
-        }).done(function() {
-            clamp(document.querySelector('.collection + .desc'), 7);
         });
 
         tracking.setPageVar(5, 'Category', category, 3);
