@@ -1,6 +1,6 @@
 define('views/homepage',
-    ['format', 'jquery', 'l10n', 'log', 'models', 'newsletter', 'textoverflowclamp', 'underscore', 'urls', 'utils', 'utils_local'],
-    function(format, $, l10n, log, models, newsletter, clamp, _, urls, utils, utils_local) {
+    ['format', 'jquery', 'l10n', 'log', 'models', 'settings', 'textoverflowclamp', 'underscore', 'urls', 'utils', 'utils_local'],
+    function(format, $, l10n, log, models, settings, clamp, _, urls, utils, utils_local) {
     'use strict';
 
     var gettext = l10n.gettext;
@@ -31,8 +31,6 @@ define('views/homepage',
                 endpoint: _endpoint,
                 sort: params.sort,
                 app_cast: app_models.cast
-            }).done(function() {
-                newsletter.init();
             });
         }
 
@@ -41,7 +39,7 @@ define('views/homepage',
             build(urls.api.unsigned.url('category', [''], params));
         }).fail(function() {
             // Offline.
-            build(urls.api.unsigned.url('offline_data'));
+            build(settings.offline_data_path);
         });
     };
 });

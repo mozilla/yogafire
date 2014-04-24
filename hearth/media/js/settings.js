@@ -153,5 +153,7 @@ define('settings', ['l10n', 'settings_local', 'underscore'], function(l10n, sett
         // The hardcoded carrier. This is expected to be falsey or an object
         // in the form {name: 'foo', slug: 'bar'}
         carrier: null,
+
+        offline_data_path: '/db/preloaded.json',
     });
 });
