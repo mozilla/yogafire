@@ -38,6 +38,8 @@ package: clean
 	@pushd TMP && commonplace langpacks && popd
 	@pushd TMP && grunt fetchdb && popd
 
+	@cp -r hearth/downloads TMP/hearth/
+
 	@# We have to have a temp file to work around a bug in Mac's version of sed :(
 	@sed -i'.bak' -e 's/"Marketplace"/"$(NAME)"/g' TMP/hearth/manifest.webapp
 	@sed -i'.bak' -e 's/marketplace\.firefox\.com/$(DOMAIN)/g' TMP/hearth/manifest.webapp
