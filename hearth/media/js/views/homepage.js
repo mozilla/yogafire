@@ -26,17 +26,22 @@ define('views/homepage',
             delete params.src;
         }
 
-        var endpoint = urls.api.unsigned.url('category', [''], params);
-        utils_local.checkOnline().fail(function() {
-            endpoint = '/hearth/db/preloaded.json';
-        });
+        function build(_endpoint) {
+            builder.start('category_yogafire/main.html', {
+                endpoint: _endpoint,
+                sort: params.sort,
+                app_cast: app_models.cast
+            }).done(function() {
+                newsletter.init();
+            });
+        }
 
-        builder.start('category_yogafire/main.html', {
-            endpoint: endpoint,
-            sort: params.sort,
-            app_cast: app_models.cast
-        }).done(function() {
-            newsletter.init();
+        utils_local.checkOnline().done(function() {
+            // Online.
+            build(urls.api.unsigned.url('category', [''], params));
+        }).fail(function() {
+            // Offline.
+            build(urls.api.unsigned.url('offline_data'));
         });
     };
 });

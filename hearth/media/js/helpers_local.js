@@ -14,7 +14,6 @@ define('helpers_local', ['nunjucks', 'z'], function(nunjucks, z) {
         // Clicking on a "more" link reveals the hidden portion.
         var lines = str.split('\n');
         var firstLine = lines[0].replace(/<(?:.|\n)*?>/g, '').replace(/\..*:\s+/g, '.');
-        console.log(firstLine);
         lines.splice(0, 1);  // Remove first line now that we've stored it.
 
         return nunjucks.env.render('_includes/truncated.html', {
