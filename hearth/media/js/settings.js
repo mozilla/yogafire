@@ -155,5 +155,6 @@ define('settings', ['l10n', 'settings_local', 'underscore'], function(l10n, sett
         carrier: null,
 
         offline_data_path: '/db/preloaded.json',
+        tarako_featured_api: 'https://marketplace.firefox.com/api/v1/fireplace/collection/tarako-featured/?cache=1&vary=0',
     });
 });

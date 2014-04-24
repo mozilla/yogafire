@@ -4,7 +4,7 @@
 
 {% set source = category or 'all' %}
 
-{% defer (url=endpoint|urlunparam(['sort']), pluck='objects', as='app') %}
+{% defer (url=endpoint|urlunparam(['sort']), pluck=pluck or 'objects', as='app') %}
   <ol class="container listing grid-if-desktop search-listing c">
     {% if not category %}
       <header class="featured-header c">

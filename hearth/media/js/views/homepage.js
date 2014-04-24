@@ -26,20 +26,21 @@ define('views/homepage',
             delete params.src;
         }
 
-        function build(_endpoint) {
+        function build(_endpoint, pluck) {
             builder.start('category_yogafire/main.html', {
                 endpoint: _endpoint,
                 sort: params.sort,
-                app_cast: app_models.cast
+                app_cast: app_models.cast,
+                pluck: pluck
             });
         }
 
         utils_local.checkOnline().done(function() {
             // Online.
-            build(urls.api.unsigned.url('category', [''], params));
+            build(settings.tarako_featured_api, 'apps');
         }).fail(function() {
             // Offline.
-            build(settings.offline_data_path);
+            build(settings.offline_data_path, 'apps');
         });
     };
 });
