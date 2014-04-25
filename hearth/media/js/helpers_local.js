@@ -1,4 +1,4 @@
-define('helpers_local', ['nunjucks', 'z'], function(nunjucks, z) {
+define('helpers_local', ['featured', 'nunjucks', 'z'], function(featured, nunjucks, z) {
     var filters = nunjucks.require('filters');
     var globals = nunjucks.require('globals');
 
@@ -22,6 +22,12 @@ define('helpers_local', ['nunjucks', 'z'], function(nunjucks, z) {
             'more': more,
             'visible_line': firstLine,
         });
+    };
+
+    filters.get_featured = function(apps) {
+        // Filters selection of apps to ensure that the same subset of 6
+        // featured apps is displayed daily.
+        return featured.get(apps);
     };
 
     // Functions provided in the default context.
