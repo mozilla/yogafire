@@ -3,6 +3,9 @@ define('login',
     function(cache, capabilities, defer, $, log, notification, settings, _, urls, user, utils, requests, z) {
 
     var console = log('login');
+    if (!settings.login_enabled) {
+        return;
+    }
 
     function signOutNotification() {
         notification.notification({message: gettext('You have been signed out')});

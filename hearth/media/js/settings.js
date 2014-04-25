@@ -88,6 +88,7 @@ define('settings', ['l10n', 'settings_local', 'underscore'], function(l10n, sett
         newsletter_enabled: false,
         cache_rewriting_enabled: true,
         potatolytics_enabled: false,
+        login_enabled: false,
 
         // Waffle flags/switches from the server.
         flags: flags,
