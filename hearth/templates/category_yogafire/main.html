@@ -5,13 +5,14 @@
 {% set source = category or 'all' %}
 
 {% defer (url=endpoint|urlunparam(['sort']), pluck=pluck or 'objects', as='app') %}
+  {% set apps = this if category else this|get_featured %}
   <ol class="container listing grid-if-desktop search-listing c">
     {% if not category %}
       <header class="featured-header c">
         <h3>{{ _('Featured Apps') }}</h3>
       </header>
     {% endif %}
-    {% for result in this %}
+    {% for result in apps %}
       <li class="item result app c">
         {{ market_tile(result, link=true, src=source + '-' + (sort or 'popular'), tray=False, description=not category) }}
       </li>
