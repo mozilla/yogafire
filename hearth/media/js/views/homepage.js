@@ -37,7 +37,7 @@ define('views/homepage',
 
         utils_local.checkOnline().done(function() {
             // Online.
-            build(settings.tarako_featured_api, 'apps');
+            build(urls.api.unsigned.url('collection', ['tarako-featured'], params), 'apps');
         }).fail(function() {
             // Offline.
             build(settings.offline_homepage, 'apps');
