@@ -36,10 +36,13 @@
 
 {% if not category %}
   <section class="support-list">
-    <a href="{{ url('feedback') }}" class="button alt">
+    <a href="https://support.mozilla.org/products/firefox-os/marketplace" class="button" target="_blank">
+      {{ _('Get Help') }}
+    </a>
+    <a href="{{ url('feedback') }}" class="button">
       {{ _('Feedback') }}
     </a>
-    <a href="{{ url('terms') }}" class="button alt">
+    <a href="{{ url('terms') }}" class="button">
       {{ _('Terms of Use') }}
     </a>
   </section>
