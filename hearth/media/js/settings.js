@@ -50,7 +50,7 @@ define('settings', ['l10n', 'settings_local', 'underscore'], function(l10n, sett
         api_cdn_whitelist: {
             '/api/v1/fireplace/search/': 60 * 3,  // 3 minutes
             '/api/v1/fireplace/search/featured/': 60 * 3,  // 3 minutes
-            '/api/v1/apps/category/': 60 * 60,  // 1 hour
+            '/api/v1/fireplace/collection/tarako-featured/': 60 * 3,  // 3 minutes
         },
 
         // The list of models and their primary key mapping. Used by caching.
@@ -71,7 +71,7 @@ define('settings', ['l10n', 'settings_local', 'underscore'], function(l10n, sett
         offline_cache_whitelist: {
             '/api/v1/fireplace/consumer-info/': 60 * 60 * 24 * 7,  // 1 week
             '/api/v1/fireplace/search/featured/': 60 * 60 * 24 * 7,  // 1 week
-            '/api/v1/apps/category/': 60 * 60 * 24 * 7  // 1 week
+            '/api/v1/fireplace/collection/tarako-featured/': 60 * 60 * 24 * 7,  // 1 week
         },
         offline_cache_enabled: offline_cache_enabled,
         offline_cache_limit: 1024 * 1024 * 4,  // 4 MB
@@ -156,7 +156,6 @@ define('settings', ['l10n', 'settings_local', 'underscore'], function(l10n, sett
         offline_homepage: '/db/home.json',
         'offline_tarako-games': '/db/games.json',
         'offline_tarako-tools': '/db/tools.json',
-        'offline_tarako-lifestyle': '/db/lifestyle.json',
-        tarako_featured_api: 'https://marketplace.firefox.com/api/v1/fireplace/collection/tarako-featured/?cache=1&vary=0',
+        'offline_tarako-lifestyle': '/db/lifestyle.json'
     });
 });
