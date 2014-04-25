@@ -34,6 +34,7 @@ define('views/category',
             });
         }
 
+        params['tag'] = 'tarako';
         utils_local.checkOnline().done(function() {
             // Online.
             build(urls.api.unsigned.url('category', [category], params), 'objects');
