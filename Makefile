@@ -44,6 +44,7 @@ package: clean
 	@# We have to have a temp file to work around a bug in Mac's version of sed :(
 	@sed -i'.bak' -e 's/"Marketplace"/"$(NAME)"/g' TMP/hearth/manifest.webapp
 	@sed -i'.bak' -e 's/marketplace\.firefox\.com/$(DOMAIN)/g' TMP/hearth/manifest.webapp
+	@sed -i'.bak' -e 's/{launch_path}/app.html/g' TMP/hearth/manifest.webapp
 	@sed -i'.bak' -e 's/{fireplace_package_version}/$(VERSION_INT)/g' TMP/hearth/{manifest.webapp,media/js/include.js}
 
 	@rm -rf package/archives/latest_$(SERVER)
@@ -63,6 +64,47 @@ package: clean
 	@echo "Unzipped latest package: package/archives/latest_$(SERVER)/"
 
 	@rm -rf TMP
+
+fat_package: compile
+	@rm -rf TMP
+	@rm -rf hearth/downloads/icons/*
+	@rm -rf hearth/downloads/screenshots/*
+	@rm -rf hearth/downloads/thumbnails/*
+	@mkdir -p TMP
+	@cp -r hearth TMP/hearth
+
+	@mv TMP/hearth/media/js/settings_package_$(SERVER).js TMP/hearth/media/js/settings_local_package.js
+	@rm -rf TMP/hearth/media/js/{settings_local_hosted.js,settings_package_*.js}
+
+	@pushd TMP && commonplace langpacks && popd
+	@pushd TMP && grunt fetchdb && popd
+
+	@cp -r hearth/downloads TMP/hearth/
+	@rm -rf TMP/hearth/downloads/screenshots
+
+	@# We have to have a temp file to work around a bug in Mac's version of sed :(
+	@sed -i'.bak' -e 's/"Marketplace"/"$(NAME)"/g' TMP/hearth/manifest.webapp
+	@sed -i'.bak' -e 's/marketplace\.firefox\.com/$(DOMAIN)/g' TMP/hearth/manifest.webapp
+	@sed -i'.bak' -e 's/{launch_path}/index.html/g' TMP/hearth/manifest.webapp
+	@sed -i'.bak' -e 's/{fireplace_package_version}/$(VERSION_INT)/g' TMP/hearth/{manifest.webapp,media/js/settings_local_package.js}
+	@rm -rf package/archives/latest_fat_$(SERVER)
+	@mkdir -p package/archives/latest_fat_$(SERVER)
+	@rm -f package/archives/latest_fat_$(SERVER).zip
+
+	@pushd TMP/hearth && \
+		zip -r ../../package/archives/fat_$(NAME)_$(SERVER)_$(VERSION_INT).zip . \
+		popd
+	@echo "Created package: package/archives/fat_$(NAME)_$(SERVER)_$(VERSION_INT).zip"
+	@cp package/archives/fat_$(NAME)_$(SERVER)_$(VERSION_INT).zip package/archives/latest_fat_$(SERVER).zip
+	@echo "Created package: package/archives/latest_fat_$(SERVER).zip"
+
+	@pushd package/archives/latest_fat_$(SERVER) && \
+		unzip ../latest_fat_$(SERVER).zip && \
+		popd
+	@echo "Unzipped latest package: package/archives/latest_fat_$(SERVER)/"
+
+	@rm -rf TMP
+
 package_prod:
 	make package
 package_stage:
@@ -70,6 +112,12 @@ package_stage:
 package_dev:
 	SERVER='dev' NAME='Dev' DOMAIN='marketplace-dev.allizom.org' make package
 
+fat_package_prod:
+	make fat_package
+fat_package_stage:
+	SERVER='stage' NAME='Stage' DOMAIN='marketplace.allizom.org' make fat_package
+fat_package_dev:
+	SERVER='dev' NAME='Dev' DOMAIN='marketplace-dev.allizom.org' make fat_package
 
 serve_package:
 	@open 'http://localhost:8676/app.html'
