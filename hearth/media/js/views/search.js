@@ -1,6 +1,6 @@
 define('views/search',
-    ['capabilities', 'l10n', 'storage', 'tracking', 'underscore', 'urls', 'utils', 'z'],
-    function(capabilities, l10n, storage, tracking, _, urls, utils, z) {
+    ['capabilities', 'l10n', 'notification', 'storage', 'tracking', 'underscore', 'urls', 'utils', 'utils_local', 'z'],
+    function(capabilities, l10n, notification, storage, tracking, _, urls, utils, utils_local, z) {
 
     var _pd = utils._pd;
     var gettext = l10n.gettext;
@@ -21,6 +21,13 @@ define('views/search',
         if ($(this).hasClass('search-clear')) {
             $('#search-q').val('').trigger('focus');
         }
+    })).on('focus', '#search-q', _pd(function() {
+        utils_local.checkOnline().fail(function() {
+            $('#search-q').trigger('blur');
+            notification.notification({
+                message: gettext('Sorry, you must be connected to the Internet to search Marketplace.')
+            });
+        });
     }));
 
     // If we've set this value in localStorage before, then always use it.
