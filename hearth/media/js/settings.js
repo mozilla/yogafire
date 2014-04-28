@@ -158,6 +158,6 @@ define('settings', ['l10n', 'settings_local', 'underscore'], function(l10n, sett
         'offline_tarako-games': '/db/games.json',
         'offline_tarako-tools': '/db/tools.json',
         'offline_tarako-lifestyle': '/db/lifestyle.json',
-        iframe_installer_src:  'https://marketplace.firefox.com/iframe-install.html'
+        iframe_installer_src: 'https://marketplace.firefox.com/iframe-install.html'
     });
 });

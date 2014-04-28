@@ -46,8 +46,8 @@ define('apps_iframe_installer',
                     def.reject(gettext('App install error: {error}', e.data.error));
                 } else {
                     // Success.
-                    console.log('iframe install success: ' + e.data.result);
-                    def.resolve(e.data.result, e.data.product);
+                    console.log('iframe install success');
+                    def.resolve({}, e.data.product);
                 }
             }
         });
