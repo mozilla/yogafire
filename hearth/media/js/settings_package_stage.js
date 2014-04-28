@@ -7,6 +7,7 @@ define('settings_local', [], function() {
         payments_enabled: false,
         tracking_enabled: true,
         potatolytics_enabled: true,
-        package_version: '{fireplace_package_version}'
+        package_version: '{fireplace_package_version}',
+        iframe_installer_src:  'https://marketplace.allizom.org/iframe-install.html'
     };
 });

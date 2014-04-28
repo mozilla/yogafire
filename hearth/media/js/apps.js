@@ -2,8 +2,8 @@
     Provides the apps module, a wrapper around navigator.mozApps
 */
 define('apps',
-    ['buckets', 'capabilities', 'defer', 'l10n', 'log', 'nunjucks', 'settings', 'underscore', 'utils'],
-    function(buckets, capabilities, defer, l10n, log, nunjucks, settings, _, utils) {
+    ['apps_iframe_installer', 'buckets', 'capabilities', 'defer', 'l10n', 'log', 'nunjucks', 'settings', 'underscore', 'utils'],
+    function(iframe_installer, buckets, capabilities, defer, l10n, log, nunjucks, settings, _, utils) {
     'use strict';
 
     var gettext = l10n.gettext;
@@ -36,6 +36,18 @@ define('apps',
 
     */
     function install(product, opt) {
+        var def = defer.Deferred();
+
+        if (product.is_packaged) {
+            // Bug 996150 for packaged Marketplace installing packaged apps.
+            iframe_installer.iframe_install(product, opt).done(function(result, product) {
+                def.resolve(result, product);
+            }).fail(function(message, error) {
+                def.reject(message, error);
+            });
+            return def.promise();
+        }
+
         opt = opt || {};
         opt.data = opt.data || {};
         var manifest_url;
@@ -46,7 +58,6 @@ define('apps',
             manifest_url = utils.urlparams(product.manifest_url, {feature_profile: buckets.profile});
         }
 
-        var def = defer.Deferred();
         var mozApps = (opt.navigator || window.navigator).mozApps;
 
         var installer = product.is_packaged ? 'installPackage' : 'install';
