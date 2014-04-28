@@ -18,7 +18,7 @@ EMAIL_TO="Awesome Localizers <dev-l10n-web@lists.mozilla.org>"
 EMAIL_SUBJECT="[Mkt/fireplace] .po files updated"
 
 # A link to the .po files
-EMAIL_SOURCE="https://github.com/mozilla/fireplace/tree/master/locale"
+EMAIL_SOURCE="https://github.com/mozilla/yogafire/tree/master/locale"
 
 # gettext flags
 CLEAN_FLAGS="--no-obsolete --width=200"
