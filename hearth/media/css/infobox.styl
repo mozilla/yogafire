@@ -50,32 +50,3 @@
         margin-right: 5px;
     }
 }
-
-@media $at-least-desktop {
-    // Let's undo the overflow widths for desktop.
-    .infobox {
-        > div {
-            padding: 24px 15px;
-        }
-        ul.c {
-            margin: -12px;
-            li {
-                margin: 0;
-                padding: 12px;
-                width: 25%;
-                &:nth-child(2n) {
-                    padding: 12px;
-                }
-            }
-        }
-        &.overflowing {
-            ul.c li {
-                padding: 12px;
-                width: 50%;
-                &:nth-child(2n) {
-                    padding: 12px;
-                }
-            }
-        }
-    }
-}

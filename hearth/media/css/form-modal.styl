@@ -47,29 +47,3 @@
         display: none;
     }
 }
-
-@media $at-least-desktop {
-    .form-modal {
-        background: none;
-        min-height: inherit;
-        padding: 0;
-        textarea {
-            margin-bottom: 18px;
-            min-height: 170px;
-        }
-    }
-    .modal {
-        .secondary-header {
-            background: none;
-            height: 22px;
-        }
-    }
-    .modal.show {
-        .buttons .button {
-            width: auto;
-        }
-    }
-    .main:not(.modal) .form-modal {
-        margin-top: 48px;
-    }
-}

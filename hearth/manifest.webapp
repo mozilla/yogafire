@@ -2,8 +2,7 @@
   "activities": {
     "marketplace-search": {"href": "/{launch_path}"},
     "marketplace-category": {"href": "/{launch_path}"},
-    "marketplace-app": {"href": "/{launch_path}"},
-    "marketplace-app-rating": {"href": "/{launch_path}"}
+    "marketplace-app": {"href": "/{launch_path}"}
   },
   "default_locale": "en-US",
   "description": "Firefox Marketplace",

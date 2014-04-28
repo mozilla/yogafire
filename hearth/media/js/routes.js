@@ -6,31 +6,19 @@ var dependencies;
 // Please leave quotes around keys! They're needed for Space Heater.
 var routes = [
     {'pattern': '^/(app.html|index.html|server.html)?$', 'view_name': 'homepage'},
-    {'pattern': '^/app/([^/<>"\']+)/ratings/add$', 'view_name': 'app/ratings/add'},
-    {'pattern': '^/app/([^/<>"\']+)/ratings/edit$', 'view_name': 'app/ratings/edit'},
-    {'pattern': '^/app/([^/<>"\']+)/ratings/([^/<>"\']+)$', 'view_name': 'app/ratings/rating'},
-    {'pattern': '^/app/([^/<>"\']+)/ratings$', 'view_name': 'app/ratings'},
     {'pattern': '^/app/([^/<>"\']+)/abuse$', 'view_name': 'app/abuse'},
     {'pattern': '^/app/([^/<>"\']+)/privacy$', 'view_name': 'app/privacy'},
-    {'pattern': '^/app/([^/<>"\']+)/receipt$', 'view_name': 'app/receipt'},
     {'pattern': '^/app/([^/<>"\']+)/?$', 'view_name': 'app'},
     {'pattern': '^/search/?$', 'view_name': 'search'},
     {'pattern': '^/category/([^/<>"\']+)$', 'view_name': 'category'},
-    {'pattern': '^/category/([^/<>"\']+)/featured$', 'view_name': 'featured'},
-    {'pattern': '^/nominate$', 'view_name': 'nominate'},
-    {'pattern': '^/settings$', 'view_name': 'settings'},
     {'pattern': '^/feedback$', 'view_name': 'feedback'},
-    {'pattern': '^/purchases$', 'view_name': 'purchases'},
 
     {'pattern': '^/privacy-policy$', 'view_name': 'privacy'},
     {'pattern': '^/terms-of-use$', 'view_name': 'terms'},
     {'pattern': '^/site/deprecated$', 'view_name': 'deprecated'},
 
-    {'pattern': '^/collection/([^/<>"\']+)/?$', 'view_name': 'collection'},
-
     {'pattern': '^/debug$', 'view_name': 'debug'},
     {'pattern': '^/debug/features$', 'view_name': 'debug_features'},
-    {'pattern': '^/credits$', 'view_name': 'credits'}
 ];
 
 // Only `require.js` has `window.require.defined`, so we can use this to

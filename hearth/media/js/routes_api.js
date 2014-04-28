@@ -4,8 +4,6 @@ define('routes_api', [], function() {
         'app/privacy': '/api/v1/apps/app/{0}/privacy/?cache=1&vary=0',
         'category': '/api/v1/fireplace/search/featured/?cat={0}&cache=1&vary=0&tag=tarako',
         'collection': '/api/v1/fireplace/collection/{0}/?cache=1&vary=0',
-        'reviews': '/api/v1/apps/rating/',
-        'review': '/api/v1/apps/rating/{0}/',
         'settings': '/api/v1/account/settings/mine/',
         'installed': '/api/v1/account/installed/mine/',
         'login': '/api/v1/account/login/',

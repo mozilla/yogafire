@@ -61,9 +61,6 @@
       {% endif %}
       <div class="price vital">{{ app.price_locale if app.payment_required else _('Free') }}</div>
       <div class="rating vital{{ ' unrated' if not app.ratings.count }}" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-        {% if not link %}
-          <a href="{{ url('app/ratings', [app.slug]) }}" class="rating_link">
-        {% endif %}
         {{ stars(app.ratings.average) }}
         {% if app.ratings.count %}
           <span class="cnt short">
@@ -77,7 +74,6 @@
           <span class="cnt short">{{ _('(0)') }}</span>
           <span class="cnt long">{{ _('Not yet rated') }}</span>
         {% endif %}
-        {% if not link %}</a>{% endif %}
       </div>
       {{ market_button(app, classes=(['paid'] if app.payment_required),
                        data_attrs={'manifest_url': app.manifest_url,

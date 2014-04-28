@@ -117,8 +117,6 @@ $triangle-size = 20px;
     .slider {
         margin-top: 15px;
         overflow: hidden;
-        user-select: none;
-        -webkit-user-select: none;
         -moz-user-select: none;
     }
     ul {
@@ -367,148 +365,6 @@ grid-style() {
     }
 }
 
-@media $at-least-desktop {
-    .shots {
-        position: relative;
-        .next, .prev {
-            border-radius: 0 30px 30px 0;
-            border: 15px solid rgba(#252525,.7);
-            height: 60px;
-            margin-top: -30px;
-            outline: 0;
-            position: absolute;
-            top: 50%;
-            transition(all .2s linear);
-            width: 0;
-            z-index: 16;
-            &:after {
-                background: url(../img/icons/slider_arrow.png) no-repeat;
-                content: "";
-                float: right;
-                height: 22px;
-                left: 7px;
-                position: relative;
-                top: 4px;
-                width: 15px;
-            }
-            &:hover {
-                border-color: rgba(#252525,.9);
-                border-left-width: 22px;
-            }
-            &:active {
-                border-color: rgba(#777,.9);
-            }
-        }
-        .next {
-            border-radius: 30px 0 0 30px;
-            right: 0;
-            &:after {
-                transform(scaleX(-1));
-            }
-            &:hover {
-                border-left-width: 15px;
-                border-right-width: 22px;
-            }
-        }
-        .prev {
-            left: 0;
-        }
-    }
-    #lightbox {
-        .next, .prev {
-            box-shadow: 0 0 4px #fff;
-        }
-    }
-
-    .island {
-        border-radius: 5px;
-    }
-
-    .category {
-        .view-all-mbl {
-            display: none;
-        }
-        .view-all {
-            display: block;
-            float: right;
-            font-weight: 300;
-            // Bigger click area.
-            margin: -10px -6px -3px;
-            padding: 10px 6px 6px;
-            position: relative;
-            z-index: 1;
-            &:after {
-                content: " \00BB";
-            }
-        }
-    }
-
-    .featured {
-        margin-bottom: 48px;
-        // Show 7 at most on desktop.
-        li:nth-child(7) ~ li {
-            display: none;
-        }
-    }
-
-    // Turn listing style into category horizontal style on desktop.
-    .listing.grid-if-desktop {
-        grid-style();
-        li.item {
-            background: none;
-            border: 0;
-            border-radius: 0;
-            margin: 0;
-            .mkt-tile {
-                padding: 0;
-                .icon {
-                    float: none;
-                    position: static;
-                }
-            }
-        }
-        .subdetail, .bad-app, .button, .loadmore {
-            display: none;
-        }
-        .price {
-            display: block;
-        }
-    }
-
-    .grid, .listing.grid-if-desktop {
-        max-width: $desktop-content;
-        padding: 0 5px;
-        li {
-            width: (100% / 7);
-            &:nth-child(8),
-            &:nth-child(15) {
-                clear: both;
-                &:before {
-                    content: "";
-                    display: block;
-                    height: 0;
-                    left: -5px;
-                    position: absolute;
-                    top: -1px;
-                    // Span 7 columns.
-                    width: calc(unquote('700% + 10px'));
-                }
-            }
-            // Show 21 at most.
-            &:nth-child(21) ~ li {
-                display: none;
-            }
-        }
-    }
-
-    .tabs a {
-        text-shadow: none;
-        &.active:before, &.active:after {
-            background-color: #fff;
-        }
-    }
-}
-
 @media $narrower-than-desktop {
     .purchases .mkt-tile + .tray {
         display: none;
@@ -536,15 +392,6 @@ grid-style() {
     }
 }
 
-@media $retina {
-    .shots .next, .shots .prev {
-        &:after {
-            background: url(../img/icons/slider_arrow-2x.png) no-repeat;
-            background-size: 15px auto;
-        }
-    }
-}
-
 .listing {
     margin-bottom: 10px;
     .loadmore {
@@ -567,27 +414,6 @@ grid-style() {
 
 .search-listing .mkt-tile + .tray {
     border-radius: 0 0 5px 5px;
-}
-
-@media $at-least-desktop {
-    .listing li {
-        &.item, &.loadmore {
-            margin: 25px 0 0;
-        }
-        &.item {
-            border-radius: 10px;
-            .mkt-tile + .tray {
-                // Subtract 1px for border.
-                border-radius: 0 0 9px 9px;
-            }
-        }
-        &.loadmore {
-            margin-bottom: -25px;
-        }
-        a {
-            position: static;
-        }
-    }
 }
 
 ratings-sidebar() {
@@ -695,48 +521,6 @@ ratings-sidebar() {
                 border-radius: 0;
             }
         }
-    }
-}
-
-@media $at-least-desktop {
-    .mkt-tile + .tray {
-        border-radius: 0;
-    }
-    .listing {
-        &:not(.grid-if-desktop) .mkt-tile {
-            ratings-sidebar();
-        }
-        .mkt-tile {
-            padding: 18px 15px;
-            .button {
-                min-width: 100px;
-                width: 100px;
-            }
-        }
-        .install {
-            bottom: 18px;
-            right: 15px;
-        }
-        &.product-details {
-            border-radius: 10px;
-            .mkt-tile {
-                + .tray:after,
-                + .tray:before {
-                    background-image: none;
-                }
-                h3 {
-                    font-size: 26px;
-                    line-height: 26px;
-                }
-                .subdetail {
-                    font-size: 15px;
-                    line-height: 20px;
-                }
-            }
-        }
-    }
-    .search-listing .mkt-tile + .tray {
-        border-radius: 0 0 10px 10px;
     }
 }
 
