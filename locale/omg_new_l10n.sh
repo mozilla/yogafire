@@ -15,7 +15,7 @@
 
 EMAIL_FROM="Marketplace Developers <dev-marketplace@lists.mozilla.org>"
 EMAIL_TO="Awesome Localizers <dev-l10n-web@lists.mozilla.org>"
-EMAIL_SUBJECT="[Mkt/fireplace] .po files updated"
+EMAIL_SUBJECT="[Marketplace Light] .po files updated"
 
 # A link to the .po files
 EMAIL_SOURCE="https://github.com/mozilla/yogafire/tree/master/locale"
