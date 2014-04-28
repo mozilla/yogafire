@@ -1,6 +1,6 @@
 define('buttons',
     ['apps', 'cache', 'capabilities', 'defer', 'l10n', 'log', 'login',
-     'models', 'notification', 'payments/payments', 'requests', 'settings',
+     'models', 'notification', 'requests', 'settings',
      'tracking', 'tracking_helpers', 'urls', 'user', 'utils', 'views', 'z'],
     function() {
 
@@ -55,19 +55,10 @@ define('buttons',
                                     product.premium_type !== 'free-inapp' &&
                                     !require('settings').simulate_nav_pay);
 
-        // If it's a paid app, ask the user to sign in first.
-        if (product.receipt_required && !user.logged_in()) {
-            console.log('Install suspended; user needs to log in');
-            return require('login').login().done(function() {
-                // Once login completes, just call this function again with
-                // the same parameters, but re-fetch the button (since the
-                // button instance is not the same).
-                var new_button = get_button(product.manifest_url);
-                install(product, new_button);
-            }).fail(function(){
-                console.log('Install cancelled; login aborted');
-                notification.notification({message: gettext('Payment cancelled.')});
-            });
+        // If it's a paid app, it's unsupported for now.
+        if (product.receipt_required) {
+            console.log('Install cancelled; product is not free');
+            notification.notification({message: gettext('Payment cancelled.')});
         }
 
         // If there isn't a user object on the app, add one.
@@ -94,48 +85,10 @@ define('buttons',
 
         if (product.payment_required) {
             // The app requires a payment.
-
-            console.log('Starting payment flow for', product_name);
-            $this.data('old-text', $this.html());  // Save the old text of the button.
-            setButton($this, gettext('Purchasing'), 'purchasing');
-            require('payments/payments').purchase(product).then(function() {
-                console.log('Purchase flow completed for', product_name);
-
-                // Update the button to say Install.
-                setButton($this, gettext('Install'), 'purchased');
-                $this.data('old-text', $this.html());  // Save the old text of the button.
-
-                // Update the cache to show that the app was purchased.
-                user.update_purchased(product.id);
-
-                // Bust the cache for the My Apps page.
-                cache.bust(urls.api.url('installed'));
-                // Rewrite the cache to allow the user to review the app.
-                cache.attemptRewrite(function(key) {
-                    return key === urls.api.params('reviews', {app: product.slug});
-                }, function(data) {
-                    data.user.can_rate = true;
-                    return data;
-                });
-
-                def.always(function() {
-                    // Do a reload to show any reviews privilege changes for bug 838848.
-                    require('views').reload();
-                });
-
-                // Start the app's installation.
-                start_install();
-
-            }, function() {
-                notification.notification({message: gettext('Payment cancelled.')});
-
-                console.log('Purchase flow rejected for', product_name);
-                def.reject();
-            });
-
+            notification.notification({message: gettext('Payment cancelled.')});
+            console.log('Purchase flow rejected for', product_name);
         } else {
             // There's no payment required, just start install.
-
             console.log('Starting app installation for', product_name);
             // Start the app's installation.
             start_install();

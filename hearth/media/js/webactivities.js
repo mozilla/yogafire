@@ -34,11 +34,6 @@ define('webactivities', ['capabilities', 'log', 'urls', 'utils', 'z'], function(
                     z.page.trigger('search', {q: ':manifest=' + manifest_url, src: src});
                 }
                 break;
-            case 'marketplace-app-rating':
-                // Load up the page to leave a rating for the app.
-                url = urls.reverse('app/ratings/add', [data.slug]);
-                z.page.trigger('navigate', [utils.urlparams(url, {src: src})]);
-                break;
             case 'marketplace-category':
                 // Load up a category page.
                 url = urls.reverse('category', [data.slug]);

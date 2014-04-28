@@ -1,7 +1,7 @@
 // Note that 'mobilenetwork' must be required immediately prior to 'cat-dropdown'.
 define('cat-dropdown',
-    ['builder', 'categories', 'consumer_info', 'jquery', 'keys', 'l10n', 'models', 'requests', 'templates', 'underscore', 'urls', 'z'],
-    function(builder, categories, consumer_info, $, keys, l10n, models, requests, nunjucks, _, urls, z) {
+    ['builder', 'consumer_info', 'jquery', 'keys', 'l10n', 'models', 'requests', 'templates', 'underscore', 'urls', 'z'],
+    function(builder, consumer_info, $, keys, l10n, models, requests, nunjucks, _, urls, z) {
     'use strict';
 
     var gettext = l10n.gettext;
@@ -14,28 +14,6 @@ define('cat-dropdown',
     var catModels = models('category');
 
     // TODO: Detect when the user is offline and raise an error.
-
-    function toggleMenu(e) {
-        if (e) {
-            e.preventDefault();
-        }
-        $catMenu.toggleClass('hidden');
-        $dropdown.toggleClass('active');
-    }
-
-    function updateDropDown(catSlug, catTitle) {
-        var oldCatSlug = $dropdownLink.data('catSlug');
-        if (oldCatSlug !== catSlug) {
-            var model = catModels.lookup(catSlug);
-            catTitle = catTitle || (model && model.name) || catSlug;
-            if (catTitle && catSlug && oldCatSlug && $dropdownLink) {
-                $dropdownLink.text(catTitle)
-                         .removeClass('cat-' + oldCatSlug)
-                         .addClass('cat-' + catSlug)
-                         .data('catSlug', catSlug);
-            }
-        }
-    }
 
     function updateCurrentCat(catSlug, $elm) {
         var currentClass = 'current';
@@ -51,13 +29,10 @@ define('cat-dropdown',
         var $target = $(e.target);
         var newCat = $target.data('catSlug');
         var catTitle = $target.text();
-        toggleMenu();
-        updateDropDown(newCat, catTitle);
         updateCurrentCat(newCat, $target);
     }
 
     function dropDownRefresh(catSlug) {
-        updateDropDown(catSlug);
         updateCurrentCat(catSlug);
     }
 
@@ -85,24 +60,15 @@ define('cat-dropdown',
         $dropdown = $('.dropdown');
         $dropdownLink = $dropdown.find('a');
 
-        $catList.html(nunjucks.env.render('cat_list.html', {categories: categories}));
         $catMenu = $('.cat-menu');
         handleCatsRendered();
-    }
-
-    function handleDropDownDisplayByKey(e){
-        if (e.keyCode === keys.ESCAPE) {
-            toggleMenu(e);
-        }
     }
 
     function handleResize() {
         $('.dropdown a').toggleClass('mobile', z.win.width() <= desktopWidth);
     }
 
-    z.body.on('click', '.dropdown a', toggleMenu)
-          .on('click', '.cat-menu a', handleCatClick)
-          .on('keydown', '#cat-dropdown, #cat-list', handleDropDownDisplayByKey);
+    z.body.on('click', '.cat-menu a', handleCatClick);
     z.doc.on('saferesize', handleResize);
     z.page.on('build_start', handleBuildStart)
           .on('reload_chrome', handleRenderDropdown);

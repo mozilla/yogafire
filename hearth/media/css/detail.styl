@@ -178,69 +178,6 @@ section.releasenotes {
     }
 }
 
-// ***************** Wide Mobile (> 671px)
-
-@media $at-least-desktop {
-    .upsell-wrapper {
-        background: #fff;
-    }
-    .upsell,
-    .blurbs > div {
-        padding: 24px 15px;
-    }
-    .upsell {
-        border: 0;
-        border-radius: 0;
-        margin: 0;
-        div {
-            padding: 8px 15px;
-        }
-        .avail {
-            font-size: 17px;
-            line-height: 19px;
-        }
-        .name {
-            font-size: 15px;
-            line-height: 21px;
-        }
-    }
-    .blurbs .description-wrapper {
-        p.description {
-            padding-top: 0;
-        }
-    }
-    section.blurbs .truncated-wrapper.truncated {
-        max-height: none;
-        overflow: visible;
-
-        &:after {
-            content: none;
-        }
-    }
-    .show-toggle {
-        display: none;
-    }
-
-    .detail {
-        border-radius: 10px;
-        margin: 0 auto;
-        max-width: $desktop-content;
-        overflow: hidden;
-        h3 {
-            font-weight: 500;
-        }
-    }
-    .secondary-header .leading {
-        font-size: 24px;
-        gradient-two-color(#fff, #e1e1e1);
-        line-height: 24px;
-        max-width: 100%;
-        padding: 15px;
-        position: static;
-    }
-}
-
-
 // Statistics page is not mobile-optimized. Hide button to that page at non-
 // desktop widths.
 @media $narrower-than-desktop {

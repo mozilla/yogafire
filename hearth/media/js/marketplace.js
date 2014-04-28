@@ -45,7 +45,6 @@ define(
         'outgoing_links',
         'overlay',
         'previews',
-        'ratings',
         'requests',
         'settings',
         'storage',
@@ -167,20 +166,7 @@ function(_) {
     z.page.on('reload_chrome', function() {
         console.log('Reloading chrome');
         var context = {z: z};
-        $('#site-header').html(
-            nunjucks.env.render('header.html', context));
-        $('#site-footer').html(
-            nunjucks.env.render('footer.html', context));
-
-        if (!navigator.mozApps &&
-            !navigator.userAgent.match(/googlebot/i) &&
-            !require('storage').getItem('hide_incompatibility_banner')) {
-            console.log('Adding incompatibility banner');
-            $('#incompatibility-banner').html(
-                nunjucks.env.render('incompatible.html'));
-            z.body.addClass('show-incompatibility-banner');
-        }
-
+        $('#site-header').html(nunjucks.env.render('header.html', context));
         z.body.toggleClass('logged-in', require('user').logged_in());
         z.page.trigger('reloaded_chrome');
     }).trigger('reload_chrome');
