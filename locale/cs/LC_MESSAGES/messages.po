@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marketplace\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-09T16:17:52.721Z\n"
+"POT-Creation-Date: 2014-04-28T23:58:29.645Z\n"
 "PO-Revision-Date: 2014-04-09 17:55+0000\n"
 "Last-Translator: Michal <michal.stanke@mikk.cz>\n"
 "Language-Team: Czech <info@mozilla.cz>\n"
@@ -14,16 +14,27 @@ msgstr ""
 "X-Generator: Pootle 2.5.0\n"
 "X-POOTLE-MTIME: 1397066137.0\n"
 
-#: /templates/cat_dropdown.html:1 /media/js/categories.js:7
+#: /templates/cat_dropdown.html:2
 msgid "All Categories"
 msgstr "Všechny kategorie"
 
-#. Please do your best to capture the essence of Scooby Doo.
-#: /templates/collection.html:33
-msgid "Ruh roh! No apps here, Shaggy!"
-msgstr "Ale ne! Zde není žádná aplikace!"
+#: /templates/cat_dropdown.html:17
+msgid "Home"
+msgstr ""
 
-#: /templates/confirmation.html:0 /templates/incompatible.html:3 /templates/detail/abuse.html:6 /templates/settings/nav.html:12
+#: /templates/cat_dropdown.html:18
+msgid "Games"
+msgstr "Hry"
+
+#: /templates/cat_dropdown.html:19
+msgid "Tools"
+msgstr ""
+
+#: /templates/cat_dropdown.html:20
+msgid "Lifestyle"
+msgstr "Životní styl"
+
+#: /templates/confirmation.html:0 /templates/incompatible.html:3 /templates/detail/abuse.html:6
 msgid "Close"
 msgstr "Zavřít"
 
@@ -34,10 +45,6 @@ msgstr "Ne"
 #: /templates/confirmation.html:4
 msgid "Yes"
 msgstr "Ano"
-
-#: /templates/credits.html:2 /media/js/views/credits.js:10
-msgid "Credits"
-msgstr "Poděkování"
 
 #. The Marketplace app is out-of-date and needs to be updated.
 #: /templates/deprecated.html:2
@@ -52,72 +59,6 @@ msgstr "Verze Firefox Marketplace, kterou používáte, již není podporována.
 msgid "Update Now"
 msgstr "Aktualizovat"
 
-#: /templates/featured.html:7
-msgid "Featured"
-msgstr "Propagovaná"
-
-#: /templates/featured.html:8 /templates/search/main.html:18 /templates/user/purchases.html:14
-msgid "Expand"
-msgstr "Rozšířit"
-
-#: /templates/featured.html:22
-msgid "No featured apps found"
-msgstr "Nebyly nalezeny žádné propagované aplikace"
-
-#: /templates/footer.html:2
-msgid "Develop Apps"
-msgstr "Vývoj aplikací"
-
-#: /templates/footer.html:5
-msgid "Developer Hub"
-msgstr "Pro vývojáře"
-
-#: /templates/footer.html:6 /templates/header.html:26 /templates/settings/nav.html:8 /templates/settings/nav.html:11 /media/js/views/feedback.js:61
-msgid "Feedback"
-msgstr "Reakce"
-
-#: /templates/footer.html:8 /templates/footer.html:10
-msgid "Support"
-msgstr "Podpora"
-
-#: /templates/footer.html:16 /templates/header.html:22 /templates/settings/nav.html:7 /templates/user/purchases.html:44 /templates/user/purchases.html:11 /templates/user/purchases.html:31
-#: /media/js/views/purchases.js:13
-msgid "My Apps"
-msgstr "Mé aplikace"
-
-#: /templates/footer.html:18 /templates/header.html:24
-msgid "My Submissions"
-msgstr "Mé příspěvky"
-
-#: /templates/footer.html:21 /templates/settings/main.html:43
-msgid "Reviewer Tools"
-msgstr "Nástroje pro redaktora"
-
-#: /templates/footer.html:24
-msgid "Lookup Tool"
-msgstr "Nástroje"
-
-#: /templates/footer.html:32
-msgid ""
-"Except where otherwise <a href=\"{legal_url}\" target=\"_blank\">noted</a>, content on this site is licensed under the <a href=\"{cc_url}\" target=\"_blank\">Creative Commons Attribution Share-"
-"Alike License v3.0</a> or any later version."
-msgstr ""
-"Pokud není <a href=\"{legal_url}\" target=\"_blank\">řečeno</a> jinak, je obsah této stránky dostupný pod licencí <a href=\"{cc_url}\" target=\"_blank\">Creative Commons Attribution Share-Alike "
-"License v. 3.0</a> či kterékoliv pozdější verze."
-
-#: /templates/footer.html:37 /templates/privacy.html:2 /templates/detail/main.html:189 /templates/detail/privacy.html:3 /templates/detail/receipt.html:57 /templates/settings/feedback.html:26
-#: /templates/user/newsletter.html:10 /media/js/views/privacy.js:10 /media/js/views/app/privacy.js:10
-msgid "Privacy Policy"
-msgstr "Zásady ochrany soukromí"
-
-#: /templates/footer.html:38 /templates/terms.html:2 /templates/settings/feedback.html:31 /media/js/views/terms.js:10
-msgid "Terms of Use"
-msgstr "Podmínky použití"
-
-#: /templates/footer.html:40
-msgid "Report Trademark Abuse"
-msgstr "Nahlášení zneužití ochranné známky"
-
 #: /templates/header.html:1
 msgid "Back"
 msgstr "Zpět"
@@ -130,21 +71,17 @@ msgstr "Vyhledávání"
 msgid "Clear"
 msgstr "Vymazat"
 
-#: /templates/header.html:14
-msgid "Settings"
-msgstr "Nastavení"
+#: /templates/featured.html:7
+msgid "Featured"
+msgstr "Propagovaná"
 
-#: /templates/header.html:20
-msgid "Edit Account Settings"
-msgstr "Úprava nastavení účtu"
+#: /templates/featured.html:8 /templates/search/main.html:18
+msgid "Expand"
+msgstr "Rozšířit"
 
-#: /templates/header.html:27 /templates/settings/main.html:40
-msgid "Sign Out"
-msgstr "Odhlášení"
-
-#: /templates/header.html:31
-msgid "Sign In"
-msgstr "Přihlášení"
+#: /templates/featured.html:22
+msgid "No featured apps found"
+msgstr "Nebyly nalezeny žádné propagované aplikace"
 
 #: /templates/incompatible.html:1
 msgid "You must use Firefox to install Firefox apps."
@@ -154,65 +91,18 @@ msgstr "Pro instalaci aplikací musíte používat Firefox."
 msgid "Download."
 msgstr "Stáhnout."
 
-#: /templates/nominate.html:1
-msgid "Nominate apps to be featured on Firefox Marketplace!"
-msgstr "Nominujte aplikace, které budou propagovány na Firefox Marketplace!"
+#: /templates/privacy.html:2 /templates/category_yogafire/main.html:47 /templates/detail/main_yogafire.html:80 /templates/detail/privacy.html:3 /media/js/views/privacy.js:10
+#: /media/js/views/app/privacy.js:10
+msgid "Privacy Policy"
+msgstr "Zásady ochrany soukromí"
 
-#: /templates/nominate.html:6
-msgid "Are you the developer or fan of an awesome app or collection of apps on Firefox Marketplace? Submit your nominations, and you may see them in a featured spot."
-msgstr "Jste vývojář či fanoušek skvělé aplikace nebo sbírky aplikací na Firefox Marketplace? Přidejte své nominace, které chcete vidět na propagovaném místě."
+#: /templates/terms.html:2 /templates/category_yogafire/main.html:44 /media/js/views/terms.js:10
+msgid "Terms of Use"
+msgstr "Podmínky použití"
 
-#: /templates/nominate.html:9
-msgid "Learn more about <a href=\"{wiki_url}\">how apps are featured</a>."
-msgstr "Dozvědět se více o tom, <a href=\"{wiki_url}\">jak jsou aplikace propagovány</a>."
-
-#: /templates/nominate.html:15
-msgid "Thanks for submitting your nomination."
-msgstr "Děkujeme za odeslání vaší nominace."
-
-#: /templates/nominate.html:16
-msgid "Tell your friends!"
-msgstr "Řekněte svým přátelům!"
-
-#: /templates/nominate.html:17
-msgid "Tweet #FaveApps"
-msgstr "Tweet #FaveApps"
-
-#: /templates/nominate.html:18
-msgid "Submit another nomination"
-msgstr "Odeslat další nominaci"
-
-#: /templates/nominate.html:24
-msgid "Tell us which Marketplace apps you'd like to nominate for featuring"
-msgstr "Řekněte nám, jakou aplikaci z Marketplace byste rádi viděli na propagovanou."
-
-#: /templates/nominate.html:25
-msgid "Name of apps or Marketplace URLs"
-msgstr "Název aplikací nebo adresy na Marketplace"
-
-#: /templates/nominate.html:29
-msgid "Select a category for these apps"
-msgstr "Zvolte kategorii těchto aplikací"
-
-#: /templates/nominate.html:41
-msgid "In which regions would you like to see these apps featured?"
-msgstr "V jakých regionech byste rádi viděli tyto aplikace jako propagované?"
-
-#: /templates/nominate.html:54
-msgid "Tell us why these apps should be featured"
-msgstr "Řekněte nám, proč by měly být tyto aplikace propagované"
-
-#: /templates/nominate.html:60 /templates/nominate.html:61
-msgid "Your name"
-msgstr "Vaše jméno"
-
-#: /templates/nominate.html:64
-msgid "Your email address"
-msgstr "Vaše e-mailová adresa"
-
-#: /templates/nominate.html:71 /templates/ratings/edit.html:22 /templates/ratings/write.html:20
-msgid "Submit"
-msgstr "Odeslat"
+#: /templates/_includes/truncated.html:4
+msgid "...more"
+msgstr ""
 
 #. This app is unavailable for purchase.
 #: /templates/_macros/market_button.html:5
@@ -223,7 +113,7 @@ msgstr "Není dostupné"
 msgid "Free"
 msgstr "Zdarma"
 
-#: /templates/_macros/market_button.html:14 /media/js/buttons.js:105 /media/js/buttons.js:318
+#: /templates/_macros/market_button.html:14 /media/js/buttons.js:271
 msgid "Install"
 msgstr "Instalovat"
 
@@ -236,22 +126,22 @@ msgstr "Snímek obrazovky {app_name}"
 msgid "{rating_body}: {rating}"
 msgstr "{rating_body}: {rating}"
 
-#: /templates/_macros/market_tile.html:69
+#: /templates/_macros/market_tile.html:66
 msgid "({n})"
 msgstr "({n})"
 
-#: /templates/_macros/market_tile.html:72 /templates/detail/main.html:135
+#: /templates/_macros/market_tile.html:69
 msgid "{n} Review"
 msgid_plural "{n} Reviews"
 msgstr[0] "{n} recenze"
 msgstr[1] "{n} recenze"
 msgstr[2] "{n} recenzí"
 
-#: /templates/_macros/market_tile.html:76
+#: /templates/_macros/market_tile.html:73
 msgid "(0)"
 msgstr "(0)"
 
-#: /templates/_macros/market_tile.html:77
+#: /templates/_macros/market_tile.html:74
 msgid "Not yet rated"
 msgstr "Dosud nehodnocena"
 
@@ -259,64 +149,35 @@ msgstr "Dosud nehodnocena"
 msgid "More"
 msgstr "Více"
 
-#: /templates/_macros/rating.html:9
-msgid "by {author}"
-msgstr "od {author}"
-
-#: /templates/_macros/rating.html:12
-msgid "for previous version {version}"
-msgstr "pro předchozí verzi {version}"
-
-#: /templates/_macros/rating.html:21
-msgid "Flagged for review"
-msgstr "Označena pro kontrolu"
-
-#: /templates/_macros/rating.html:27
-msgid "Edit"
-msgstr "Upravit"
-
-#: /templates/_macros/rating.html:30
-msgid "Delete"
-msgstr "Smazat"
-
-#: /templates/_macros/rating.html:33
-msgid "Report"
-msgstr "Hlášení"
-
 #: /templates/_macros/stars.html:5
 msgid "Rated {stars} out of {maxstars} stars"
 msgstr "Hodnocení {stars} z {maxstars} hvězdiček"
 
-#: /templates/category/main.html:37
+#: /templates/category_yogafire/main.html:38
+msgid "Get Help"
+msgstr "Získat pomoc"
+
+#: /templates/category_yogafire/main.html:41 /media/js/views/feedback.js:61
+msgid "Feedback"
+msgstr "Reakce"
+
+#: /templates/category_yogafire/main.html:10
 msgid "Featured Apps"
 msgstr "Propagované aplikace"
 
-#: /templates/category/main.html:38 /templates/category/main.html:45 /templates/category/main.html:65
-msgid "View All"
-msgstr "Zobrazit vše"
-
-#: /templates/category/main.html:61
-msgid "Popular"
-msgstr "Populární"
-
-#. "New" should translate to mean "Recent". Choose the shortest (space constraints)
-#: /templates/category/main.html:63
-msgid "New"
-msgstr "Nové"
-
-#: /templates/category/main.html:84
+#: /templates/category_yogafire/main.html:23
 msgid "No apps in this category"
 msgstr "V této kategorii není žádná aplikace"
 
-#: /templates/category/main.html:89
+#: /templates/category_yogafire/main.html:28
 msgid "The category you requested does not exist."
 msgstr "Kategorie, kterou hledáte, není dostupná."
 
-#: /templates/category/main.html:91 /templates/user/purchases.html:39
+#: /templates/category_yogafire/main.html:30
 msgid "An internal server error occurred. Please try again later."
 msgstr "Nastala interní chyba serveru. Zkuste to znovu později."
 
-#: /templates/detail/abuse.html:5 /templates/detail/main.html:200 /templates/detail/receipt.html:68 /media/js/views/app/abuse.js:34
+#: /templates/detail/abuse.html:5 /templates/detail/main_yogafire.html:91 /media/js/views/app/abuse.js:34
 msgid "Report Abuse"
 msgstr "Nahlásit zneužití"
 
@@ -328,105 +189,37 @@ msgstr "Odeslání hlášení"
 msgid "Content Rating"
 msgstr "Hodnocení obsahu"
 
-#: /templates/detail/content_ratings.html:76
+#: /templates/detail/content_ratings.html:73
 msgid "Content Rating Details"
 msgstr "Detaily hodnocení obsahu"
 
-#: /templates/detail/main.html:42
+#: /templates/detail/main_yogafire.html:41
 msgid "Installed!"
 msgstr "Nainstalováno!"
 
-#: /templates/detail/main.html:45
-msgid "Launch this app from your <b>Applications</b> directory."
-msgstr "Spusťte aplikaci z vašeho adresáře <b>Aplikace</b>."
-
-#: /templates/detail/main.html:48
-msgid "Launch this app from your <b>Windows desktop</b> or <b>Start &#9658; All Programs</b>."
-msgstr "Spusťte aplikaci z <b>Plochy Windows</b> či <b>Start &#9658; Všechny programy</b>."
-
-#: /templates/detail/main.html:51
-msgid "Launch this app from your <b>dash</b>, <b>Application picker</b>, or <b>Applications menu</b>."
-msgstr "Spusťte aplikaci z vašeho <b>Dash</b>, <b>Application picker</b> nebo <b>nabídky Applications</b>."
-
-#: /templates/detail/main.html:14 /templates/detail/main.html:15 /templates/detail/receipt.html:18 /templates/detail/receipt.html:19 /media/js/views/app.js:68 /media/js/views/collection.js:42
+#: /templates/detail/main_yogafire.html:13 /templates/detail/main_yogafire.html:14 /media/js/views/app.js:68
 msgid "Loading..."
 msgstr "Načítání..."
 
-#: /templates/detail/main.html:66
-msgid "Updates"
-msgstr "Aktualizace"
-
-#: /templates/detail/main.html:72 /templates/detail/main.html:89
-msgid "Less&hellip;"
-msgstr "Méně&hellip;"
-
-#: /templates/detail/main.html:72 /templates/detail/main.html:89
-msgid "More&hellip;"
-msgstr "Více&hellip;"
-
-#: /templates/detail/main.html:83
+#: /templates/detail/main_yogafire.html:50
 msgid "Description"
 msgstr "Popis"
 
-#: /templates/detail/main.html:92
-msgid "Version"
-msgstr "Verze"
-
-#: /templates/detail/main.html:94
-msgid "Latest version: {version}"
-msgstr "Poslední verze: {version}"
-
-#: /templates/detail/main.html:110
-msgid "Edit Listing"
-msgstr "Úprava stránky"
-
-#: /templates/detail/main.html:113
-msgid "Approve / Reject"
-msgstr "Schválit / Zamítnout"
-
-#: /templates/detail/main.html:113
-msgid "Review History"
-msgstr "Historie kontrol"
-
-#: /templates/detail/main.html:124 /templates/ratings/main.html:6 /media/js/views/app/ratings.js:16
-msgid "Reviews"
-msgstr "Recenze"
-
-#: /templates/detail/main.html:143
-msgid "App not yet rated"
-msgstr "Aplikace dosud nebyla hodnocena"
-
-#: /templates/detail/main.html:151
-msgid "Edit Your Review"
-msgstr "Úprava recenze"
-
-#: /templates/detail/main.html:155 /templates/ratings/main.html:18 /templates/ratings/write.html:2 /media/js/views/app/ratings/add.js:40
-msgid "Write a Review"
-msgstr "Napsání recenze"
-
-#: /templates/detail/main.html:155 /templates/ratings/main.html:18
-msgid "Sign in to Review"
-msgstr "Pro přidání recenze se přihlašte."
-
-#: /templates/detail/main.html:172 /templates/detail/receipt.html:40
+#: /templates/detail/main_yogafire.html:63
 msgid "Support Email"
 msgstr "E-mail podpory"
 
-#: /templates/detail/main.html:178 /templates/detail/receipt.html:46
+#: /templates/detail/main_yogafire.html:69
 msgid "Support Site"
 msgstr "Stránka podpory"
 
-#: /templates/detail/main.html:183 /templates/detail/receipt.html:51
+#: /templates/detail/main_yogafire.html:74
 msgid "Homepage"
 msgstr "Domovská stránka"
 
-#: /templates/detail/main.html:195 /templates/detail/receipt.html:63
+#: /templates/detail/main_yogafire.html:86
 msgid "Statistics"
 msgstr "Statistiky"
-
-#: /templates/detail/main.html:211
-msgid "Premium version available"
-msgstr "K dispozici je placená verze"
 
 #: /templates/detail/privacy.html:5
 msgid "Back to app"
@@ -436,11 +229,7 @@ msgstr "Zpět na aplikaci"
 msgid "Loading Privacy Policy..."
 msgstr "Probíhá načítání zásad ochrany soukromí..."
 
-#: /templates/detail/receipt.html:8
-msgid "Thank you for purchasing"
-msgstr "Děkujeme za nákup"
-
-#: /templates/errors/404.html:2 /templates/errors/fragment.html:1 /templates/user/purchases.html:38
+#: /templates/errors/404.html:2 /templates/errors/fragment.html:1
 msgid "Oh no!"
 msgstr "Ale ne!"
 
@@ -467,7 +256,7 @@ msgstr[0] "<b>{n}</b> výsledek"
 msgstr[1] "<b>{n}</b> výsledky"
 msgstr[2] "<b>{n}</b> výsledků"
 
-#: /templates/search/main.html:16 /templates/user/purchases.html:12
+#: /templates/search/main.html:16
 msgid "Showing <b>1</b>&ndash;<b class=\"total-results\">{total}</b>"
 msgstr "Zobrazeno <b>1</b>&ndash;<b class=\"total-results\">{total}</b>"
 
@@ -479,216 +268,42 @@ msgstr "Nebyly nalezeny žádné výsledky"
 msgid "No results found, try again later"
 msgstr "Nebyly nalezeny žádné výsledky. Zkuste to znovu později."
 
-#: /templates/ratings/edit.html:5 /templates/ratings/main.html:14 /media/js/views/app/ratings/edit.js:88
-msgid "Edit Review"
-msgstr "Úprava recenze"
-
-#: /templates/ratings/edit.html:9 /templates/ratings/write.html:7
-msgid "Rate:"
-msgstr "Hodnocení:"
-
-#: /templates/ratings/edit.html:21 /templates/ratings/report.html:3 /templates/ratings/report.html:23 /templates/ratings/write.html:3 /templates/ratings/write.html:19
-#: /templates/user/newsletter.html:13
-msgid "Cancel"
-msgstr "Zrušit"
-
-#: /templates/ratings/edit.html:25 /templates/ratings/write.html:23
-msgid "Only logged in users may edit reviews."
-msgstr "Upravovat recenze smí pouze přihlášení uživatelé."
-
-#: /templates/ratings/rating.html:4 /media/js/views/app/ratings/rating.js:13
-msgid "App Review"
-msgstr "Recenze aplikace"
-
-#: /templates/ratings/report.html:2
-msgid "Please select a reason:"
-msgstr "Zadejte prosím důvod:"
-
-#: /templates/ratings/report.html:8
-msgid "Spam or otherwise non-review content"
-msgstr "Nevyžádaný příspěvek či nesouvislost s obsahem"
-
-#: /templates/ratings/report.html:13
-msgid "Inappropriate language/dialog"
-msgstr "Nevhodný jazyk/chování"
-
-#: /templates/ratings/report.html:18
-msgid "Misplaced bug report or support request"
-msgstr "Nevhodné oznámení chyby nebo žádost o podporu"
-
-#: /templates/settings/feedback.html:12
+#: /templates/settings/feedback.html:11
 msgid "Send"
 msgstr "Odeslat"
 
-#: /templates/settings/feedback.html:18 /templates/settings/feedback.html:20
-msgid "Get Help"
-msgstr "Získat pomoc"
-
-#: /templates/settings/main.html:2 /media/js/views/settings.js:47
-msgid "Account Settings"
-msgstr "Nastavení účtu"
-
-#: /templates/settings/main.html:11
-msgid "Email"
-msgstr "E-mail"
-
-#: /templates/settings/main.html:20
-msgid "Display Name"
-msgstr "Zobrazené jméno"
-
-#: /templates/settings/main.html:29
-msgid "Region"
-msgstr "Region"
-
-#: /templates/settings/main.html:38
-msgid "Save Changes"
-msgstr "Uložení změn"
-
-#: /templates/settings/main.html:41
-msgid "Sign In / Sign Up"
-msgstr "Přihlášení / Registrace"
-
-#: /templates/settings/nav.html:6
-msgid "Account"
-msgstr "Účet"
-
-#: /templates/user/newsletter.html:3
-msgid "Get Firefox Marketplace news"
-msgstr "Získávat novinky Firefox Marketplace"
-
-#: /templates/user/newsletter.html:8
-msgid "Sign up"
-msgstr "Přihlášení"
-
-#: /templates/user/newsletter.html:15
-msgid "Signing up..."
-msgstr "Probíhá přihlášení"
-
-#: /templates/user/newsletter.html:18
-msgid "You were successfully signed up for the Marketplace newsletter!"
-msgstr "Uspěšně jste přihlásil(a) odběr zpravodaje Marketplace!"
-
-#: /templates/user/purchases.html:49
-msgid "You must be signed in to view your apps."
-msgstr "Pro zobrazení svých aplikací musíte být přihlášen(a)."
-
-#: /templates/user/purchases.html:50
-msgid "Sign in / Sign up"
-msgstr "Přihlášení / Registrace"
-
-#: /templates/user/purchases.html:34
-msgid "You have no apps"
-msgstr "Nemáte žádné aplikace"
-
-#: /media/js/apps.js:79
+#: /media/js/apps_iframe_installer.js:46 /media/js/apps.js:90
 msgid "App install error: {error}"
 msgstr "Chyba při instalaci aplikace: {error}"
 
-#: /media/js/apps.js:130
+#: /media/js/apps.js:141
 msgid "Your device does not support payments."
 msgstr "Vaše zařízení nepodporuje platby."
 
-#: /media/js/apps.js:132
+#: /media/js/apps.js:143
 msgid "This app is unavailable for purchase in your region."
 msgstr "Aplikaci nelze koupit ve vašem regionu."
 
-#: /media/js/apps.js:136
+#: /media/js/apps.js:147
 msgid "Your browser or device is not web-app compatible."
 msgstr "Váš prohlížeč nebo zařízení nepodporuji webové aplikace."
 
-#: /media/js/apps.js:138
+#: /media/js/apps.js:149
 msgid "This app is unavailable for your platform."
 msgstr "Aplikace není dostupná pro vaši platformu."
 
-#: /media/js/buttons.js:69 /media/js/buttons.js:130 /media/js/payments/payments.js:91
+#: /media/js/buttons.js:61 /media/js/buttons.js:88
 msgid "Payment cancelled."
 msgstr "Platba byla zrušena."
 
-#. "Launch" as in "Launch the app"
-#: /media/js/buttons.js:100
-msgid "Purchasing"
-msgstr "Probíhá zakoupení"
-
 #. The app's installation has failed, but the problem is temporary.
-#: /media/js/buttons.js:206
+#: /media/js/buttons.js:159
 msgid "Install failed. Please try again later."
 msgstr "Instalace selhala. Zkuste to prosím znovu později."
 
-#: /media/js/buttons.js:296
-msgid "Launch"
-msgstr "Spuštění"
-
-#: /media/js/categories.js:8
-msgid "Games"
-msgstr "Hry"
-
-#: /media/js/categories.js:9
-msgid "Books"
-msgstr "Knihy a reference"
-
-#: /media/js/categories.js:10
-msgid "Business"
-msgstr "Finance"
-
-#: /media/js/categories.js:11
-msgid "Education"
-msgstr "Vzdělávání"
-
-#: /media/js/categories.js:12
-msgid "Entertainment"
-msgstr "Zábava"
-
-#: /media/js/categories.js:13
-msgid "Health & Fitness"
-msgstr "Zdraví a fitness"
-
-#: /media/js/categories.js:14
-msgid "Lifestyle"
-msgstr "Životní styl"
-
-#: /media/js/categories.js:15
-msgid "Maps & Navigation"
-msgstr "Mapy a navigace"
-
-#: /media/js/categories.js:16
-msgid "Music"
-msgstr "Hudba"
-
-#: /media/js/categories.js:17
-msgid "News & Weather"
-msgstr "Novinky"
-
-#: /media/js/categories.js:18
-msgid "Photo & Video"
-msgstr "Fotky a média"
-
-#: /media/js/categories.js:19
-msgid "Productivity"
-msgstr "Produktivita"
-
-#: /media/js/categories.js:20
-msgid "Reference"
-msgstr "Reference"
-
-#: /media/js/categories.js:21
-msgid "Shopping"
-msgstr "Nakupování"
-
-#: /media/js/categories.js:22
-msgid "Social"
-msgstr "Sociální sítě"
-
-#: /media/js/categories.js:23
-msgid "Sports"
-msgstr "Sporty"
-
-#: /media/js/categories.js:24
-msgid "Travel"
-msgstr "Cestování"
-
-#: /media/js/categories.js:25
-msgid "Utilities"
-msgstr "Nástroje"
+#: /media/js/buttons.js:249
+msgid "Open"
+msgstr ""
 
 #. For ages {0} and higher. (de) `ab {0} Jahren`.
 #: /media/js/content-ratings.js:97
@@ -703,7 +318,7 @@ msgstr "Obecné"
 msgid "Criminal Acts"
 msgstr "Trestné činy"
 
-#: /media/js/content-ratings.js:112 /media/js/content-ratings.js:180 /media/js/content-ratings.js:193 /media/js/content-ratings.js:213
+#: /media/js/content-ratings.js:112 /media/js/content-ratings.js:177 /media/js/content-ratings.js:189 /media/js/content-ratings.js:208
 msgid "Drugs"
 msgstr "Drogy"
 
@@ -719,291 +334,287 @@ msgstr "Legální drogy"
 msgid "Inappropriate Language"
 msgstr "Nevhodný jazyk"
 
-#: /media/js/content-ratings.js:120 /media/js/content-ratings.js:162 /media/js/content-ratings.js:184 /media/js/content-ratings.js:197 /media/js/content-ratings.js:216
-msgid "No Descriptors"
-msgstr "Žádné popisy"
-
-#: /media/js/content-ratings.js:122 /media/js/content-ratings.js:163
+#: /media/js/content-ratings.js:120 /media/js/content-ratings.js:160
 msgid "Nudity"
 msgstr "Nahota"
 
-#: /media/js/content-ratings.js:124 /media/js/content-ratings.js:188 /media/js/content-ratings.js:201
+#: /media/js/content-ratings.js:122 /media/js/content-ratings.js:184 /media/js/content-ratings.js:196
 msgid "Sex"
 msgstr "Sex"
 
-#: /media/js/content-ratings.js:126
+#: /media/js/content-ratings.js:124
 msgid "Explicit Sex"
 msgstr "Explicitní sex"
 
-#: /media/js/content-ratings.js:128
+#: /media/js/content-ratings.js:126
 msgid "Impacting Content"
 msgstr "Vlivný obsah"
 
-#: /media/js/content-ratings.js:130 /media/js/content-ratings.js:175 /media/js/content-ratings.js:189 /media/js/content-ratings.js:202 /media/js/content-ratings.js:222
+#: /media/js/content-ratings.js:128 /media/js/content-ratings.js:172 /media/js/content-ratings.js:185 /media/js/content-ratings.js:197 /media/js/content-ratings.js:216
 msgid "Violence"
 msgstr "Násilí"
 
-#: /media/js/content-ratings.js:132
+#: /media/js/content-ratings.js:130
 msgid "Extreme Violence"
 msgstr "Extrémní násilí"
 
-#: /media/js/content-ratings.js:135
+#: /media/js/content-ratings.js:133
 msgid "Alcohol Reference"
 msgstr "Tématika alkoholu"
 
-#: /media/js/content-ratings.js:136
+#: /media/js/content-ratings.js:134
 msgid "Alcohol and Tobacco Reference"
 msgstr "Tématika alkoholu a tabáku"
 
-#: /media/js/content-ratings.js:137
+#: /media/js/content-ratings.js:135
 msgid "Use of Alcohol and Tobacco"
 msgstr "Užívání alkoholu a tabáku"
 
-#: /media/js/content-ratings.js:138
+#: /media/js/content-ratings.js:136
 msgid "Use of Alcohol"
 msgstr "Konzumace alkoholu"
 
-#: /media/js/content-ratings.js:139
+#: /media/js/content-ratings.js:137
 msgid "Blood"
 msgstr "Krev"
 
-#: /media/js/content-ratings.js:140
+#: /media/js/content-ratings.js:138
 msgid "Blood and Gore"
 msgstr "Krev a sražená krev"
 
-#: /media/js/content-ratings.js:141
+#: /media/js/content-ratings.js:139
 msgid "Comic Mischief"
 msgstr "Comic Mischief"
 
-#: /media/js/content-ratings.js:142
+#: /media/js/content-ratings.js:140
 msgid "Crime"
 msgstr "Zločin"
 
-#: /media/js/content-ratings.js:143
+#: /media/js/content-ratings.js:141
 msgid "Criminal Instruction"
 msgstr "Návod ke zločinu"
 
-#: /media/js/content-ratings.js:144
+#: /media/js/content-ratings.js:142
 msgid "Crude Humor"
 msgstr "Surový humor"
 
-#: /media/js/content-ratings.js:145
+#: /media/js/content-ratings.js:143
 msgid "Drug and Alcohol Reference"
 msgstr "Odkaz na drogy a alkohol"
 
-#: /media/js/content-ratings.js:146
+#: /media/js/content-ratings.js:144
 msgid "Drug, Alcohol, and Tobacco Reference"
 msgstr "Odkaz na drogy, alkohol a tabák"
 
-#: /media/js/content-ratings.js:147
+#: /media/js/content-ratings.js:145
 msgid "Use of Drug, Alcohol, and Tobacco"
 msgstr "Konzumace drog, alkoholu a tabáku"
 
-#: /media/js/content-ratings.js:148
+#: /media/js/content-ratings.js:146
 msgid "Use of Drug and Alcohol"
 msgstr "Konzumace drog a alkoholu"
 
-#: /media/js/content-ratings.js:149
+#: /media/js/content-ratings.js:147
 msgid "Drug Reference"
 msgstr "Odkaz na drogy"
 
-#: /media/js/content-ratings.js:150
+#: /media/js/content-ratings.js:148
 msgid "Drug and Tobacco Reference"
 msgstr "Odkaz na drogy a tabák"
 
-#: /media/js/content-ratings.js:151
+#: /media/js/content-ratings.js:149
 msgid "Use of Drug and Tobacco"
 msgstr "Konzumace drog a tabáku"
 
-#: /media/js/content-ratings.js:152
+#: /media/js/content-ratings.js:150
 msgid "Use of Drugs"
 msgstr "Konzumace drog"
 
-#: /media/js/content-ratings.js:153
+#: /media/js/content-ratings.js:151
 msgid "Fantasy Violence"
 msgstr "Násilnické fantazie"
 
-#: /media/js/content-ratings.js:154
+#: /media/js/content-ratings.js:152
 msgid "Hate Speech"
 msgstr "Nenávistná mluva"
 
-#: /media/js/content-ratings.js:155
+#: /media/js/content-ratings.js:153
 msgid "Intense Violence"
 msgstr "Intenzivní násilí"
 
-#: /media/js/content-ratings.js:157 /media/js/content-ratings.js:183 /media/js/content-ratings.js:196
+#: /media/js/content-ratings.js:155 /media/js/content-ratings.js:180 /media/js/content-ratings.js:192
 msgid "Language"
 msgstr "Jazyk"
 
-#: /media/js/content-ratings.js:158
+#: /media/js/content-ratings.js:156
 msgid "Mild Blood"
 msgstr "Slabá krev"
 
-#: /media/js/content-ratings.js:159
+#: /media/js/content-ratings.js:157
 msgid "Mild Fantasy Violence"
 msgstr "Jemná násilnická fantazie"
 
-#: /media/js/content-ratings.js:160
+#: /media/js/content-ratings.js:158
 msgid "Mild Language"
 msgstr "Jemný jazyk"
 
-#: /media/js/content-ratings.js:161
+#: /media/js/content-ratings.js:159
 msgid "Mild Violence"
 msgstr "Násilí"
 
-#: /media/js/content-ratings.js:164
+#: /media/js/content-ratings.js:161
 msgid "Partial Nudity"
 msgstr "Částečná nahota"
 
-#: /media/js/content-ratings.js:165
+#: /media/js/content-ratings.js:162
 msgid "Real Gambling"
 msgstr "Skutečné hazardní hry"
 
-#: /media/js/content-ratings.js:166
+#: /media/js/content-ratings.js:163
 msgid "Scary Themes"
 msgstr "Strašidelné motivy"
 
-#: /media/js/content-ratings.js:167 /media/js/content-ratings.js:220
+#: /media/js/content-ratings.js:164 /media/js/content-ratings.js:214
 msgid "Sexual Content"
 msgstr "Sexuální obsah"
 
-#: /media/js/content-ratings.js:168
+#: /media/js/content-ratings.js:165
 msgid "Sexual Themes"
 msgstr "Sexuální témata"
 
-#: /media/js/content-ratings.js:169
+#: /media/js/content-ratings.js:166
 msgid "Simulated Gambling"
 msgstr "Simulované hazardní hry"
 
-#: /media/js/content-ratings.js:170
+#: /media/js/content-ratings.js:167
 msgid "Strong Language"
 msgstr "Ostrý jazyk"
 
-#: /media/js/content-ratings.js:171
+#: /media/js/content-ratings.js:168
 msgid "Strong Sexual Content"
 msgstr "Ostrý sexuální obsah"
 
-#: /media/js/content-ratings.js:172
+#: /media/js/content-ratings.js:169
 msgid "Suggestive Themes"
 msgstr "Sugestivní motivy"
 
-#: /media/js/content-ratings.js:173
+#: /media/js/content-ratings.js:170
 msgid "Tobacco Reference"
 msgstr "Odkaz na tabák"
 
-#: /media/js/content-ratings.js:174
+#: /media/js/content-ratings.js:171
 msgid "Use of Tobacco"
 msgstr "Konzumace tabáku"
 
-#: /media/js/content-ratings.js:176
+#: /media/js/content-ratings.js:173
 msgid "Violence References"
 msgstr "Odkazy na násilí"
 
-#: /media/js/content-ratings.js:179 /media/js/content-ratings.js:192 /media/js/content-ratings.js:211
+#: /media/js/content-ratings.js:176 /media/js/content-ratings.js:188 /media/js/content-ratings.js:206
 msgid "Discrimination"
 msgstr "Diskriminace"
 
-#: /media/js/content-ratings.js:181 /media/js/content-ratings.js:194
+#: /media/js/content-ratings.js:178 /media/js/content-ratings.js:190
 msgid "Gambling"
 msgstr "Hazardní hry"
 
-#: /media/js/content-ratings.js:185 /media/js/content-ratings.js:198
+#: /media/js/content-ratings.js:181 /media/js/content-ratings.js:193
 msgid "Online"
 msgstr "Online"
 
-#: /media/js/content-ratings.js:186 /media/js/content-ratings.js:199
+#: /media/js/content-ratings.js:182 /media/js/content-ratings.js:194
 msgid "Fear"
 msgstr "Strach"
 
-#: /media/js/content-ratings.js:204
+#: /media/js/content-ratings.js:199
 msgid "Social Interaction Functionality"
 msgstr "Funkce sociální interakce"
 
-#: /media/js/content-ratings.js:205
+#: /media/js/content-ratings.js:200
 msgid "Personal Data Sharing"
 msgstr "Sdílení osobních dat"
 
-#: /media/js/content-ratings.js:206
+#: /media/js/content-ratings.js:201
 msgid "In-app Purchase Option"
 msgstr "Možnost platby v aplikaci"
 
-#: /media/js/content-ratings.js:207
+#: /media/js/content-ratings.js:202
 msgid "Location Data Sharing"
 msgstr "Sdílení dat o poloze"
 
-#: /media/js/content-ratings.js:215
+#: /media/js/content-ratings.js:210
 msgid "Explicit Language"
 msgstr "Explicitní jazyk"
 
-#: /media/js/content-ratings.js:218
+#: /media/js/content-ratings.js:212
 msgid "Frightening Content"
 msgstr "Děsivý obsah"
 
-#: /media/js/content-ratings.js:226
+#: /media/js/content-ratings.js:220
 msgid "Digital Purchases"
 msgstr "Digitální koupě"
 
-#: /media/js/content-ratings.js:227
+#: /media/js/content-ratings.js:221
 msgid "Shares Info"
 msgstr "Sdílení informace"
 
-#: /media/js/content-ratings.js:228
+#: /media/js/content-ratings.js:222
 msgid "Shares Location"
 msgstr "Sdílení umístění"
 
-#: /media/js/content-ratings.js:229
+#: /media/js/content-ratings.js:223
 msgid "Users Interact"
 msgstr "Interakce uživatelů"
 
-#: /media/js/content-ratings.js:234
+#: /media/js/content-ratings.js:228
 msgid "For all ages"
 msgstr "Pro všechny věkové skupiny"
 
-#: /media/js/content-ratings.js:243
+#: /media/js/content-ratings.js:237
 msgid "Rating Pending"
 msgstr "Čekající na hodnocení"
 
-#: /media/js/content-ratings.js:244
+#: /media/js/content-ratings.js:238
 msgid "Rating Refused"
 msgstr "Hodnocení zamítnuto"
 
-#: /media/js/content-ratings.js:247
+#: /media/js/content-ratings.js:241
 msgid "Everyone"
 msgstr "Každý"
 
-#: /media/js/content-ratings.js:248
+#: /media/js/content-ratings.js:242
 msgid "Everyone 10+"
 msgstr "Každý 10+"
 
-#: /media/js/content-ratings.js:249
+#: /media/js/content-ratings.js:243
 msgid "Teen"
 msgstr "Dospívající"
 
-#: /media/js/content-ratings.js:250
+#: /media/js/content-ratings.js:244
 msgid "Mature 17+"
 msgstr "Dospělý 17+"
 
-#: /media/js/content-ratings.js:251
+#: /media/js/content-ratings.js:245
 msgid "Adults Only 18+"
 msgstr "Dospělý pouze 18+"
 
-#: /media/js/login.js:8
+#: /media/js/login.js:11
 msgid "You have been signed out"
 msgstr "Byl(a) jste odhlášen(a)"
 
-#: /media/js/login.js:12
+#: /media/js/login.js:15
 msgid "You have been signed in"
 msgstr "Byl(a) jste přihlášen(a)"
 
-#: /media/js/login.js:132
+#: /media/js/login.js:135
 msgid "Persona login failed. Maybe you don't have an account under that email address?"
 msgstr "Přihlášení pomocí Persona selhalo. Možná nemáte účet pod touto e-mailovou adresou?"
 
-#: /media/js/login.js:137
+#: /media/js/login.js:140
 msgid "Persona login failed. A server error was encountered."
 msgstr "Přihlášení pomocí Persona selhalo. Vyskytla se chyba na serveru."
 
-#: /media/js/login.js:205
+#: /media/js/login.js:208
 msgid "Persona cannot be reached. Try again later."
 msgstr "Personu se nepodařilo kontaktovat. Zkuste to prosím později."
 
@@ -1011,120 +622,111 @@ msgstr "Personu se nepodařilo kontaktovat. Zkuste to prosím později."
 msgid "No internet connection"
 msgstr "Žádné připojení k Internetu"
 
-#: /media/js/newsletter.js:65
-msgid "There was an error submitting your newsletter sign up request"
-msgstr "Při přihlašování odběru našeho zpravodaje nastala chyba"
-
-#. The report is an abuse report for reviews
-#: /media/js/ratings.js:40
-msgid "Sending report..."
-msgstr "Probíhá odesílání hlášení..."
-
-#: /media/js/ratings.js:45
-msgid "Review flagged"
-msgstr "Recenze byla označena"
-
-#: /media/js/ratings.js:49
-msgid "Report review operation failed"
-msgstr "Operace nahlášení recenze selhala"
-
-#: /media/js/ratings.js:60
-msgid "Review deleted"
-msgstr "Recenze byla smazána"
-
-#: /media/js/ratings.js:90
-msgid "There was a problem deleting the review"
-msgstr "Při mazání recenze se vyskytla chyba"
-
-#: /media/js/ratings.js:238
-msgid "Your review was posted"
-msgstr "Recenze byla přidána"
-
-#: /media/js/ratings.js:252
-msgid "Error while submitting review"
-msgstr "Chyba při odesílání recenze"
-
-#: /media/js/settings.js:104
+#: /media/js/settings.js:106
 msgid "Rest of World"
 msgstr "Zbytek světa"
 
-#: /media/js/settings.js:105
+#: /media/js/settings.js:107
 msgid "Argentina"
 msgstr "Argentina"
 
-#: /media/js/settings.js:106
+#: /media/js/settings.js:108
 msgid "Brazil"
 msgstr "Brazílie"
 
-#: /media/js/settings.js:107
+#: /media/js/settings.js:109
 msgid "Chile"
 msgstr "Chile"
 
-#: /media/js/settings.js:108
+#: /media/js/settings.js:110
 msgid "China"
 msgstr "Čína"
 
-#: /media/js/settings.js:109
+#: /media/js/settings.js:111
 msgid "Colombia"
 msgstr "Kolumbie"
 
-#: /media/js/settings.js:110
+#: /media/js/settings.js:112
+msgid "Costa Rica"
+msgstr ""
+
+#: /media/js/settings.js:113
+msgid "Ecuador"
+msgstr ""
+
+#: /media/js/settings.js:114
+msgid "El Salvador"
+msgstr ""
+
+#: /media/js/settings.js:115
 msgid "Germany"
 msgstr "Německo"
 
-#: /media/js/settings.js:111
+#: /media/js/settings.js:116
 msgid "Greece"
 msgstr "Řecko"
 
-#: /media/js/settings.js:112
+#: /media/js/settings.js:117
+msgid "Guatemala"
+msgstr ""
+
+#: /media/js/settings.js:118
 msgid "Hungary"
 msgstr "Maďarsko"
 
-#: /media/js/settings.js:113
+#: /media/js/settings.js:119
 msgid "Italy"
 msgstr "Itálie"
 
-#: /media/js/settings.js:114
+#: /media/js/settings.js:120
 msgid "Mexico"
 msgstr "Mexiko"
 
-#: /media/js/settings.js:115
+#: /media/js/settings.js:121
 msgid "Montenegro"
 msgstr "Černá Hora"
 
-#: /media/js/settings.js:116
+#: /media/js/settings.js:122
+msgid "Nicaragua"
+msgstr ""
+
+#: /media/js/settings.js:123
+msgid "Panama"
+msgstr ""
+
+#: /media/js/settings.js:124
 msgid "Peru"
 msgstr "Peru"
 
-#: /media/js/settings.js:117
+#: /media/js/settings.js:125
 msgid "Poland"
 msgstr "Polsko"
 
-#: /media/js/settings.js:118
+#: /media/js/settings.js:126
 msgid "Serbia"
 msgstr "Srbsko"
 
-#: /media/js/settings.js:119
+#: /media/js/settings.js:127
 msgid "Spain"
 msgstr "Španělsko"
 
-#: /media/js/settings.js:120
+#: /media/js/settings.js:128
 msgid "United Kingdom"
 msgstr "Velká Británie"
 
-#: /media/js/settings.js:121
+#: /media/js/settings.js:129
 msgid "United States"
 msgstr "Spojené státy americké"
 
-#: /media/js/settings.js:122
+#: /media/js/settings.js:130
 msgid "Uruguay"
 msgstr "Uruguay"
 
-#: /media/js/settings.js:123
+#: /media/js/settings.js:131
 msgid "Venezuela"
 msgstr "Venezuela"
 
-#: /media/js/settings.js:124
+#: /media/js/settings.js:132
 msgid "No region in search"
 msgstr "U vyhledávání nebyl zvolen region"
 
@@ -1136,34 +738,9 @@ msgstr[0] "Zbývá <b>{n}</b> znak."
 msgstr[1] "Zbývají <b>{n}</b> znaky."
 msgstr[2] "Zbývá <b>{n}</b> znaků."
 
-#. {n} is the number of stars
-#: /media/js/common/ratingwidget.js:34
-msgid "{n} star"
-msgid_plural "{n} stars"
-msgstr[0] "{n} hvězdička"
-msgstr[1] "{n} hvězdičky"
-msgstr[2] "{n} hvězdiček"
-
-#: /media/js/payments/payments.js:94
-msgid "Payment failed. Try again later."
-msgstr "Platba selhala. Zkuste to znovu později."
-
-#. This error is raised when we are unable to fetch a JWT from the payments API.
-#: /media/js/payments/payments.js:115
-msgid "Error while communicating with server. Try again later."
-msgstr "Chyba při komunikaci se serverem. Zkuste to znovu později."
-
-#: /media/js/payments/payments.js:122
-msgid "Your device does not support purchases."
-msgstr "Vaše zařízení nepodporuje platby."
-
 #: /media/js/views/app.js:69
 msgid "App Details"
 msgstr "Detaily o aplikaci"
-
-#: /media/js/views/collection.js:43
-msgid "Collection Details"
-msgstr "Detaily sbírky"
 
 #: /media/js/views/feedback.js:23
 msgid "Feedback submitted. Thanks!"
@@ -1173,26 +750,18 @@ msgstr "Reakce byla odeslána. Děkujeme!"
 msgid "There was a problem submitting your feedback. Try again soon."
 msgstr "Při odeslání vaší reakce nastala chyba. Zkuste to brzy znovu."
 
-#: /media/js/views/nominate.js:114
-msgid "Nominate apps"
-msgstr "Nominované aplikace"
-
 #. Page not found (404)
 #: /media/js/views/not_found.js:9
 msgid "Not Found"
 msgstr "Nebylo nalezeno"
 
-#: /media/js/views/search.js:216
+#: /media/js/views/search.js:28
+msgid "Sorry, you must be connected to the Internet to search Marketplace."
+msgstr ""
+
+#: /media/js/views/search.js:223
 msgid "Search Results"
 msgstr "Výsledky vyhledávání"
-
-#: /media/js/views/settings.js:34
-msgid "Settings saved"
-msgstr "Nastavení bylo uloženo"
-
-#: /media/js/views/settings.js:36
-msgid "Settings could not be saved"
-msgstr "Nastavení nemohlo být uloženo"
 
 #: /media/js/views/app/abuse.js:18
 msgid "Abuse reported"
@@ -1201,19 +770,3 @@ msgstr "Zneužití nahlášeno"
 #: /media/js/views/app/abuse.js:22
 msgid "Error while submitting report"
 msgstr "Při odesílání reportu nastala chyba"
-
-#: /media/js/views/app/receipt.js:22
-msgid "Please sign in to view the receipt"
-msgstr "Pro zobrazení stvrzenky se prosím přihlaste"
-
-#: /media/js/views/app/receipt.js:40
-msgid "Receipt"
-msgstr "Stvrzenka"
-
-#: /media/js/views/app/ratings/edit.js:22
-msgid "Review updated successfully"
-msgstr "Recenze byla úspěšně upravena."
-
-#: /media/js/views/app/ratings/edit.js:37
-msgid "There was a problem updating your review"
-msgstr "Při úpravě vaší recenze se vyskytla chyba"
