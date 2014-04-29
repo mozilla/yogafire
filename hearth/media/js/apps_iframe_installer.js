@@ -43,6 +43,10 @@ define('apps_iframe_installer',
                 if (e.data.error) {
                     // Fail.
                     console.log('iframe install failed: ' + e.data.error.error);
+                    if (e.data.error.error == 'DENIED') {
+                        def.reject();
+                        return;
+                    }
                     def.reject(gettext('App install error: {error}', e.data.error));
                 } else {
                     // Success.

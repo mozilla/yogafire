@@ -1,4 +1,6 @@
-define('utils_local', [], function() {
+define('utils_local', ['log'], function(log) {
+    var console = log('utils_local');
+
     function checkOnline() {
         // `navigator.onLine` is always accurate in Chrome,
         // but of course it's *never* accurate in Firefox
@@ -11,6 +13,7 @@ define('utils_local', [], function() {
             def.resolve();
         };
         i.onerror = function() {
+            console.log('Offline detected');
             def.reject();
         };
 
