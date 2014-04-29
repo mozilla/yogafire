@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: marketplace-fireplace\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-28T23:58:29.645Z\n"
+"POT-Creation-Date: 2014-04-29T15:34:49.744Z\n"
 "PO-Revision-Date: 2014-04-09 16:40+0000\n"
 "Last-Translator: Marco Aurélio <ouesten@me.com>\n"
 "Language-Team: Português (Brasil) <dev-l10n-pt-br@lists.mozilla.org>\n"
@@ -62,18 +62,6 @@ msgstr "A versão do Marketplace que você está usando não está mais ativa. �
 msgid "Update Now"
 msgstr "Atualizar"
 
-#: /templates/header.html:1
-msgid "Back"
-msgstr "Voltar"
-
-#: /templates/header.html:5 /templates/header.html:8
-msgid "Search"
-msgstr "Procurar"
-
-#: /templates/header.html:10
-msgid "Clear"
-msgstr "Limpar"
-
 #: /templates/featured.html:7
 msgid "Featured"
 msgstr "Destaques"
@@ -86,6 +74,18 @@ msgstr "Expandir"
 msgid "No featured apps found"
 msgstr "Não encontramos nenhum aplicativo em destaque."
 
+#: /templates/header.html:1
+msgid "Back"
+msgstr "Voltar"
+
+#: /templates/header.html:5 /templates/header.html:8
+msgid "Search"
+msgstr "Procurar"
+
+#: /templates/header.html:10
+msgid "Clear"
+msgstr "Limpar"
+
 #: /templates/incompatible.html:1
 msgid "You must use Firefox to install Firefox apps."
 msgstr "Você deve usar o Firefox para instalar aplicativos do Firefox."
@@ -94,7 +94,7 @@ msgstr "Você deve usar o Firefox para instalar aplicativos do Firefox."
 msgid "Download."
 msgstr "Baixar."
 
-#: /templates/privacy.html:2 /templates/category_yogafire/main.html:47 /templates/detail/main_yogafire.html:80 /templates/detail/privacy.html:3 /media/js/views/privacy.js:10
+#: /templates/privacy.html:2 /templates/category_yogafire/main.html:47 /templates/detail/main_yogafire.html:75 /templates/detail/privacy.html:3 /media/js/views/privacy.js:10
 #: /media/js/views/app/privacy.js:10
 msgid "Privacy Policy"
 msgstr "Política de privacidade"
@@ -179,7 +179,7 @@ msgstr "A categoria que você tentou abrir não existe."
 msgid "An internal server error occurred. Please try again later."
 msgstr "Hum... Nosso servidor está demorando para responder... Por favor, tente novamente em breve."
 
-#: /templates/detail/abuse.html:5 /templates/detail/main_yogafire.html:91 /media/js/views/app/abuse.js:34
+#: /templates/detail/abuse.html:5 /templates/detail/main_yogafire.html:86 /media/js/views/app/abuse.js:34
 msgid "Report Abuse"
 msgstr "Denunciar abuso"
 
@@ -195,31 +195,27 @@ msgstr "Classificação de conteúdo"
 msgid "Content Rating Details"
 msgstr "Detalhes da Classificação de Conteúdo"
 
-#: /templates/detail/main_yogafire.html:41
-msgid "Installed!"
-msgstr "Instalado!"
-
 #: /templates/detail/main_yogafire.html:13 /templates/detail/main_yogafire.html:14 /media/js/views/app.js:68
 msgid "Loading..."
 msgstr "Carregando..."
 
-#: /templates/detail/main_yogafire.html:50
+#: /templates/detail/main_yogafire.html:42
 msgid "Description"
 msgstr "Descrição"
 
-#: /templates/detail/main_yogafire.html:63
+#: /templates/detail/main_yogafire.html:58
 msgid "Support Email"
 msgstr "E-mail de suporte"
 
-#: /templates/detail/main_yogafire.html:69
+#: /templates/detail/main_yogafire.html:64
 msgid "Support Site"
 msgstr "Página de suporte"
 
-#: /templates/detail/main_yogafire.html:74
+#: /templates/detail/main_yogafire.html:69
 msgid "Homepage"
 msgstr "Página inicial"
 
-#: /templates/detail/main_yogafire.html:86
+#: /templates/detail/main_yogafire.html:81
 msgid "Statistics"
 msgstr "Estatíticas"
 
@@ -273,7 +269,7 @@ msgstr "Nenhum resultado encontrado, tente novamente mais tarde"
 msgid "Send"
 msgstr "Enviar"
 
-#: /media/js/apps_iframe_installer.js:46 /media/js/apps.js:90
+#: /media/js/apps.js:90 /media/js/apps_iframe_installer.js:46
 msgid "App install error: {error}"
 msgstr "Erro ao instalar o aplicativo: {error}"
 

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-28T23:58:29.645Z\n"
+"POT-Creation-Date: 2014-04-29T15:34:49.744Z\n"
 "PO-Revision-Date: 2014-04-09 12:30-0500\n"
 "Last-Translator: Kohei Yoshino <kohei.yoshino@gmail.com>\n"
 "Language-Team: Japanese\n"
@@ -58,18 +58,6 @@ msgstr "お使いの Firefox Marketplace のバージョンは古く、対応が
 msgid "Update Now"
 msgstr "今すぐ更新"
 
-#: /templates/header.html:1
-msgid "Back"
-msgstr "戻る"
-
-#: /templates/header.html:5 /templates/header.html:8
-msgid "Search"
-msgstr "検索"
-
-#: /templates/header.html:10
-msgid "Clear"
-msgstr "クリア"
-
 #: /templates/featured.html:7
 msgid "Featured"
 msgstr "おすすめ"
@@ -82,6 +70,18 @@ msgstr "折りたたむ / 開く"
 msgid "No featured apps found"
 msgstr "おすすめのアプリはありません"
 
+#: /templates/header.html:1
+msgid "Back"
+msgstr "戻る"
+
+#: /templates/header.html:5 /templates/header.html:8
+msgid "Search"
+msgstr "検索"
+
+#: /templates/header.html:10
+msgid "Clear"
+msgstr "クリア"
+
 #: /templates/incompatible.html:1
 msgid "You must use Firefox to install Firefox apps."
 msgstr "Firefox アプリをインストールするには Firefox を使ってください。"
@@ -90,7 +90,7 @@ msgstr "Firefox アプリをインストールするには Firefox を使って�
 msgid "Download."
 msgstr "ダウンロード"
 
-#: /templates/privacy.html:2 /templates/category_yogafire/main.html:47 /templates/detail/main_yogafire.html:80 /templates/detail/privacy.html:3 /media/js/views/privacy.js:10
+#: /templates/privacy.html:2 /templates/category_yogafire/main.html:47 /templates/detail/main_yogafire.html:75 /templates/detail/privacy.html:3 /media/js/views/privacy.js:10
 #: /media/js/views/app/privacy.js:10
 msgid "Privacy Policy"
 msgstr "プライバシーポリシー"
@@ -175,7 +175,7 @@ msgstr "リクエストされたカテゴリは存在しません。"
 msgid "An internal server error occurred. Please try again later."
 msgstr "内部サーバエラーが発生しました。また後で試してください。"
 
-#: /templates/detail/abuse.html:5 /templates/detail/main_yogafire.html:91 /media/js/views/app/abuse.js:34
+#: /templates/detail/abuse.html:5 /templates/detail/main_yogafire.html:86 /media/js/views/app/abuse.js:34
 msgid "Report Abuse"
 msgstr "不正報告"
 
@@ -191,31 +191,27 @@ msgstr "コンテンツレーティング"
 msgid "Content Rating Details"
 msgstr "コンテンツレーティングの詳細"
 
-#: /templates/detail/main_yogafire.html:41
-msgid "Installed!"
-msgstr "インストールが完了しました。"
-
 #: /templates/detail/main_yogafire.html:13 /templates/detail/main_yogafire.html:14 /media/js/views/app.js:68
 msgid "Loading..."
 msgstr "読み込み中..."
 
-#: /templates/detail/main_yogafire.html:50
+#: /templates/detail/main_yogafire.html:42
 msgid "Description"
 msgstr "説明"
 
-#: /templates/detail/main_yogafire.html:63
+#: /templates/detail/main_yogafire.html:58
 msgid "Support Email"
 msgstr "メールでの問い合わせ"
 
-#: /templates/detail/main_yogafire.html:69
+#: /templates/detail/main_yogafire.html:64
 msgid "Support Site"
 msgstr "サポートサイト"
 
-#: /templates/detail/main_yogafire.html:74
+#: /templates/detail/main_yogafire.html:69
 msgid "Homepage"
 msgstr "ホームページ"
 
-#: /templates/detail/main_yogafire.html:86
+#: /templates/detail/main_yogafire.html:81
 msgid "Statistics"
 msgstr "統計"
 
@@ -269,7 +265,7 @@ msgstr "該当するアプリはありません。また後日見に来てくだ
 msgid "Send"
 msgstr "送信"
 
-#: /media/js/apps_iframe_installer.js:46 /media/js/apps.js:90
+#: /media/js/apps.js:90 /media/js/apps_iframe_installer.js:46
 msgid "App install error: {error}"
 msgstr "アプリのインストールエラー: {error}"
 

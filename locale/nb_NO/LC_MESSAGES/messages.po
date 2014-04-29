@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-28T23:58:29.645Z\n"
+"POT-Creation-Date: 2014-04-29T15:34:49.744Z\n"
 "PO-Revision-Date: 2014-02-27 09:05+0000\n"
 "Last-Translator: Håvar <havar@firefox.no>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -59,18 +59,6 @@ msgstr "Denne versjonen av Firefox Marketplace støttes ikke lenger. Den må opp
 msgid "Update Now"
 msgstr "Oppdater nå"
 
-#: /templates/header.html:1
-msgid "Back"
-msgstr "Tilbake"
-
-#: /templates/header.html:5 /templates/header.html:8
-msgid "Search"
-msgstr "Søk"
-
-#: /templates/header.html:10
-msgid "Clear"
-msgstr "Nullstill"
-
 #: /templates/featured.html:7
 msgid "Featured"
 msgstr "Fremhevet"
@@ -83,6 +71,18 @@ msgstr "Utvid"
 msgid "No featured apps found"
 msgstr "Ingen fremhevede apper funnet"
 
+#: /templates/header.html:1
+msgid "Back"
+msgstr "Tilbake"
+
+#: /templates/header.html:5 /templates/header.html:8
+msgid "Search"
+msgstr "Søk"
+
+#: /templates/header.html:10
+msgid "Clear"
+msgstr "Nullstill"
+
 #: /templates/incompatible.html:1
 msgid "You must use Firefox to install Firefox apps."
 msgstr "Du må bruke Firefox for å installere Firefox-apper."
@@ -91,7 +91,7 @@ msgstr "Du må bruke Firefox for å installere Firefox-apper."
 msgid "Download."
 msgstr "Last ned."
 
-#: /templates/privacy.html:2 /templates/category_yogafire/main.html:47 /templates/detail/main_yogafire.html:80 /templates/detail/privacy.html:3 /media/js/views/privacy.js:10
+#: /templates/privacy.html:2 /templates/category_yogafire/main.html:47 /templates/detail/main_yogafire.html:75 /templates/detail/privacy.html:3 /media/js/views/privacy.js:10
 #: /media/js/views/app/privacy.js:10
 msgid "Privacy Policy"
 msgstr "Erklæring om personvern"
@@ -176,7 +176,7 @@ msgstr "Kategorien finnes ikke."
 msgid "An internal server error occurred. Please try again later."
 msgstr "En intern serverfeil oppstod. Prøv igjen senere."
 
-#: /templates/detail/abuse.html:5 /templates/detail/main_yogafire.html:91 /media/js/views/app/abuse.js:34
+#: /templates/detail/abuse.html:5 /templates/detail/main_yogafire.html:86 /media/js/views/app/abuse.js:34
 msgid "Report Abuse"
 msgstr "Rapporter misbruk"
 
@@ -192,32 +192,28 @@ msgstr "Innholdsgradering"
 msgid "Content Rating Details"
 msgstr "Innholdsgraderingsdetaljer"
 
-#: /templates/detail/main_yogafire.html:41
-msgid "Installed!"
-msgstr "Installert!"
-
 #: /templates/detail/main_yogafire.html:13 /templates/detail/main_yogafire.html:14 /media/js/views/app.js:68
 msgid "Loading..."
 msgstr "Laster …"
 
-#: /templates/detail/main_yogafire.html:50
+#: /templates/detail/main_yogafire.html:42
 msgid "Description"
 msgstr "Beskrivelse"
 
-#: /templates/detail/main_yogafire.html:63
+#: /templates/detail/main_yogafire.html:58
 msgid "Support Email"
 msgstr "E-poststøtte"
 
-#: /templates/detail/main_yogafire.html:69
+#: /templates/detail/main_yogafire.html:64
 msgid "Support Site"
 msgstr "Kundestøtte"
 
 # Apple bruker Utviklernettsted i AppStore, stjeler denne hit.
-#: /templates/detail/main_yogafire.html:74
+#: /templates/detail/main_yogafire.html:69
 msgid "Homepage"
 msgstr "Utviklernettsted"
 
-#: /templates/detail/main_yogafire.html:86
+#: /templates/detail/main_yogafire.html:81
 msgid "Statistics"
 msgstr "Statistikk"
 
@@ -272,7 +268,7 @@ msgstr "Ingen resultater funnet, prøv igjen senere"
 msgid "Send"
 msgstr "Send"
 
-#: /media/js/apps_iframe_installer.js:46 /media/js/apps.js:90
+#: /media/js/apps.js:90 /media/js/apps_iframe_installer.js:46
 msgid "App install error: {error}"
 msgstr "Appinstalleringsfeil: {error}"
 

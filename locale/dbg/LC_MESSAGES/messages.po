@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-28T23:58:29.645Z\n"
+"POT-Creation-Date: 2014-04-29T15:34:49.744Z\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -58,18 +58,6 @@ msgstr "Ŧħḗ ṽḗřşīǿƞ ǿƒ ŧħḗ Ƒīřḗƒǿẋ Ḿȧřķḗŧƥ�
 msgid "Update Now"
 msgstr "Ŭƥḓȧŧḗ Ƞǿẇ"
 
-#: /templates/header.html:1
-msgid "Back"
-msgstr "Ɓȧƈķ"
-
-#: /templates/header.html:5 /templates/header.html:8
-msgid "Search"
-msgstr "Şḗȧřƈħ"
-
-#: /templates/header.html:10
-msgid "Clear"
-msgstr "Ƈŀḗȧř"
-
 #: /templates/featured.html:7
 msgid "Featured"
 msgstr "Ƒḗȧŧŭřḗḓ"
@@ -82,6 +70,18 @@ msgstr "Ḗẋƥȧƞḓ"
 msgid "No featured apps found"
 msgstr "Ƞǿ ƒḗȧŧŭřḗḓ ȧƥƥş ƒǿŭƞḓ"
 
+#: /templates/header.html:1
+msgid "Back"
+msgstr "Ɓȧƈķ"
+
+#: /templates/header.html:5 /templates/header.html:8
+msgid "Search"
+msgstr "Şḗȧřƈħ"
+
+#: /templates/header.html:10
+msgid "Clear"
+msgstr "Ƈŀḗȧř"
+
 #: /templates/incompatible.html:1
 msgid "You must use Firefox to install Firefox apps."
 msgstr "Ẏǿŭ ḿŭşŧ ŭşḗ Ƒīřḗƒǿẋ ŧǿ īƞşŧȧŀŀ Ƒīřḗƒǿẋ ȧƥƥş."
@@ -90,7 +90,7 @@ msgstr "Ẏǿŭ ḿŭşŧ ŭşḗ Ƒīřḗƒǿẋ ŧǿ īƞşŧȧŀŀ Ƒīřḗ
 msgid "Download."
 msgstr "Ḓǿẇƞŀǿȧḓ."
 
-#: /templates/privacy.html:2 /templates/category_yogafire/main.html:47 /templates/detail/main_yogafire.html:80 /templates/detail/privacy.html:3 /media/js/views/privacy.js:10
+#: /templates/privacy.html:2 /templates/category_yogafire/main.html:47 /templates/detail/main_yogafire.html:75 /templates/detail/privacy.html:3 /media/js/views/privacy.js:10
 #: /media/js/views/app/privacy.js:10
 msgid "Privacy Policy"
 msgstr "Ƥřīṽȧƈẏ Ƥǿŀīƈẏ"
@@ -175,7 +175,7 @@ msgstr "Ŧħḗ ƈȧŧḗɠǿřẏ ẏǿŭ řḗɋŭḗşŧḗḓ ḓǿḗş ƞ�
 msgid "An internal server error occurred. Please try again later."
 msgstr "Ȧƞ īƞŧḗřƞȧŀ şḗřṽḗř ḗřřǿř ǿƈƈŭřřḗḓ. Ƥŀḗȧşḗ ŧřẏ ȧɠȧīƞ ŀȧŧḗř."
 
-#: /templates/detail/abuse.html:5 /templates/detail/main_yogafire.html:91 /media/js/views/app/abuse.js:34
+#: /templates/detail/abuse.html:5 /templates/detail/main_yogafire.html:86 /media/js/views/app/abuse.js:34
 msgid "Report Abuse"
 msgstr "Řḗƥǿřŧ Ȧƀŭşḗ"
 
@@ -191,31 +191,27 @@ msgstr "Ƈǿƞŧḗƞŧ Řȧŧīƞɠ"
 msgid "Content Rating Details"
 msgstr "Ƈǿƞŧḗƞŧ Řȧŧīƞɠ Ḓḗŧȧīŀş"
 
-#: /templates/detail/main_yogafire.html:41
-msgid "Installed!"
-msgstr "Īƞşŧȧŀŀḗḓ!"
-
 #: /templates/detail/main_yogafire.html:13 /templates/detail/main_yogafire.html:14 /media/js/views/app.js:68
 msgid "Loading..."
 msgstr "Ŀǿȧḓīƞɠ..."
 
-#: /templates/detail/main_yogafire.html:50
+#: /templates/detail/main_yogafire.html:42
 msgid "Description"
 msgstr "Ḓḗşƈřīƥŧīǿƞ"
 
-#: /templates/detail/main_yogafire.html:63
+#: /templates/detail/main_yogafire.html:58
 msgid "Support Email"
 msgstr "Şŭƥƥǿřŧ Ḗḿȧīŀ"
 
-#: /templates/detail/main_yogafire.html:69
+#: /templates/detail/main_yogafire.html:64
 msgid "Support Site"
 msgstr "Şŭƥƥǿřŧ Şīŧḗ"
 
-#: /templates/detail/main_yogafire.html:74
+#: /templates/detail/main_yogafire.html:69
 msgid "Homepage"
 msgstr "Ħǿḿḗƥȧɠḗ"
 
-#: /templates/detail/main_yogafire.html:86
+#: /templates/detail/main_yogafire.html:81
 msgid "Statistics"
 msgstr "Şŧȧŧīşŧīƈş"
 
@@ -269,7 +265,7 @@ msgstr "Ƞǿ řḗşŭŀŧş ƒǿŭƞḓ, ŧřẏ ȧɠȧīƞ ŀȧŧḗř"
 msgid "Send"
 msgstr "Şḗƞḓ"
 
-#: /media/js/apps_iframe_installer.js:46 /media/js/apps.js:90
+#: /media/js/apps.js:90 /media/js/apps_iframe_installer.js:46
 msgid "App install error: {error}"
 msgstr "Ȧƥƥ īƞşŧȧŀŀ ḗřřǿř: {ḗřřǿř}"
 
