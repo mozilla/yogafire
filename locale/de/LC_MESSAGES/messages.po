@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: AMO Fireplace\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-04-29T15:34:49.744Z\n"
-"PO-Revision-Date: 2014-04-09 16:40+0000\n"
+"PO-Revision-Date: 2014-04-29 18:29+0000\n"
 "Last-Translator: Michael <michael.koehler1@gmx.de>\n"
 "Language-Team: German (de) <coce@nurfuerspam.de>\n"
 "Language: de\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Pootle 2.5.0\n"
-"X-POOTLE-MTIME: 1397061605.0\n"
+"X-POOTLE-MTIME: 1398796155.0\n"
 
 #: /templates/cat_dropdown.html:2
 msgid "All Categories"
@@ -20,7 +20,7 @@ msgstr "Alle Kategorien"
 
 #: /templates/cat_dropdown.html:17
 msgid "Home"
-msgstr ""
+msgstr "Startseite"
 
 #: /templates/cat_dropdown.html:18
 msgid "Games"
@@ -28,7 +28,7 @@ msgstr "Spiele"
 
 #: /templates/cat_dropdown.html:19
 msgid "Tools"
-msgstr ""
+msgstr "Werkzeuge"
 
 #: /templates/cat_dropdown.html:20
 msgid "Lifestyle"
@@ -102,7 +102,7 @@ msgstr "Nutzungsbedingungen"
 
 #: /templates/_includes/truncated.html:4
 msgid "...more"
-msgstr ""
+msgstr "…mehr"
 
 #. This app is unavailable for purchase.
 #: /templates/_macros/market_button.html:5
@@ -297,7 +297,7 @@ msgstr "Installation fehlgeschlagen. Bitte versuchen Sie es später erneut."
 
 #: /media/js/buttons.js:249
 msgid "Open"
-msgstr ""
+msgstr "Offen"
 
 #. For ages {0} and higher. (de) `ab {0} Jahren`.
 #: /media/js/content-ratings.js:97
@@ -642,15 +642,15 @@ msgstr "Kolumbien"
 
 #: /media/js/settings.js:112
 msgid "Costa Rica"
-msgstr ""
+msgstr "Costa Rica"
 
 #: /media/js/settings.js:113
 msgid "Ecuador"
-msgstr ""
+msgstr "Ecuador"
 
 #: /media/js/settings.js:114
 msgid "El Salvador"
-msgstr ""
+msgstr "El Salvador"
 
 #: /media/js/settings.js:115
 msgid "Germany"
@@ -662,7 +662,7 @@ msgstr "Griechenland"
 
 #: /media/js/settings.js:117
 msgid "Guatemala"
-msgstr ""
+msgstr "Guatemala"
 
 #: /media/js/settings.js:118
 msgid "Hungary"
@@ -682,11 +682,11 @@ msgstr "Montenegro"
 
 #: /media/js/settings.js:122
 msgid "Nicaragua"
-msgstr ""
+msgstr "Nicaragua"
 
 #: /media/js/settings.js:123
 msgid "Panama"
-msgstr ""
+msgstr "Panama"
 
 #: /media/js/settings.js:124
 msgid "Peru"
@@ -751,6 +751,8 @@ msgstr "Nicht gefunden"
 #: /media/js/views/search.js:28
 msgid "Sorry, you must be connected to the Internet to search Marketplace."
 msgstr ""
+"Es tut uns Leid, Sie benötigen eine Internetverbindung, um im Marketplace zu "
+"suchen."
 
 #: /media/js/views/search.js:223
 msgid "Search Results"
