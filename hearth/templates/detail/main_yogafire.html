@@ -37,15 +37,17 @@
   </section>
 </div>
 
-<div class="main blurbs prose infobox detail">
-  {% defer (url=endpoint, as='app', key=slug) %}
+{% defer (url=endpoint, as='app', key=slug) %}
+  <div class="main blurbs prose infobox detail">
     <h3>{{ _('Description') }}</h3>
     {{ this.description|translate(this)|summarise('market-tile-description', true)|safe }}
-  {% placeholder %}
+  </div>
+{% placeholder %}
+  <div class="main blurbs prose infobox detail">
     <p class="spinner alt"></p>
-  {% except %}
-  {% end %}
-</div>
+  </div>
+{% except %}
+{% end %}
 
 {% defer (url=endpoint, as='app', key=slug) %}
 <section class="main infobox support c">
