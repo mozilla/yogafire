@@ -12,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Pootle 2.5.0\n"
-"X-POOTLE-MTIME: 1398796155.0\n"
+"X-POOTLE-MTIME: 1398796194.0\n"
 
 #: /templates/cat_dropdown.html:2
 msgid "All Categories"
@@ -297,7 +297,7 @@ msgstr "Installation fehlgeschlagen. Bitte versuchen Sie es später erneut."
 
 #: /media/js/buttons.js:249
 msgid "Open"
-msgstr "Offen"
+msgstr "Öffnen"
 
 #. For ages {0} and higher. (de) `ab {0} Jahren`.
 #: /media/js/content-ratings.js:97
