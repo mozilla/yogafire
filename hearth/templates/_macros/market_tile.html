@@ -63,15 +63,11 @@
       <div class="rating vital{{ ' unrated' if not app.ratings.count }}" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
         {{ stars(app.ratings.average) }}
         {% if app.ratings.count %}
-          <span class="cnt short">
-            {{ _('({n})', n='<span itemprop="reviewCount">' + app.ratings.count + '</span>') }}
-          </span>
           <span class="cnt long">
             {{ _plural('{n} Review', '{n} Reviews', n=app.ratings.count) }}
           </span>
         {% else %}
           {# L10n: "(0)" means "0 reviews." #}
-          <span class="cnt short">{{ _('(0)') }}</span>
           <span class="cnt long">{{ _('Not yet rated') }}</span>
         {% endif %}
       </div>
