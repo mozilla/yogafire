@@ -39,8 +39,10 @@
 
 {% defer (url=endpoint, as='app', key=slug) %}
   <div class="main blurbs prose infobox detail">
-    <h3>{{ _('Description') }}</h3>
-    {{ this.description|translate(this)|summarise('market-tile-description', true)|safe }}
+    <div>
+      <h3>{{ _('Description') }}</h3>
+      {{ this.description|translate(this)|summarise('market-tile-description', true)|safe }}
+    </div>
   </div>
 {% placeholder %}
   <div class="main blurbs prose infobox detail">
