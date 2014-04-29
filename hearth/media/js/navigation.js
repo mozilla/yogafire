@@ -29,10 +29,12 @@ define('navigation',
     }
 
     function canNavigate() {
+        /* (yogafire is offline-capabile)
         if (!navigator.onLine && !capabilities.phantom) {
             notification.notification({message: gettext('No internet connection')});
             return false;
         }
+        */
         return true;
     }
 
