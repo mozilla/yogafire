@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-04-29T15:34:49.744Z\n"
-"PO-Revision-Date: 2014-04-12 00:06+0000\n"
+"PO-Revision-Date: 2014-04-29 22:09+0000\n"
 "Last-Translator: Gábor <kelemeng@ubuntu.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n !=1);\n"
 "X-Generator: Pootle 2.5.0\n"
-"X-POOTLE-MTIME: 1397261208.0\n"
+"X-POOTLE-MTIME: 1398809353.0\n"
 
 #: /templates/cat_dropdown.html:2
 msgid "All Categories"
@@ -21,7 +21,7 @@ msgstr "Összes kategória"
 
 #: /templates/cat_dropdown.html:17
 msgid "Home"
-msgstr ""
+msgstr "Kezdőlap"
 
 #: /templates/cat_dropdown.html:18
 msgid "Games"
@@ -29,7 +29,7 @@ msgstr "Játékok"
 
 #: /templates/cat_dropdown.html:19
 msgid "Tools"
-msgstr ""
+msgstr "Eszközök"
 
 #: /templates/cat_dropdown.html:20
 msgid "Lifestyle"
@@ -103,7 +103,7 @@ msgstr "Felhasználási feltételek"
 
 #: /templates/_includes/truncated.html:4
 msgid "...more"
-msgstr ""
+msgstr "…több"
 
 #. This app is unavailable for purchase.
 #: /templates/_macros/market_button.html:5
@@ -298,7 +298,7 @@ msgstr "A telepítés sikertelen. Próbálja meg később."
 
 #: /media/js/buttons.js:249
 msgid "Open"
-msgstr ""
+msgstr "Megnyitás"
 
 #. For ages {0} and higher. (de) `ab {0} Jahren`.
 #: /media/js/content-ratings.js:97
@@ -643,15 +643,15 @@ msgstr "Kolumbia"
 
 #: /media/js/settings.js:112
 msgid "Costa Rica"
-msgstr ""
+msgstr "Costa Rica"
 
 #: /media/js/settings.js:113
 msgid "Ecuador"
-msgstr ""
+msgstr "Ecuador"
 
 #: /media/js/settings.js:114
 msgid "El Salvador"
-msgstr ""
+msgstr "Salvador"
 
 #: /media/js/settings.js:115
 msgid "Germany"
@@ -663,7 +663,7 @@ msgstr "Görögország"
 
 #: /media/js/settings.js:117
 msgid "Guatemala"
-msgstr ""
+msgstr "Guatemala"
 
 #: /media/js/settings.js:118
 msgid "Hungary"
@@ -683,11 +683,11 @@ msgstr "Montenegró"
 
 #: /media/js/settings.js:122
 msgid "Nicaragua"
-msgstr ""
+msgstr "Nicaragua"
 
 #: /media/js/settings.js:123
 msgid "Panama"
-msgstr ""
+msgstr "Panama"
 
 #: /media/js/settings.js:124
 msgid "Peru"
@@ -752,6 +752,7 @@ msgstr "Nem található"
 #: /media/js/views/search.js:28
 msgid "Sorry, you must be connected to the Internet to search Marketplace."
 msgstr ""
+"Elnézést, csatlakoznia kell az internetre a Marketplace-en való kereséshez."
 
 #: /media/js/views/search.js:223
 msgid "Search Results"
