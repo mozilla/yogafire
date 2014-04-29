@@ -218,13 +218,22 @@ function(_) {
         false
     );
 
-    require('consumer_info').promise.done(function() {
+    function startPage() {
         console.log('Triggering initial navigation');
         if (!z.spaceheater) {
             z.page.trigger('navigate', [window.location.pathname + window.location.search]);
         } else {
             z.page.trigger('loaded');
         }
+    }
+    require('utils_local').checkOnline().done(function() {
+        console.log('Online, initializing page.');
+        require('consumer_info').promise.done(function() {
+            startPage();
+        });
+    }).fail(function() {
+        console.log('Offline, initializing page.');
+        startPage();
     });
 
     // Set the tracking consumer page variable.
