@@ -35,11 +35,12 @@ define('views/homepage',
             });
         }
 
-        utils_local.checkOnline().done(function() {
-            // Online.
+        utils_local.checkOnline(function() {
+            //Online.
             build(urls.api.unsigned.url('collection', ['tarako-featured'], params), 'apps');
-        }).fail(function() {
+        }, function() {
             // Offline.
+            console.log('showing offline homepage');
             build(settings.offline_homepage, 'apps');
         });
     };

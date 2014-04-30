@@ -8,6 +8,7 @@ define('views/category',
 
     return function(builder, args, params) {
         var category = args[0];
+        console.log('category found:', category);
         params = params || {};
 
         var model = cat_models.lookup(category);
@@ -34,10 +35,10 @@ define('views/category',
             });
         }
 
-        utils_local.checkOnline().done(function() {
+        utils_local.checkOnline(function() {
             // Online.
             build(urls.api.unsigned.url('category', [category], params), 'objects');
-        }).fail(function() {
+        }, function() {
             // Offline.
             build(settings['offline_' + category] , 'apps');
         });
