@@ -16,15 +16,10 @@ define('utils_local', ['log'], function(log) {
             console.log('Offline detected');
             def.reject();
         };
-        setTimeout(function() {
-            console.log('Offline detected');
-            def.reject();
-        }, 3000);
-
         return def.promise();
     }
 
     return {
         checkOnline: checkOnline
-    }
+    };
 });
