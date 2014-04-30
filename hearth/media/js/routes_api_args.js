@@ -4,18 +4,13 @@ define('routes_api_args',
 
     var _dev = null;
     var _device = null;
-    var _limit = 25;
+    var _limit = 10;
 
     if (caps.firefoxOS) {
         _dev = _device = 'firefoxos';
     } else if (caps.firefoxAndroid) {
         _dev = 'android';
         _device = caps.widescreen() ? 'tablet' : 'mobile';
-    }
-
-    if (_device == 'mobile' || _device == 'firefoxos') {
-        // For mobile phones, set limit to 10, otherwise use the default, 25.
-        _limit = 10;
     }
 
     return function() {
