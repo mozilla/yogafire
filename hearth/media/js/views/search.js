@@ -186,30 +186,6 @@ define('views/search',
         );
     });
 
-    function processor(query) {
-        query = query ? query.toLowerCase() : '';
-        return function(data) {
-            switch (query) {
-                case 'what does the fox say?':
-                    var base = function(item) {return _.extend(item, {author: 'The Fox', 'previews':[], 'icons': {'64': urls.media('fireplace/img/logos/firefox-256.png')}});};
-                    data.unshift(base({name: 'Joff-tchoff-tchoffo-tchoffo-tchoff!'}));
-                    data.unshift(base({name: 'Hatee-hatee-hatee-ho!'}));
-                    data.unshift(base({name: 'Wa-pa-pa-pa-pa-pa-pow!'}));
-                    data.unshift(base({name: 'Ring-ding-ding-ding-dingeringeding!'}));
-                    break;
-                case 'hampster dance':
-                    data.forEach(function(v, k) {
-                        v.icons['64'] = urls.media('fireplace/img/icons/eggs/h' + (k % 4 + 1) + '.gif');
-                    });
-                    break;
-                case 'rick fant rolled':
-                    data.forEach(function(v) { v.url = 'http://www.youtube.com/watch?v=oHg5SJYRHA0'; });
-                    break;
-            }
-            return data;
-        };
-    }
-
     return function(builder, args, params) {
         params = parsePotatoSearch(_.extend({q: params.q}, params));
 
@@ -229,7 +205,6 @@ define('views/search',
 
         builder.start('search/main.html', {
             params: _.extend({}, params),
-            processor: processor(query)
         }).done(function() {
             var results = builder.results.searchresults;
             if (params.manifest_url && results.objects.length === 1) {
