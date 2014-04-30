@@ -3,7 +3,7 @@
 
 {% set source = category or 'all' %}
 
-{% defer (url=endpoint|urlunparam(['sort']), pluck=pluck or 'objects', as='app') %}
+{% defer (url=endpoint|urlunparam(['sort']), pluck=pluck or 'objects', as='app', paginate='ol.listing') %}
   {% set apps = this if category else this|get_featured %}
   <ol class="container listing grid-if-desktop search-listing c">
     {% if not category %}
@@ -16,6 +16,11 @@
         {{ market_tile(result, link=true, src=source + '-' + (sort or 'popular'), tray=False, description=not category) }}
       </li>
     {% endfor %}
+
+    {# Render the more button if there's another page of results and we are dealing with a category #}
+    {% if response.meta.next and category %}
+      {{ more_button(response.meta.next) }}
+    {% endif %}
   </ol>
 {% placeholder %}
   <p class="spinner padded alt"></p>
