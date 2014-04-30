@@ -44,18 +44,24 @@ define('navigation',
         console.log('Navigation started: ', href);
         var view = views.match(href);
         if (view === null) {
+            console.log('Couldnt match route.');
             return;
         }
 
+        console.log('View found.');
         if (!view[1] && initialized) {
+            console.log('view[1] is null, already initialized.');
             window.location.href = href;
             return;
         }
 
+        console.log('Building view.');
         views.build(view[0], view[1], state.params);
         if (initialized) {
+            console.log('Initialized already, navigation.');
             z.win.trigger('navigating', [popped]);
         }
+        console.log('Initializing.');
         initialized = true;
         state.type = z.context.type;
         state.title = z.context.title;
