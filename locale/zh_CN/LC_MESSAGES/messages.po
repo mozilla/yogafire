@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Fireplace\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-04-29T15:34:49.744Z\n"
-"PO-Revision-Date: 2014-04-02 08:19+0000\n"
+"PO-Revision-Date: 2014-04-30 02:06+0000\n"
 "Last-Translator: Shen <steekid@icloud.com>\n"
 "Language-Team: Chinese Simplified, China <LL@li.org>\n"
 "Language: zh_CN\n"
@@ -12,15 +12,16 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Pootle 2.5.0\n"
-"X-POOTLE-MTIME: 1396426792.0\n"
+"X-POOTLE-MTIME: 1398823577.0\n"
 
 #: /templates/cat_dropdown.html:2
 msgid "All Categories"
 msgstr "所有类别"
 
+# 具体含义存疑
 #: /templates/cat_dropdown.html:17
 msgid "Home"
-msgstr ""
+msgstr "居家"
 
 #: /templates/cat_dropdown.html:18
 msgid "Games"
@@ -28,7 +29,7 @@ msgstr "游戏"
 
 #: /templates/cat_dropdown.html:19
 msgid "Tools"
-msgstr ""
+msgstr "工具"
 
 #: /templates/cat_dropdown.html:20
 msgid "Lifestyle"
@@ -102,7 +103,7 @@ msgstr "使用条款"
 
 #: /templates/_includes/truncated.html:4
 msgid "...more"
-msgstr ""
+msgstr "...更多"
 
 #. This app is unavailable for purchase.
 #: /templates/_macros/market_button.html:5
@@ -119,7 +120,7 @@ msgstr "安装"
 
 #: /templates/_macros/market_tile.html:11 /templates/_macros/market_tile.html:13
 msgid "{app_name} screenshot"
-msgstr ""
+msgstr "{app_name} 屏幕截图"
 
 #. the IARC rating body/system followed by a name/description of the rating (e.g. "ESRB: Everyone" or "PEGI: For ages 3+").
 #: /templates/_macros/market_tile.html:52
@@ -295,7 +296,7 @@ msgstr "安装失败。请稍后重试。"
 
 #: /media/js/buttons.js:249
 msgid "Open"
-msgstr ""
+msgstr "打开"
 
 #. For ages {0} and higher. (de) `ab {0} Jahren`.
 #: /media/js/content-ratings.js:97
@@ -640,15 +641,15 @@ msgstr "哥伦比亚"
 
 #: /media/js/settings.js:112
 msgid "Costa Rica"
-msgstr ""
+msgstr "哥斯达黎加"
 
 #: /media/js/settings.js:113
 msgid "Ecuador"
-msgstr ""
+msgstr "厄瓜多尔"
 
 #: /media/js/settings.js:114
 msgid "El Salvador"
-msgstr ""
+msgstr "萨尔瓦多共和国"
 
 #: /media/js/settings.js:115
 msgid "Germany"
@@ -660,7 +661,7 @@ msgstr "希腊"
 
 #: /media/js/settings.js:117
 msgid "Guatemala"
-msgstr ""
+msgstr "危地马拉"
 
 #: /media/js/settings.js:118
 msgid "Hungary"
@@ -680,11 +681,11 @@ msgstr "蒙得维的亚"
 
 #: /media/js/settings.js:122
 msgid "Nicaragua"
-msgstr ""
+msgstr "尼加拉瓜"
 
 #: /media/js/settings.js:123
 msgid "Panama"
-msgstr ""
+msgstr "巴拿马"
 
 #: /media/js/settings.js:124
 msgid "Peru"
@@ -747,7 +748,7 @@ msgstr "未找到"
 
 #: /media/js/views/search.js:28
 msgid "Sorry, you must be connected to the Internet to search Marketplace."
-msgstr ""
+msgstr "抱歉，连接到互联网才能搜索应用市场。"
 
 #: /media/js/views/search.js:223
 msgid "Search Results"
