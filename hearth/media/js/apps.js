@@ -38,76 +38,18 @@ define('apps',
     function install(product, opt) {
         var def = defer.Deferred();
 
-        if (product.is_packaged) {
-            // Bug 996150 for packaged Marketplace installing packaged apps.
-            iframe_installer.iframe_install(product, opt).done(function(result, product) {
-                def.resolve(result, product);
-            }).fail(function(message, error) {
-                def.reject(message, error);
-            });
-            return def.promise();
-        }
-
-        opt = opt || {};
-        opt.data = opt.data || {};
-        var manifest_url;
-        if (product.manifest_url) {
-            manifest_url = product.manifest_url;
-        }
-        if (manifest_url && product.is_packaged) {
-            manifest_url = utils.urlparams(product.manifest_url, {feature_profile: buckets.profile});
-        }
-
-        var mozApps = (opt.navigator || window.navigator).mozApps;
-
-        var installer = product.is_packaged ? 'installPackage' : 'install';
-        console.log('Using `navigator.mozApps.' + installer + '` installer.');
-
-        // Copy app categories to the installer.
-        if (!('categories' in opt.data)) {
-            opt.data.categories = product.categories;
-        }
-
-        // Try to install the app.
-        if (manifest_url && mozApps && mozApps[installer]) {
-            var installRequest = mozApps[installer](manifest_url, opt.data);
-            installRequest.onsuccess = function() {
-                console.log('App installation successful for', product.name);
-                var status;
-                var isInstalled = setInterval(function() {
-                    status = installRequest.result.installState;
-                    if (status == 'installed') {
-                        console.log('App reported as installed for', product.name);
-                        clearInterval(isInstalled);
-                        def.resolve(installRequest.result, product);
-                    }
-                }, 250);
-            };
-            installRequest.onerror = function() {
-                if (this.error.name === 'DENIED') {
-                    def.reject();  // Don't return a message when the user cancels install.
-                } else {
-                    def.reject(gettext('App install error: {error}', {error: this.error.name || this.error}));
-                }
-            };
-        } else {
-            var reason;
-            if (!manifest_url) {
-                def.reject('Could not find a manifest URL in the product object.');
-            } else if (product.is_packaged) {
-                def.reject('Could not find platform support to install packaged app');
-            } else {
-                def.reject('Could not find platform support to install hosted app');
-            }
-        }
-
-        def.then(function() {
-            console.log('App installed successfully:', product.name);
-        }, function(error) {
-            console.error(error, product.name);
+        // Bug 996150 for packaged Marketplace installing packaged apps.
+        iframe_installer.iframe_install(product, opt).done(function(result, product) {
+            def.resolve(result, product);
+        }).fail(function(message, error) {
+            def.reject(message, error);
         });
 
         return def.promise();
+    }
+
+    function getInstalled() {
+        return iframe_installer.getInstalled();
     }
 
     /*
@@ -155,6 +97,7 @@ define('apps',
     nunjucks.require('globals').app_incompat = incompat;
 
     return {
+        getInstalled: getInstalled,
         incompat: incompat,
         install: install,
         _use_compat_cache: function(val) {use_compat_cache = val;}

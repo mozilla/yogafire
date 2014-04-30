@@ -131,16 +131,15 @@ function(_) {
             return;
         }
         // Get list of installed apps and mark as such.
-        var r = navigator.mozApps.getInstalled();
-        r.onsuccess = function() {
+        require('apps').getInstalled().done(function(results) {
             var buttons = require('buttons');
 
             z.apps = {};
-            _.each(r.result, function(val) {
+            _.each(results, function(manifestURL) {
                 buttons.buttonInstalled(
-                    require('utils').baseurl(val.manifestURL), val);
+                    require('utils').baseurl(manifestURL), {manifestURL: manifestURL});
             });
-        };
+        });
     };
     if (capabilities.webApps) {
         z.page.on('loaded', get_installed);
