@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: 1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-04-29T15:34:49.744Z\n"
-"PO-Revision-Date: 2014-04-10 16:51+0000\n"
+"PO-Revision-Date: 2014-04-30 16:50+0000\n"
 "Last-Translator: Peter <petercpg@mail.moztw.org>\n"
 "Language-Team: MozTW <petercpg@mail.moztw.org>\n"
 "Language: zh_TW\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Pootle 2.5.0\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-POOTLE-MTIME: 1397148687.0\n"
+"X-POOTLE-MTIME: 1398876616.0\n"
 
 #: /templates/cat_dropdown.html:2
 msgid "All Categories"
@@ -21,7 +21,7 @@ msgstr "所有分類"
 
 #: /templates/cat_dropdown.html:17
 msgid "Home"
-msgstr ""
+msgstr "家居"
 
 #: /templates/cat_dropdown.html:18
 msgid "Games"
@@ -29,7 +29,7 @@ msgstr "遊戲"
 
 #: /templates/cat_dropdown.html:19
 msgid "Tools"
-msgstr ""
+msgstr "工具"
 
 #: /templates/cat_dropdown.html:20
 msgid "Lifestyle"
@@ -103,7 +103,7 @@ msgstr "使用條款"
 
 #: /templates/_includes/truncated.html:4
 msgid "...more"
-msgstr ""
+msgstr "…更多"
 
 #. This app is unavailable for purchase.
 #: /templates/_macros/market_button.html:5
@@ -296,7 +296,7 @@ msgstr "安裝失敗，請稍後再試一次。"
 
 #: /media/js/buttons.js:249
 msgid "Open"
-msgstr ""
+msgstr "開啟"
 
 #. For ages {0} and higher. (de) `ab {0} Jahren`.
 #: /media/js/content-ratings.js:97
@@ -641,15 +641,15 @@ msgstr "哥倫比亞"
 
 #: /media/js/settings.js:112
 msgid "Costa Rica"
-msgstr ""
+msgstr "哥斯大黎加"
 
 #: /media/js/settings.js:113
 msgid "Ecuador"
-msgstr ""
+msgstr "厄瓜多"
 
 #: /media/js/settings.js:114
 msgid "El Salvador"
-msgstr ""
+msgstr "薩爾瓦多"
 
 #: /media/js/settings.js:115
 msgid "Germany"
@@ -661,7 +661,7 @@ msgstr "希臘"
 
 #: /media/js/settings.js:117
 msgid "Guatemala"
-msgstr ""
+msgstr "瓜地馬拉"
 
 #: /media/js/settings.js:118
 msgid "Hungary"
@@ -681,11 +681,11 @@ msgstr "蒙特尼格羅"
 
 #: /media/js/settings.js:122
 msgid "Nicaragua"
-msgstr ""
+msgstr "尼加拉瓜"
 
 #: /media/js/settings.js:123
 msgid "Panama"
-msgstr ""
+msgstr "巴拿馬"
 
 #: /media/js/settings.js:124
 msgid "Peru"
@@ -748,7 +748,7 @@ msgstr "找不到"
 
 #: /media/js/views/search.js:28
 msgid "Sorry, you must be connected to the Internet to search Marketplace."
-msgstr ""
+msgstr "抱歉，您必須連線至網際網路才能搜尋 Marketplace。"
 
 #: /media/js/views/search.js:223
 msgid "Search Results"
