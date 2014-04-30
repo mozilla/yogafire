@@ -226,12 +226,12 @@ function(_) {
             z.page.trigger('loaded');
         }
     }
-    require('utils_local').checkOnline().done(function() {
+    require('utils_local').checkOnline(function() {
         console.log('Online, initializing page.');
         require('consumer_info').promise.done(function() {
             startPage();
         });
-    }).fail(function() {
+    }, function() {
         console.log('Offline, initializing page.');
         startPage();
     });

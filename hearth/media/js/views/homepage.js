@@ -36,11 +36,10 @@ define('views/homepage',
             });
         }
 
-        utils_local.checkOnline().done(function() {
+        utils_local.checkOnline(function() {
             // Online.
-            console.log("Building online homepage.");
             build(urls.api.unsigned.url('collection', ['tarako-featured'], params), 'apps');
-        }).fail(function() {
+        }, function() {
             // Offline.
             console.log("Building offline homepage.");
             build(settings.offline_homepage, 'apps');
