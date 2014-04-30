@@ -5,7 +5,7 @@
 
 {% defer (url=endpoint|urlunparam(['sort']), pluck=pluck or 'objects', as='app', paginate='ol.listing') %}
   {% set apps = this if category else this|get_featured %}
-  <ol class="container listing grid-if-desktop search-listing c">
+  <ol class="container listing search-listing c">
     {% if not category %}
       <header class="featured-header c">
         <h3>{{ _('Featured Apps') }}</h3>

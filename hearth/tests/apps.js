@@ -214,60 +214,6 @@ test('apps.incompat payments', function(done, fail) {
 });
 
 
-test('apps.incompat webapps', function(done, fail) {
-    mock(
-        'apps',
-        {
-            capabilities: {
-                device_type: function() {return 'foo';},
-                webApps: false,
-                navPay: true
-            }
-        },
-        function(apps) {
-            var product = {
-                payment_required: true,
-                price: '1.00',
-                device_types: ['foo']
-            };
-            var results = apps.incompat(product);
-            assert(results);
-            eq_(results.length, 1);
-            eq_(results[0], 'Your browser or device is not web-app compatible.');
-            done();
-        },
-        fail
-    );
-});
-
-
-test('apps.incompat platform', function(done, fail) {
-    mock(
-        'apps',
-        {
-            capabilities: {
-                device_type: function() {return 'foo';},
-                webApps: true,
-                navPay: true
-            }
-        },
-        function(apps) {
-            var product = {
-                payment_required: true,
-                price: '1.00',
-                device_types: ['bar']
-            };
-            var results = apps.incompat(product);
-            assert(results);
-            eq_(results.length, 1);
-            eq_(results[0], 'This app is unavailable for your platform.');
-            done();
-        },
-        fail
-    );
-});
-
-
 test('apps.incompat payments unavailable', function(done, fail) {
     mock(
         'apps',
