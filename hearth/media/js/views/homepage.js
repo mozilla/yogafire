@@ -11,6 +11,7 @@ define('views/homepage',
     var catElm = '<li><a class="cat-{0} cat-icon-a" data-cat-slug="{0}" href="{1}">{2}</a></li>';
 
     return function(builder, args, params) {
+        console.log("Homepage view hit.");
         params = params || {};
 
         builder.z('title', '');  // We don't want a title on the homepage.
@@ -37,9 +38,11 @@ define('views/homepage',
 
         utils_local.checkOnline().done(function() {
             // Online.
+            console.log("Building online homepage.");
             build(urls.api.unsigned.url('collection', ['tarako-featured'], params), 'apps');
         }).fail(function() {
             // Offline.
+            console.log("Building offline homepage.");
             build(settings.offline_homepage, 'apps');
         });
     };
