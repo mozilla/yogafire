@@ -2,8 +2,8 @@
     Install packaged app with iframe hack (postMessage to m.f.c) due to origin errors.
 */
 define('apps_iframe_installer',
-    ['defer', 'l10n', 'log', 'settings'],
-    function(defer, l10n, log, settings) {
+    ['defer', 'l10n', 'log', 'settings', 'z'],
+    function(defer, l10n, log, settings, z) {
     'use strict';
     var gettext = l10n.gettext;
     var console = log('apps_iframe_installer');
@@ -37,9 +37,9 @@ define('apps_iframe_installer',
             }
         }, '*');
 
-        window.addEventListener('message', function(e) {
+        z.win.on('message', function(e) {
             console.log('Received message from iframe installer.');
-            if (e.data && e.data.appId == product.id) {
+            if (e.data && e.data.name == 'install-package' && e.data.appId == product.id) {
                 if (e.data.error) {
                     // Fail.
                     console.log('iframe install failed: ' + e.data.error.error);
@@ -59,7 +59,26 @@ define('apps_iframe_installer',
         return def.promise();
     };
 
+    var getInstalled = function() {
+        console.log("Getting installed apps.");
+        var def = defer.Deferred();
+
+        z.win.one('message', function(e) {
+            if (e.data && e.data.name == 'getInstalled') {
+                console.log("Got installed apps: " + e.data.result);
+                def.resolve(e.data.result);
+            }
+        });
+
+        iframe.contentWindow.postMessage({
+            name: 'getInstalled',
+        }, '*');
+
+        return def.promise();
+    };
+
     return {
+        getInstalled: getInstalled,
         iframe_install: iframe_install,
     };
 });
