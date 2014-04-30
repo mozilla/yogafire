@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Fireplace\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-04-29T15:34:49.744Z\n"
-"PO-Revision-Date: 2014-01-16 20:01+0000\n"
+"PO-Revision-Date: 2014-04-30 20:47+0000\n"
 "Last-Translator: Vlado <valastiak@mozilla.sk>\n"
 "Language-Team: Mozilla.sk <l10n@mozilla.sk>\n"
 "Language: sk\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Pootle 2.5.0\n"
-"X-POOTLE-MTIME: 1389902501.0\n"
+"X-POOTLE-MTIME: 1398890843.0\n"
 
 #: /templates/cat_dropdown.html:2
 msgid "All Categories"
@@ -20,7 +20,7 @@ msgstr "Všetky kategórie"
 
 #: /templates/cat_dropdown.html:17
 msgid "Home"
-msgstr ""
+msgstr "Domov"
 
 #: /templates/cat_dropdown.html:18
 msgid "Games"
@@ -28,7 +28,7 @@ msgstr "Hry"
 
 #: /templates/cat_dropdown.html:19
 msgid "Tools"
-msgstr ""
+msgstr "Nástroje"
 
 #: /templates/cat_dropdown.html:20
 msgid "Lifestyle"
@@ -102,7 +102,7 @@ msgstr "Podmienky použitia"
 
 #: /templates/_includes/truncated.html:4
 msgid "...more"
-msgstr ""
+msgstr "...ďalšie"
 
 #. This app is unavailable for purchase.
 #: /templates/_macros/market_button.html:5
@@ -119,7 +119,7 @@ msgstr "Nainštalovať"
 
 #: /templates/_macros/market_tile.html:11 /templates/_macros/market_tile.html:13
 msgid "{app_name} screenshot"
-msgstr ""
+msgstr "Snímka obrazovky {app_name}"
 
 #. the IARC rating body/system followed by a name/description of the rating (e.g. "ESRB: Everyone" or "PEGI: For ages 3+").
 #: /templates/_macros/market_tile.html:52
@@ -299,48 +299,48 @@ msgstr "Inštalácia zlyhala. Skúste to neskôr."
 
 #: /media/js/buttons.js:249
 msgid "Open"
-msgstr ""
+msgstr "Otvoriť"
 
 #. For ages {0} and higher. (de) `ab {0} Jahren`.
 #: /media/js/content-ratings.js:97
 msgid "For ages {0}+"
-msgstr ""
+msgstr "Pre vek {0}+"
 
 #: /media/js/content-ratings.js:103
 msgid "Generic"
-msgstr ""
+msgstr "Všeobecné"
 
 #: /media/js/content-ratings.js:110
 msgid "Criminal Acts"
-msgstr ""
+msgstr "Trestné činy"
 
 #: /media/js/content-ratings.js:112 /media/js/content-ratings.js:177 /media/js/content-ratings.js:189 /media/js/content-ratings.js:208
 msgid "Drugs"
-msgstr ""
+msgstr "Drogy"
 
 #: /media/js/content-ratings.js:114
 msgid "Illegal Drugs"
-msgstr ""
+msgstr "Ilegálne drogy"
 
 #: /media/js/content-ratings.js:116
 msgid "Legal Drugs"
-msgstr ""
+msgstr "Legálne drogy"
 
 #: /media/js/content-ratings.js:118
 msgid "Inappropriate Language"
-msgstr ""
+msgstr "Nevhodný jazyk"
 
 #: /media/js/content-ratings.js:120 /media/js/content-ratings.js:160
 msgid "Nudity"
-msgstr ""
+msgstr "Nahota"
 
 #: /media/js/content-ratings.js:122 /media/js/content-ratings.js:184 /media/js/content-ratings.js:196
 msgid "Sex"
-msgstr ""
+msgstr "Sex"
 
 #: /media/js/content-ratings.js:124
 msgid "Explicit Sex"
-msgstr ""
+msgstr "Explicitný sex"
 
 #: /media/js/content-ratings.js:126
 msgid "Impacting Content"
