@@ -41,7 +41,7 @@
       <img class="icon" alt="" src="{{ app.icons['64'] or app.icon }}" height="64" width="64" itemprop="image">
     {% endif %}
     <div class="info">
-      <h3 itemprop="name">{{ app.name|translate(app) }}</h3>
+      <h3 itemprop="name"{{ 'class="tight"'|safe if app.content_ratings.rating }}>{{ app.name|translate(app) }}</h3>
       {% if app.author %}
         {# TODO: When we get user profiles, update this to be a proper Person itemprop #}
         <div class="author lineclamp vital subdetail" itemprop="creator">{{ app.author }}</div>
@@ -63,9 +63,6 @@
       <div class="rating vital{{ ' unrated' if not app.ratings.count }}" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
         {{ stars(app.ratings.average) }}
         {% if app.ratings.count %}
-          <span class="cnt short">
-            {{ _('({n})', n='<span itemprop="reviewCount">' + app.ratings.count + '</span>') }}
-          </span>
           <span class="cnt long">
             {{ _plural('{n} Review', '{n} Reviews', n=app.ratings.count) }}
           </span>
