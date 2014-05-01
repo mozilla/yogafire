@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-04-29T15:34:49.744Z\n"
-"PO-Revision-Date: 2014-04-09 12:30-0500\n"
+"PO-Revision-Date: 2014-05-01 05:08-0400\n"
 "Last-Translator: Kohei Yoshino <kohei.yoshino@gmail.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -19,7 +19,7 @@ msgstr "すべてのカテゴリ"
 
 #: /templates/cat_dropdown.html:17
 msgid "Home"
-msgstr ""
+msgstr "ホーム"
 
 #: /templates/cat_dropdown.html:18
 msgid "Games"
@@ -27,7 +27,7 @@ msgstr "ゲーム"
 
 #: /templates/cat_dropdown.html:19
 msgid "Tools"
-msgstr ""
+msgstr "ツール"
 
 #: /templates/cat_dropdown.html:20
 msgid "Lifestyle"
@@ -101,7 +101,7 @@ msgstr "利用規約"
 
 #: /templates/_includes/truncated.html:4
 msgid "...more"
-msgstr ""
+msgstr "もっと見る"
 
 #. This app is unavailable for purchase.
 #: /templates/_macros/market_button.html:5
@@ -225,7 +225,7 @@ msgstr "プライバシーポリシーを読み込んでいます..."
 
 #: /templates/errors/404.html:2 /templates/errors/fragment.html:1
 msgid "Oh no!"
-msgstr "Not Found"
+msgstr "ページが見つかりません"
 
 #: /templates/errors/404.html:3
 msgid "The page you were looking for was not found."
@@ -296,7 +296,7 @@ msgstr "インストールに失敗しました。また後で試してくださ
 
 #: /media/js/buttons.js:249
 msgid "Open"
-msgstr ""
+msgstr "開く"
 
 #. For ages {0} and higher. (de) `ab {0} Jahren`.
 #: /media/js/content-ratings.js:97
@@ -641,15 +641,15 @@ msgstr "コロンビア"
 
 #: /media/js/settings.js:112
 msgid "Costa Rica"
-msgstr ""
+msgstr "コスタリカ"
 
 #: /media/js/settings.js:113
 msgid "Ecuador"
-msgstr ""
+msgstr "エクアドル"
 
 #: /media/js/settings.js:114
 msgid "El Salvador"
-msgstr ""
+msgstr "エルサルバドル"
 
 #: /media/js/settings.js:115
 msgid "Germany"
@@ -661,7 +661,7 @@ msgstr "ギリシャ"
 
 #: /media/js/settings.js:117
 msgid "Guatemala"
-msgstr ""
+msgstr "グアテマラ"
 
 #: /media/js/settings.js:118
 msgid "Hungary"
@@ -681,11 +681,11 @@ msgstr "モンテネグロ"
 
 #: /media/js/settings.js:122
 msgid "Nicaragua"
-msgstr ""
+msgstr "ニカラグア"
 
 #: /media/js/settings.js:123
 msgid "Panama"
-msgstr ""
+msgstr "パナマ"
 
 #: /media/js/settings.js:124
 msgid "Peru"
@@ -745,11 +745,11 @@ msgstr "フィードバックの送信中に問題が発生しました。また
 #. Page not found (404)
 #: /media/js/views/not_found.js:9
 msgid "Not Found"
-msgstr "Not Found"
+msgstr "ページが見つかりません"
 
 #: /media/js/views/search.js:28
 msgid "Sorry, you must be connected to the Internet to search Marketplace."
-msgstr ""
+msgstr "申し訳ありません。Marketplace を検索するにはインターネットへ接続する必要があります。"
 
 #: /media/js/views/search.js:223
 msgid "Search Results"
