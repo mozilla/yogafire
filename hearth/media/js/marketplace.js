@@ -125,6 +125,7 @@ function(_) {
         });
     }
 
+    var buttons = require('buttons');
     var get_installed = function() {
         // Don't getInstalled if the page isn't visible.
         if (document.hidden) {
@@ -132,8 +133,6 @@ function(_) {
         }
         // Get list of installed apps and mark as such.
         require('apps').getInstalled().done(function(results) {
-            var buttons = require('buttons');
-
             z.apps = {};
             _.each(results, function(manifestURL) {
                 buttons.buttonInstalled(
@@ -142,9 +141,7 @@ function(_) {
         });
     };
     if (capabilities.webApps) {
-        z.page.on('loaded', get_installed);
-        z.page.on('fragment_loaded loaded_more',
-                  _.debounce(get_installed, 2000, true));  // No delay.
+        z.page.on('loaded fragment_loaded loaded_more', get_installed);
         document.addEventListener('visibilitychange', function() {
             if (document.hidden) {
                 return;
@@ -157,7 +154,7 @@ function(_) {
             if (require('user').logged_in()) {
                 require('consumer_info').fetch(true);
             }
-            require('buttons').revertUninstalled();
+            buttons.revertUninstalled();
         }, false);
     }
 
