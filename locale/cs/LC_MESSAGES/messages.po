@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: Marketplace\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-04-29T15:34:49.744Z\n"
-"PO-Revision-Date: 2014-04-09 17:55+0000\n"
-"Last-Translator: Michal <michal.stanke@mikk.cz>\n"
+"PO-Revision-Date: 2014-05-02 08:43+0000\n"
+"Last-Translator: Pavel <jasnapaka@jasnapaka.com>\n"
 "Language-Team: Czech <info@mozilla.cz>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Pootle 2.5.0\n"
-"X-POOTLE-MTIME: 1397066137.0\n"
+"X-POOTLE-MTIME: 1399020196.0\n"
 
 #: /templates/cat_dropdown.html:2
 msgid "All Categories"
@@ -20,7 +20,7 @@ msgstr "Všechny kategorie"
 
 #: /templates/cat_dropdown.html:17
 msgid "Home"
-msgstr ""
+msgstr "Domů"
 
 #: /templates/cat_dropdown.html:18
 msgid "Games"
@@ -28,7 +28,7 @@ msgstr "Hry"
 
 #: /templates/cat_dropdown.html:19
 msgid "Tools"
-msgstr ""
+msgstr "Nástroje"
 
 #: /templates/cat_dropdown.html:20
 msgid "Lifestyle"
@@ -102,7 +102,7 @@ msgstr "Podmínky použití"
 
 #: /templates/_includes/truncated.html:4
 msgid "...more"
-msgstr ""
+msgstr "...více"
 
 #. This app is unavailable for purchase.
 #: /templates/_macros/market_button.html:5
@@ -299,7 +299,7 @@ msgstr "Instalace selhala. Zkuste to prosím znovu později."
 
 #: /media/js/buttons.js:249
 msgid "Open"
-msgstr ""
+msgstr "Otevřít"
 
 #. For ages {0} and higher. (de) `ab {0} Jahren`.
 #: /media/js/content-ratings.js:97
@@ -644,15 +644,15 @@ msgstr "Kolumbie"
 
 #: /media/js/settings.js:112
 msgid "Costa Rica"
-msgstr ""
+msgstr "Kostarika"
 
 #: /media/js/settings.js:113
 msgid "Ecuador"
-msgstr ""
+msgstr "Ekvádor"
 
 #: /media/js/settings.js:114
 msgid "El Salvador"
-msgstr ""
+msgstr "El Salvador"
 
 #: /media/js/settings.js:115
 msgid "Germany"
@@ -664,7 +664,7 @@ msgstr "Řecko"
 
 #: /media/js/settings.js:117
 msgid "Guatemala"
-msgstr ""
+msgstr "Guatemala"
 
 #: /media/js/settings.js:118
 msgid "Hungary"
@@ -684,11 +684,11 @@ msgstr "Černá Hora"
 
 #: /media/js/settings.js:122
 msgid "Nicaragua"
-msgstr ""
+msgstr "Nikaragua"
 
 #: /media/js/settings.js:123
 msgid "Panama"
-msgstr ""
+msgstr "Panama"
 
 #: /media/js/settings.js:124
 msgid "Peru"
@@ -754,6 +754,8 @@ msgstr "Nebylo nalezeno"
 #: /media/js/views/search.js:28
 msgid "Sorry, you must be connected to the Internet to search Marketplace."
 msgstr ""
+"Omlouváme se, ale pro vyhledávání na Marketplace musíte být připojen k "
+"Internetu."
 
 #: /media/js/views/search.js:223
 msgid "Search Results"
