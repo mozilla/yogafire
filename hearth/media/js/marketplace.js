@@ -125,27 +125,23 @@ function(_) {
         });
     }
 
+    var buttons = require('buttons');
     var get_installed = function() {
         // Don't getInstalled if the page isn't visible.
         if (document.hidden) {
             return;
         }
         // Get list of installed apps and mark as such.
-        var r = navigator.mozApps.getInstalled();
-        r.onsuccess = function() {
-            var buttons = require('buttons');
-
+        require('apps').getInstalled().done(function(results) {
             z.apps = {};
-            _.each(r.result, function(val) {
+            _.each(results, function(manifestURL) {
                 buttons.buttonInstalled(
-                    require('utils').baseurl(val.manifestURL), val);
+                    require('utils').baseurl(manifestURL), {manifestURL: manifestURL});
             });
-        };
+        });
     };
     if (capabilities.webApps) {
-        z.page.on('loaded', get_installed);
-        z.page.on('fragment_loaded loaded_more',
-                  _.debounce(get_installed, 2000, true));  // No delay.
+        z.page.on('loaded fragment_loaded loaded_more', get_installed);
         document.addEventListener('visibilitychange', function() {
             if (document.hidden) {
                 return;
@@ -158,7 +154,7 @@ function(_) {
             if (require('user').logged_in()) {
                 require('consumer_info').fetch(true);
             }
-            require('buttons').revertUninstalled();
+            buttons.revertUninstalled();
         }, false);
     }
 

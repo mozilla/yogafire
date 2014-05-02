@@ -38,7 +38,7 @@ define('buttons',
     }
 
     var launchHandler = _handler(function(product) {
-        z.apps[product.manifest_url].launch();
+        apps.launch(product.manifest_url);
         tracking.trackEvent(
             'Launch app',
             product.payment_required ? 'Paid' : 'Free',
@@ -254,12 +254,11 @@ define('buttons',
            "Launch" to "Install". */
 
         // Get installed apps to know which apps may have been uninstalled.
-        var r = navigator.mozApps.getInstalled();
-        r.onsuccess = function() {
+        var r = apps.getInstalled().done(function(results) {
             // Build an array of manifests that match the button's data-manifest.
             var installed = [];
-            _.each(r.result, function(val) {
-                installed.push(require('utils').baseurl(val.manifestURL));
+            _.each(results, function(manifestURL) {
+                installed.push(require('utils').baseurl(manifestURL));
             });
 
             $('.button.product').each(function(i, button) {
@@ -273,7 +272,7 @@ define('buttons',
                     $button.removeClass('launch');
                 }
             });
-        };
+        });
     }
 
     return {
