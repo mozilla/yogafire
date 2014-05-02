@@ -52,6 +52,10 @@ define('apps',
         return iframe_installer.getInstalled();
     }
 
+    function launch(manifestURL) {
+        return iframe_installer.launch_app(manifestURL);
+    }
+
     /*
     apps.incompat(app_object)
 
@@ -100,6 +104,7 @@ define('apps',
         getInstalled: getInstalled,
         incompat: incompat,
         install: install,
+        launch: launch,
         _use_compat_cache: function(val) {use_compat_cache = val;}
     };
 });

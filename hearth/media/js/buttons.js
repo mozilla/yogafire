@@ -38,7 +38,7 @@ define('buttons',
     }
 
     var launchHandler = _handler(function(product) {
-        z.apps[product.manifest_url].launch();
+        apps.launch(product.manifest_url);
         tracking.trackEvent(
             'Launch app',
             product.payment_required ? 'Paid' : 'Free',

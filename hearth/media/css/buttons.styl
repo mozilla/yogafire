@@ -21,6 +21,7 @@
 
     &:hover,
     &:focus {
+        background: darken(#4cb1ff, 10%);
         text-decoration: none;
     }
 
@@ -97,10 +98,6 @@
         pointer-events: auto;
     }
 
-    &:not([disabled]):not(.alt):hover,
-    &:not([disabled]):not(.alt):focus {
-        background: darken(#4cb1ff, 10%);
-    }
     &:not([disabled]):active {
         btn-shadow-active();
         background: $seavan-salt-white;

@@ -1,5 +1,5 @@
 /*
-    Install packaged app with iframe hack (postMessage to m.f.c) due to origin errors.
+    Interface with mozApps through m.f.c iframe since Yogafire is packaged with different origin.
 */
 define('apps_iframe_installer',
     ['defer', 'l10n', 'log', 'settings', 'z'],
@@ -88,8 +88,16 @@ define('apps_iframe_installer',
         return def.promise();
     };
 
+    var launch_app = function(manifestURL) {
+        iframe.contentWindow.postMessage({
+            name: 'launch-app',
+            manifestURL: manifestURL
+        }, '*');
+    };
+
     return {
         getInstalled: getInstalled,
         iframe_install: iframe_install,
+        launch_app: launch_app,
     };
 });
