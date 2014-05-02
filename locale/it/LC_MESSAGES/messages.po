@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: Fireplace\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-04-29T15:34:49.744Z\n"
-"PO-Revision-Date: 2014-05-02 07:13+0000\n"
+"PO-Revision-Date: 2014-05-02 07:15+0000\n"
 "Last-Translator: Sara <sara.todaro@mozillaitalia.org>\n"
 "Language-Team: gialloporpora <gialloporpora@yahoo.it>\n"
 "Language: it\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Pootle 2.5.0\n"
-"X-POOTLE-MTIME: 1399014829.0\n"
+"X-POOTLE-MTIME: 1399014931.0\n"
 
 #: /templates/cat_dropdown.html:2
 msgid "All Categories"
@@ -223,7 +223,7 @@ msgstr "Ritorna all'app"
 
 #: /templates/detail/privacy.html:11
 msgid "Loading Privacy Policy..."
-msgstr "Caricamento dell'informativa sulla privacy in corso…"
+msgstr "Caricamento dell’informativa sulla privacy in corso…"
 
 #: /templates/errors/404.html:2 /templates/errors/fragment.html:1
 msgid "Oh no!"
