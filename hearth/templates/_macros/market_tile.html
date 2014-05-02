@@ -41,7 +41,7 @@
       <img class="icon" alt="" src="{{ app.icons['64'] or app.icon }}" height="64" width="64" itemprop="image">
     {% endif %}
     <div class="info">
-      <h3 itemprop="name"{{ 'class="tight"'|safe if app.content_ratings.rating }}>{{ app.name|translate(app) }}</h3>
+      <h3 itemprop="name" class="{{ 'tight' if app.content_ratings.rating }}">{{ app.name|translate(app) }}</h3>
       {% if app.author %}
         {# TODO: When we get user profiles, update this to be a proper Person itemprop #}
         <div class="author lineclamp vital subdetail" itemprop="creator">{{ app.author }}</div>
@@ -68,7 +68,6 @@
           </span>
         {% else %}
           {# L10n: "(0)" means "0 reviews." #}
-          <span class="cnt short">{{ _('(0)') }}</span>
           <span class="cnt long">{{ _('Not yet rated') }}</span>
         {% endif %}
       </div>
