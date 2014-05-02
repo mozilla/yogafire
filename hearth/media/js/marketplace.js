@@ -184,6 +184,7 @@ function(_) {
         require('storage').setItem('hide_incompatibility_banner', true);
     });
 
+    // Image deferring.
     var ImageDeferrer = require('image-deferrer');
     var iconDeferrer = ImageDeferrer.Deferrer(100, null);
     var screenshotDeferrer = ImageDeferrer.Deferrer(null, 200);

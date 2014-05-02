@@ -22,7 +22,7 @@ define('views/search',
             $('#search-q').val('').trigger('focus');
         }
     })).on('focus', '#search-q', _pd(function() {
-        utils_local.checkOnline().fail(function() {
+        utils_local.checkOnline(null, function() {
             $('#search-q').trigger('blur');
             notification.notification({
                 message: gettext('Sorry, you must be connected to the Internet to search Marketplace.')
