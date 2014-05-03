@@ -1,764 +1,776 @@
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-04-29T15:34:49.744Z\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2014-04-30 04:27+0000\n"
+"Last-Translator: அருண் குமார் - <thangam.arunx@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: ta\n"
 "MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);Content-Type: text/plain; charset=UTF-8\n"
-"X-Generator: Fireplace L10n Tools 1.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Pootle 2.5.0\n"
+"X-POOTLE-MTIME: 1398832054.0\n"
 
 #: /templates/cat_dropdown.html:2
 msgid "All Categories"
-msgstr ""
+msgstr "அனைத்து பகுப்புகளும்"
 
 #: /templates/cat_dropdown.html:17
 msgid "Home"
-msgstr ""
+msgstr "முகப்பு"
 
 #: /templates/cat_dropdown.html:18
 msgid "Games"
-msgstr ""
+msgstr "விளையாட்டுகள்"
 
 #: /templates/cat_dropdown.html:19
 msgid "Tools"
-msgstr ""
+msgstr "கருவிகள்"
 
 #: /templates/cat_dropdown.html:20
 msgid "Lifestyle"
-msgstr ""
+msgstr "வாழ்க்கை முறை"
 
 #: /templates/confirmation.html:0 /templates/incompatible.html:3 /templates/detail/abuse.html:6
 msgid "Close"
-msgstr ""
+msgstr "மூடவும்"
 
 #: /templates/confirmation.html:3
 msgid "No"
-msgstr ""
+msgstr "இல்லை"
 
 #: /templates/confirmation.html:4
 msgid "Yes"
-msgstr ""
+msgstr "ஆம்"
 
 #. The Marketplace app is out-of-date and needs to be updated.
 #: /templates/deprecated.html:2
 msgid "Out-of-Date Marketplace"
-msgstr ""
+msgstr "காலாவதியான சந்தையிடம்"
 
 #: /templates/deprecated.html:3
 msgid "The version of the Firefox Marketplace that you're using is no longer supported. You will need to perform an update before you can continue enjoying the Marketplace."
 msgstr ""
+"நீங்கள் பயன்படுத்தும் பயர்பாக்ஸ் சந்தையின் பதிப்பானது அதிக காலம் "
+"ஆதரிக்ப்படாது. சந்தையிடத்தை அனுபவிப்பதற்கு முன்னதாக புதுப்பித்தலை செய்து "
+"பின் தொடரவும்."
 
 #: /templates/deprecated.html:5
 msgid "Update Now"
-msgstr ""
+msgstr "இப்போது புதுப்பி"
 
 #: /templates/featured.html:7
 msgid "Featured"
-msgstr ""
+msgstr "சிறப்பான"
 
 #: /templates/featured.html:8 /templates/search/main.html:18
 msgid "Expand"
-msgstr ""
+msgstr "விரிவுபடுத்து"
 
 #: /templates/featured.html:22
 msgid "No featured apps found"
-msgstr ""
+msgstr "சிறப்பான பயன்பாடுகள் காணப்படவில்லை"
 
 #: /templates/header.html:1
 msgid "Back"
-msgstr ""
+msgstr "பின்செல்"
 
 #: /templates/header.html:5 /templates/header.html:8
 msgid "Search"
-msgstr ""
+msgstr "தேடு"
 
 #: /templates/header.html:10
 msgid "Clear"
-msgstr ""
+msgstr "துடை"
 
 #: /templates/incompatible.html:1
 msgid "You must use Firefox to install Firefox apps."
 msgstr ""
+"நீங்கள் பயர்பாக்ஸ் பயன்பாடுகளை நிறுவ பயர்பாக்ஸை பயன்படுத்தியாக வேண்டும்."
 
 #: /templates/incompatible.html:2
 msgid "Download."
-msgstr ""
+msgstr "பதிவிறக்கம்."
 
 #: /templates/privacy.html:2 /templates/category_yogafire/main.html:47 /templates/detail/main_yogafire.html:75 /templates/detail/privacy.html:3 /media/js/views/privacy.js:10
 #: /media/js/views/app/privacy.js:10
 msgid "Privacy Policy"
-msgstr ""
+msgstr "தனியுரிமை கொள்கை"
 
 #: /templates/terms.html:2 /templates/category_yogafire/main.html:44 /media/js/views/terms.js:10
 msgid "Terms of Use"
-msgstr ""
+msgstr "பயன்பாட்டு நிபந்தனைகள்"
 
 #: /templates/_includes/truncated.html:4
 msgid "...more"
-msgstr ""
+msgstr "...மேலும்"
 
 #. This app is unavailable for purchase.
 #: /templates/_macros/market_button.html:5
 msgid "Unavailable"
-msgstr ""
+msgstr "இல்லை"
 
 #: /templates/_macros/market_button.html:7 /templates/_macros/market_tile.html:61
 msgid "Free"
-msgstr ""
+msgstr "இலவசம்"
 
 #: /templates/_macros/market_button.html:14 /media/js/buttons.js:271
 msgid "Install"
-msgstr ""
+msgstr "நிறுவு"
 
 #: /templates/_macros/market_tile.html:11 /templates/_macros/market_tile.html:13
 msgid "{app_name} screenshot"
-msgstr ""
+msgstr "{app_name} திரைப்பிடிப்பு"
 
 #. the IARC rating body/system followed by a name/description of the rating (e.g. "ESRB: Everyone" or "PEGI: For ages 3+").
 #: /templates/_macros/market_tile.html:52
 msgid "{rating_body}: {rating}"
-msgstr ""
+msgstr "{rating_body}: {rating}"
 
 #: /templates/_macros/market_tile.html:66
 msgid "({n})"
-msgstr ""
+msgstr "({n})"
 
 #: /templates/_macros/market_tile.html:69
 msgid "{n} Review"
 msgid_plural "{n} Reviews"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{n} மீளாய்வு"
+msgstr[1] "{n} மீளாய்வுகள்"
 
 #: /templates/_macros/market_tile.html:73
 msgid "(0)"
-msgstr ""
+msgstr "(0)"
 
 #: /templates/_macros/market_tile.html:74
 msgid "Not yet rated"
-msgstr ""
+msgstr "மதிப்பிடப் படவில்லை"
 
 #: /templates/_macros/more_button.html:2
 msgid "More"
-msgstr ""
+msgstr "மேலும்"
 
 #: /templates/_macros/stars.html:5
 msgid "Rated {stars} out of {maxstars} stars"
-msgstr ""
+msgstr "{maxstars} க்கு {stars} நட்டசத்திரங்கள் மதிப்பிடப்பட்டது"
 
 #: /templates/category_yogafire/main.html:38
 msgid "Get Help"
-msgstr ""
+msgstr "உதவியை பெறுக"
 
 #: /templates/category_yogafire/main.html:41 /media/js/views/feedback.js:61
 msgid "Feedback"
-msgstr ""
+msgstr "கருத்து தெரிவி"
 
 #: /templates/category_yogafire/main.html:10
 msgid "Featured Apps"
-msgstr ""
+msgstr "சிறந்த பயன்பாடுகள்"
 
 #: /templates/category_yogafire/main.html:23
 msgid "No apps in this category"
-msgstr ""
+msgstr "இந்த வகை பயன்பாடுகள் ஏதுமில்லை"
 
 #: /templates/category_yogafire/main.html:28
 msgid "The category you requested does not exist."
-msgstr ""
+msgstr "நீங்கள் கோரிய வகை இல்லை."
 
 #: /templates/category_yogafire/main.html:30
 msgid "An internal server error occurred. Please try again later."
-msgstr ""
+msgstr "சேவகனில் உள்ளார்ந்த பிழை ஏற்பட்டது. பிறகு மீண்டும் முயற்சி செய்."
 
 #: /templates/detail/abuse.html:5 /templates/detail/main_yogafire.html:86 /media/js/views/app/abuse.js:34
 msgid "Report Abuse"
-msgstr ""
+msgstr "புகார் அளி"
 
 #: /templates/detail/abuse.html:15
 msgid "Send Report"
-msgstr ""
+msgstr "அறிக்கையை சமர்ப்பி"
 
 #: /templates/detail/content_ratings.html:4
 msgid "Content Rating"
-msgstr ""
+msgstr "உள்ளடக்க மதிப்பிடல்"
 
 #: /templates/detail/content_ratings.html:73
 msgid "Content Rating Details"
-msgstr ""
+msgstr "உள்ளடக்க மதிப்பிடலின் விவரங்கள்"
 
 #: /templates/detail/main_yogafire.html:13 /templates/detail/main_yogafire.html:14 /media/js/views/app.js:68
 msgid "Loading..."
-msgstr ""
+msgstr "ஏற்றுகிறது..."
 
 #: /templates/detail/main_yogafire.html:42
 msgid "Description"
-msgstr ""
+msgstr "விளக்கம்"
 
 #: /templates/detail/main_yogafire.html:58
 msgid "Support Email"
-msgstr ""
+msgstr "மின்னஞ்சல் ஆதரவு"
 
 #: /templates/detail/main_yogafire.html:64
 msgid "Support Site"
-msgstr ""
+msgstr "ஆதிரித்த தளம்"
 
 #: /templates/detail/main_yogafire.html:69
 msgid "Homepage"
-msgstr ""
+msgstr "முகப்பு பக்கம்"
 
 #: /templates/detail/main_yogafire.html:81
 msgid "Statistics"
-msgstr ""
+msgstr "புள்ளி நிலவரம்"
 
 #: /templates/detail/privacy.html:5
 msgid "Back to app"
-msgstr ""
+msgstr "பயன்பாட்டுக்கு செல்லவும்"
 
 #: /templates/detail/privacy.html:11
 msgid "Loading Privacy Policy..."
-msgstr ""
+msgstr "தனியுரிமை கொள்கையை ஏற்றுகிறது..."
 
 #: /templates/errors/404.html:2 /templates/errors/fragment.html:1
 msgid "Oh no!"
-msgstr ""
+msgstr "ஆகா இல்லை!"
 
 #: /templates/errors/404.html:3
 msgid "The page you were looking for was not found."
-msgstr ""
+msgstr "நீங்கள் பார்க்க நினைத்த பக்கம் காணப்படவில்லை."
 
 #: /templates/errors/fragment.html:2
 msgid "An error occurred."
-msgstr ""
+msgstr "ஒரு பிழை நேர்ந்தது."
 
 #: /templates/errors/pagination.html:1
 msgid "Error loading more"
-msgstr ""
+msgstr "கூடுதலாக ஏற்றும்பொது பிழை"
 
 #: /templates/errors/pagination.html:2
 msgid "Try Again"
-msgstr ""
+msgstr "மீண்டும் முயற்சி செய்"
 
 #: /templates/search/main.html:15
 msgid "<b>{n}</b> Result"
 msgid_plural "<b>{n}</b> Results"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "<b>{n}</b> முடிவு"
+msgstr[1] "<b>{n}</b> முடிவுகள்"
 
 #: /templates/search/main.html:16
 msgid "Showing <b>1</b>&ndash;<b class=\"total-results\">{total}</b>"
-msgstr ""
+msgstr "காண்பிப்பது <b>1</b>&ndash;<b class=\"total-results\">{total}</b>"
 
 #: /templates/search/main.html:36
 msgid "No results found"
-msgstr ""
+msgstr "முடிவுகள் காணப்படவில்லை"
 
 #: /templates/search/main.html:41
 msgid "No results found, try again later"
-msgstr ""
+msgstr "எந்த முடிவுகளும் காணப்படவில்லை, பிறகு மீண்டும் முயற்சி செய்"
 
 #: /templates/settings/feedback.html:11
 msgid "Send"
-msgstr ""
+msgstr "அனுப்பு"
 
 #: /media/js/apps.js:90 /media/js/apps_iframe_installer.js:46
 msgid "App install error: {error}"
-msgstr ""
+msgstr "பயன்பாடு நிறுவல் பிழை: {error}"
 
 #: /media/js/apps.js:141
 msgid "Your device does not support payments."
-msgstr ""
+msgstr "உங்களுடைய சாதனம் பணம் செலுத்தலை முறைகளை ஆதரிக்கவில்லை."
 
 #: /media/js/apps.js:143
 msgid "This app is unavailable for purchase in your region."
-msgstr ""
+msgstr "இந்த பயன்பாட்டை உங்கள் பகுதியில் வாங்க இயலாது."
 
 #: /media/js/apps.js:147
 msgid "Your browser or device is not web-app compatible."
-msgstr ""
+msgstr "இணையப்பயன்பாட்டுடன் உங்களுடைய உலாவி அல்லது சாதனம் ஒத்துவரவில்லை."
 
 #: /media/js/apps.js:149
 msgid "This app is unavailable for your platform."
-msgstr ""
+msgstr "இந்த பயன்பாடு உங்களுடைய இயங்குதளத்திற்கு ஒத்துவராது."
 
 #: /media/js/buttons.js:61 /media/js/buttons.js:88
 msgid "Payment cancelled."
-msgstr ""
+msgstr "பணம் செலுத்தல் இரத்துசெய்யப்பட்டது."
 
 #. The app's installation has failed, but the problem is temporary.
 #: /media/js/buttons.js:159
 msgid "Install failed. Please try again later."
-msgstr ""
+msgstr "நிறுவல் தோழ்வியடைந்தது. தயவுச்செய்து மீண்டும் முயற்சி செய்."
 
 #: /media/js/buttons.js:249
 msgid "Open"
-msgstr ""
+msgstr "திறக்கவும்"
 
 #. For ages {0} and higher. (de) `ab {0} Jahren`.
 #: /media/js/content-ratings.js:97
 msgid "For ages {0}+"
-msgstr ""
+msgstr "{0}+ வயதுக்காக"
 
 #: /media/js/content-ratings.js:103
 msgid "Generic"
-msgstr ""
+msgstr "பொதுவான"
 
 #: /media/js/content-ratings.js:110
 msgid "Criminal Acts"
-msgstr ""
+msgstr "குற்ற செயல்கள்"
 
 #: /media/js/content-ratings.js:112 /media/js/content-ratings.js:177 /media/js/content-ratings.js:189 /media/js/content-ratings.js:208
 msgid "Drugs"
-msgstr ""
+msgstr "மருந்துகள்"
 
 #: /media/js/content-ratings.js:114
 msgid "Illegal Drugs"
-msgstr ""
+msgstr "சட்டவிரோத மருந்துகள்"
 
 #: /media/js/content-ratings.js:116
 msgid "Legal Drugs"
-msgstr ""
+msgstr "சட்டத்திற்குட்பட்ட மருந்துகள்"
 
 #: /media/js/content-ratings.js:118
 msgid "Inappropriate Language"
-msgstr ""
+msgstr "பொருத்தமற்ற மொழி"
 
 #: /media/js/content-ratings.js:120 /media/js/content-ratings.js:160
 msgid "Nudity"
-msgstr ""
+msgstr "நிர்வாண"
 
 #: /media/js/content-ratings.js:122 /media/js/content-ratings.js:184 /media/js/content-ratings.js:196
 msgid "Sex"
-msgstr ""
+msgstr "பாலியல்"
 
 #: /media/js/content-ratings.js:124
 msgid "Explicit Sex"
-msgstr ""
+msgstr "வெளிப்படையான பாலியல்"
 
 #: /media/js/content-ratings.js:126
 msgid "Impacting Content"
-msgstr ""
+msgstr "பாதிக்கிற உள்ளடக்கம்"
 
 #: /media/js/content-ratings.js:128 /media/js/content-ratings.js:172 /media/js/content-ratings.js:185 /media/js/content-ratings.js:197 /media/js/content-ratings.js:216
 msgid "Violence"
-msgstr ""
+msgstr "வன்முறை"
 
 #: /media/js/content-ratings.js:130
 msgid "Extreme Violence"
-msgstr ""
+msgstr "உச்சக்கட்ட வன்செயல்"
 
 #: /media/js/content-ratings.js:133
 msgid "Alcohol Reference"
-msgstr ""
+msgstr "மது குறிப்பு"
 
 #: /media/js/content-ratings.js:134
 msgid "Alcohol and Tobacco Reference"
-msgstr ""
+msgstr "மது மற்றும் புகையிலை குறிப்பு"
 
 #: /media/js/content-ratings.js:135
 msgid "Use of Alcohol and Tobacco"
-msgstr ""
+msgstr "மது மற்றும் புகையிலையின் பயன்"
 
 #: /media/js/content-ratings.js:136
 msgid "Use of Alcohol"
-msgstr ""
+msgstr "மதுவின் பயன்"
 
 #: /media/js/content-ratings.js:137
 msgid "Blood"
-msgstr ""
+msgstr "இரத்தம்"
 
 #: /media/js/content-ratings.js:138
 msgid "Blood and Gore"
-msgstr ""
+msgstr "இரத்த மற்றும் காயங்கள்"
 
 #: /media/js/content-ratings.js:139
 msgid "Comic Mischief"
-msgstr ""
+msgstr "காமிக் தீங்குகள்"
 
 #: /media/js/content-ratings.js:140
 msgid "Crime"
-msgstr ""
+msgstr "குற்றம்"
 
 #: /media/js/content-ratings.js:141
 msgid "Criminal Instruction"
-msgstr ""
+msgstr "குற்றவியல் வழிமுறை"
 
 #: /media/js/content-ratings.js:142
 msgid "Crude Humor"
-msgstr ""
+msgstr "நயமற்ற நகைச்சுவை"
 
 #: /media/js/content-ratings.js:143
 msgid "Drug and Alcohol Reference"
-msgstr ""
+msgstr "போதை மருந்து மற்றும் மது குறிப்பு"
 
 #: /media/js/content-ratings.js:144
 msgid "Drug, Alcohol, and Tobacco Reference"
-msgstr ""
+msgstr "மருந்து, மது, மற்றும் புகையிலை குறிப்பு"
 
 #: /media/js/content-ratings.js:145
 msgid "Use of Drug, Alcohol, and Tobacco"
-msgstr ""
+msgstr "மருந்து, மதுபானம் மற்றும் புகையிலையின் பயன்"
 
 #: /media/js/content-ratings.js:146
 msgid "Use of Drug and Alcohol"
-msgstr ""
+msgstr "போதை மருந்து மற்றும் மதுவின் பயன்"
 
 #: /media/js/content-ratings.js:147
 msgid "Drug Reference"
-msgstr ""
+msgstr "மருந்து குறிப்பு"
 
 #: /media/js/content-ratings.js:148
 msgid "Drug and Tobacco Reference"
-msgstr ""
+msgstr "மருந்து மற்றும் புகையிலை குறிப்பு"
 
 #: /media/js/content-ratings.js:149
 msgid "Use of Drug and Tobacco"
-msgstr ""
+msgstr "மருந்து மற்றும் புகையிலையின் பயன்"
 
 #: /media/js/content-ratings.js:150
 msgid "Use of Drugs"
-msgstr ""
+msgstr "மருந்துகளின் பயன்"
 
 #: /media/js/content-ratings.js:151
 msgid "Fantasy Violence"
-msgstr ""
+msgstr "பேண்டஸி வன்முறை"
 
 #: /media/js/content-ratings.js:152
 msgid "Hate Speech"
-msgstr ""
+msgstr "வெறுக்கத்தக்க பேச்சு"
 
 #: /media/js/content-ratings.js:153
 msgid "Intense Violence"
-msgstr ""
+msgstr "தீவிர வன்முறை"
 
 #: /media/js/content-ratings.js:155 /media/js/content-ratings.js:180 /media/js/content-ratings.js:192
 msgid "Language"
-msgstr ""
+msgstr "மொழி"
 
 #: /media/js/content-ratings.js:156
 msgid "Mild Blood"
-msgstr ""
+msgstr "லேசான இரத்தம்"
 
 #: /media/js/content-ratings.js:157
 msgid "Mild Fantasy Violence"
-msgstr ""
+msgstr "லேசான பேண்டஸி வன்முறை"
 
 #: /media/js/content-ratings.js:158
 msgid "Mild Language"
-msgstr ""
+msgstr "மிதமான மொழி"
 
 #: /media/js/content-ratings.js:159
 msgid "Mild Violence"
-msgstr ""
+msgstr "லேசான வன்முறை"
 
 #: /media/js/content-ratings.js:161
 msgid "Partial Nudity"
-msgstr ""
+msgstr "பகுதி நிர்வாணம்"
 
 #: /media/js/content-ratings.js:162
 msgid "Real Gambling"
-msgstr ""
+msgstr "உண்மையான சூதாட்டம்"
 
 #: /media/js/content-ratings.js:163
 msgid "Scary Themes"
-msgstr ""
+msgstr "பயமுறுத்தும் கருப்பொருள்கள்"
 
 #: /media/js/content-ratings.js:164 /media/js/content-ratings.js:214
 msgid "Sexual Content"
-msgstr ""
+msgstr "பாலியல் உள்ளடக்கம்"
 
 #: /media/js/content-ratings.js:165
 msgid "Sexual Themes"
-msgstr ""
+msgstr "பாலியல் கருப்பொருள்கள்"
 
 #: /media/js/content-ratings.js:166
 msgid "Simulated Gambling"
-msgstr ""
+msgstr "மாதிரி சூதாட்டம்"
 
 #: /media/js/content-ratings.js:167
 msgid "Strong Language"
-msgstr ""
+msgstr "வலுவான மொழி"
 
 #: /media/js/content-ratings.js:168
 msgid "Strong Sexual Content"
-msgstr ""
+msgstr "வலுவான பாலியல் உள்ளடக்கம்"
 
 #: /media/js/content-ratings.js:169
 msgid "Suggestive Themes"
-msgstr ""
+msgstr "விவரிக்கும் கருப்பொருள்கள்"
 
 #: /media/js/content-ratings.js:170
 msgid "Tobacco Reference"
-msgstr ""
+msgstr "புகையிலை குறிப்பு"
 
 #: /media/js/content-ratings.js:171
 msgid "Use of Tobacco"
-msgstr ""
+msgstr "புகையிலையின் பயன்"
 
 #: /media/js/content-ratings.js:173
 msgid "Violence References"
-msgstr ""
+msgstr "வன்முறை குறிப்புகள்"
 
 #: /media/js/content-ratings.js:176 /media/js/content-ratings.js:188 /media/js/content-ratings.js:206
 msgid "Discrimination"
-msgstr ""
+msgstr "பாரபட்சம்"
 
 #: /media/js/content-ratings.js:178 /media/js/content-ratings.js:190
 msgid "Gambling"
-msgstr ""
+msgstr "சூதாட்டம்"
 
 #: /media/js/content-ratings.js:181 /media/js/content-ratings.js:193
 msgid "Online"
-msgstr ""
+msgstr "இணையத்தில்"
 
 #: /media/js/content-ratings.js:182 /media/js/content-ratings.js:194
 msgid "Fear"
-msgstr ""
+msgstr "பயம்"
 
 #: /media/js/content-ratings.js:199
 msgid "Social Interaction Functionality"
-msgstr ""
+msgstr "சமூக தொடர்புடைய செயல்பாடு"
 
 #: /media/js/content-ratings.js:200
 msgid "Personal Data Sharing"
-msgstr ""
+msgstr "தனிப்பட்ட தரவு பகிர்வு"
 
 #: /media/js/content-ratings.js:201
 msgid "In-app Purchase Option"
-msgstr ""
+msgstr "பயன்பாட்டு கொள்முதல் விருப்பம்"
 
 #: /media/js/content-ratings.js:202
 msgid "Location Data Sharing"
-msgstr ""
+msgstr "புவியிடத்தரவு பகிர்வு"
 
 #: /media/js/content-ratings.js:210
 msgid "Explicit Language"
-msgstr ""
+msgstr "வெளிப்படையான மொழி"
 
 #: /media/js/content-ratings.js:212
 msgid "Frightening Content"
-msgstr ""
+msgstr "பயமுறுத்தும் உள்ளடக்கம்"
 
 #: /media/js/content-ratings.js:220
 msgid "Digital Purchases"
-msgstr ""
+msgstr "எண்ணிம கொள்முதல்கள்"
 
 #: /media/js/content-ratings.js:221
 msgid "Shares Info"
-msgstr ""
+msgstr "தகவலை பகிர்கிறது"
 
 #: /media/js/content-ratings.js:222
 msgid "Shares Location"
-msgstr ""
+msgstr "புவியிடத்தை பகிர்கிறது"
 
 #: /media/js/content-ratings.js:223
 msgid "Users Interact"
-msgstr ""
+msgstr "பயனர்களுடன் ஊடாடுகிறது"
 
 #: /media/js/content-ratings.js:228
 msgid "For all ages"
-msgstr ""
+msgstr "அனைத்து வயதினர்களுக்கும்"
 
 #: /media/js/content-ratings.js:237
 msgid "Rating Pending"
-msgstr ""
+msgstr "மதிப்பீடு நிலுவையில்"
 
 #: /media/js/content-ratings.js:238
 msgid "Rating Refused"
-msgstr ""
+msgstr "மதிப்பீடு மறுக்கப்பட்டது"
 
 #: /media/js/content-ratings.js:241
 msgid "Everyone"
-msgstr ""
+msgstr "எல்லோரும்"
 
 #: /media/js/content-ratings.js:242
 msgid "Everyone 10+"
-msgstr ""
+msgstr "எல்லோரும் 10+"
 
 #: /media/js/content-ratings.js:243
 msgid "Teen"
-msgstr ""
+msgstr "இளையவர்"
 
 #: /media/js/content-ratings.js:244
 msgid "Mature 17+"
-msgstr ""
+msgstr "வளர்ந்த 17+"
 
 #: /media/js/content-ratings.js:245
 msgid "Adults Only 18+"
-msgstr ""
+msgstr "பெரியவர்கள் 18+ மட்டும்"
 
 #: /media/js/login.js:11
 msgid "You have been signed out"
-msgstr ""
+msgstr "நீங்கள் வெளியாகி விட்டீர்கள்"
 
 #: /media/js/login.js:15
 msgid "You have been signed in"
-msgstr ""
+msgstr "நீங்கள் உள்நுழைந்துள்ளீர்கள்"
 
 #: /media/js/login.js:135
 msgid "Persona login failed. Maybe you don't have an account under that email address?"
 msgstr ""
+"தனிப்பட்ட உள்நுழைவு தோல்வியடைந்தது. அந்த மின்னஞ்சல் முகவரியின் கீழ் "
+"உங்களுடைய கணக்கு இல்லாமல் இருக்கலாம்."
 
 #: /media/js/login.js:140
 msgid "Persona login failed. A server error was encountered."
 msgstr ""
+"பர்சோன உள்நுழைவு தோல்வியடைந்தது. சேவகன் ஒரு பிழையை சந்திக்க நேர்ந்தது."
 
 #: /media/js/login.js:208
 msgid "Persona cannot be reached. Try again later."
-msgstr ""
+msgstr "பர்சோனவை அனுக முடியவில்லை. பிறகு மீண்டும் முயற்சி செய்."
 
 #: /media/js/navigation.js:33
 msgid "No internet connection"
-msgstr ""
+msgstr "இணைய இணைப்பு இல்லை"
 
 #: /media/js/settings.js:106
 msgid "Rest of World"
-msgstr ""
+msgstr "உலகின் மற்ற பகுதி"
 
 #: /media/js/settings.js:107
 msgid "Argentina"
-msgstr ""
+msgstr "அர்ஜென்டீனா"
 
 #: /media/js/settings.js:108
 msgid "Brazil"
-msgstr ""
+msgstr "பிரேசில்"
 
 #: /media/js/settings.js:109
 msgid "Chile"
-msgstr ""
+msgstr "சிலி"
 
 #: /media/js/settings.js:110
 msgid "China"
-msgstr ""
+msgstr "சீனா"
 
 #: /media/js/settings.js:111
 msgid "Colombia"
-msgstr ""
+msgstr "கொலம்பியா"
 
 #: /media/js/settings.js:112
 msgid "Costa Rica"
-msgstr ""
+msgstr "கோஸ்டா ரிகா"
 
 #: /media/js/settings.js:113
 msgid "Ecuador"
-msgstr ""
+msgstr "எக்குவடோர்"
 
 #: /media/js/settings.js:114
 msgid "El Salvador"
-msgstr ""
+msgstr "எல் சல்வடோர்"
 
 #: /media/js/settings.js:115
 msgid "Germany"
-msgstr ""
+msgstr "ஜெர்மனி"
 
 #: /media/js/settings.js:116
 msgid "Greece"
-msgstr ""
+msgstr "கிரீஸ்"
 
 #: /media/js/settings.js:117
 msgid "Guatemala"
-msgstr ""
+msgstr "குவாத்தமாலா"
 
 #: /media/js/settings.js:118
 msgid "Hungary"
-msgstr ""
+msgstr "ஹங்கேரி"
 
 #: /media/js/settings.js:119
 msgid "Italy"
-msgstr ""
+msgstr "இத்தாலி"
 
 #: /media/js/settings.js:120
 msgid "Mexico"
-msgstr ""
+msgstr "மெக்ஸிக்கோ"
 
 #: /media/js/settings.js:121
 msgid "Montenegro"
-msgstr ""
+msgstr "மொண்டெனேகுரோ"
 
 #: /media/js/settings.js:122
 msgid "Nicaragua"
-msgstr ""
+msgstr "நிகரகுவா"
 
 #: /media/js/settings.js:123
 msgid "Panama"
-msgstr ""
+msgstr "பனாமா"
 
 #: /media/js/settings.js:124
 msgid "Peru"
-msgstr ""
+msgstr "பெரு"
 
 #: /media/js/settings.js:125
 msgid "Poland"
-msgstr ""
+msgstr "போலந்து"
 
 #: /media/js/settings.js:126
 msgid "Serbia"
-msgstr ""
+msgstr "செர்பியா"
 
 #: /media/js/settings.js:127
 msgid "Spain"
-msgstr ""
+msgstr "ஸ்பெயின்"
 
 #: /media/js/settings.js:128
 msgid "United Kingdom"
-msgstr ""
+msgstr "ஐக்கிய இராஜ்யம்"
 
 #: /media/js/settings.js:129
 msgid "United States"
-msgstr ""
+msgstr "அமெரிக்கா"
 
 #: /media/js/settings.js:130
 msgid "Uruguay"
-msgstr ""
+msgstr "உருகுவே"
 
 #: /media/js/settings.js:131
 msgid "Venezuela"
-msgstr ""
+msgstr "வெனிசுலா"
 
 #: /media/js/settings.js:132
 msgid "No region in search"
-msgstr ""
+msgstr "தேடலில் எந்த பகுதியும் இல்லை"
 
 #. {n} is the number of characters left.
 #: /media/js/utils.js:28
 msgid "<b>{n}</b> character left."
 msgid_plural "<b>{n}</b> characters left."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "<b>{n}</b> எழுத்துக்கள் விடுப்பட்டுள்ளது."
+msgstr[1] "<b>{n}</b> எழுத்துக்கள் விடுப்பட்டுள்ளன."
 
 #: /media/js/views/app.js:69
 msgid "App Details"
-msgstr ""
+msgstr "பயன்பாட்டு விவரங்கள்"
 
 #: /media/js/views/feedback.js:23
 msgid "Feedback submitted. Thanks!"
-msgstr ""
+msgstr "உங்களுடைய கருத்து சமர்பிக்கப்பட்டது. நன்றி!"
 
 #: /media/js/views/feedback.js:27
 msgid "There was a problem submitting your feedback. Try again soon."
 msgstr ""
+"உங்களுடைய கருத்தை சமர்பிப்பதில் பிழை நேர்ந்துவிட்டது. மீண்டும் பிறகு "
+"முயற்சி."
 
 #. Page not found (404)
 #: /media/js/views/not_found.js:9
 msgid "Not Found"
-msgstr ""
+msgstr "காணப்படவில்லைல"
 
 #: /media/js/views/search.js:28
 msgid "Sorry, you must be connected to the Internet to search Marketplace."
 msgstr ""
+"மன்னிக்கவும், நீங்கள் சந்தையில் தேடும் முன் இணையத்துடன் கட்டாயமாக இணைக்க "
+"வேண்டும்."
 
 #: /media/js/views/search.js:223
 msgid "Search Results"
-msgstr ""
+msgstr "தேடல் முடிவுகள்"
 
 #: /media/js/views/app/abuse.js:18
 msgid "Abuse reported"
-msgstr ""
+msgstr "புகார் அளித்துவிட்டீர்கள்"
 
 #: /media/js/views/app/abuse.js:22
 msgid "Error while submitting report"
-msgstr ""
+msgstr "அறிக்கையை சமர்ப்பிக்கும்போது பிழை நேர்ந்தது"
