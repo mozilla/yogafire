@@ -1,764 +1,771 @@
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-04-29T15:34:49.744Z\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2014-04-30 11:14+0000\n"
+"Last-Translator: Umesh <umesh.agarwal1@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: hi_IN\n"
 "MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);Content-Type: text/plain; charset=UTF-8\n"
-"X-Generator: Fireplace L10n Tools 1.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);Content-Type: text/plain; "
+"charset=UTF-8\n"
+"X-Generator: Pootle 2.5.0\n"
+"X-POOTLE-MTIME: 1398856493.0\n"
 
 #: /templates/cat_dropdown.html:2
 msgid "All Categories"
-msgstr ""
+msgstr "सभी श्रेणियाँ"
 
 #: /templates/cat_dropdown.html:17
 msgid "Home"
-msgstr ""
+msgstr "घर"
 
 #: /templates/cat_dropdown.html:18
 msgid "Games"
-msgstr ""
+msgstr "खेल"
 
 #: /templates/cat_dropdown.html:19
 msgid "Tools"
-msgstr ""
+msgstr "औजार"
 
 #: /templates/cat_dropdown.html:20
 msgid "Lifestyle"
-msgstr ""
+msgstr "जीवन शैली"
 
 #: /templates/confirmation.html:0 /templates/incompatible.html:3 /templates/detail/abuse.html:6
 msgid "Close"
-msgstr ""
+msgstr "बंद करे"
 
 #: /templates/confirmation.html:3
 msgid "No"
-msgstr ""
+msgstr "नहीं"
 
 #: /templates/confirmation.html:4
 msgid "Yes"
-msgstr ""
+msgstr "हाँ"
 
 #. The Marketplace app is out-of-date and needs to be updated.
 #: /templates/deprecated.html:2
 msgid "Out-of-Date Marketplace"
-msgstr ""
+msgstr "पुराने दिनों का मार्केटप्लेस"
 
 #: /templates/deprecated.html:3
 msgid "The version of the Firefox Marketplace that you're using is no longer supported. You will need to perform an update before you can continue enjoying the Marketplace."
 msgstr ""
+"जिस संस्करण कि फ़ायरफ़ॉक्स मार्केटप्लेस का आप उपयोग कर रहे हैं अब उसका "
+"समर्थित नहीं है. मार्केटप्लेस का आनंद जारी रखने से पहले एक अद्यतन करने की "
+"जरूरत हैं."
 
 #: /templates/deprecated.html:5
 msgid "Update Now"
-msgstr ""
+msgstr "अभी अद्यतन करें"
 
 #: /templates/featured.html:7
 msgid "Featured"
-msgstr ""
+msgstr "चित्रित"
 
 #: /templates/featured.html:8 /templates/search/main.html:18
 msgid "Expand"
-msgstr ""
+msgstr "विस्तार करें"
 
 #: /templates/featured.html:22
 msgid "No featured apps found"
-msgstr ""
+msgstr "कोई चित्रित एप्प्स नहीं पाया गया"
 
 #: /templates/header.html:1
 msgid "Back"
-msgstr ""
+msgstr "पीछे"
 
 #: /templates/header.html:5 /templates/header.html:8
 msgid "Search"
-msgstr ""
+msgstr "खोजें"
 
 #: /templates/header.html:10
 msgid "Clear"
-msgstr ""
+msgstr "साफ़ करें"
 
 #: /templates/incompatible.html:1
 msgid "You must use Firefox to install Firefox apps."
-msgstr ""
+msgstr "फ़ायरफ़ॉक्स एप्प्स स्थापित करने के लिए फ़ायरफ़ॉक्स का उपयोग करना चाहिए."
 
 #: /templates/incompatible.html:2
 msgid "Download."
-msgstr ""
+msgstr "डाउनलोड."
 
 #: /templates/privacy.html:2 /templates/category_yogafire/main.html:47 /templates/detail/main_yogafire.html:75 /templates/detail/privacy.html:3 /media/js/views/privacy.js:10
 #: /media/js/views/app/privacy.js:10
 msgid "Privacy Policy"
-msgstr ""
+msgstr "गोपनीयता नीति"
 
 #: /templates/terms.html:2 /templates/category_yogafire/main.html:44 /media/js/views/terms.js:10
 msgid "Terms of Use"
-msgstr ""
+msgstr "उपयोग की शर्तों"
 
 #: /templates/_includes/truncated.html:4
 msgid "...more"
-msgstr ""
+msgstr "...अधिक"
 
 #. This app is unavailable for purchase.
 #: /templates/_macros/market_button.html:5
 msgid "Unavailable"
-msgstr ""
+msgstr "अनुपलब्ध"
 
 #: /templates/_macros/market_button.html:7 /templates/_macros/market_tile.html:61
 msgid "Free"
-msgstr ""
+msgstr "मुफ्त"
 
 #: /templates/_macros/market_button.html:14 /media/js/buttons.js:271
 msgid "Install"
-msgstr ""
+msgstr "स्थापित करें"
 
 #: /templates/_macros/market_tile.html:11 /templates/_macros/market_tile.html:13
 msgid "{app_name} screenshot"
-msgstr ""
+msgstr "{app_name} स्क्रीनशॉट"
 
 #. the IARC rating body/system followed by a name/description of the rating (e.g. "ESRB: Everyone" or "PEGI: For ages 3+").
 #: /templates/_macros/market_tile.html:52
 msgid "{rating_body}: {rating}"
-msgstr ""
+msgstr "{rating_body}: {rating}"
 
 #: /templates/_macros/market_tile.html:66
 msgid "({n})"
-msgstr ""
+msgstr "({n})"
 
 #: /templates/_macros/market_tile.html:69
 msgid "{n} Review"
 msgid_plural "{n} Reviews"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{n} समीक्षा"
+msgstr[1] "{n} समीक्षाएँ"
 
 #: /templates/_macros/market_tile.html:73
 msgid "(0)"
-msgstr ""
+msgstr "(0)"
 
 #: /templates/_macros/market_tile.html:74
 msgid "Not yet rated"
-msgstr ""
+msgstr "अभी तक रेटेड नहीं"
 
 #: /templates/_macros/more_button.html:2
 msgid "More"
-msgstr ""
+msgstr "अधिक"
 
 #: /templates/_macros/stars.html:5
 msgid "Rated {stars} out of {maxstars} stars"
-msgstr ""
+msgstr "रेटेड {stars} में से {maxstars} सितारे"
 
 #: /templates/category_yogafire/main.html:38
 msgid "Get Help"
-msgstr ""
+msgstr "सहायता प्राप्त करें"
 
 #: /templates/category_yogafire/main.html:41 /media/js/views/feedback.js:61
 msgid "Feedback"
-msgstr ""
+msgstr "प्रतिपुष्टि"
 
 #: /templates/category_yogafire/main.html:10
 msgid "Featured Apps"
-msgstr ""
+msgstr "चित्रित एप्प्स"
 
 #: /templates/category_yogafire/main.html:23
 msgid "No apps in this category"
-msgstr ""
+msgstr "इस श्रेणी में कोई एप्प्स नहीं"
 
 #: /templates/category_yogafire/main.html:28
 msgid "The category you requested does not exist."
-msgstr ""
+msgstr "अनुरोधित श्रेणी मौजूद नहीं है."
 
 #: /templates/category_yogafire/main.html:30
 msgid "An internal server error occurred. Please try again later."
-msgstr ""
+msgstr "एक आंतरिक सर्वर त्रुटि हो गई. कृपया बाद में पुनः प्रयास करें."
 
 #: /templates/detail/abuse.html:5 /templates/detail/main_yogafire.html:86 /media/js/views/app/abuse.js:34
 msgid "Report Abuse"
-msgstr ""
+msgstr "दुर्व्यवहार की रिपोर्ट करें"
 
 #: /templates/detail/abuse.html:15
 msgid "Send Report"
-msgstr ""
+msgstr "रिपोर्ट भेजें"
 
 #: /templates/detail/content_ratings.html:4
 msgid "Content Rating"
-msgstr ""
+msgstr "विषय सूची रेटिंग"
 
 #: /templates/detail/content_ratings.html:73
 msgid "Content Rating Details"
-msgstr ""
+msgstr "विषय सूची रेटिंग विवरण"
 
 #: /templates/detail/main_yogafire.html:13 /templates/detail/main_yogafire.html:14 /media/js/views/app.js:68
 msgid "Loading..."
-msgstr ""
+msgstr "लोड हो रहा है..."
 
 #: /templates/detail/main_yogafire.html:42
 msgid "Description"
-msgstr ""
+msgstr "विवरण"
 
 #: /templates/detail/main_yogafire.html:58
 msgid "Support Email"
-msgstr ""
+msgstr "ईमेल सहायता"
 
 #: /templates/detail/main_yogafire.html:64
 msgid "Support Site"
-msgstr ""
+msgstr "सहायता की साइट"
 
 #: /templates/detail/main_yogafire.html:69
 msgid "Homepage"
-msgstr ""
+msgstr "मुखपृष्ठ"
 
 #: /templates/detail/main_yogafire.html:81
 msgid "Statistics"
-msgstr ""
+msgstr "आंकड़े"
 
 #: /templates/detail/privacy.html:5
 msgid "Back to app"
-msgstr ""
+msgstr "एप्प्स पर वापस जाएँ"
 
 #: /templates/detail/privacy.html:11
 msgid "Loading Privacy Policy..."
-msgstr ""
+msgstr "गोपनीयता नीति लोड हो रहा है..."
 
 #: /templates/errors/404.html:2 /templates/errors/fragment.html:1
 msgid "Oh no!"
-msgstr ""
+msgstr "अरे नहीं!"
 
 #: /templates/errors/404.html:3
 msgid "The page you were looking for was not found."
-msgstr ""
+msgstr "जिस पृष्ठ को खोज रहे थे वह नहीं मिला."
 
 #: /templates/errors/fragment.html:2
 msgid "An error occurred."
-msgstr ""
+msgstr "एक त्रुटि हुई."
 
 #: /templates/errors/pagination.html:1
 msgid "Error loading more"
-msgstr ""
+msgstr "अधिक लोड करने में त्रुटि"
 
 #: /templates/errors/pagination.html:2
 msgid "Try Again"
-msgstr ""
+msgstr "पुन: प्रयास करें"
 
 #: /templates/search/main.html:15
 msgid "<b>{n}</b> Result"
 msgid_plural "<b>{n}</b> Results"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "<b>{n}</b> परिणाम"
+msgstr[1] "<b>{n}</b> परिणाम"
 
 #: /templates/search/main.html:16
 msgid "Showing <b>1</b>&ndash;<b class=\"total-results\">{total}</b>"
-msgstr ""
+msgstr "दिखा रहा है<b>1</b>&ndash;<b class=\"total-results\">{total}</b>"
 
 #: /templates/search/main.html:36
 msgid "No results found"
-msgstr ""
+msgstr "कोई परिणाम नहीं मिला"
 
 #: /templates/search/main.html:41
 msgid "No results found, try again later"
-msgstr ""
+msgstr "कोई परिणाम नहीं मिला, बाद में पुन: प्रयास करें"
 
 #: /templates/settings/feedback.html:11
 msgid "Send"
-msgstr ""
+msgstr "भेजें"
 
 #: /media/js/apps.js:90 /media/js/apps_iframe_installer.js:46
 msgid "App install error: {error}"
-msgstr ""
+msgstr "एप्प्स की स्थापित त्रुटि: {error}"
 
 #: /media/js/apps.js:141
 msgid "Your device does not support payments."
-msgstr ""
+msgstr "आपका उपकरण भुगतान का समर्थन नहीं करता."
 
 #: /media/js/apps.js:143
 msgid "This app is unavailable for purchase in your region."
-msgstr ""
+msgstr "यह एप्लिकेशन आपके क्षेत्र में खरीद के लिए उपलब्ध नहीं है."
 
 #: /media/js/apps.js:147
 msgid "Your browser or device is not web-app compatible."
-msgstr ""
+msgstr "आपका ब्राउज़र या उपकरण वेब-एप्लिकेशन अनुकूल नहीं है."
 
 #: /media/js/apps.js:149
 msgid "This app is unavailable for your platform."
-msgstr ""
+msgstr "यह एप्लिकेशन आपके प्लेटफ़ॉर्म के लिए उपलब्ध नहीं है."
 
 #: /media/js/buttons.js:61 /media/js/buttons.js:88
 msgid "Payment cancelled."
-msgstr ""
+msgstr "भुगतान रद्द."
 
 #. The app's installation has failed, but the problem is temporary.
 #: /media/js/buttons.js:159
 msgid "Install failed. Please try again later."
-msgstr ""
+msgstr "स्थापित करने में विफल. बाद में पुन: प्रयास करें."
 
 #: /media/js/buttons.js:249
 msgid "Open"
-msgstr ""
+msgstr "खोलें"
 
 #. For ages {0} and higher. (de) `ab {0} Jahren`.
 #: /media/js/content-ratings.js:97
 msgid "For ages {0}+"
-msgstr ""
+msgstr "उम्र के लिए {0}+"
 
 #: /media/js/content-ratings.js:103
 msgid "Generic"
-msgstr ""
+msgstr "जातिगत"
 
 #: /media/js/content-ratings.js:110
 msgid "Criminal Acts"
-msgstr ""
+msgstr "आपराधिक कृत्य"
 
 #: /media/js/content-ratings.js:112 /media/js/content-ratings.js:177 /media/js/content-ratings.js:189 /media/js/content-ratings.js:208
 msgid "Drugs"
-msgstr ""
+msgstr "औषधि"
 
 #: /media/js/content-ratings.js:114
 msgid "Illegal Drugs"
-msgstr ""
+msgstr "अवैध औषधि"
 
 #: /media/js/content-ratings.js:116
 msgid "Legal Drugs"
-msgstr ""
+msgstr "वैध औषधि"
 
 #: /media/js/content-ratings.js:118
 msgid "Inappropriate Language"
-msgstr ""
+msgstr "अनुपयुक्त भाषा"
 
 #: /media/js/content-ratings.js:120 /media/js/content-ratings.js:160
 msgid "Nudity"
-msgstr ""
+msgstr "निर्वस्त्रता"
 
 #: /media/js/content-ratings.js:122 /media/js/content-ratings.js:184 /media/js/content-ratings.js:196
 msgid "Sex"
-msgstr ""
+msgstr "लिंग"
 
 #: /media/js/content-ratings.js:124
 msgid "Explicit Sex"
-msgstr ""
+msgstr "सुनिश्चित लिंग"
 
 #: /media/js/content-ratings.js:126
 msgid "Impacting Content"
-msgstr ""
+msgstr "प्रभावित विषय सूची"
 
 #: /media/js/content-ratings.js:128 /media/js/content-ratings.js:172 /media/js/content-ratings.js:185 /media/js/content-ratings.js:197 /media/js/content-ratings.js:216
 msgid "Violence"
-msgstr ""
+msgstr "हिंसा"
 
 #: /media/js/content-ratings.js:130
 msgid "Extreme Violence"
-msgstr ""
+msgstr "चरम हिंसा"
 
 #: /media/js/content-ratings.js:133
 msgid "Alcohol Reference"
-msgstr ""
+msgstr "शराब के संदर्भ"
 
 #: /media/js/content-ratings.js:134
 msgid "Alcohol and Tobacco Reference"
-msgstr ""
+msgstr "शराब और तंबाकू के संदर्भ"
 
 #: /media/js/content-ratings.js:135
 msgid "Use of Alcohol and Tobacco"
-msgstr ""
+msgstr "शराब और तंबाकू के उपयोग"
 
 #: /media/js/content-ratings.js:136
 msgid "Use of Alcohol"
-msgstr ""
+msgstr "शराब के उपयोग"
 
 #: /media/js/content-ratings.js:137
 msgid "Blood"
-msgstr ""
+msgstr "खून"
 
 #: /media/js/content-ratings.js:138
 msgid "Blood and Gore"
-msgstr ""
+msgstr "खून और गोर"
 
 #: /media/js/content-ratings.js:139
 msgid "Comic Mischief"
-msgstr ""
+msgstr "हास्य शरारत"
 
 #: /media/js/content-ratings.js:140
 msgid "Crime"
-msgstr ""
+msgstr "अपराध"
 
 #: /media/js/content-ratings.js:141
 msgid "Criminal Instruction"
-msgstr ""
+msgstr "आपराधिक निर्देश"
 
 #: /media/js/content-ratings.js:142
 msgid "Crude Humor"
-msgstr ""
+msgstr "अशिष्ट मनोवृत्ति"
 
 #: /media/js/content-ratings.js:143
 msgid "Drug and Alcohol Reference"
-msgstr ""
+msgstr "नशीली दवाओं और शराब के संदर्भ"
 
 #: /media/js/content-ratings.js:144
 msgid "Drug, Alcohol, and Tobacco Reference"
-msgstr ""
+msgstr "नशीली दवाओं, शराब और तंबाकू के संदर्भ"
 
 #: /media/js/content-ratings.js:145
 msgid "Use of Drug, Alcohol, and Tobacco"
-msgstr ""
+msgstr "नशीली दवाओं, शराब और तंबाकू के प्रयोग"
 
 #: /media/js/content-ratings.js:146
 msgid "Use of Drug and Alcohol"
-msgstr ""
+msgstr "नशीली दवाओं और शराब के प्रयोग"
 
 #: /media/js/content-ratings.js:147
 msgid "Drug Reference"
-msgstr ""
+msgstr "औषधि के संदर्भ"
 
 #: /media/js/content-ratings.js:148
 msgid "Drug and Tobacco Reference"
-msgstr ""
+msgstr "नशीली दवाओं और तंबाकू के संदर्भ"
 
 #: /media/js/content-ratings.js:149
 msgid "Use of Drug and Tobacco"
-msgstr ""
+msgstr "नशीली दवाओं और तंबाकू के उपयोग"
 
 #: /media/js/content-ratings.js:150
 msgid "Use of Drugs"
-msgstr ""
+msgstr "औषधि के उपयोग"
 
 #: /media/js/content-ratings.js:151
 msgid "Fantasy Violence"
-msgstr ""
+msgstr "काल्पनिक हिंसा"
 
 #: /media/js/content-ratings.js:152
 msgid "Hate Speech"
-msgstr ""
+msgstr "नफरत के वचन"
 
 #: /media/js/content-ratings.js:153
 msgid "Intense Violence"
-msgstr ""
+msgstr "तीव्र हिंसा"
 
 #: /media/js/content-ratings.js:155 /media/js/content-ratings.js:180 /media/js/content-ratings.js:192
 msgid "Language"
-msgstr ""
+msgstr "भाषा"
 
 #: /media/js/content-ratings.js:156
 msgid "Mild Blood"
-msgstr ""
+msgstr "सौम्य खून"
 
 #: /media/js/content-ratings.js:157
 msgid "Mild Fantasy Violence"
-msgstr ""
+msgstr "सौम्य काल्पनिक हिंसा"
 
 #: /media/js/content-ratings.js:158
 msgid "Mild Language"
-msgstr ""
+msgstr "नरम भाषा"
 
 #: /media/js/content-ratings.js:159
 msgid "Mild Violence"
-msgstr ""
+msgstr "नरम हिंसा"
 
 #: /media/js/content-ratings.js:161
 msgid "Partial Nudity"
-msgstr ""
+msgstr "आंशिक निर्वस्त्रता"
 
 #: /media/js/content-ratings.js:162
 msgid "Real Gambling"
-msgstr ""
+msgstr "वास्तविक जुआ"
 
 #: /media/js/content-ratings.js:163
 msgid "Scary Themes"
-msgstr ""
+msgstr "डरावने थीम्स"
 
 #: /media/js/content-ratings.js:164 /media/js/content-ratings.js:214
 msgid "Sexual Content"
-msgstr ""
+msgstr "यौन सामग्री"
 
 #: /media/js/content-ratings.js:165
 msgid "Sexual Themes"
-msgstr ""
+msgstr "यौन थीम्स"
 
 #: /media/js/content-ratings.js:166
 msgid "Simulated Gambling"
-msgstr ""
+msgstr "सिम्युलेटेड जुआ"
 
 #: /media/js/content-ratings.js:167
 msgid "Strong Language"
-msgstr ""
+msgstr "मजबूत भाषा"
 
 #: /media/js/content-ratings.js:168
 msgid "Strong Sexual Content"
-msgstr ""
+msgstr "मजबूत यौन विषय सूची"
 
 #: /media/js/content-ratings.js:169
 msgid "Suggestive Themes"
-msgstr ""
+msgstr "सुझाने वाला थीम्स"
 
 #: /media/js/content-ratings.js:170
 msgid "Tobacco Reference"
-msgstr ""
+msgstr "तंबाकू के संदर्भ"
 
 #: /media/js/content-ratings.js:171
 msgid "Use of Tobacco"
-msgstr ""
+msgstr "तंबाकू के उपयोग"
 
 #: /media/js/content-ratings.js:173
 msgid "Violence References"
-msgstr ""
+msgstr "हिंसा के सन्दर्भ"
 
 #: /media/js/content-ratings.js:176 /media/js/content-ratings.js:188 /media/js/content-ratings.js:206
 msgid "Discrimination"
-msgstr ""
+msgstr "भेदभाव"
 
 #: /media/js/content-ratings.js:178 /media/js/content-ratings.js:190
 msgid "Gambling"
-msgstr ""
+msgstr "जुआ"
 
 #: /media/js/content-ratings.js:181 /media/js/content-ratings.js:193
 msgid "Online"
-msgstr ""
+msgstr "ऑनलाइन"
 
 #: /media/js/content-ratings.js:182 /media/js/content-ratings.js:194
 msgid "Fear"
-msgstr ""
+msgstr "भय"
 
 #: /media/js/content-ratings.js:199
 msgid "Social Interaction Functionality"
-msgstr ""
+msgstr "सामाजिक सहभागिता कार्यशीलता"
 
 #: /media/js/content-ratings.js:200
 msgid "Personal Data Sharing"
-msgstr ""
+msgstr "व्यक्तिगत डाटा साझाकरण"
 
 #: /media/js/content-ratings.js:201
 msgid "In-app Purchase Option"
-msgstr ""
+msgstr "इन-एप्लिकेशन खरीद के विकल्प"
 
 #: /media/js/content-ratings.js:202
 msgid "Location Data Sharing"
-msgstr ""
+msgstr "स्थान डेटा साझाकरण"
 
 #: /media/js/content-ratings.js:210
 msgid "Explicit Language"
-msgstr ""
+msgstr "सुनिश्चित भाषा"
 
 #: /media/js/content-ratings.js:212
 msgid "Frightening Content"
-msgstr ""
+msgstr "डरावना सामग्री"
 
 #: /media/js/content-ratings.js:220
 msgid "Digital Purchases"
-msgstr ""
+msgstr "डिजिटल खरीदारी"
 
 #: /media/js/content-ratings.js:221
 msgid "Shares Info"
-msgstr ""
+msgstr "शेयरों की जानकारी"
 
 #: /media/js/content-ratings.js:222
 msgid "Shares Location"
-msgstr ""
+msgstr "स्थान साझा करें"
 
 #: /media/js/content-ratings.js:223
 msgid "Users Interact"
-msgstr ""
+msgstr "उपयोगकर्ता सहभागिता"
 
 #: /media/js/content-ratings.js:228
 msgid "For all ages"
-msgstr ""
+msgstr "सभी उम्र के लिए"
 
 #: /media/js/content-ratings.js:237
 msgid "Rating Pending"
-msgstr ""
+msgstr "रेटिंग लम्बित"
 
 #: /media/js/content-ratings.js:238
 msgid "Rating Refused"
-msgstr ""
+msgstr "रेटिंग अस्वीकृत"
 
 #: /media/js/content-ratings.js:241
 msgid "Everyone"
-msgstr ""
+msgstr "सब लोग"
 
 #: /media/js/content-ratings.js:242
 msgid "Everyone 10+"
-msgstr ""
+msgstr "सब लोग10+"
 
 #: /media/js/content-ratings.js:243
 msgid "Teen"
-msgstr ""
+msgstr "किशोर"
 
 #: /media/js/content-ratings.js:244
 msgid "Mature 17+"
-msgstr ""
+msgstr "परिपक्व17+"
 
 #: /media/js/content-ratings.js:245
 msgid "Adults Only 18+"
-msgstr ""
+msgstr "केवल वयस्क18+"
 
 #: /media/js/login.js:11
 msgid "You have been signed out"
-msgstr ""
+msgstr "आपको साइन आउट कर दिया गया है"
 
 #: /media/js/login.js:15
 msgid "You have been signed in"
-msgstr ""
+msgstr "आपको साइन इन कर दिया गया है"
 
 #: /media/js/login.js:135
 msgid "Persona login failed. Maybe you don't have an account under that email address?"
 msgstr ""
+"व्यक्तित्व लॉगिन विफल. हो सकता है कि उउस ईमेल पते के अंतर्गत एक खाता नहीं "
+"है?"
 
 #: /media/js/login.js:140
 msgid "Persona login failed. A server error was encountered."
-msgstr ""
+msgstr "व्यक्तित्व लॉगिन विफल. एक सर्वर त्रुटि का सामना हुआ."
 
 #: /media/js/login.js:208
 msgid "Persona cannot be reached. Try again later."
-msgstr ""
+msgstr "परसोना तक पहुँचा नहीं जा सकता. बाद में पुन: प्रयास करें."
 
 #: /media/js/navigation.js:33
 msgid "No internet connection"
-msgstr ""
+msgstr "कोई इंटरनेट कनेक्शन नहीं"
 
 #: /media/js/settings.js:106
 msgid "Rest of World"
-msgstr ""
+msgstr "बाकी की दुनिया"
 
 #: /media/js/settings.js:107
 msgid "Argentina"
-msgstr ""
+msgstr "अर्जेंटीना"
 
 #: /media/js/settings.js:108
 msgid "Brazil"
-msgstr ""
+msgstr "ब्राज़िल"
 
 #: /media/js/settings.js:109
 msgid "Chile"
-msgstr ""
+msgstr "चिली"
 
 #: /media/js/settings.js:110
 msgid "China"
-msgstr ""
+msgstr "चीन"
 
 #: /media/js/settings.js:111
 msgid "Colombia"
-msgstr ""
+msgstr "कोलंबिया"
 
 #: /media/js/settings.js:112
 msgid "Costa Rica"
-msgstr ""
+msgstr "कोस्टा रिका"
 
 #: /media/js/settings.js:113
 msgid "Ecuador"
-msgstr ""
+msgstr "इक्वेडोर"
 
 #: /media/js/settings.js:114
 msgid "El Salvador"
-msgstr ""
+msgstr "अल सल्वाडोर"
 
 #: /media/js/settings.js:115
 msgid "Germany"
-msgstr ""
+msgstr "जर्मनी"
 
 #: /media/js/settings.js:116
 msgid "Greece"
-msgstr ""
+msgstr "ग्रीस"
 
 #: /media/js/settings.js:117
 msgid "Guatemala"
-msgstr ""
+msgstr "ग्वाटेमाला"
 
 #: /media/js/settings.js:118
 msgid "Hungary"
-msgstr ""
+msgstr "हंगरी"
 
 #: /media/js/settings.js:119
 msgid "Italy"
-msgstr ""
+msgstr "इटली"
 
 #: /media/js/settings.js:120
 msgid "Mexico"
-msgstr ""
+msgstr "मेक्सिको"
 
 #: /media/js/settings.js:121
 msgid "Montenegro"
-msgstr ""
+msgstr "मॉन्टेंगरो"
 
 #: /media/js/settings.js:122
 msgid "Nicaragua"
-msgstr ""
+msgstr "निकारागुआ"
 
 #: /media/js/settings.js:123
 msgid "Panama"
-msgstr ""
+msgstr "पनामा"
 
 #: /media/js/settings.js:124
 msgid "Peru"
-msgstr ""
+msgstr "पेरू"
 
 #: /media/js/settings.js:125
 msgid "Poland"
-msgstr ""
+msgstr "पोलैंड"
 
 #: /media/js/settings.js:126
 msgid "Serbia"
-msgstr ""
+msgstr "सर्बिया"
 
 #: /media/js/settings.js:127
 msgid "Spain"
-msgstr ""
+msgstr "स्पेन"
 
 #: /media/js/settings.js:128
 msgid "United Kingdom"
-msgstr ""
+msgstr "यूनाइटेड किंगडम"
 
 #: /media/js/settings.js:129
 msgid "United States"
-msgstr ""
+msgstr "संयुक्त राज्य"
 
 #: /media/js/settings.js:130
 msgid "Uruguay"
-msgstr ""
+msgstr "उरुग्वे"
 
 #: /media/js/settings.js:131
 msgid "Venezuela"
-msgstr ""
+msgstr "वेनेज़ुएला"
 
 #: /media/js/settings.js:132
 msgid "No region in search"
-msgstr ""
+msgstr "खोज में कोई क्षेत्र नहीं"
 
 #. {n} is the number of characters left.
 #: /media/js/utils.js:28
 msgid "<b>{n}</b> character left."
 msgid_plural "<b>{n}</b> characters left."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "<b>{n}</b> बचे हुए अक्षर."
+msgstr[1] "<b>{n}</b> बचे हुए अक्षर."
 
 #: /media/js/views/app.js:69
 msgid "App Details"
-msgstr ""
+msgstr "एप्लिकेशन के विवरण"
 
 #: /media/js/views/feedback.js:23
 msgid "Feedback submitted. Thanks!"
-msgstr ""
+msgstr "प्रतिक्रिया प्रस्तुत की. धन्यवाद!"
 
 #: /media/js/views/feedback.js:27
 msgid "There was a problem submitting your feedback. Try again soon."
-msgstr ""
+msgstr "आपकी प्रतिक्रिया प्रस्तुत करने में समस्या थी. जल्द ही पुन: प्रयास करें."
 
 #. Page not found (404)
 #: /media/js/views/not_found.js:9
 msgid "Not Found"
-msgstr ""
+msgstr "नहीं मिला"
 
 #: /media/js/views/search.js:28
 msgid "Sorry, you must be connected to the Internet to search Marketplace."
-msgstr ""
+msgstr "क्षमा करें, मार्केटप्लेस खोजने के लिए आपको इंटरनेट से जुड़ा होना चाहिए."
 
 #: /media/js/views/search.js:223
 msgid "Search Results"
-msgstr ""
+msgstr "खोज के परिणाम"
 
 #: /media/js/views/app/abuse.js:18
 msgid "Abuse reported"
-msgstr ""
+msgstr "दुर्व्यवहार की सूचना"
 
 #: /media/js/views/app/abuse.js:22
 msgid "Error while submitting report"
-msgstr ""
+msgstr "रिपोर्ट प्रस्तुत करते करने में त्रुटि"
