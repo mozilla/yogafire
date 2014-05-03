@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-04-29T15:34:49.744Z\n"
-"PO-Revision-Date: 2014-03-06 08:08+0000\n"
+"PO-Revision-Date: 2014-05-03 21:06+0000\n"
 "Last-Translator: Selim <selim@sum.lu>\n"
 "Language-Team: none\n"
 "Language: tr\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Pootle 2.5.0\n"
-"X-POOTLE-MTIME: 1394093302.0\n"
+"X-POOTLE-MTIME: 1399151189.0\n"
 
 #: /templates/cat_dropdown.html:2
 msgid "All Categories"
@@ -20,19 +20,19 @@ msgstr "Tüm Kategoriler"
 
 #: /templates/cat_dropdown.html:17
 msgid "Home"
-msgstr ""
+msgstr "Ana sayfa"
 
 #: /templates/cat_dropdown.html:18
 msgid "Games"
-msgstr ""
+msgstr "Oyunlar"
 
 #: /templates/cat_dropdown.html:19
 msgid "Tools"
-msgstr ""
+msgstr "Araçlar"
 
 #: /templates/cat_dropdown.html:20
 msgid "Lifestyle"
-msgstr ""
+msgstr "Yaşam tarzı"
 
 #: /templates/confirmation.html:0 /templates/incompatible.html:3 /templates/detail/abuse.html:6
 msgid "Close"
@@ -102,7 +102,7 @@ msgstr "Kullanım Koşulları"
 
 #: /templates/_includes/truncated.html:4
 msgid "...more"
-msgstr ""
+msgstr "...devamı"
 
 #. This app is unavailable for purchase.
 #: /templates/_macros/market_button.html:5
@@ -330,11 +330,11 @@ msgstr ""
 
 #: /media/js/content-ratings.js:120 /media/js/content-ratings.js:160
 msgid "Nudity"
-msgstr ""
+msgstr "Çıplaklık"
 
 #: /media/js/content-ratings.js:122 /media/js/content-ratings.js:184 /media/js/content-ratings.js:196
 msgid "Sex"
-msgstr ""
+msgstr "Seks"
 
 #: /media/js/content-ratings.js:124
 msgid "Explicit Sex"
@@ -346,31 +346,31 @@ msgstr ""
 
 #: /media/js/content-ratings.js:128 /media/js/content-ratings.js:172 /media/js/content-ratings.js:185 /media/js/content-ratings.js:197 /media/js/content-ratings.js:216
 msgid "Violence"
-msgstr ""
+msgstr "Şiddet"
 
 #: /media/js/content-ratings.js:130
 msgid "Extreme Violence"
-msgstr ""
+msgstr "Aşırı şiddet"
 
 #: /media/js/content-ratings.js:133
 msgid "Alcohol Reference"
-msgstr ""
+msgstr "Alkole özendirme"
 
 #: /media/js/content-ratings.js:134
 msgid "Alcohol and Tobacco Reference"
-msgstr ""
+msgstr "Alkol ve tütüne özendirme"
 
 #: /media/js/content-ratings.js:135
 msgid "Use of Alcohol and Tobacco"
-msgstr ""
+msgstr "Alkol ve tütün kullanımı"
 
 #: /media/js/content-ratings.js:136
 msgid "Use of Alcohol"
-msgstr ""
+msgstr "Alkol kullanımı"
 
 #: /media/js/content-ratings.js:137
 msgid "Blood"
-msgstr ""
+msgstr "Kan"
 
 #: /media/js/content-ratings.js:138
 msgid "Blood and Gore"
@@ -382,11 +382,11 @@ msgstr ""
 
 #: /media/js/content-ratings.js:140
 msgid "Crime"
-msgstr ""
+msgstr "Suç"
 
 #: /media/js/content-ratings.js:141
 msgid "Criminal Instruction"
-msgstr ""
+msgstr "Suç tarifi"
 
 #: /media/js/content-ratings.js:142
 msgid "Crude Humor"
