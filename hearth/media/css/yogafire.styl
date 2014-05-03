@@ -117,7 +117,55 @@ active_category() {
     }
 }
 
+.listing .mkt-tile {
+    h3.tight {
+        padding-bottom: 5px;
+    }
+    .button {
+        bottom: -4px;
+    }
+    .info {
+        left: 84px;
+        position: absolute;
+        width: 217px;
+    }
+    .subdetail.content-rating {
+        margin-bottom: -4px;
+        padding-bottom: 0;
+    }
+    .subdetail {
+        max-width: 110px;
+    }
+}
+
+.mkt-tile .bad-app {
+    display: none;
+}
+
 [data-page-type~="detail"] {
+    .listing .mkt-tile {
+        height: 110px;
+
+        .info {
+            min-height: 90px;
+        }
+        h3.tight {
+            padding-bottom: 10px;
+        }
+        .rating {
+            bottom: 8px;
+            left: -74px;
+            position: absolute;
+
+            .cnt {
+                top: 1px;
+                margin-left: 3px;
+            }
+        }
+        .button {
+            bottom: 10px;
+        }
+    }
     .detail.top {
         background: none;
         box-shadow: none;
@@ -168,4 +216,8 @@ active_category() {
     .detail .content-ratings-wrapper {
         border: 0;
     }
+}
+
+.single .dots {
+    display: none;
 }

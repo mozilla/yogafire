@@ -85,7 +85,7 @@ define('image-deferrer', ['underscore', 'urls', 'z'], function(_, urls, z) {
         }
 
         // Defer image loading.
-        z.win.on('scroll resize', scrollListener);
+        z.win.on('scroll resize image_defer', scrollListener);
 
         function loadImages() {
             // Calculate viewport loading boundaries (vertical).
@@ -104,11 +104,11 @@ define('image-deferrer', ['underscore', 'urls', 'z'], function(_, urls, z) {
                     // Load image via clone + replace. It's slower, but it
                     // looks visually smoother than changing the image's
                     // class/src in place.
-                    imagesAlreadyLoaded.push(img);
-
                     var replace = img.cloneNode(false);
                     replace.classList.remove('deferred');
                     replace.onload = function() {
+                        imagesAlreadyLoaded.push(img);
+
                         // Once the replace has loaded, swap and fade in.
                         if (img.parentNode === null) {
                             return;

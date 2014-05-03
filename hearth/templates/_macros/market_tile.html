@@ -9,7 +9,7 @@
           <a class="screenshot thumbnail" href="{{ preview.image_url }}">
             {% if not imgAlreadyDeferred(preview.thumbnail_url) %}
               {# Defer image loading. Don't change data-src to src. #}
-              <img class="deferred" src="{{ media('fireplace/img/pretty/rocket.png') }}" alt="{{ _('{app_name} screenshot', app_name=app.name) }}" data-src="{{ preview.thumbnail_url }}" draggable="false" itemprop="contentURL">
+              <img class="icon deferred" src="/media/img/pretty/rocket.png" alt="" data-src="{{ preview.thumbnail_url }}" height="64" width="64" itemprop="image">
             {% else %}
               <img alt="{{ _('{app_name} screenshot', app_name=app.name) }}" src="{{ preview.thumbnail_url }}" draggable="false" itemprop="contentURL">
             {% endif %}
@@ -36,12 +36,12 @@
     {% if link %}itemscope itemtype="http://schema.org/SoftwareApplication"{% endif %}>
     {% if not imgAlreadyDeferred(app.icons['64']) %}
       {# Defer image loading. #}
-      <img class="icon deferred" src="{{ media('fireplace/img/pretty/rocket.png') }}" alt="" data-src="{{ app.icons['64'] or app.icon }}" height="64" width="64" itemprop="image">
+      <img class="icon deferred" src="/media/img/pretty/rocket.png" alt="" data-src="{{ app.icons['64'] or app.icon }}" height="64" width="64" itemprop="image">
     {% else %}
       <img class="icon" alt="" src="{{ app.icons['64'] or app.icon }}" height="64" width="64" itemprop="image">
     {% endif %}
     <div class="info">
-      <h3 itemprop="name">{{ app.name|translate(app) }}</h3>
+      <h3 itemprop="name" class="{{ 'tight' if app.content_ratings.rating }}">{{ app.name|translate(app) }}</h3>
       {% if app.author %}
         {# TODO: When we get user profiles, update this to be a proper Person itemprop #}
         <div class="author lineclamp vital subdetail" itemprop="creator">{{ app.author }}</div>
@@ -63,15 +63,11 @@
       <div class="rating vital{{ ' unrated' if not app.ratings.count }}" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
         {{ stars(app.ratings.average) }}
         {% if app.ratings.count %}
-          <span class="cnt short">
-            {{ _('({n})', n='<span itemprop="reviewCount">' + app.ratings.count + '</span>') }}
-          </span>
           <span class="cnt long">
             {{ _plural('{n} Review', '{n} Reviews', n=app.ratings.count) }}
           </span>
         {% else %}
           {# L10n: "(0)" means "0 reviews." #}
-          <span class="cnt short">{{ _('(0)') }}</span>
           <span class="cnt long">{{ _('Not yet rated') }}</span>
         {% endif %}
       </div>
