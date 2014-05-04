@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-04-29T15:34:49.744Z\n"
-"PO-Revision-Date: 2014-01-04 14:44+0000\n"
+"PO-Revision-Date: 2014-05-04 15:12+0000\n"
 "Last-Translator: Inma <inma.barrios@mozilla-hispano.org>\n"
 "Language-Team: Español (España) <nave@elistas.net>\n"
 "Language: es\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Pootle 2.5.0\n"
-"X-POOTLE-MTIME: 1388846668.0\n"
+"X-POOTLE-MTIME: 1399216352.0\n"
 
 #: /templates/cat_dropdown.html:2
 msgid "All Categories"
@@ -20,7 +20,7 @@ msgstr "Todas las categorías"
 
 #: /templates/cat_dropdown.html:17
 msgid "Home"
-msgstr ""
+msgstr "Inicio"
 
 #: /templates/cat_dropdown.html:18
 msgid "Games"
@@ -28,7 +28,7 @@ msgstr "Juegos"
 
 #: /templates/cat_dropdown.html:19
 msgid "Tools"
-msgstr ""
+msgstr "Herramientas"
 
 #: /templates/cat_dropdown.html:20
 msgid "Lifestyle"
@@ -102,7 +102,7 @@ msgstr "Condiciones de uso"
 
 #: /templates/_includes/truncated.html:4
 msgid "...more"
-msgstr ""
+msgstr "...más"
 
 #. This app is unavailable for purchase.
 #: /templates/_macros/market_button.html:5
@@ -119,7 +119,7 @@ msgstr "Instalar"
 
 #: /templates/_macros/market_tile.html:11 /templates/_macros/market_tile.html:13
 msgid "{app_name} screenshot"
-msgstr ""
+msgstr "Captura de pantalla {app_name}"
 
 #. the IARC rating body/system followed by a name/description of the rating (e.g. "ESRB: Everyone" or "PEGI: For ages 3+").
 #: /templates/_macros/market_tile.html:52
@@ -297,7 +297,7 @@ msgstr "Error en la instalación. Inténtalo de nuevo pasados unos minutos."
 
 #: /media/js/buttons.js:249
 msgid "Open"
-msgstr ""
+msgstr "Abrir"
 
 #. For ages {0} and higher. (de) `ab {0} Jahren`.
 #: /media/js/content-ratings.js:97
@@ -642,15 +642,15 @@ msgstr "Colombia"
 
 #: /media/js/settings.js:112
 msgid "Costa Rica"
-msgstr ""
+msgstr "Costa Rica"
 
 #: /media/js/settings.js:113
 msgid "Ecuador"
-msgstr ""
+msgstr "Ecuador"
 
 #: /media/js/settings.js:114
 msgid "El Salvador"
-msgstr ""
+msgstr "El Salvador"
 
 #: /media/js/settings.js:115
 msgid "Germany"
@@ -662,7 +662,7 @@ msgstr "Grecia"
 
 #: /media/js/settings.js:117
 msgid "Guatemala"
-msgstr ""
+msgstr "Guatemala"
 
 #: /media/js/settings.js:118
 msgid "Hungary"
@@ -682,11 +682,11 @@ msgstr "Montenegro"
 
 #: /media/js/settings.js:122
 msgid "Nicaragua"
-msgstr ""
+msgstr "Nicaragua"
 
 #: /media/js/settings.js:123
 msgid "Panama"
-msgstr ""
+msgstr "Panamá"
 
 #: /media/js/settings.js:124
 msgid "Peru"
@@ -751,6 +751,8 @@ msgstr "No pudo encontrarse"
 #: /media/js/views/search.js:28
 msgid "Sorry, you must be connected to the Internet to search Marketplace."
 msgstr ""
+"Lo lamentamos, pero tienes que tener conexión a internet para buscar en "
+"Marketplace."
 
 #: /media/js/views/search.js:223
 msgid "Search Results"
