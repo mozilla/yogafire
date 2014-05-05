@@ -40,8 +40,8 @@
     {% else %}
       <img class="icon" alt="" src="{{ app.icons['64'] or app.icon }}" height="64" width="64" itemprop="image">
     {% endif %}
-    <div class="info">
-      <h3 itemprop="name" class="{{ 'tight' if app.content_ratings.rating }}">{{ app.name|translate(app) }}</h3>
+    <div class="info {{ 'tight' if app.content_ratings.rating }}">
+      <h3 itemprop="name">{{ app.name|translate(app) }}</h3>
       {% if app.author %}
         {# TODO: When we get user profiles, update this to be a proper Person itemprop #}
         <div class="author lineclamp vital subdetail" itemprop="creator">{{ app.author }}</div>
