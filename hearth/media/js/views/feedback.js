@@ -1,6 +1,6 @@
 define('views/feedback',
-       ['buckets', 'capabilities', 'forms', 'l10n', 'common/linefit', 'notification', 'requests', 'templates', 'urls', 'utils', 'z'],
-       function(buckets, caps, forms, l10n, linefit, notification, requests, nunjucks, urls, utils, z) {
+       ['buckets', 'capabilities', 'forms', 'l10n', 'notification', 'requests', 'templates', 'urls', 'utils', 'z'],
+       function(buckets, caps, forms, l10n, notification, requests, nunjucks, urls, utils, z) {
 
     var gettext = l10n.gettext;
     var notify = notification.notification;
@@ -54,7 +54,6 @@ define('views/feedback',
         builder.start('settings/feedback.html').done(function() {
             $('.feedback').removeClass('modal');
             addFeedbackModal();
-            $('.linefit').linefit(2);
         });
 
         builder.z('type', 'leaf');

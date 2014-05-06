@@ -244,18 +244,10 @@
     cursor: pointer;
 }
 
-.secondary-header,
-.featured-header {
-    position: relative;
-    h2, h3 {
-        color: $london-fog-gray;
-        font-weight: 300;
-        margin-bottom: -3px;
-        max-width: calc(unquote('100% - 75px'));
-        min-width: 70%;
-        padding-bottom: 3px;
-        position: absolute;
-    }
+.secondary-header h2,
+.featured-header h2 {
+    color: $london-fog-gray;
+    font-weight: 300;
 }
 
 .category.featured {
@@ -266,6 +258,7 @@
     background: $salt-flat-white;
     border-top: 1px solid $seavan-salt-white;
     margin-top: -1px;
+    position: relative;
     z-index: 19;
     &:before {
         // Because box-shadows can go suck it.
@@ -288,11 +281,16 @@
             font-size: 30px;
         }
     }
+    h2 {
+        max-width: calc(unquote('100% - 75px'));
+        min-width: 70%;
+        position: absolute;
+    }
 }
 
 .featured-header {
-    padding: 5px 10px 25px;
-    h3 {
+    padding: 5px 10px 5px;
+    h2 {
         font-size: 20px;
         line-height: 20px;
     }
