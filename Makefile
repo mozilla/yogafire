@@ -29,13 +29,13 @@ package: clean
 	@rm -rf hearth/downloads/screenshots/*
 	@rm -rf hearth/downloads/thumbnails/*
 	@mkdir -p TMP
+	@commonplace langpacks
 	@cp -r hearth TMP/hearth
 
 	@mv TMP/hearth/media/js/settings_package_$(SERVER).js TMP/hearth/media/js/settings_local_package.js
 	@rm -rf TMP/hearth/media/js/{settings_local_hosted.js,settings_package_*.js}
 
 	@pushd TMP && commonplace includes && popd
-	@pushd TMP && commonplace langpacks && popd
 	@pushd TMP && grunt fetchdb && popd
 
 	@cp -r hearth/downloads TMP/hearth/
@@ -71,12 +71,12 @@ fat_package: compile
 	@rm -rf hearth/downloads/screenshots/*
 	@rm -rf hearth/downloads/thumbnails/*
 	@mkdir -p TMP
+	@commonplace langpacks
 	@cp -r hearth TMP/hearth
 
 	@mv TMP/hearth/media/js/settings_package_$(SERVER).js TMP/hearth/media/js/settings_local_package.js
 	@rm -rf TMP/hearth/media/js/{settings_local_hosted.js,settings_package_*.js}
 
-	@pushd TMP && commonplace langpacks && popd
 	@pushd TMP && grunt fetchdb && popd
 
 	@cp -r hearth/downloads TMP/hearth/
