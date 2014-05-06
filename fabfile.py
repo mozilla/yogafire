@@ -8,13 +8,13 @@ import deploysettings as settings
 
 env.key_filename = settings.SSH_KEY
 fabdeploytools.envs.loadenv(settings.CLUSTER)
-ROOT, FIREPLACE = helpers.get_app_dirs(__file__)
-COMMONPLACE = '%s/node_modules/commonplace/bin/commonplace' % FIREPLACE
+ROOT, YOGAFIRE = helpers.get_app_dirs(__file__)
+COMMONPLACE = '%s/node_modules/commonplace/bin/commonplace' % YOGAFIRE
 
 
 @task
 def pre_update(ref):
-    with lcd(FIREPLACE):
+    with lcd(YOGAFIRE):
         local('git fetch')
         local('git fetch -t')
         local('git reset --hard %s' % ref)
@@ -22,7 +22,7 @@ def pre_update(ref):
 
 @task
 def update():
-    with lcd(FIREPLACE):
+    with lcd(YOGAFIRE):
         local('npm install')
         local('npm install --force commonplace@0.3.2')
         local('%s includes' % COMMONPLACE)
@@ -32,7 +32,7 @@ def update():
 @task
 def deploy():
     helpers.deploy(name=settings.PROJECT_NAME,
-                   app_dir='fireplace',
+                   app_dir='yogafire',
                    env=settings.ENV,
                    cluster=settings.CLUSTER,
                    domain=settings.DOMAIN,
@@ -41,8 +41,8 @@ def deploy():
 
 @task
 def pre_update_latest_tag():
-    current_tag_file = os.path.join(FIREPLACE, '.tag')
-    latest_tag = helpers.git_latest_tag(FIREPLACE)
+    current_tag_file = os.path.join(YOGAFIRE, '.tag')
+    latest_tag = helpers.git_latest_tag(YOGAFIRE)
     with open(current_tag_file, 'r+') as f:
         if f.read() == latest_tag:
             print 'Environment is at %s' % latest_tag
