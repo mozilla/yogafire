@@ -1,9 +1,9 @@
 {
-  "name": "fireplace",
+  "name": "yogafire",
   "version": "1.1.0",
   "private": true,
   "repository": {
-    "url": "git://github.com/mozilla/fireplace.git",
+    "url": "git://github.com/mozilla/yogafire.git",
     "type": "git"
   },
   "scripts": {
@@ -19,6 +19,7 @@
     "lodash": "~2.4.1"
   },
   "devDependencies": {
-    "grunt": "~0.4.4"
+    "grunt": "~0.4.4",
+    "grunt-cli": "~0.1.13",
   }
 }
