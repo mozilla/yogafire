@@ -40,7 +40,7 @@ def update():
 @task
 def deploy():
     build_package()
-    deploy_package()
+    upload_package()
 
 
 @task
@@ -50,7 +50,7 @@ def build_package():
 
 
 @task
-def deploy_package():
+def upload_package():
     with lcd(ZAMBONI):
         local('%s manage.py --settings=settings_local_mkt '
               'upload_new_marketplace_package %s' % (ZAMBONI_PYTHON,
