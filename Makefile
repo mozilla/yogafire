@@ -4,7 +4,6 @@ VERSION = `date "+%Y.%m.%d_%H.%M.%S"`
 VERSION_INT = $(shell date "+%Y%m%d%H%M%S")
 TMP = _tmp
 SHELL = /bin/bash
-export PATH := ${CURDIR}/node_modules/commonplace/bin:${CURDIR}/node_modules/grunt-cli/bin:$(PATH)
 
 # This is what Yulelog's iframe src points to.
 DOMAIN?=marketplace.firefox.com
