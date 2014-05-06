@@ -8,6 +8,7 @@ import deploysettings as settings
 
 env.key_filename = settings.SSH_KEY
 fabdeploytools.envs.loadenv(settings.CLUSTER)
+
 ROOT, YOGAFIRE = helpers.get_app_dirs(__file__)
 
 ZAMBONI = '%s/zamboni' % settings.ZAMBONI_DIR
