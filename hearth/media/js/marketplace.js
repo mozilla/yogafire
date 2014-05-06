@@ -9,6 +9,7 @@ require.config({
     paths: {
         'flipsnap': 'lib/flipsnap',
         'jquery': 'lib/jquery-2.0.2',
+        'localforage': 'lib/localforage-0.7.0',
         'underscore': 'lib/underscore',
         'nunjucks': 'lib/nunjucks',
         'nunjucks.compat': 'lib/nunjucks.compat',
@@ -24,6 +25,7 @@ define(
     [
         'underscore',
         'jquery',
+        'localforage',
         'helpers',  // Must come before mostly everything else.
         'helpers_local',
         'buttons',
@@ -33,6 +35,7 @@ define(
         'mobilenetwork',  // Must come before cat-dropdown (for amd.js)
         'cat-dropdown',
         'content-ratings',
+        'db',
         'forms',
         'header',
         'image-deferrer',
@@ -82,7 +85,10 @@ function(_) {
     console.log('Dependencies resolved, starting init');
 
     var $ = require('jquery');
+    var consumer_info = require('consumer_info');
+    var db = require('db');
     var format = require('format');
+    var localforage = require('localforage');
     var nunjucks = require('templates');
     var settings = require('settings');
     var z = require('z');
@@ -154,7 +160,7 @@ function(_) {
             // apps, and check if apps were uninstalled since switching away,
             // refreshing Install buttons if any were.
             if (require('user').logged_in()) {
-                require('consumer_info').fetch(true);
+                consumer_info.fetch(true);
             }
             buttons.revertUninstalled();
         }, false);
@@ -218,29 +224,24 @@ function(_) {
         false
     );
 
-    function startPage() {
+    z.body.on('click', '.try-again', function() {
+        window.location.reload();
+    });
+
+    // 
+    z.body.on('lf_preloaded_finished', function() {
         console.log('Triggering initial navigation');
+        consumer_info.fetch()
         if (!z.spaceheater) {
             z.page.trigger('navigate', [window.location.pathname + window.location.search]);
         } else {
             z.page.trigger('loaded');
         }
-    }
-
-    require('utils_local').checkOnline(function() {
-        console.log('Online, initializing page.');
-        z.body.removeClass('offline');
-        require('consumer_info').promise.done(function() {
-            startPage();
-        });
-    }, function() {
-        console.log('Offline, initializing page.');
-        z.body.addClass('offline');
-        startPage();
     });
 
-    z.body.on('click', '.try-again', function() {
-        window.location.reload();
+    // Initialize the database when localForage has loaded.
+    localforage.ready().then(function() {
+        db.init();
     });
 
     // Set the tracking consumer page variable.
