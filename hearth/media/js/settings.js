@@ -1,4 +1,5 @@
-define('settings', ['l10n', 'settings_local', 'underscore'], function(l10n, settings_local, _) {
+define('settings', ['l10n', 'localforage', 'settings_local', 'underscore'],
+       function(l10n, localforage, settings_local, _) {
     var gettext = l10n.gettext;
 
     var base_settings = JSON.parse(document.body.getAttribute('data-settings') || '{}');
@@ -154,10 +155,16 @@ define('settings', ['l10n', 'settings_local', 'underscore'], function(l10n, sett
         // in the form {name: 'foo', slug: 'bar'}
         carrier: null,
 
+        // LocalForage driver: should be localStorage for dev, indexeddb for production
+        // (easier to inspect localStorage in the console).
+        localforage_driver: localforage.LOCALSTORAGE,
+
+        // URLs to API responses preloaded with the package.
         offline_homepage: '/db/home.json',
         'offline_tarako-games': '/db/games.json',
         'offline_tarako-tools': '/db/tools.json',
         'offline_tarako-lifestyle': '/db/lifestyle.json',
+
         iframe_installer_src: 'https://marketplace.firefox.com/iframe-install.html',
 
         offline_msg: gettext('Sorry, you are currently offline. Please try again later.')
