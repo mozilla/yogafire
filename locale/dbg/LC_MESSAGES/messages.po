@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-29T15:34:49.744Z\n"
+"POT-Creation-Date: 2014-05-07T16:18:37.753Z\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -58,18 +58,6 @@ msgstr "Ŧħḗ ṽḗřşīǿƞ ǿƒ ŧħḗ Ƒīřḗƒǿẋ Ḿȧřķḗŧƥ�
 msgid "Update Now"
 msgstr "Ŭƥḓȧŧḗ Ƞǿẇ"
 
-#: /templates/featured.html:7
-msgid "Featured"
-msgstr "Ƒḗȧŧŭřḗḓ"
-
-#: /templates/featured.html:8 /templates/search/main.html:18
-msgid "Expand"
-msgstr "Ḗẋƥȧƞḓ"
-
-#: /templates/featured.html:22
-msgid "No featured apps found"
-msgstr "Ƞǿ ƒḗȧŧŭřḗḓ ȧƥƥş ƒǿŭƞḓ"
-
 #: /templates/header.html:1
 msgid "Back"
 msgstr "Ɓȧƈķ"
@@ -90,12 +78,12 @@ msgstr "Ẏǿŭ ḿŭşŧ ŭşḗ Ƒīřḗƒǿẋ ŧǿ īƞşŧȧŀŀ Ƒīřḗ
 msgid "Download."
 msgstr "Ḓǿẇƞŀǿȧḓ."
 
-#: /templates/privacy.html:2 /templates/category_yogafire/main.html:47 /templates/detail/main_yogafire.html:75 /templates/detail/privacy.html:3 /media/js/views/privacy.js:10
+#: /templates/privacy.html:2 /templates/category_yogafire/main.html:52 /templates/detail/main_yogafire.html:75 /templates/detail/privacy.html:3 /media/js/views/privacy.js:10
 #: /media/js/views/app/privacy.js:10
 msgid "Privacy Policy"
 msgstr "Ƥřīṽȧƈẏ Ƥǿŀīƈẏ"
 
-#: /templates/terms.html:2 /templates/category_yogafire/main.html:44 /media/js/views/terms.js:10
+#: /templates/terms.html:2 /templates/category_yogafire/main.html:49 /media/js/views/terms.js:10
 msgid "Terms of Use"
 msgstr "Ŧḗřḿş ǿƒ Ŭşḗ"
 
@@ -112,11 +100,11 @@ msgstr "Ŭƞȧṽȧīŀȧƀŀḗ"
 msgid "Free"
 msgstr "Ƒřḗḗ"
 
-#: /templates/_macros/market_button.html:14 /media/js/buttons.js:271
+#: /templates/_macros/market_button.html:14 /media/js/buttons.js:270
 msgid "Install"
 msgstr "Īƞşŧȧŀŀ"
 
-#: /templates/_macros/market_tile.html:11 /templates/_macros/market_tile.html:13
+#: /templates/_macros/market_tile.html:13
 msgid "{app_name} screenshot"
 msgstr "{ȧƥƥ_ƞȧḿḗ} şƈřḗḗƞşħǿŧ"
 
@@ -126,20 +114,12 @@ msgid "{rating_body}: {rating}"
 msgstr "{řȧŧīƞɠ_ƀǿḓẏ}: {řȧŧīƞɠ}"
 
 #: /templates/_macros/market_tile.html:66
-msgid "({n})"
-msgstr "({ƞ})"
-
-#: /templates/_macros/market_tile.html:69
 msgid "{n} Review"
 msgid_plural "{n} Reviews"
 msgstr[0] "{ƞ} Řḗṽīḗẇ"
 msgstr[1] "{ƞ} Řḗṽīḗẇş"
 
-#: /templates/_macros/market_tile.html:73
-msgid "(0)"
-msgstr "(0)"
-
-#: /templates/_macros/market_tile.html:74
+#: /templates/_macros/market_tile.html:70
 msgid "Not yet rated"
 msgstr "Ƞǿŧ ẏḗŧ řȧŧḗḓ"
 
@@ -151,11 +131,11 @@ msgstr "Ḿǿřḗ"
 msgid "Rated {stars} out of {maxstars} stars"
 msgstr "Řȧŧḗḓ {şŧȧřş} ǿŭŧ ǿƒ {ḿȧẋşŧȧřş} şŧȧřş"
 
-#: /templates/category_yogafire/main.html:38
+#: /templates/category_yogafire/main.html:43
 msgid "Get Help"
 msgstr "Ɠḗŧ Ħḗŀƥ"
 
-#: /templates/category_yogafire/main.html:41 /media/js/views/feedback.js:61
+#: /templates/category_yogafire/main.html:46 /media/js/views/feedback.js:60
 msgid "Feedback"
 msgstr "Ƒḗḗḓƀȧƈķ"
 
@@ -163,17 +143,37 @@ msgstr "Ƒḗḗḓƀȧƈķ"
 msgid "Featured Apps"
 msgstr "Ƒḗȧŧŭřḗḓ Ȧƥƥş"
 
-#: /templates/category_yogafire/main.html:23
+#: /templates/category_yogafire/main.html:28
 msgid "No apps in this category"
 msgstr "Ƞǿ ȧƥƥş īƞ ŧħīş ƈȧŧḗɠǿřẏ"
 
-#: /templates/category_yogafire/main.html:28
+#: /templates/category_yogafire/main.html:33
 msgid "The category you requested does not exist."
 msgstr "Ŧħḗ ƈȧŧḗɠǿřẏ ẏǿŭ řḗɋŭḗşŧḗḓ ḓǿḗş ƞǿŧ ḗẋīşŧ."
 
-#: /templates/category_yogafire/main.html:30
+#: /templates/category_yogafire/main.html:35
 msgid "An internal server error occurred. Please try again later."
 msgstr "Ȧƞ īƞŧḗřƞȧŀ şḗřṽḗř ḗřřǿř ǿƈƈŭřřḗḓ. Ƥŀḗȧşḗ ŧřẏ ȧɠȧīƞ ŀȧŧḗř."
+
+#: /templates/errors/404.html:2 /templates/errors/fragment.html:1
+msgid "Oh no!"
+msgstr "Ǿħ ƞǿ!"
+
+#: /templates/errors/404.html:3
+msgid "The page you were looking for was not found."
+msgstr "Ŧħḗ ƥȧɠḗ ẏǿŭ ẇḗřḗ ŀǿǿķīƞɠ ƒǿř ẇȧş ƞǿŧ ƒǿŭƞḓ."
+
+#: /templates/errors/fragment.html:2
+msgid "An error occurred."
+msgstr "Ȧƞ ḗřřǿř ǿƈƈŭřřḗḓ."
+
+#: /templates/errors/pagination.html:1
+msgid "Error loading more"
+msgstr "Ḗřřǿř ŀǿȧḓīƞɠ ḿǿřḗ"
+
+#: /templates/errors/pagination.html:2
+msgid "Try Again"
+msgstr "Ŧřẏ Ȧɠȧīƞ"
 
 #: /templates/detail/abuse.html:5 /templates/detail/main_yogafire.html:86 /media/js/views/app/abuse.js:34
 msgid "Report Abuse"
@@ -223,41 +223,21 @@ msgstr "Ɓȧƈķ ŧǿ ȧƥƥ"
 msgid "Loading Privacy Policy..."
 msgstr "Ŀǿȧḓīƞɠ Ƥřīṽȧƈẏ Ƥǿŀīƈẏ..."
 
-#: /templates/errors/404.html:2 /templates/errors/fragment.html:1
-msgid "Oh no!"
-msgstr "Ǿħ ƞǿ!"
-
-#: /templates/errors/404.html:3
-msgid "The page you were looking for was not found."
-msgstr "Ŧħḗ ƥȧɠḗ ẏǿŭ ẇḗřḗ ŀǿǿķīƞɠ ƒǿř ẇȧş ƞǿŧ ƒǿŭƞḓ."
-
-#: /templates/errors/fragment.html:2
-msgid "An error occurred."
-msgstr "Ȧƞ ḗřřǿř ǿƈƈŭřřḗḓ."
-
-#: /templates/errors/pagination.html:1
-msgid "Error loading more"
-msgstr "Ḗřřǿř ŀǿȧḓīƞɠ ḿǿřḗ"
-
-#: /templates/errors/pagination.html:2
-msgid "Try Again"
-msgstr "Ŧřẏ Ȧɠȧīƞ"
-
 #: /templates/search/main.html:15
 msgid "<b>{n}</b> Result"
 msgid_plural "<b>{n}</b> Results"
 msgstr[0] "<b>{ƞ}</b> Řḗşŭŀŧ"
 msgstr[1] "<b>{ƞ}</b> Řḗşŭŀŧş"
 
-#: /templates/search/main.html:16
-msgid "Showing <b>1</b>&ndash;<b class=\"total-results\">{total}</b>"
-msgstr "Şħǿẇīƞɠ <b>1</b>&ndash;<b class=\"total-results\">{ŧǿŧȧŀ}</b>"
+#: /templates/search/main.html:17
+msgid "Expand"
+msgstr "Ḗẋƥȧƞḓ"
 
-#: /templates/search/main.html:36
+#: /templates/search/main.html:35
 msgid "No results found"
 msgstr "Ƞǿ řḗşŭŀŧş ƒǿŭƞḓ"
 
-#: /templates/search/main.html:41
+#: /templates/search/main.html:40
 msgid "No results found, try again later"
 msgstr "Ƞǿ řḗşŭŀŧş ƒǿŭƞḓ, ŧřẏ ȧɠȧīƞ ŀȧŧḗř"
 
@@ -265,25 +245,25 @@ msgstr "Ƞǿ řḗşŭŀŧş ƒǿŭƞḓ, ŧřẏ ȧɠȧīƞ ŀȧŧḗř"
 msgid "Send"
 msgstr "Şḗƞḓ"
 
-#: /media/js/apps.js:90 /media/js/apps_iframe_installer.js:46
-msgid "App install error: {error}"
-msgstr "Ȧƥƥ īƞşŧȧŀŀ ḗřřǿř: {ḗřřǿř}"
-
-#: /media/js/apps.js:141
+#: /media/js/apps.js:87
 msgid "Your device does not support payments."
 msgstr "Ẏǿŭř ḓḗṽīƈḗ ḓǿḗş ƞǿŧ şŭƥƥǿřŧ ƥȧẏḿḗƞŧş."
 
-#: /media/js/apps.js:143
+#: /media/js/apps.js:89
 msgid "This app is unavailable for purchase in your region."
 msgstr "Ŧħīş ȧƥƥ īş ŭƞȧṽȧīŀȧƀŀḗ ƒǿř ƥŭřƈħȧşḗ īƞ ẏǿŭř řḗɠīǿƞ."
 
-#: /media/js/apps.js:147
+#: /media/js/apps.js:93
 msgid "Your browser or device is not web-app compatible."
 msgstr "Ẏǿŭř ƀřǿẇşḗř ǿř ḓḗṽīƈḗ īş ƞǿŧ ẇḗƀ-ȧƥƥ ƈǿḿƥȧŧīƀŀḗ."
 
-#: /media/js/apps.js:149
+#: /media/js/apps.js:95
 msgid "This app is unavailable for your platform."
 msgstr "Ŧħīş ȧƥƥ īş ŭƞȧṽȧīŀȧƀŀḗ ƒǿř ẏǿŭř ƥŀȧŧƒǿřḿ."
+
+#: /media/js/apps_iframe_installer.js:60
+msgid "App install error: {error}"
+msgstr "Ȧƥƥ īƞşŧȧŀŀ ḗřřǿř: {ḗřřǿř}"
 
 #: /media/js/buttons.js:61 /media/js/buttons.js:88
 msgid "Payment cancelled."
@@ -611,10 +591,6 @@ msgstr "Ƥḗřşǿƞȧ ŀǿɠīƞ ƒȧīŀḗḓ. Ȧ şḗřṽḗř ḗřřǿ�
 msgid "Persona cannot be reached. Try again later."
 msgstr "Ƥḗřşǿƞȧ ƈȧƞƞǿŧ ƀḗ řḗȧƈħḗḓ. Ŧřẏ ȧɠȧīƞ ŀȧŧḗř."
 
-#: /media/js/navigation.js:33
-msgid "No internet connection"
-msgstr "Ƞǿ īƞŧḗřƞḗŧ ƈǿƞƞḗƈŧīǿƞ"
-
 #: /media/js/settings.js:106
 msgid "Rest of World"
 msgstr "Řḗşŧ ǿƒ Ẇǿřŀḓ"
@@ -751,7 +727,7 @@ msgstr "Ƞǿŧ Ƒǿŭƞḓ"
 msgid "Sorry, you must be connected to the Internet to search Marketplace."
 msgstr ""
 
-#: /media/js/views/search.js:223
+#: /media/js/views/search.js:199
 msgid "Search Results"
 msgstr "Şḗȧřƈħ Řḗşŭŀŧş"
 

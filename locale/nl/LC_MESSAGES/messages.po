@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-29T15:34:49.744Z\n"
+"POT-Creation-Date: 2014-05-07T16:18:37.753Z\n"
 "PO-Revision-Date: 2014-05-01 13:38+0000\n"
 "Last-Translator: Ton <tonnes.mb@gmail.com>\n"
 "Language-Team: none\n"
@@ -34,10 +34,7 @@ msgstr "Hulpmiddelen"
 msgid "Lifestyle"
 msgstr "Levensstijl"
 
-#: /templates/confirmation.html:0
-#: /templates/incompatible.html:3
-#: /templates/incompatible.html:3
-#: /templates/detail/abuse.html:6
+#: /templates/confirmation.html:0 /templates/incompatible.html:3 /templates/detail/abuse.html:6
 msgid "Close"
 msgstr "Sluiten"
 
@@ -56,39 +53,20 @@ msgstr "Marketplace verouderd"
 
 #: /templates/deprecated.html:3
 msgid "The version of the Firefox Marketplace that you're using is no longer supported. You will need to perform an update before you can continue enjoying the Marketplace."
-msgstr ""
-"De door u gebruikte versie van de Firefox Marketplace wordt niet meer "
-"ondersteund. U dient een update uit te voeren voordat u de Marketplace weer "
-"kunt gebruiken."
+msgstr "De door u gebruikte versie van de Firefox Marketplace wordt niet meer ondersteund. U dient een update uit te voeren voordat u de Marketplace weer kunt gebruiken."
 
 #: /templates/deprecated.html:5
 msgid "Update Now"
 msgstr "Nu bijwerken"
 
-#: /templates/featured.html:7
-msgid "Featured"
-msgstr "Aanbevolen"
-
-#: /templates/featured.html:8
-#: /templates/search/main.html:18
-msgid "Expand"
-msgstr "Uitvouwen"
-
-#: /templates/featured.html:22
-msgid "No featured apps found"
-msgstr "Geen aanbevolen apps gevonden"
-
-#: /templates/header.html:1
 #: /templates/header.html:1
 msgid "Back"
 msgstr "Terug"
 
-#: /templates/header.html:5
-#: /templates/header.html:8
+#: /templates/header.html:5 /templates/header.html:8
 msgid "Search"
 msgstr "Zoeken"
 
-#: /templates/header.html:10
 #: /templates/header.html:10
 msgid "Clear"
 msgstr "Wissen"
@@ -101,18 +79,12 @@ msgstr "U dient Firefox te gebruiken om Firefox-apps te installeren."
 msgid "Download."
 msgstr "Downloaden."
 
-#: /templates/privacy.html:2
-#: /templates/category_yogafire/main.html:47
-#: /templates/detail/main_yogafire.html:75
-#: /templates/detail/privacy.html:3
-#: /media/js/views/privacy.js:10
+#: /templates/privacy.html:2 /templates/category_yogafire/main.html:52 /templates/detail/main_yogafire.html:75 /templates/detail/privacy.html:3 /media/js/views/privacy.js:10
 #: /media/js/views/app/privacy.js:10
 msgid "Privacy Policy"
 msgstr "Privacybeleid"
 
-#: /templates/terms.html:2
-#: /templates/category_yogafire/main.html:44
-#: /media/js/views/terms.js:10
+#: /templates/terms.html:2 /templates/category_yogafire/main.html:49 /media/js/views/terms.js:10
 msgid "Terms of Use"
 msgstr "Gebruiksvoorwaarden"
 
@@ -125,17 +97,14 @@ msgstr "…meer"
 msgid "Unavailable"
 msgstr "Niet beschikbaar"
 
-#: /templates/_macros/market_button.html:7
-#: /templates/_macros/market_tile.html:61
+#: /templates/_macros/market_button.html:7 /templates/_macros/market_tile.html:61
 msgid "Free"
 msgstr "Gratis"
 
-#: /templates/_macros/market_button.html:14
-#: /media/js/buttons.js:271
+#: /templates/_macros/market_button.html:14 /media/js/buttons.js:270
 msgid "Install"
 msgstr "Installeren"
 
-#: /templates/_macros/market_tile.html:11
 #: /templates/_macros/market_tile.html:13
 msgid "{app_name} screenshot"
 msgstr "{app_name}-schermafbeelding"
@@ -146,20 +115,12 @@ msgid "{rating_body}: {rating}"
 msgstr "{rating_body}: {rating}"
 
 #: /templates/_macros/market_tile.html:66
-msgid "({n})"
-msgstr "({n})"
-
-#: /templates/_macros/market_tile.html:69
 msgid "{n} Review"
 msgid_plural "{n} Reviews"
 msgstr[0] "{n} beoordeling"
 msgstr[1] "{n} beoordelingen"
 
-#: /templates/_macros/market_tile.html:73
-msgid "(0)"
-msgstr "(0)"
-
-#: /templates/_macros/market_tile.html:74
+#: /templates/_macros/market_tile.html:70
 msgid "Not yet rated"
 msgstr "Nog niet gewaardeerd"
 
@@ -171,12 +132,11 @@ msgstr "Meer"
 msgid "Rated {stars} out of {maxstars} stars"
 msgstr "Waardering {stars} van {maxstars} sterren"
 
-#: /templates/category_yogafire/main.html:38
+#: /templates/category_yogafire/main.html:43
 msgid "Get Help"
 msgstr "Hulp krijgen"
 
-#: /templates/category_yogafire/main.html:41
-#: /media/js/views/feedback.js:61
+#: /templates/category_yogafire/main.html:46 /media/js/views/feedback.js:60
 msgid "Feedback"
 msgstr "Feedback"
 
@@ -184,21 +144,39 @@ msgstr "Feedback"
 msgid "Featured Apps"
 msgstr "Aanbevolen apps"
 
-#: /templates/category_yogafire/main.html:23
+#: /templates/category_yogafire/main.html:28
 msgid "No apps in this category"
 msgstr "Geen apps in deze categorie"
 
-#: /templates/category_yogafire/main.html:28
+#: /templates/category_yogafire/main.html:33
 msgid "The category you requested does not exist."
 msgstr "De door u gevraagde categorie bestaat niet."
 
-#: /templates/category_yogafire/main.html:30
+#: /templates/category_yogafire/main.html:35
 msgid "An internal server error occurred. Please try again later."
 msgstr "Er is een interne serverfout opgetreden. Probeer het later nog eens."
 
-#: /templates/detail/abuse.html:5
-#: /templates/detail/main_yogafire.html:86
-#: /media/js/views/app/abuse.js:34
+#: /templates/errors/404.html:2 /templates/errors/fragment.html:1
+msgid "Oh no!"
+msgstr "Oh nee!"
+
+#: /templates/errors/404.html:3
+msgid "The page you were looking for was not found."
+msgstr "De door u gezochte pagina is niet gevonden."
+
+#: /templates/errors/fragment.html:2
+msgid "An error occurred."
+msgstr "Er is een fout opgetreden."
+
+#: /templates/errors/pagination.html:1
+msgid "Error loading more"
+msgstr "Fout bij laden van meer"
+
+#: /templates/errors/pagination.html:2
+msgid "Try Again"
+msgstr "Probeer het opnieuw"
+
+#: /templates/detail/abuse.html:5 /templates/detail/main_yogafire.html:86 /media/js/views/app/abuse.js:34
 msgid "Report Abuse"
 msgstr "Misbruik melden"
 
@@ -214,9 +192,7 @@ msgstr "Inhoudswaardering"
 msgid "Content Rating Details"
 msgstr "Details van inhoudswaardering"
 
-#: /templates/detail/main_yogafire.html:13
-#: /templates/detail/main_yogafire.html:14
-#: /media/js/views/app.js:68
+#: /templates/detail/main_yogafire.html:13 /templates/detail/main_yogafire.html:14 /media/js/views/app.js:68
 msgid "Loading..."
 msgstr "Laden…"
 
@@ -248,42 +224,21 @@ msgstr "Terug naar app"
 msgid "Loading Privacy Policy..."
 msgstr "Privacybeleid laden…"
 
-#: /templates/errors/404.html:2
-#: /templates/errors/fragment.html:1
-msgid "Oh no!"
-msgstr "Oh nee!"
-
-#: /templates/errors/404.html:3
-msgid "The page you were looking for was not found."
-msgstr "De door u gezochte pagina is niet gevonden."
-
-#: /templates/errors/fragment.html:2
-msgid "An error occurred."
-msgstr "Er is een fout opgetreden."
-
-#: /templates/errors/pagination.html:1
-msgid "Error loading more"
-msgstr "Fout bij laden van meer"
-
-#: /templates/errors/pagination.html:2
-msgid "Try Again"
-msgstr "Probeer het opnieuw"
-
 #: /templates/search/main.html:15
 msgid "<b>{n}</b> Result"
 msgid_plural "<b>{n}</b> Results"
 msgstr[0] "<b>{n}</b> resultaat"
 msgstr[1] "<b>{n}</b> resultaten"
 
-#: /templates/search/main.html:16
-msgid "Showing <b>1</b>&ndash;<b class=\"total-results\">{total}</b>"
-msgstr "Weergave <b>1</b>&ndash;<b class=\"total-results\">{total}</b>"
+#: /templates/search/main.html:17
+msgid "Expand"
+msgstr "Uitvouwen"
 
-#: /templates/search/main.html:36
+#: /templates/search/main.html:35
 msgid "No results found"
 msgstr "Geen resultaten gevonden"
 
-#: /templates/search/main.html:41
+#: /templates/search/main.html:40
 msgid "No results found, try again later"
 msgstr "Geen resultaten, probeer het later nog eens"
 
@@ -291,29 +246,27 @@ msgstr "Geen resultaten, probeer het later nog eens"
 msgid "Send"
 msgstr "Verzenden"
 
-#: /media/js/apps.js:90
-#: /media/js/apps_iframe_installer.js:46
-msgid "App install error: {error}"
-msgstr "App-installatiefout: {error}"
-
-#: /media/js/apps.js:141
+#: /media/js/apps.js:87
 msgid "Your device does not support payments."
 msgstr "Uw apparaat ondersteunt geen betalingen."
 
-#: /media/js/apps.js:143
+#: /media/js/apps.js:89
 msgid "This app is unavailable for purchase in your region."
 msgstr "Deze app kan niet in uw regio worden gekocht."
 
-#: /media/js/apps.js:147
+#: /media/js/apps.js:93
 msgid "Your browser or device is not web-app compatible."
 msgstr "Uw browser of apparaat is niet compatibel met webapps."
 
-#: /media/js/apps.js:149
+#: /media/js/apps.js:95
 msgid "This app is unavailable for your platform."
 msgstr "Deze app is niet beschikbaar voor uw platform."
 
-#: /media/js/buttons.js:61
-#: /media/js/buttons.js:88
+#: /media/js/apps_iframe_installer.js:60
+msgid "App install error: {error}"
+msgstr "App-installatiefout: {error}"
+
+#: /media/js/buttons.js:61 /media/js/buttons.js:88
 msgid "Payment cancelled."
 msgstr "Betaling geannuleerd."
 
@@ -339,10 +292,7 @@ msgstr "Algemeen"
 msgid "Criminal Acts"
 msgstr "Strafbare feiten"
 
-#: /media/js/content-ratings.js:112
-#: /media/js/content-ratings.js:177
-#: /media/js/content-ratings.js:189
-#: /media/js/content-ratings.js:208
+#: /media/js/content-ratings.js:112 /media/js/content-ratings.js:177 /media/js/content-ratings.js:189 /media/js/content-ratings.js:208
 msgid "Drugs"
 msgstr "Drugs"
 
@@ -358,14 +308,11 @@ msgstr "Legale drugs"
 msgid "Inappropriate Language"
 msgstr "Ongepast taalgebruik"
 
-#: /media/js/content-ratings.js:120
-#: /media/js/content-ratings.js:160
+#: /media/js/content-ratings.js:120 /media/js/content-ratings.js:160
 msgid "Nudity"
 msgstr "Naaktheid"
 
-#: /media/js/content-ratings.js:122
-#: /media/js/content-ratings.js:184
-#: /media/js/content-ratings.js:196
+#: /media/js/content-ratings.js:122 /media/js/content-ratings.js:184 /media/js/content-ratings.js:196
 msgid "Sex"
 msgstr "Seks"
 
@@ -377,11 +324,7 @@ msgstr "Expliciete seks"
 msgid "Impacting Content"
 msgstr "Inhoud met impact"
 
-#: /media/js/content-ratings.js:128
-#: /media/js/content-ratings.js:172
-#: /media/js/content-ratings.js:185
-#: /media/js/content-ratings.js:197
-#: /media/js/content-ratings.js:216
+#: /media/js/content-ratings.js:128 /media/js/content-ratings.js:172 /media/js/content-ratings.js:185 /media/js/content-ratings.js:197 /media/js/content-ratings.js:216
 msgid "Violence"
 msgstr "Geweld"
 
@@ -473,9 +416,7 @@ msgstr "Aanzetten tot haat"
 msgid "Intense Violence"
 msgstr "Intens geweld"
 
-#: /media/js/content-ratings.js:155
-#: /media/js/content-ratings.js:180
-#: /media/js/content-ratings.js:192
+#: /media/js/content-ratings.js:155 /media/js/content-ratings.js:180 /media/js/content-ratings.js:192
 msgid "Language"
 msgstr "Taalgebruik"
 
@@ -507,8 +448,7 @@ msgstr "Realistisch gokken"
 msgid "Scary Themes"
 msgstr "Enge thema’s"
 
-#: /media/js/content-ratings.js:164
-#: /media/js/content-ratings.js:214
+#: /media/js/content-ratings.js:164 /media/js/content-ratings.js:214
 msgid "Sexual Content"
 msgstr "Seksuele inhoud"
 
@@ -544,24 +484,19 @@ msgstr "Tabaksgebruik"
 msgid "Violence References"
 msgstr "Verwijzingen naar geweld"
 
-#: /media/js/content-ratings.js:176
-#: /media/js/content-ratings.js:188
-#: /media/js/content-ratings.js:206
+#: /media/js/content-ratings.js:176 /media/js/content-ratings.js:188 /media/js/content-ratings.js:206
 msgid "Discrimination"
 msgstr "Discriminatie"
 
-#: /media/js/content-ratings.js:178
-#: /media/js/content-ratings.js:190
+#: /media/js/content-ratings.js:178 /media/js/content-ratings.js:190
 msgid "Gambling"
 msgstr "Gokken"
 
-#: /media/js/content-ratings.js:181
-#: /media/js/content-ratings.js:193
+#: /media/js/content-ratings.js:181 /media/js/content-ratings.js:193
 msgid "Online"
 msgstr "Online"
 
-#: /media/js/content-ratings.js:182
-#: /media/js/content-ratings.js:194
+#: /media/js/content-ratings.js:182 /media/js/content-ratings.js:194
 msgid "Fear"
 msgstr "Angst"
 
@@ -647,9 +582,7 @@ msgstr "U bent aangemeld"
 
 #: /media/js/login.js:135
 msgid "Persona login failed. Maybe you don't have an account under that email address?"
-msgstr ""
-"Aanmelden met Persona mislukt. Wellicht hebt u geen account met dat "
-"e-mailadres?"
+msgstr "Aanmelden met Persona mislukt. Wellicht hebt u geen account met dat e-mailadres?"
 
 #: /media/js/login.js:140
 msgid "Persona login failed. A server error was encountered."
@@ -658,10 +591,6 @@ msgstr "Aanmelden met Persona mislukt. Er is een serverfout opgetreden."
 #: /media/js/login.js:208
 msgid "Persona cannot be reached. Try again later."
 msgstr "Persona is niet bereikbaar. Probeer het later nog eens."
-
-#: /media/js/navigation.js:33
-msgid "No internet connection"
-msgstr "Geen internetverbinding"
 
 #: /media/js/settings.js:106
 msgid "Rest of World"
@@ -788,9 +717,7 @@ msgstr "Feedback ingediend. Bedankt!"
 
 #: /media/js/views/feedback.js:27
 msgid "There was a problem submitting your feedback. Try again soon."
-msgstr ""
-"Er is een probleem opgetreden bij het indienen van uw feedback. Probeer het "
-"binnenkort nog eens."
+msgstr "Er is een probleem opgetreden bij het indienen van uw feedback. Probeer het binnenkort nog eens."
 
 #. Page not found (404)
 #: /media/js/views/not_found.js:9
@@ -799,10 +726,9 @@ msgstr "Niet gevonden"
 
 #: /media/js/views/search.js:28
 msgid "Sorry, you must be connected to the Internet to search Marketplace."
-msgstr ""
-"Sorry, u moet met het internet zijn verbonden om Marketplace te doorzoeken."
+msgstr "Sorry, u moet met het internet zijn verbonden om Marketplace te doorzoeken."
 
-#: /media/js/views/search.js:223
+#: /media/js/views/search.js:199
 msgid "Search Results"
 msgstr "Zoekresultaten"
 
