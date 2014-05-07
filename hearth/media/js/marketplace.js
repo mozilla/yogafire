@@ -163,6 +163,7 @@ function(_) {
         console.log('Reloading chrome');
         var context = {z: z};
         $('#site-header').html(nunjucks.env.render('header.html', context));
+        $('.offline-screen').html(nunjucks.env.render('_includes/offline.html'));
         z.body.toggleClass('logged-in', require('user').logged_in());
         z.page.trigger('reloaded_chrome');
     }).trigger('reload_chrome');
@@ -223,14 +224,21 @@ function(_) {
             z.page.trigger('loaded');
         }
     }
+
     require('utils_local').checkOnline(function() {
         console.log('Online, initializing page.');
+        z.body.removeClass('offline');
         require('consumer_info').promise.done(function() {
             startPage();
         });
     }, function() {
         console.log('Offline, initializing page.');
+        z.body.addClass('offline');
         startPage();
+    });
+
+    z.body.on('click', '.try-again', function() {
+        window.location.reload();
     });
 
     // Set the tracking consumer page variable.
