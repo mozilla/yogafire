@@ -263,3 +263,41 @@ active_category() {
     margin: 15px auto;
     width: 80%;
 }
+
+// Screenshot prev/next navigation.
+button.ssnav {
+    background: $yoga-blue;
+    border-radius: 5px;
+    border: 0;
+    color: #fff;
+    display: none;
+    font-size: 30px;
+    height: 100px;
+    left: 0;
+    padding: 0 3px;
+    position: absolute;
+    top: 40px;
+    width: 25px;
+    z-index: 20;
+    &:active {
+        background: darken($yoga-blue, 10%);
+    }
+    &:last-child {
+        left: inherit;
+        right: 0;
+    }
+}
+.slider {
+    &:before, &:after {
+        content: "";
+        position: absolute;
+        background: $salt-flat-white;
+        width: 60px;
+        height: 150px;
+        z-index: 10;
+    }
+    &:after {
+        top: 15px;
+        right: 0;
+    }
+}

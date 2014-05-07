@@ -1,9 +1,9 @@
-define('shothandles', ['z'], function(z) {
+define('yogahandles', ['z'], function(z) {
     function attachHandles(slider, $container) {
         $container.find('.prev, .next').remove();
 
-        var $prevHandle = $('<a href="#" class="shandle prev"></a>'),
-            $nextHandle = $('<a href="#" class="shandle next"></a>');
+        var $prevHandle = $('<button class="ssnav prev" data-action="prev">&#10216;</button>'),
+            $nextHandle = $('<button class="ssnav next" data-action="next">&#10217;</button>');
 
         function setHandleState() {
             $prevHandle.hide();
@@ -24,7 +24,7 @@ define('shothandles', ['z'], function(z) {
         $container.append($prevHandle, $nextHandle);
     }
 
-    z.body.on('click', '.shandle', function(e) {
+    z.body.on('click', '.ssnav', function(e) {
         e.preventDefault();
         var slider = this.parentNode.slider;
         if (this.classList.contains('prev')) {
