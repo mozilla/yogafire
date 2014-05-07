@@ -35,7 +35,7 @@ def pre_update(ref):
 def update():
     with lcd(YOGAFIRE):
         local('npm install')
-        local('npm install --force commonplace@0.3.2')
+        local('npm install --force commonplace@0.3.3')
 
 
 @task
