@@ -43,7 +43,7 @@ if (!window.define) {
     var build_id = document.body.getAttribute('data-buildIdJs') || +new Date();
     var repo = document.body.getAttribute('data-repo');
     /* jshint ignore:start */
-    document.write('<script src="/media/' + (repo ? repo + '/' : '') + 'locales/' + locale + '.js?b=' + build_id + '"></script>');
+    document.write('<script src="/media/' + (repo ? repo + '/' : '') + 'locales/' + locale + '.js"></script>');
     /* jshint ignore:end */
 
 } else {
