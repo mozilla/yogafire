@@ -1,5 +1,7 @@
 @import 'lib';
 
+$yoga-blue = #4CB1FF;
+
 .featured-header {
     padding-top: 18px;
 
@@ -62,10 +64,10 @@
 /* Active state category nav. */
 active_category() {
     a {
-        color: #4CB1FF;
+        color: $yoga-blue;
     }
     b {
-        border-bottom: 3px solid #4CB1FF;
+        border-bottom: 3px solid $yoga-blue;
     }
 }
 
@@ -110,7 +112,7 @@ active_category() {
     width: 100%;
 
     a.button {
-        background: #4cb1ff;
+        background: $yoga-blue;
         color: #fff;
         margin: 10px 10px 0;
         width: unquote('calc(100% - 20px)');
