@@ -90,7 +90,7 @@ msgstr "Условия использования"
 
 #: /templates/_includes/truncated.html:4
 msgid "...more"
-msgstr ""
+msgstr "...Ещё"
 
 #. This app is unavailable for purchase.
 #: /templates/_macros/market_button.html:5
@@ -620,15 +620,15 @@ msgstr "Колумбия"
 
 #: /media/js/settings.js:112
 msgid "Costa Rica"
-msgstr ""
+msgstr "Коста-Рика"
 
 #: /media/js/settings.js:113
 msgid "Ecuador"
-msgstr ""
+msgstr "Эквадор"
 
 #: /media/js/settings.js:114
 msgid "El Salvador"
-msgstr ""
+msgstr "Сальвадор"
 
 #: /media/js/settings.js:115
 msgid "Germany"
@@ -660,11 +660,11 @@ msgstr "Черногория"
 
 #: /media/js/settings.js:122
 msgid "Nicaragua"
-msgstr ""
+msgstr "Никарагуа"
 
 #: /media/js/settings.js:123
 msgid "Panama"
-msgstr ""
+msgstr "Панама"
 
 #: /media/js/settings.js:124
 msgid "Peru"
