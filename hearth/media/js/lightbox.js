@@ -1,6 +1,6 @@
 define('lightbox',
-    ['keys', 'models', 'navigation', 'utils', 'shothandles', 'tracking', 'underscore', 'z'],
-    function(keys, models, navigation, utils, handles, tracking, _, z) {
+    ['keys', 'models', 'navigation', 'utils', 'tracking', 'underscore', 'z'],
+    function(keys, models, navigation, utils, tracking, _, z) {
 
     var $lightbox = $(document.getElementById('lightbox'));
     var $section = $lightbox.find('section');
@@ -115,7 +115,6 @@ define('lightbox',
         if ($content.length) {
             slider = Flipsnap($content[0]);
             slider.element.addEventListener('fsmoveend', pauseVideos, false);
-            handles.attachHandles(slider, $section);
         }
     }
 

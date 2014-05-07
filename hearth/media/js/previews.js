@@ -1,5 +1,5 @@
 define('previews',
-    ['flipsnap', 'log', 'models', 'templates', 'capabilities', 'shothandles', 'underscore', 'z'],
+    ['flipsnap', 'log', 'models', 'templates', 'capabilities', 'yogahandles', 'underscore', 'z'],
     function(Flipsnap, log, models, nunjucks, caps, handles, _, z) {
 
     var console = log('previews');
@@ -57,7 +57,7 @@ define('previews',
         setActiveDot();
 
         // Tray can fit 3 desktop thumbs before paging is required.
-        if (numPreviews > 3 && caps.widescreen()) {
+        if (numPreviews > 1) {
             handles.attachHandles(slider, $tray.find('.slider'));
         }
 

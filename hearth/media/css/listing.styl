@@ -177,24 +177,12 @@ $dot-size = 13px;
         width: 100%;
     }
     .dot {
-        background: $salt-flat-white;
-        // Don't use shorthand, we do transitions.
-        border-color: $cloud-gray;
+        background: $cloud-gray;
         border-radius: ($dot-size/2);
-        border-style: solid;
-        border-width: 3px;
-        cursor: pointer;
         display: inline-block;
         height: $dot-size;
         margin: 0 3px;
-        transition-duration: 0.15s;
-        transition-property: border-color, border-width;
         width: $dot-size;
-        &.current,
-        &:hover,
-        &:active {
-            border-color: $sailor-blue;
-        }
         &.current {
             background: $sailor-blue;
         }
