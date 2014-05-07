@@ -132,11 +132,13 @@ function(_) {
             return;
         }
         // Get list of installed apps and mark as such.
-        require('apps').getInstalled().done(function(results) {
-            z.apps = {};
-            _.each(results, function(manifestURL) {
-                buttons.buttonInstalled(
-                    require('utils').baseurl(manifestURL), {manifestURL: manifestURL});
+        setTimeout(function() {
+            require('apps').getInstalled().done(function(results) {
+                z.apps = {};
+                _.each(results, function(manifestURL) {
+                    buttons.buttonInstalled(
+                        require('utils').baseurl(manifestURL), {manifestURL: manifestURL});
+                });
             });
         });
     };
