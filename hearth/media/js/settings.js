@@ -94,7 +94,7 @@ define('settings', ['l10n', 'settings_local', 'underscore'], function(l10n, sett
         flags: flags,
 
         // Enabling this settings will mock compatibility with all apps.
-        never_incompat: false,
+        never_incompat: true,
 
         // The UA tracking ID for this app.
         ua_tracking_id: 'UA-36116321-6',
