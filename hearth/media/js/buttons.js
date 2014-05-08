@@ -236,7 +236,7 @@ define('buttons',
                 _handler(install);
             }, function() {
                 notify({
-                    message: gettext('You must be online to install this app')
+                    message: gettext('Sorry, you are offline. Please try again later.')
                 });
                 e.preventDefault();
                 e.stopPropagation();
