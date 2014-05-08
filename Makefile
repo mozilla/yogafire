@@ -52,7 +52,7 @@ package: clean
 	@rm -f package/archives/latest_$(SERVER).zip
 
 	@pushd TMP/hearth && \
-		cat ../../package/files.txt | zip -9 -r ../../package/archives/$(NAME)_$(SERVER)_$(VERSION_INT).zip -@ && \
+		cat ../../package/files.txt | sed '/^#/ d' | zip -9 -r ../../package/archives/$(NAME)_$(SERVER)_$(VERSION_INT).zip -@ && \
 		popd
 	@echo "Created package: package/archives/$(NAME)_$(SERVER)_$(VERSION_INT).zip"
 	@cp package/archives/$(NAME)_$(SERVER)_$(VERSION_INT).zip package/archives/latest_$(SERVER).zip
