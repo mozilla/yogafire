@@ -6,12 +6,11 @@ define('buttons',
 
     var apps = require('apps');
     var cache = require('cache');
-    var notify = require('notification').notification;
+    var notification = require('notification');
     var requests = require('requests');
     var tracking = require('tracking');
     var urls = require('urls');
     var user = require('user');
-    var utils_local = require('utils_local');
     var z = require('z');
 
     var console = require('log')('buttons');
@@ -59,7 +58,7 @@ define('buttons',
         // If it's a paid app, it's unsupported for now.
         if (product.receipt_required) {
             console.log('Install cancelled; product is not free');
-            notify({message: gettext('Payment cancelled.')});
+            notification.notification({message: gettext('Payment cancelled.')});
         }
 
         // If there isn't a user object on the app, add one.
@@ -86,7 +85,7 @@ define('buttons',
 
         if (product.payment_required) {
             // The app requires a payment.
-            notify({message: gettext('Payment cancelled.')});
+            notification.notification({message: gettext('Payment cancelled.')});
             console.log('Purchase flow rejected for', product_name);
         } else {
             // There's no payment required, just start install.
@@ -156,7 +155,7 @@ define('buttons',
 
             }).fail(function() {
                 // L10n: The app's installation has failed, but the problem is temporary.
-                notify({
+                notification.notification({
                     message: gettext('Install failed. Please try again later.')
                 });
 
@@ -176,7 +175,7 @@ define('buttons',
                 def.resolve(installer, product, $this);
             }).fail(function(error) {
                 if (error) {
-                    notify({message: error});
+                    notification.notification({message: error});
                 }
                 console.log('App install deferred was rejected for ', product.name);
                 def.reject();
@@ -230,18 +229,7 @@ define('buttons',
     }
 
     z.page.on('click', '.product.launch', launchHandler)
-        .on('click', '.button.product:not(.launch):not(.incompatible)', function(e) {
-            // Are we offline?
-            utils_local.checkOnline(function() {
-                _handler(install);
-            }, function() {
-                notify({
-                    message: gettext('Sorry, you are offline. Please try again later.')
-                });
-                e.preventDefault();
-                e.stopPropagation();
-            });
-        });
+          .on('click', '.button.product:not(.launch):not(.incompatible)', _handler(install));
 
     function get_button(manifest_url) {
         return $('.button[data-manifest_url="' + manifest_url.replace(/"/, '\\"') + '"]');
