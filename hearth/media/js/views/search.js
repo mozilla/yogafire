@@ -22,12 +22,12 @@ define('views/search',
             $('#search-q').val('').trigger('focus');
         }
     })).on('focus', '#search-q', _pd(function() {
-        utils_local.checkOnline(null, function() {
+        if (!z.onLine) {
             $('#search-q').trigger('blur');
             notification.notification({
-                message: gettext('Sorry, you must be connected to the Internet to search Marketplace.')
+                message: gettext('Sorry, you must be online to search. Please try again later.')
             });
-        });
+        }
     }));
 
     // If we've set this value in localStorage before, then always use it.

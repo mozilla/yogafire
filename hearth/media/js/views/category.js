@@ -1,6 +1,6 @@
 define('views/category',
-    ['models', 'settings', 'tracking', 'urls', 'utils', 'utils_local', 'z'],
-    function(models, settings, tracking, urls, utils, utils_local, z) {
+    ['models', 'settings', 'tracking', 'urls', 'utils', 'z'],
+    function(models, settings, tracking, urls, utils, z) {
     'use strict';
 
     var cat_models = models('category');
@@ -35,13 +35,11 @@ define('views/category',
             });
         }
 
-        utils_local.checkOnline(function() {
-            // Online.
+        if (z.onLine) {
             build(urls.api.unsigned.url('category', [category], params), 'objects');
-        }, function() {
-            // Offline.
+        } else {
             build(settings['offline_' + category] , 'apps');
-        });
+        }
 
         tracking.setPageVar(5, 'Category', category, 3);
     };

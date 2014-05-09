@@ -151,17 +151,19 @@ define('buttons',
                     def.reject();
                     return;
                 }
-
                 do_install({data: {'receipts': [response.receipt]}});
 
             }).fail(function() {
-                // L10n: The app's installation has failed, but the problem is temporary.
-                notify({
-                    message: gettext('Install failed. Please try again later.')
+                utils_local.checkOnline().done(function() {
+                    notify({
+                        // L10n: The app's installation has failed, but the problem is temporary.
+                        message: gettext('Sorry, there was an issue contacting server for install. Please try again later.')
+                    });
+                }).fail(function() {
+                    notify({
+                        message: gettext('Sorry, you are offline. Please try again later.')
+                    });
                 });
-
-                // Could not record/generate receipt!
-                console.error('Could not generate receipt or record install for', product_name);
                 def.reject();
             });
         }
@@ -230,20 +232,7 @@ define('buttons',
     }
 
     z.page.on('click', '.product.launch', launchHandler)
-        .on('click', '.button.product:not(.launch):not(.incompatible)', function(e) {
-            var self = this;
-            e.preventDefault();
-            e.stopPropagation();
-
-            // Are we offline?
-            utils_local.checkOnline(function() {
-                install.call(self, apps_model.lookup($(self).closest('[data-slug]').data('slug')));
-            }, function() {
-                notify({
-                    message: gettext('Sorry, you are offline. Please try again later.')
-                });
-            });
-        });
+          .on('click', '.button.product:not(.launch):not(.incompatible)', _handler(install));
 
     function get_button(manifest_url) {
         return $('.button[data-manifest_url="' + manifest_url.replace(/"/, '\\"') + '"]');

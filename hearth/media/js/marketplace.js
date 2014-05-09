@@ -227,13 +227,14 @@ function(_) {
         }
     }
 
-    require('utils_local').checkOnline(function() {
+    // Use checkOnline to initialize z.onLine.
+    require('utils_local').checkOnline().done(function() {
         console.log('Online, initializing page.');
         z.body.removeClass('offline');
         require('consumer_info').promise.done(function() {
             startPage();
         });
-    }, function() {
+    }).fail(function() {
         console.log('Offline, initializing page.');
         z.body.addClass('offline');
         startPage();

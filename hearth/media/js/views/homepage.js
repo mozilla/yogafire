@@ -1,6 +1,6 @@
 define('views/homepage',
-    ['format', 'l10n', 'log', 'models', 'settings', 'urls', 'utils_local'],
-    function(format, l10n, log, models, settings, urls, utils_local) {
+    ['format', 'l10n', 'log', 'models', 'settings', 'urls', 'z'],
+    function(format, l10n, log, models, settings, urls, z) {
     'use strict';
 
     var gettext = l10n.gettext;
@@ -36,13 +36,11 @@ define('views/homepage',
             });
         }
 
-        utils_local.checkOnline(function() {
-            // Online.
+        if (z.onLine) {
             build(urls.api.unsigned.url('collection', ['tarako-featured'], params), 'apps');
-        }, function() {
-            // Offline.
+        } else {
             console.log("Building offline homepage.");
             build(settings.offline_homepage, 'apps');
-        });
+        }
     };
 });

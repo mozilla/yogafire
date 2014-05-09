@@ -7,6 +7,7 @@ define('z', ['jquery'], function($) {
         page: $('#page'),
         apps: {},
         context: {},
-        spaceheater: !!document.body.getAttribute('data-spaceheater')
+        spaceheater: !!document.body.getAttribute('data-spaceheater'),
+        onLine: true
     };
 });
