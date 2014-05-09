@@ -151,9 +151,7 @@ define('buttons',
                         message: gettext('Sorry, there was an issue contacting server for install. Please try again later.')
                     });
                 }).fail(function() {
-                    notify({
-                        message: gettext('Sorry, you are currently offline. Please try again later.')
-                    });
+                    notify({message: settings.offline_msg});
                 });
                 def.reject();
             });

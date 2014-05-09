@@ -1,6 +1,6 @@
 define('views/search',
-    ['capabilities', 'l10n', 'notification', 'storage', 'tracking', 'underscore', 'urls', 'utils', 'utils_local', 'z'],
-    function(capabilities, l10n, notification, storage, tracking, _, urls, utils, utils_local, z) {
+    ['capabilities', 'l10n', 'notification', 'settings', 'storage', 'tracking', 'underscore', 'urls', 'utils', 'utils_local', 'z'],
+    function(capabilities, l10n, notification, settings, storage, tracking, _, urls, utils, utils_local, z) {
 
     var _pd = utils._pd;
     var gettext = l10n.gettext;
@@ -24,9 +24,7 @@ define('views/search',
     })).on('focus', '#search-q', _pd(function() {
         if (!z.onLine) {
             $('#search-q').trigger('blur');
-            notification.notification({
-                message: gettext('Sorry, you must be online to search. Please try again later.')
-            });
+            notification.notification({message: settings.offline_msg});
         }
     }));
 

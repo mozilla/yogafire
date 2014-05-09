@@ -15,9 +15,7 @@ define('views/homepage',
         if (!z.onLine) {
             e.preventDefault();
             e.stopImmediatePropagation();
-            notification.notification({
-                message: gettext('Sorry, you are currently offline. Please try again later.')
-            });
+            notify({message: settings.offline_msg});
         }
     });
 

@@ -1,6 +1,6 @@
 define('views/feedback',
-       ['buckets', 'capabilities', 'forms', 'l10n', 'notification', 'requests', 'templates', 'urls', 'utils', 'z'],
-       function(buckets, caps, forms, l10n, notification, requests, nunjucks, urls, utils, z) {
+       ['buckets', 'capabilities', 'forms', 'l10n', 'notification', 'requests', 'settings', 'templates', 'urls', 'utils', 'z'],
+       function(buckets, caps, forms, l10n, notification, requests, settings, nunjucks, urls, utils, z) {
 
     var gettext = l10n.gettext;
     var notify = notification.notification;
@@ -28,9 +28,7 @@ define('views/feedback',
                     message: gettext('Sorry, there was an issue submitting your feedback. Please try again later.')
                 });
             } else {
-                notify({
-                    message: gettext('Sorry, you are currently offline. Please try again later.')
-                });
+                notify({message: settings.offline_msg});
             }
         });
     });
