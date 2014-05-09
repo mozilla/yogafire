@@ -3,14 +3,15 @@ msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-05-07T16:18:37.753Z\n"
-"PO-Revision-Date: 2014-04-12 18:04+0400\n"
+"PO-Revision-Date: 2014-05-09 17:00+0400\n"
 "Last-Translator: Alexander L. Slovesnik <unghost@mozilla-russia.org>\n"
 "Language-Team: none\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Poedit 1.6.4\n"
 "X-POOTLE-MTIME: 1393613896.0\n"
 
@@ -20,7 +21,7 @@ msgstr "Все категории"
 
 #: /templates/cat_dropdown.html:17
 msgid "Home"
-msgstr ""
+msgstr "Дом"
 
 #: /templates/cat_dropdown.html:18
 msgid "Games"
@@ -28,13 +29,14 @@ msgstr "Игры"
 
 #: /templates/cat_dropdown.html:19
 msgid "Tools"
-msgstr ""
+msgstr "Инструменты"
 
 #: /templates/cat_dropdown.html:20
 msgid "Lifestyle"
 msgstr "Стиль"
 
-#: /templates/confirmation.html:0 /templates/incompatible.html:3 /templates/detail/abuse.html:6
+#: /templates/confirmation.html:0 /templates/incompatible.html:3
+#: /templates/detail/abuse.html:6
 msgid "Close"
 msgstr "Закрыть"
 
@@ -52,8 +54,14 @@ msgid "Out-of-Date Marketplace"
 msgstr "Устаревший Marketplace"
 
 #: /templates/deprecated.html:3
-msgid "The version of the Firefox Marketplace that you're using is no longer supported. You will need to perform an update before you can continue enjoying the Marketplace."
-msgstr "Используемая вами версия Firefox Marketplace больше не поддерживается. Чтобы продолжить пользоваться Marketplace вам необходимо сначала произвести его обновление."
+msgid ""
+"The version of the Firefox Marketplace that you're using is no longer "
+"supported. You will need to perform an update before you can continue "
+"enjoying the Marketplace."
+msgstr ""
+"Используемая вами версия Firefox Marketplace больше не поддерживается. Чтобы "
+"продолжить пользоваться Marketplace вам необходимо сначала произвести его "
+"обновление."
 
 #: /templates/deprecated.html:5
 msgid "Update Now"
@@ -79,12 +87,14 @@ msgstr "Вы должны использовать Firefox для установ
 msgid "Download."
 msgstr "Загрузить."
 
-#: /templates/privacy.html:2 /templates/category_yogafire/main.html:52 /templates/detail/main_yogafire.html:75 /templates/detail/privacy.html:3 /media/js/views/privacy.js:10
-#: /media/js/views/app/privacy.js:10
+#: /templates/privacy.html:2 /templates/category_yogafire/main.html:52
+#: /templates/detail/main_yogafire.html:75 /templates/detail/privacy.html:3
+#: /media/js/views/privacy.js:10 /media/js/views/app/privacy.js:10
 msgid "Privacy Policy"
 msgstr "Политика приватности"
 
-#: /templates/terms.html:2 /templates/category_yogafire/main.html:49 /media/js/views/terms.js:10
+#: /templates/terms.html:2 /templates/category_yogafire/main.html:49
+#: /media/js/views/terms.js:10
 msgid "Terms of Use"
 msgstr "Условия использования"
 
@@ -97,7 +107,8 @@ msgstr "...Ещё"
 msgid "Unavailable"
 msgstr "Недоступно"
 
-#: /templates/_macros/market_button.html:7 /templates/_macros/market_tile.html:61
+#: /templates/_macros/market_button.html:7
+#: /templates/_macros/market_tile.html:61
 msgid "Free"
 msgstr "Бесплатно"
 
@@ -155,7 +166,8 @@ msgstr "Запрошенная вами категория не существу
 
 #: /templates/category_yogafire/main.html:35
 msgid "An internal server error occurred. Please try again later."
-msgstr "Произошла внутренняя ошибка сервера. Пожалуйста, повторите попытку позже."
+msgstr ""
+"Произошла внутренняя ошибка сервера. Пожалуйста, повторите попытку позже."
 
 #: /templates/errors/404.html:2 /templates/errors/fragment.html:1
 msgid "Oh no!"
@@ -177,7 +189,8 @@ msgstr "Ошибка загрузки других"
 msgid "Try Again"
 msgstr "Попробовать снова"
 
-#: /templates/detail/abuse.html:5 /templates/detail/main_yogafire.html:86 /media/js/views/app/abuse.js:34
+#: /templates/detail/abuse.html:5 /templates/detail/main_yogafire.html:86
+#: /media/js/views/app/abuse.js:34
 msgid "Report Abuse"
 msgstr "Сообщить о нарушении правил"
 
@@ -193,7 +206,8 @@ msgstr "Рейтинг содержания"
 msgid "Content Rating Details"
 msgstr "Подробнее о рейтинге содержания"
 
-#: /templates/detail/main_yogafire.html:13 /templates/detail/main_yogafire.html:14 /media/js/views/app.js:68
+#: /templates/detail/main_yogafire.html:13
+#: /templates/detail/main_yogafire.html:14 /media/js/views/app.js:68
 msgid "Loading..."
 msgstr "Загрузка..."
 
@@ -279,7 +293,7 @@ msgstr "Установка не удалась. Пожалуйста, повто
 
 #: /media/js/buttons.js:249
 msgid "Open"
-msgstr ""
+msgstr "Открыть"
 
 #. For ages {0} and higher. (de) `ab {0} Jahren`.
 #: /media/js/content-ratings.js:97
@@ -294,7 +308,8 @@ msgstr "Общее"
 msgid "Criminal Acts"
 msgstr "Преступные действия"
 
-#: /media/js/content-ratings.js:112 /media/js/content-ratings.js:177 /media/js/content-ratings.js:189 /media/js/content-ratings.js:208
+#: /media/js/content-ratings.js:112 /media/js/content-ratings.js:177
+#: /media/js/content-ratings.js:189 /media/js/content-ratings.js:208
 msgid "Drugs"
 msgstr "Наркотики"
 
@@ -314,7 +329,8 @@ msgstr "Неприемлемые выражения"
 msgid "Nudity"
 msgstr "Обнаженность"
 
-#: /media/js/content-ratings.js:122 /media/js/content-ratings.js:184 /media/js/content-ratings.js:196
+#: /media/js/content-ratings.js:122 /media/js/content-ratings.js:184
+#: /media/js/content-ratings.js:196
 msgid "Sex"
 msgstr "Секс"
 
@@ -326,7 +342,9 @@ msgstr "Откровенный секс"
 msgid "Impacting Content"
 msgstr "Влияющий на содержимое"
 
-#: /media/js/content-ratings.js:128 /media/js/content-ratings.js:172 /media/js/content-ratings.js:185 /media/js/content-ratings.js:197 /media/js/content-ratings.js:216
+#: /media/js/content-ratings.js:128 /media/js/content-ratings.js:172
+#: /media/js/content-ratings.js:185 /media/js/content-ratings.js:197
+#: /media/js/content-ratings.js:216
 msgid "Violence"
 msgstr "Насилие"
 
@@ -418,7 +436,8 @@ msgstr "Язык вражды"
 msgid "Intense Violence"
 msgstr "Реалистичное насилие"
 
-#: /media/js/content-ratings.js:155 /media/js/content-ratings.js:180 /media/js/content-ratings.js:192
+#: /media/js/content-ratings.js:155 /media/js/content-ratings.js:180
+#: /media/js/content-ratings.js:192
 msgid "Language"
 msgstr "Сквернословие"
 
@@ -486,7 +505,8 @@ msgstr "Употребление табака"
 msgid "Violence References"
 msgstr "Присутствие насилия"
 
-#: /media/js/content-ratings.js:176 /media/js/content-ratings.js:188 /media/js/content-ratings.js:206
+#: /media/js/content-ratings.js:176 /media/js/content-ratings.js:188
+#: /media/js/content-ratings.js:206
 msgid "Discrimination"
 msgstr "Дискриминация"
 
@@ -583,8 +603,12 @@ msgid "You have been signed in"
 msgstr "Вы вошли в систему"
 
 #: /media/js/login.js:135
-msgid "Persona login failed. Maybe you don't have an account under that email address?"
-msgstr "Ошибка входа через Persona. Возможно у вас нет учетной записи для этого адреса эл. почты?"
+msgid ""
+"Persona login failed. Maybe you don't have an account under that email "
+"address?"
+msgstr ""
+"Ошибка входа через Persona. Возможно у вас нет учетной записи для этого "
+"адреса эл. почты?"
 
 #: /media/js/login.js:140
 msgid "Persona login failed. A server error was encountered."
@@ -640,7 +664,7 @@ msgstr "Греция"
 
 #: /media/js/settings.js:117
 msgid "Guatemala"
-msgstr ""
+msgstr "Гватемала"
 
 #: /media/js/settings.js:118
 msgid "Hungary"
@@ -720,7 +744,8 @@ msgstr "Отзыв отправлен. Спасибо!"
 
 #: /media/js/views/feedback.js:27
 msgid "There was a problem submitting your feedback. Try again soon."
-msgstr "При отправке вашего отзыва возникла проблема. Подождите и попробуйте снова."
+msgstr ""
+"При отправке вашего отзыва возникла проблема. Подождите и попробуйте снова."
 
 #. Page not found (404)
 #: /media/js/views/not_found.js:9
@@ -729,7 +754,7 @@ msgstr "Не найдено"
 
 #: /media/js/views/search.js:28
 msgid "Sorry, you must be connected to the Internet to search Marketplace."
-msgstr ""
+msgstr "Для поиска в Marketplace вы должны быть подключены к Интернету."
 
 #: /media/js/views/search.js:199
 msgid "Search Results"
