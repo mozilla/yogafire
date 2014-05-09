@@ -76,7 +76,6 @@ define('buttons',
         var def = require('defer').Deferred();
         // Create a reference to the button.
         var $this = $button || $(this);
-        var _timeout;
 
         // If the user has already purchased the app, we do need to generate
         // another receipt but we don't need to go through the purchase flow again.
@@ -96,7 +95,6 @@ define('buttons',
         }
 
         function start_install() {
-
             // Track the search term used to find this app, if applicable.
             require('tracking_helpers').track_search_term();
 
@@ -112,13 +110,6 @@ define('buttons',
             $this.data('old-text', $this.html())
                  .html('<span class="spin"></span>')
                  .addClass('spinning');
-            // Reset button if it's been 30 seconds without user action.
-            _timeout = setTimeout(function() {
-                if ($this.hasClass('spinning')) {
-                    console.warn('Spinner timeout for', product_name);
-                    revertButton($this);
-                }
-            }, 30000);
 
             // If the app has already been installed by the user and we don't
             // need a receipt, just start the app install.
@@ -185,15 +176,8 @@ define('buttons',
             });
         }
 
-        // After everything has completed...
+        // After everything has completed, carry out post-install logic.
         def.then(function(installer) {
-            // On install success, carry out post-install logic.
-
-            // Clear the spinner timeout if one was set.
-            if (_timeout) {
-                clearTimeout(_timeout);
-            }
-
             // Show the box on how to run the app.
             var $installed = $('#installed');
             var $how = $installed.find('.' + require('utils').browser());
