@@ -8,6 +8,6 @@ define('z', ['jquery'], function($) {
         apps: {},
         context: {},
         spaceheater: !!document.body.getAttribute('data-spaceheater'),
-        onLine: true
+        onLine: true,
     };
 });

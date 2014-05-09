@@ -23,9 +23,15 @@ define('views/feedback',
             notify({message: gettext('Feedback submitted. Thanks!')});
         }).fail(function() {
             forms.toggleSubmitFormState($this, true);
-            notify({
-                message: gettext('There was a problem submitting your feedback. Try again soon.')
-            });
+            if (z.onLine) {
+                notify({
+                    message: gettext('Sorry, there was an issue submitting your feedback. Please try again later.')
+                });
+            } else {
+                notify({
+                    message: gettext('Sorry, you are currently offline. Please try again later.')
+                });
+            }
         });
     });
 

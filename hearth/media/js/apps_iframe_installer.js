@@ -57,7 +57,7 @@ define('apps_iframe_installer',
                         def.reject();
                         return;
                     } else if (data.error.error == 'NETWORK_ERROR') {
-                        def.reject(gettext('Sorry, you are offline. Please try again later.'));
+                        def.reject(gettext('Sorry, you are currently offline. Please try again later.'));
                         return;
                     }
                     def.reject(gettext('App install error: {error}', data.error));

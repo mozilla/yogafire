@@ -152,7 +152,7 @@ define('buttons',
                     });
                 }).fail(function() {
                     notify({
-                        message: gettext('Sorry, you are offline. Please try again later.')
+                        message: gettext('Sorry, you are currently offline. Please try again later.')
                     });
                 });
                 def.reject();

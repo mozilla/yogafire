@@ -1,6 +1,6 @@
 define('views/homepage',
-    ['format', 'l10n', 'log', 'models', 'settings', 'urls', 'z'],
-    function(format, l10n, log, models, settings, urls, z) {
+    ['format', 'l10n', 'log', 'models', 'notification', 'settings', 'urls', 'z'],
+    function(format, l10n, log, models, notification, settings, urls, z) {
     'use strict';
 
     var gettext = l10n.gettext;
@@ -9,6 +9,17 @@ define('views/homepage',
     var app_models = models('app');
 
     var catElm = '<li><a class="cat-{0} cat-icon-a" data-cat-slug="{0}" href="{1}">{2}</a></li>';
+
+    z.body.on('click', '.support-list .online', function(e) {
+        var $this = $(this);
+        if (!z.onLine) {
+            e.preventDefault();
+            e.stopImmediatePropagation();
+            notification.notification({
+                message: gettext('Sorry, you are currently offline. Please try again later.')
+            });
+        }
+    });
 
     return function(builder, args, params) {
         console.log("Homepage view hit.");
