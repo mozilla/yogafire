@@ -9,7 +9,7 @@ require.config({
     paths: {
         'flipsnap': 'lib/flipsnap',
         'jquery': 'lib/jquery-2.0.2',
-        'localforage': 'lib/localforage-0.7.0',
+        'localforage': 'lib/localforage',
         'underscore': 'lib/underscore',
         'nunjucks': 'lib/nunjucks',
         'nunjucks.compat': 'lib/nunjucks.compat',
@@ -228,16 +228,6 @@ function(_) {
         window.location.reload();
     });
 
-    function startPage() {
-        console.log('Triggering initial navigation');
-        consumer_info.fetch()
-        if (!z.spaceheater) {
-            z.page.trigger('navigate', [window.location.pathname + window.location.search]);
-        } else {
-            z.page.trigger('loaded');
-        }
-    }
-
     // Initialize the database when localForage has loaded.
     localforage.ready().then(function() {
         console.log('Configuring localForage.');
@@ -249,6 +239,16 @@ function(_) {
         });
         db.preload();
     });
+
+    function startPage() {
+        console.log('Triggering initial navigation');
+        consumer_info.fetch()
+        if (!z.spaceheater) {
+            z.page.trigger('navigate', [window.location.pathname + window.location.search]);
+        } else {
+            z.page.trigger('loaded');
+        }
+    }
 
     z.body.on('lf_preloaded_finished', function() {
         // Use checkOnline to initialize z.onLine.
