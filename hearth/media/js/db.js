@@ -12,6 +12,7 @@ define('db', ['format', 'localforage', 'log', 'requests', 'urls', 'settings', 'u
     function preload() {
         console.log('Checking if data is already preloaded');
         localforage.getItem(PRELOADED_KEY).then(function(is_preloaded) {
+            console.log('resolved');
             if(is_preloaded) {
                 console.log('Data already preloaded');
                 z.body.trigger('lf_preloaded_finished');
@@ -24,7 +25,7 @@ define('db', ['format', 'localforage', 'log', 'requests', 'urls', 'settings', 'u
                         resolve();
                     });
                 }));
-                var categories = [settings.offline_tarako-games, settings.offline_tarako-tools, settings.offline_tarako-lifestyle];
+                var categories = [settings['offline_tarako-games'], settings['offline_tarako-tools'], settings['offline_tarako-lifestyle']];
                 _.each(categories, function(category) {
                     promises.push(new Promise(function(resolve, reject) {
                         requests.get(settings.offline_homepage, true).done(function (data) {
@@ -39,6 +40,10 @@ define('db', ['format', 'localforage', 'log', 'requests', 'urls', 'settings', 'u
                     z.body.trigger('lf_preloaded_finished');
                 });
             }
+        }, function(err) {
+            console.log('rejected', err);
+        }).fail(function(err) {
+            console.log('rejected 2', err);
         });
 
     }

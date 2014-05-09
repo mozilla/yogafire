@@ -16,11 +16,7 @@ define('settings', ['l10n', 'localforage', 'settings_local', 'underscore'],
     param_blacklist = ['pro'];
 
     function offline_cache_enabled() {
-        var storage = require('storage');
-        if (storage.getItem('offline_cache_disabled') || require('capabilities').phantom) {
-            return false;
-        }
-        return window.location.search.indexOf('cache=false') === -1;
+        return false;
     }
 
     return _.defaults(base_settings, {
