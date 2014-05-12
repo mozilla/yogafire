@@ -1,4 +1,4 @@
-define('settings_local', ['localforage'], function(localforage) {
+define('settings_local', [], function() {
     return {
         api_url: 'https://marketplace.allizom.org',
         body_classes: 'package',
@@ -9,6 +9,6 @@ define('settings_local', ['localforage'], function(localforage) {
         potatolytics_enabled: true,
         package_version: '{fireplace_package_version}',
         iframe_installer_src:  'https://marketplace.firefox.com/iframe-install.html',
-        localforage_driver: localforage.INDEXEDDB
+        localforage_driver: 'asyncStorage'
     };
 });
