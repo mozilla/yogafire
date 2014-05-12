@@ -5,9 +5,10 @@ define('db', ['defer', 'format', 'localforage', 'log', 'requests', 'urls', 'sett
 
     // Localforage keys.
     function app_key(slug) { return 'app_' + slug; }
-    function category_key(slug) { return 'category_' + slug; }
+    function category_key(slug, page) { return 'category_' + slug + '_' + page; }
     var HOMEPAGE_KEY = 'homepage';
     var PRELOADED_KEY = 'has_preloaded';
+
 
     function preload() {
         console.log('Checking if data is already preloaded');
@@ -37,7 +38,7 @@ define('db', ['defer', 'format', 'localforage', 'log', 'requests', 'urls', 'sett
                 _.each(categories, function(category) {
                     promises.push(new Promise(function(resolve, reject) {
                         requests.get(category.url, true).done(function(data) {
-                            storeCategory(category.slug, data);
+                            storeCategory(category.slug, data, 0);  // 0 because we preload the first page.
                             resolve();
                         });
                     }));
@@ -93,10 +94,10 @@ define('db', ['defer', 'format', 'localforage', 'log', 'requests', 'urls', 'sett
         return def.promise();
     }
 
-    function getCategory(slug) {
+    function getCategory(slug, page) {
         /*
-        Passed a slug, returns a promise that resolves to search results for a
-        category with that slug.
+        Passed a slug and 0-indexed page number, returns a promise that resolves to the
+        passed page number for search results for a category with the passed slug.
 
         It fetches that data by kicking off two asynchronous tasks:
         1) An attempt to retrieve to the data from localforage.
@@ -105,27 +106,31 @@ define('db', ['defer', 'format', 'localforage', 'log', 'requests', 'urls', 'sett
         Whichever task completes first will resolve the data. Regardless of which
         task does the resolution, the API call will complete and the data from the
         call will be stored with localforage.
-
-        TODO: handle pagination.
         */
         var def = defer.Deferred();
         var resolved = false;
+        var num_per_page = 10;
 
-        localforage.getItem(category_key(slug)).then(function(data) {
+        page = page || 0;
+
+        localforage.getItem(category_key(slug, page)).then(function(data) {
             if (data && !resolved) {
-                console.log('Returned', slug, 'category from localforage.');
+                console.log('Returned page', page, 'of', slug, 'category from localforage.');
                 def.resolve(data);
                 resolved = true;
             }
         });
 
-        var url = urls.api.url('category', slug);
+        var url = urls.api.url('category', slug, {
+            limit: num_per_page,
+            offset: page * num_per_page
+        });
         requests.get(url, true).done(function(data) {
             if (!resolved) {
-                console.log('Returned', slug, 'category from API.');
+                console.log('Returned page', page, 'of', slug, 'category from API.');
                 def.resolve(data);
             }
-            storeCategory(slug, data);
+            storeCategory(slug, data, page);
         });
 
         return def.promise();
@@ -181,14 +186,14 @@ define('db', ['defer', 'format', 'localforage', 'log', 'requests', 'urls', 'sett
         });
     }
 
-    function storeCategory(name, data) {
+    function storeCategory(name, data, page) {
         /*
         Passed a catgory slug and API response of a search for that category:
         1) Stores the response of that category with localforage.
         2) Saves each app in that category.
         */
-        console.log('Storing', name, 'category in localforage');
-        localforage.setItem(category_key(name), data);
+        console.log('Storing page', page, 'of', name, 'category in localforage');
+        localforage.setItem(category_key(name, page), data);
         storeApps(data.objects);
     }
 
