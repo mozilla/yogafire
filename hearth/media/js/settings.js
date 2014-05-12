@@ -164,6 +164,8 @@ define('settings', ['l10n', 'settings_local', 'underscore'],
 
         iframe_installer_src: 'https://marketplace.firefox.com/iframe-install.html',
 
-        offline_msg: gettext('Sorry, you are currently offline. Please try again later.')
+        offline_msg: gettext('Sorry, you are currently offline. Please try again later.'),
+
+        num_per_page: 10,
     });
 });

@@ -113,9 +113,6 @@ define('db', ['defer', 'format', 'localforage', 'log', 'requests', 'urls', 'sett
 
         var def = defer.Deferred();
         var resolved = false;
-        var num_per_page = 10;
-
-        page = page || 0;
 
         localforage.getItem(category_key(slug, page)).then(function(data) {
             if (data && !resolved) {
@@ -125,9 +122,10 @@ define('db', ['defer', 'format', 'localforage', 'log', 'requests', 'urls', 'sett
             }
         });
 
+        page = page || 0;
         var url = urls.api.url('category', slug, {
-            limit: num_per_page,
-            offset: page * num_per_page
+            limit: settings.num_per_page,
+            offset: page * settings.num_per_page
         });
         requests.get(url, true).done(function(data) {
             if (!resolved) {

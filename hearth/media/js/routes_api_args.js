@@ -1,10 +1,10 @@
 define('routes_api_args',
-    ['buckets', 'capabilities', 'user_helpers'],
-    function(buckets, caps, user_helpers) {
+    ['buckets', 'capabilities', 'settings', 'user_helpers'],
+    function(buckets, caps, settings, user_helpers) {
 
     var _dev = null;
     var _device = null;
-    var _limit = 10;
+    var _limit = settings.num_per_page;
 
     if (caps.firefoxOS) {
         _dev = _device = 'firefoxos';
