@@ -6,8 +6,6 @@ define('views/homepage',
     var gettext = l10n.gettext;
     var console = log('homepage');
 
-    var app_models = models('app');
-
     var catElm = '<li><a class="cat-{0} cat-icon-a" data-cat-slug="{0}" href="{1}">{2}</a></li>';
 
     z.body.on('click', '.support-list .online', function(e) {
@@ -36,20 +34,6 @@ define('views/homepage',
             delete params.src;
         }
 
-        function build(_endpoint, pluck) {
-            builder.start('category_yogafire/main.html', {
-                endpoint: _endpoint,
-                sort: params.sort,
-                app_cast: app_models.cast,
-                pluck: pluck
-            });
-        }
-
-        if (z.onLine) {
-            build(urls.api.unsigned.url('collection', ['tarako-featured'], params), 'apps');
-        } else {
-            console.log("Building offline homepage.");
-            build(settings.offline_homepage, 'apps');
-        }
+        builder.start('category_yogafire/main.html');
     };
 });

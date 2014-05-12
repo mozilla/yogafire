@@ -108,6 +108,10 @@ define('db', ['defer', 'format', 'localforage', 'log', 'requests', 'urls', 'sett
 
         TODO: handle pagination.
         */
+        if (!slug) {
+            return getHomepage();
+        }
+
         var def = defer.Deferred();
         var resolved = false;
 
@@ -151,7 +155,7 @@ define('db', ['defer', 'format', 'localforage', 'log', 'requests', 'urls', 'sett
         localforage.getItem(HOMEPAGE_KEY).then(function(data) {
             if (data && !resolved) {
                 console.log('Returned homepage from localforage.');
-                resolve(data);
+                def.resolve(data);
                 resolved = true;
             }
         });
@@ -160,7 +164,8 @@ define('db', ['defer', 'format', 'localforage', 'log', 'requests', 'urls', 'sett
         requests.get(url, true).done(function(data) {
             if (!resolved) {
                 console.log('Returned homepage from API.');
-                resolve(data);
+                def.resolve(data);
+                resolved = true;
             }
             storeHomepage(data);
         });
