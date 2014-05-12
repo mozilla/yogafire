@@ -4,7 +4,6 @@ define('views/category',
     'use strict';
 
     var cat_models = models('category');
-    var app_models = models('app');
 
     return function(builder, args, params) {
         var category = args[0];
@@ -25,21 +24,9 @@ define('views/category',
             delete params.src;
         }
 
-        function build(_endpoint, pluck) {
-            builder.start('category_yogafire/main.html', {
-                app_cast: app_models.cast,
-                category: category,
-                endpoint: _endpoint,
-                pluck: pluck,
-                sort: params.sort,
-            });
-        }
-
-        if (z.onLine) {
-            build(urls.api.unsigned.url('category', [category], params), 'objects');
-        } else {
-            build(settings['offline_' + category] , 'apps');
-        }
+        builder.start('category_yogafire/main.html', {
+            category: category,
+        });
 
         tracking.setPageVar(5, 'Category', category, 3);
     };
