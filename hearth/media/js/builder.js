@@ -1,6 +1,6 @@
 define('builder',
-    ['log', 'templates', 'models', 'requests', 'settings', 'z', 'nunjucks.compat'],
-    function(log, nunjucks, models, requests, settings, z) {
+    ['db', 'log', 'templates', 'models', 'requests', 'settings', 'z', 'nunjucks.compat'],
+    function(db, log, nunjucks, models, requests, settings, z) {
 
     var console = log('builder');
     var SafeString = nunjucks.require('runtime').SafeString;
@@ -266,6 +266,81 @@ define('builder',
                 }
 
                 return new SafeString('<div id="' + uid + '" class="placeholder fetchblock">' + out + '</div>');
+            }
+        });
+
+        this.env.addExtension('localforage', {
+            run: function(context, signature, body, placeholder, empty, except) {
+                var uid = 'ph_' + counter++;
+                var out;
+
+                var injector = function(key, slug, replace, extract) {
+                    var lf_request = db.get[key](slug);
+
+                    if ('id' in signature) {
+                        result_handlers[signature.id] = lf_request;
+                    }
+
+                    function get_result(data, dont_cast) {
+                        // `pluck` pulls the value out of the response.
+                        if ('pluck' in signature) {
+                            data = data[signature.pluck];
+                        }
+                        var content = '';
+                        if (empty && (!data || Array.isArray(data) && data.length === 0)) {
+                            content = empty();
+                        } else {
+                            context.ctx.this = data;
+                            content = body();
+                        }
+                        if (extract) {
+                            try {
+                                content = parse_and_find(content, extract).innerHTML;
+                            } catch (e) {
+                                console.error('There was an error extracting the result from the rendered response.');
+                                content = error_template;
+                            }
+                        }
+                        return content;
+                    }
+
+                    lf_request.done(function(data) {
+                        result_map[key] = data;
+
+                        var el = document.getElementById(uid);
+                        if (!el) {
+                            return;
+                        }
+                        context.ctx.response = data;
+                        var content = get_result(data);
+                        if (replace) {
+                            parse_and_replace(content, replace);
+                        } else {
+                            el.innerHTML = content;
+                        }
+                        if (signature.paginate) {
+                            make_paginatable(injector, el, signature.paginate);
+                        }
+                        trigger_fragment_loaded(signature.id || null);
+                    }).fail(function(error) {
+                        if (!replace) {
+                            var el = document.getElementById(uid);
+                            if (!el) {
+                                return;
+                            }
+                            context.ctx.response = error;
+                            context.ctx.error = error;
+                            el.innerHTML = except ? except() : error_template;
+                        }
+                    });
+                    return lf_request;
+                };
+
+                injector(signature.key, signature.slug);
+                if (!out) {
+                    out = '<div class="loading">' + (placeholder ? placeholder() : '') + '</div>';
+                }
+                return new SafeString('<div id="' + uid + '" class="placeholder">' + out + '</div>');
             }
         });
 

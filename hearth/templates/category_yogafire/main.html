@@ -3,15 +3,14 @@
 
 {% set source = category or 'all' %}
 
-{% defer (url=endpoint|urlunparam(['sort']), pluck=pluck or 'objects', as='app', paginate='ol.listing') %}
-  {% set apps = this if category else this|get_featured %}
+{% localforage (key='category', slug=category, pluck='objects' if category else 'apps') %}
   <ol class="container listing search-listing c">
     {% if not category %}
       <header class="featured-header c">
         <h2>{{ _('Featured Apps') }}</h2>
       </header>
     {% endif %}
-    {% for result in apps %}
+    {% for result in this %}
       <li class="item result app c">
         {{ market_tile(result, link=true, src=source + '-' + (sort or 'popular'), tray=False, description=not category) }}
       </li>
@@ -30,11 +29,7 @@
   </p>
 {% except %}
   <p class="no-results">
-    {% if error == 400 or error == 404 %}
-      {{ _('The category you requested does not exist.') }}
-    {% elif error == 500 %}
-      {{ _('An internal server error occurred. Please try again later.') }}
-    {% endif %}
+    {{ _('No apps in this category.') }}
   </p>
 {% end %}
 
