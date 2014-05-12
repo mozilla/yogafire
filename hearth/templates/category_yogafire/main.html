@@ -3,7 +3,7 @@
 
 {% set source = category or 'all' %}
 
-{% localforage (key='category', slug=category, pluck='objects' if category else 'apps') %}
+{% localforage (key='category', slug=category, pluck='objects' if category else 'apps', paginate='ol.listing') %}
   <ol class="container listing search-listing c">
     {% if not category %}
       <header class="featured-header c">
@@ -17,8 +17,8 @@
     {% endfor %}
 
     {# Render the more button if there's another page of results and we are dealing with a category #}
-    {% if response.meta.next and category %}
-      {{ more_button(response.meta.next) }}
+    {% if category and response.meta.next %}
+      {{ more_button_localforage('category', category, (response.meta.offset / response.meta.limit) + 1) }}
     {% endif %}
   </ol>
 {% placeholder %}
