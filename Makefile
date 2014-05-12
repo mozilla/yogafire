@@ -45,7 +45,7 @@ package: clean
 	@sed -i'.bak' -e 's/"Marketplace"/"$(NAME)"/g' TMP/hearth/manifest.webapp
 	@sed -i'.bak' -e 's/marketplace\.firefox\.com/$(DOMAIN)/g' TMP/hearth/manifest.webapp
 	@sed -i'.bak' -e 's/{launch_path}/app.html/g' TMP/hearth/manifest.webapp
-	@sed -i'.bak' -e 's/{fireplace_package_version}/$(VERSION_INT)/g' TMP/hearth/{manifest.webapp,media/js/include.js}
+	@sed -i'.bak' -e 's/{fireplace_package_version}/$(VERSION_INT)/g' TMP/hearth/{manifest.webapp,media/js/include.js,app.html}
 
 	@rm -rf package/archives/latest_$(SERVER)
 	@mkdir -p package/archives/latest_$(SERVER)
@@ -86,7 +86,8 @@ fat_package: compile
 	@sed -i'.bak' -e 's/"Marketplace"/"$(NAME)"/g' TMP/hearth/manifest.webapp
 	@sed -i'.bak' -e 's/marketplace\.firefox\.com/$(DOMAIN)/g' TMP/hearth/manifest.webapp
 	@sed -i'.bak' -e 's/{launch_path}/index.html/g' TMP/hearth/manifest.webapp
-	@sed -i'.bak' -e 's/{fireplace_package_version}/$(VERSION_INT)/g' TMP/hearth/{manifest.webapp,media/js/settings_local_package.js}
+	@sed -i'.bak' -e 's/{fireplace_package_version}/$(VERSION_INT)/g' TMP/hearth/{manifest.webapp,media/js/settings_local_package.js,app.html}
+
 	@rm -rf package/archives/latest_fat_$(SERVER)
 	@mkdir -p package/archives/latest_fat_$(SERVER)
 	@rm -f package/archives/latest_fat_$(SERVER).zip

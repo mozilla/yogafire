@@ -264,8 +264,10 @@ function(_) {
         });
     });
 
-    // Set the tracking consumer page variable.
-    //require('tracking').setVar(3, 'Site section', 'Consumer', 3);
+    // Set the tracking package version variable (dimension15).
+    if (z.body.data('build-id')) {
+        require('tracking').setVar(15, 'Package version', z.body.data('build-id'));
+    }
 
     require('requests').on('deprecated', function() {
         // Divert the user to the deprecated view.
