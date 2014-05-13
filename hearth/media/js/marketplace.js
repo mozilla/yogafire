@@ -238,13 +238,14 @@ function(_) {
     // Initialize the database when localForage has loaded.
     localforage.ready().then(function() {
         console.log('Configuring localForage.');
-        localforage.setDriver(settings.localforage_driver);
         localforage.config({
             name: 'yogafire',
             storeName: 'yogafire',
             version: 1.0
         });
-        db.preload();
+        localforage.setDriver(settings.localforage_driver).then(function() {
+            db.preload();
+        });
     });
 
     // Once database is initialized, kick off page render.
