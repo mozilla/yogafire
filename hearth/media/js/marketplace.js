@@ -9,7 +9,6 @@ require.config({
     paths: {
         'flipsnap': 'lib/flipsnap',
         'jquery': 'lib/jquery-2.0.2',
-        'localforage': 'lib/localforage',
         'underscore': 'lib/underscore',
         'nunjucks': 'lib/nunjucks',
         'nunjucks.compat': 'lib/nunjucks.compat',
@@ -236,6 +235,19 @@ function(_) {
         }
     }
 
+    // Initialize the database when localForage has loaded.
+    localforage.ready().then(function() {
+        console.log('Configuring localForage.');
+        localforage.setDriver(settings.localforage_driver);
+        localforage.config({
+            name: 'yogafire',
+            storeName: 'yogafire',
+            version: 1.0
+        });
+        db.preload();
+    });
+
+    // Once database is initialized, kick off page render.
     z.body.on('lf_preloaded_finished', function() {
         // Use checkOnline to initialize z.onLine.
         require('utils_local').checkOnline().done(function() {

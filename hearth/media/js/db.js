@@ -1,5 +1,5 @@
-define('db', ['defer', 'format', 'localforage', 'log', 'requests', 'urls', 'settings', 'underscore', 'z'],
-    function(defer, format, localforage, log, requests, urls, settings, _, z) {
+define('db', ['defer', 'format', 'log', 'requests', 'urls', 'settings', 'underscore', 'z'],
+    function(defer, format, log, requests, urls, settings, _, z) {
 
     var console = log('db');
 
@@ -8,18 +8,6 @@ define('db', ['defer', 'format', 'localforage', 'log', 'requests', 'urls', 'sett
     function category_key(slug, page) { return 'category_' + slug + '_' + page; }
     var HOMEPAGE_KEY = 'homepage';
     var PRELOADED_KEY = 'has_preloaded';
-
-    // Initialize the database when localForage has loaded.
-    localforage.ready().then(function() {
-        console.log('Configuring localForage.');
-        localforage.setDriver(settings.localforage_driver);
-        localforage.config({
-            name: 'yogafire',
-            storeName: 'yogafire',
-            version: 1.0
-        });
-        preload();
-    });
 
     function preload() {
         console.log('Checking if data is already preloaded');
