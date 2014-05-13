@@ -4,3 +4,12 @@
   <div class="spinner alt btn-replace"></div>
 </li>
 {% endmacro %}
+
+{% macro more_button_localforage(key, slug, page) %}
+<li class="loadmore">
+  <button class="button" data-key="{{ key }}" data-slug="{{ slug }}" data-page="{{ page }}">
+    {{ _('More') }}
+  </button>
+  <div class="spinner alt btn-replace"></div>
+</li>
+{% endmacro %}

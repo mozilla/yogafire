@@ -89,6 +89,36 @@ define('builder',
             }, false);
         }
 
+        function make_paginatable_localforage(injector, placeholder, target) {
+            /* Like defer's paginatable, but passes in key/slug/page for db.js
+               instead of a URL for requests.js */
+            if (!placeholder) {
+                console.log('No element to paginate');
+                return;
+            }
+
+            var el = placeholder.querySelector('.loadmore button');
+            if (!el) {
+                return;
+            }
+
+            el.addEventListener('click', function() {
+                el.classList.add('hide');
+                el.parentNode.classList.remove('pagination-error');
+                // Call the injector to load the next page's data into the
+                // more button's parent. `target` is the selector to extract
+                // from the newly built HTML to inject into the currently
+                // visible page.
+                var key = el.getAttribute('data-key');
+                var slug = el.getAttribute('data-slug');
+                var page = el.getAttribute('data-page');
+                injector(key, slug, page, el.parentNode, target).done(function() {
+                    console.log('Pagination completed');
+                    fire(page, 'loaded_more');
+                });
+            }, false);
+        }
+
         function trigger_fragment_loaded(id) {
             fire(page, 'fragment_loaded', id || null);
         }
@@ -270,12 +300,14 @@ define('builder',
         });
 
         this.env.addExtension('localforage', {
+            /* Like defer's paginatable, but takes and passes in key/slug/page
+               for db.js instead of a URL for requests.js */
             run: function(context, signature, body, placeholder, empty, except) {
                 var uid = 'ph_' + counter++;
                 var out;
 
-                var injector = function(key, slug, replace, extract) {
-                    var lf_request = db.get[key](slug);
+                var injector = function(key, slug, page, replace, extract) {
+                    var lf_request = db.get[key](slug, page);
 
                     if ('id' in signature) {
                         result_handlers[signature.id] = lf_request;
@@ -319,7 +351,7 @@ define('builder',
                             el.innerHTML = content;
                         }
                         if (signature.paginate) {
-                            make_paginatable(injector, el, signature.paginate);
+                            make_paginatable_localforage(injector, el, signature.paginate);
                         }
                         trigger_fragment_loaded(signature.id || null);
                     }).fail(function(error) {
