@@ -25,7 +25,6 @@ define(
     [
         'underscore',
         'jquery',
-        'localforage',
         'helpers',  // Must come before mostly everything else.
         'helpers_local',
         'buttons',
@@ -88,7 +87,6 @@ function(_) {
     var consumer_info = require('consumer_info');
     var db = require('db');
     var format = require('format');
-    var localforage = require('localforage');
     var nunjucks = require('templates');
     var settings = require('settings');
     var z = require('z');
@@ -226,18 +224,6 @@ function(_) {
 
     z.body.on('click', '.try-again', function() {
         window.location.reload();
-    });
-
-    // Initialize the database when localForage has loaded.
-    localforage.ready().then(function() {
-        console.log('Configuring localForage.');
-        localforage.setDriver(settings.localforage_driver);
-        localforage.config({
-            name: 'yogafire',
-            storeName: 'yogafire',
-            version: 1.0
-        });
-        db.preload();
     });
 
     function startPage() {

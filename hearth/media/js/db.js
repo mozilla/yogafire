@@ -9,6 +9,17 @@ define('db', ['defer', 'format', 'localforage', 'log', 'requests', 'urls', 'sett
     var HOMEPAGE_KEY = 'homepage';
     var PRELOADED_KEY = 'has_preloaded';
 
+    // Initialize the database when localForage has loaded.
+    localforage.ready().then(function() {
+        console.log('Configuring localForage.');
+        localforage.setDriver(settings.localforage_driver);
+        localforage.config({
+            name: 'yogafire',
+            storeName: 'yogafire',
+            version: 1.0
+        });
+        preload();
+    });
 
     function preload() {
         console.log('Checking if data is already preloaded');
