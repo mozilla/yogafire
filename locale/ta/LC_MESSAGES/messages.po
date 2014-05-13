@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-05-07T16:18:37.753Z\n"
-"PO-Revision-Date: 2014-04-30 04:27+0000\n"
+"PO-Revision-Date: 2014-05-13 18:18+0000\n"
 "Last-Translator: அருண் குமார் - <thangam.arunx@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: ta\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Pootle 2.5.0\n"
-"X-POOTLE-MTIME: 1398832054.0\n"
+"X-POOTLE-MTIME: 1400005114.0\n"
 
 #: /templates/cat_dropdown.html:2
 msgid "All Categories"
@@ -24,7 +24,7 @@ msgstr "முகப்பு"
 
 #: /templates/cat_dropdown.html:18
 msgid "Games"
-msgstr "விளையாட்டுகள்"
+msgstr "ஆட்டம்"
 
 #: /templates/cat_dropdown.html:19
 msgid "Tools"
@@ -32,7 +32,7 @@ msgstr "கருவிகள்"
 
 #: /templates/cat_dropdown.html:20
 msgid "Lifestyle"
-msgstr "வாழ்க்கை முறை"
+msgstr "வாழ்முறை"
 
 #: /templates/confirmation.html:0 /templates/incompatible.html:3 /templates/detail/abuse.html:6
 msgid "Close"
