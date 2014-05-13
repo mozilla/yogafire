@@ -36,6 +36,7 @@ media/img/pretty/stars_small.png
 media/img/yogafire/categories.png
 media/js/include.js
 media/js/l10n.js
+media/js/lib/localforage.js
 # Disabled most locales to make package size smaller. See bug 1007216.
 #media/locales/ar.js
 #media/locales/as.js
