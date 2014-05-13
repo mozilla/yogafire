@@ -34,6 +34,7 @@ media/img/pretty/search.png
 media/img/pretty/stars_large.png
 media/img/pretty/stars_small.png
 media/img/yogafire/categories.png
+media/img/yogafire/offline_bg.png
 media/js/include.js
 media/js/l10n.js
 media/js/lib/localforage.js
