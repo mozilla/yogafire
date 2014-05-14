@@ -1,6 +1,6 @@
 define('lightbox',
-    ['keys', 'models', 'navigation', 'utils', 'tracking', 'underscore', 'z'],
-    function(keys, models, navigation, utils, tracking, _, z) {
+    ['db', 'keys', 'models', 'navigation', 'utils', 'tracking', 'underscore', 'z'],
+    function(db, keys, models, navigation, utils, tracking, _, z) {
 
     var $lightbox = $(document.getElementById('lightbox'));
     var $section = $lightbox.find('section');
@@ -32,25 +32,26 @@ define('lightbox',
         // We get the screenshots from the associated tile. No tile? bail.
         if (!$tile.hasClass('mkt-tile')) return;
 
-        var product = models('app').lookup($tile.data('slug'));
-        var id = product.id;
+        db.get.app($tile.data('slug')).done(function(product) {
+            var id = product.id;
 
-        if (id != currentApp || !slider) {
-            currentApp = id;
-            previews = product.previews;
-            renderPreviews();
-        }
+            if (id != currentApp || !slider) {
+                currentApp = id;
+                previews = product.previews;
+                renderPreviews();
+            }
 
-        navigation.modal('lightbox');
+            navigation.modal('lightbox');
 
-        // Fade that bad boy in.
-        z.body.addClass('overlayed');
-        $lightbox.show();
-        setTimeout(function() {
-            slider.moveToPoint(which);
-            resize();
-            $lightbox.addClass('show');
-        }, 0);
+            // Fade that bad boy in.
+            z.body.addClass('overlayed');
+            $lightbox.show();
+            setTimeout(function() {
+                slider.moveToPoint(which);
+                resize();
+                $lightbox.addClass('show');
+            }, 0);
+        });
     }
 
     // Set up key bindings.
