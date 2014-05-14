@@ -13,17 +13,17 @@ module.exports = function(grunt) {
         },
         {
           data_dest: settings.db_dir + '/games.json',
-          data_src: 'https://marketplace-dev.allizom.org/api/v1/fireplace/search/featured/?cat=tarako-games&limit=10',
+          data_src: 'https://marketplace.firefox.com/api/v1/fireplace/search/featured/?cat=tarako-games&limit=10',
           slug: 'games',
         },
         {
           data_dest: settings.db_dir + '/tools.json',
-          data_src: 'https://marketplace-dev.allizom.org/api/v1/fireplace/search/featured/?cat=tarako-tools&limit=10',
+          data_src: 'https://marketplace.firefox.com/api/v1/fireplace/search/featured/?cat=tarako-tools&limit=10',
           slug: 'tools',
         },
         {
           data_dest: settings.db_dir + '/lifestyle.json',
-          data_src: 'https://marketplace-dev.allizom.org/api/v1/fireplace/search/featured/?cat=tarako-lifestyle&limit=10',
+          data_src: 'https://marketplace.firefox.com/api/v1/fireplace/search/featured/?cat=tarako-lifestyle&limit=10',
           slug: 'lifestyle',
         },
       ]
