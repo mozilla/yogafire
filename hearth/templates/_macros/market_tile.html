@@ -40,7 +40,7 @@
     {% else %}
       <img class="icon" alt="" src="{{ app.icons['64'] or app.icon }}" height="64" width="64" itemprop="image">
     {% endif %}
-    <div class="info {{ 'tight' if app.content_ratings.rating }}">
+    <div class="info">
       <h3 itemprop="name">{{ app.name|translate(app) }}</h3>
       {% if app.author %}
         {# TODO: When we get user profiles, update this to be a proper Person itemprop #}
@@ -61,20 +61,17 @@
       {% endif %}
       <div class="price vital">{{ app.price_locale if app.payment_required else _('Free') }}</div>
       <div class="rating vital{{ ' unrated' if not app.ratings.count }}" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-        {{ stars(app.ratings.average) }}
         {% if app.ratings.count %}
+          {{ stars(app.ratings.average) }}
           <span class="cnt long">
             {{ _plural('{n} Review', '{n} Reviews', n=app.ratings.count) }}
           </span>
-        {% else %}
-          {# L10n: "(0)" means "0 reviews." #}
-          <span class="cnt long">{{ _('Not yet rated') }}</span>
         {% endif %}
       </div>
-      {{ market_button(app, classes=(['paid'] if app.payment_required),
+    </div>
+    {{ market_button(app, classes=(['paid'] if app.payment_required),
                        data_attrs={'manifest_url': app.manifest_url,
                                    'slug': app.slug}) if app.slug }}
-    </div>
     {% for notice in app_incompat(app) %}
       <div class="bad-app">{{ notice }}</div>
     {% endfor %}
