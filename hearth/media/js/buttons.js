@@ -1,5 +1,5 @@
 define('buttons',
-    ['apps', 'cache', 'capabilities', 'defer', 'l10n', 'log', 'login',
+    ['apps', 'cache', 'capabilities', 'db', 'defer', 'l10n', 'log', 'login',
      'models', 'notification', 'requests', 'settings',
      'tracking', 'tracking_helpers', 'urls', 'user', 'utils', 'views', 'z'],
     function() {
@@ -15,8 +15,6 @@ define('buttons',
     var z = require('z');
 
     var console = require('log')('buttons');
-
-    var apps_model = require('models')('app');
     var gettext = require('l10n').gettext;
 
     function setButton($button, text, cls) {
@@ -34,7 +32,10 @@ define('buttons',
         return function(e) {
             e.preventDefault();
             e.stopPropagation();
-            func.call(this, apps_model.lookup($(this).closest('[data-slug]').data('slug')));
+            var that = this;
+            require('db').get.app($(this).closest('[data-slug]').data('slug')).done(function(product) {
+                func.call(that, product);
+            });
         };
     }
 
