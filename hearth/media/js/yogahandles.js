@@ -2,8 +2,8 @@ define('yogahandles', ['z'], function(z) {
     function attachHandles(slider, $container) {
         $container.find('.prev, .next').remove();
 
-        var $prevHandle = $('<button class="ssnav prev" data-action="prev">&#10216;</button>'),
-            $nextHandle = $('<button class="ssnav next" data-action="next">&#10217;</button>');
+        var $prevHandle = $('<button class="ssnav prev" data-action="prev">&lsaquo;</button>'),
+            $nextHandle = $('<button class="ssnav next" data-action="next">&rsaquo;</button>');
 
         function setHandleState() {
             $prevHandle.hide();
