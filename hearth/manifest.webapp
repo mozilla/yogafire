@@ -42,7 +42,7 @@
     "mobilenetwork": {
       "description": "To detect mobile carrier and regional information."
     },
-    "storage" {
+    "storage": {
       "description": "To allow caching of over 5MB of app data."
     }
   },
