@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: AMO Fireplace\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-05-14T16:32:02.721Z\n"
-"PO-Revision-Date: 2014-04-29 18:29+0000\n"
+"PO-Revision-Date: 2014-05-14 18:45+0000\n"
 "Last-Translator: Michael <michael.koehler1@gmx.de>\n"
 "Language-Team: German (de) <coce@nurfuerspam.de>\n"
 "Language: de\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Pootle 2.5.0\n"
-"X-POOTLE-MTIME: 1398796194.0\n"
+"X-POOTLE-MTIME: 1400093111.0\n"
 
 #: /templates/cat_dropdown.html:2
 msgid "All Categories"
@@ -91,10 +91,12 @@ msgstr "Nutzungsbedingungen"
 #: /templates/_includes/offline.html:2
 msgid "Sorry, you need to be connected to the Internet to access Marketplace."
 msgstr ""
+"Es tut uns Leid, Sie benötigen eine Internetverbindung, um auf den "
+"Marketplace zuzugreifen."
 
 #: /templates/_includes/offline.html:4
 msgid "Go Online"
-msgstr ""
+msgstr "Online gehen"
 
 #: /templates/_includes/truncated.html:4
 msgid "...more"
@@ -695,6 +697,8 @@ msgstr "Keine Region in Suche"
 #: /media/js/settings.js:167
 msgid "Sorry, you are currently offline. Please try again later."
 msgstr ""
+"Es tut uns Leid, Sie sind derzeit offline. Bitte versuchen Sie es später "
+"erneut."
 
 #. {n} is the number of characters left.
 #: /media/js/utils.js:28
@@ -714,6 +718,8 @@ msgstr "Rückmeldung abgesendet. Vielen Dank!"
 #: /media/js/views/feedback.js:28
 msgid "Sorry, there was an issue submitting your feedback. Please try again later."
 msgstr ""
+"Es tut uns Leid, bei der Übermittlung Ihres Feedbacks ist ein Fehler "
+"aufgetreten. Bitte versuchen Sie es später erneut."
 
 #. Page not found (404)
 #: /media/js/views/not_found.js:9
