@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: AMO Fireplace\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-07T16:18:37.753Z\n"
+"POT-Creation-Date: 2014-05-14T16:32:02.721Z\n"
 "PO-Revision-Date: 2014-04-29 18:29+0000\n"
 "Last-Translator: Michael <michael.koehler1@gmx.de>\n"
 "Language-Team: German (de) <coce@nurfuerspam.de>\n"
@@ -79,14 +79,22 @@ msgstr "Sie müssen Firefox verwenden, um Firefox-Apps zu installieren."
 msgid "Download."
 msgstr "Herunterladen."
 
-#: /templates/privacy.html:2 /templates/category_yogafire/main.html:52 /templates/detail/main_yogafire.html:75 /templates/detail/privacy.html:3 /media/js/views/privacy.js:10
+#: /templates/privacy.html:2 /templates/category_yogafire/main.html:47 /templates/detail/main_yogafire.html:64 /templates/detail/privacy.html:3 /media/js/views/privacy.js:10
 #: /media/js/views/app/privacy.js:10
 msgid "Privacy Policy"
 msgstr "Datenschutzerklärung"
 
-#: /templates/terms.html:2 /templates/category_yogafire/main.html:49 /media/js/views/terms.js:10
+#: /templates/terms.html:2 /templates/category_yogafire/main.html:44 /media/js/views/terms.js:10
 msgid "Terms of Use"
 msgstr "Nutzungsbedingungen"
+
+#: /templates/_includes/offline.html:2
+msgid "Sorry, you need to be connected to the Internet to access Marketplace."
+msgstr ""
+
+#: /templates/_includes/offline.html:4
+msgid "Go Online"
+msgstr ""
 
 #: /templates/_includes/truncated.html:4
 msgid "...more"
@@ -101,7 +109,7 @@ msgstr "Nicht verfügbar"
 msgid "Free"
 msgstr "Kostenlos"
 
-#: /templates/_macros/market_button.html:14 /media/js/buttons.js:270
+#: /templates/_macros/market_button.html:14 /media/js/buttons.js:176
 msgid "Install"
 msgstr "Installieren"
 
@@ -124,7 +132,7 @@ msgstr[1] "{n} Bewertungen"
 msgid "Not yet rated"
 msgstr "Noch nicht bewertet"
 
-#: /templates/_macros/more_button.html:2
+#: /templates/_macros/more_button.html:2 /templates/_macros/more_button.html:10
 msgid "More"
 msgstr "Weitere"
 
@@ -132,29 +140,21 @@ msgstr "Weitere"
 msgid "Rated {stars} out of {maxstars} stars"
 msgstr "Bewertung: {stars} von {maxstars} Sternen"
 
-#: /templates/category_yogafire/main.html:43
+#: /templates/category_yogafire/main.html:38
 msgid "Get Help"
 msgstr "Hilfe erhalten"
 
-#: /templates/category_yogafire/main.html:46 /media/js/views/feedback.js:60
+#: /templates/category_yogafire/main.html:41 /media/js/views/feedback.js:64
 msgid "Feedback"
 msgstr "Feedback"
 
-#: /templates/category_yogafire/main.html:10
+#: /templates/category_yogafire/main.html:9
 msgid "Featured Apps"
 msgstr "Vorgestellte Apps"
 
-#: /templates/category_yogafire/main.html:28
+#: /templates/category_yogafire/main.html:27 /templates/category_yogafire/main.html:31
 msgid "No apps in this category"
 msgstr "Keine Apps in dieser Kategorie"
-
-#: /templates/category_yogafire/main.html:33
-msgid "The category you requested does not exist."
-msgstr "Die von Ihnen angeforderte Kategorie existiert nicht."
-
-#: /templates/category_yogafire/main.html:35
-msgid "An internal server error occurred. Please try again later."
-msgstr "Ein interner Server-Fehler ist aufgetreten. Bitte versuchen Sie es später erneut."
 
 #: /templates/errors/404.html:2 /templates/errors/fragment.html:1
 msgid "Oh no!"
@@ -176,7 +176,7 @@ msgstr "Beim Laden weiterer Informationen ist ein Fehler aufgetreten"
 msgid "Try Again"
 msgstr "Versuchen Sie es erneut"
 
-#: /templates/detail/abuse.html:5 /templates/detail/main_yogafire.html:86 /media/js/views/app/abuse.js:34
+#: /templates/detail/abuse.html:5 /templates/detail/main_yogafire.html:75 /media/js/views/app/abuse.js:34
 msgid "Report Abuse"
 msgstr "Missbrauch melden"
 
@@ -192,27 +192,27 @@ msgstr "Inhaltsbewertung"
 msgid "Content Rating Details"
 msgstr "Detail zur Inhaltsbewertung"
 
-#: /templates/detail/main_yogafire.html:13 /templates/detail/main_yogafire.html:14 /media/js/views/app.js:68
+#: /templates/detail/main_yogafire.html:11 /templates/detail/main_yogafire.html:12 /media/js/views/app.js:68
 msgid "Loading..."
 msgstr "Laden…"
 
-#: /templates/detail/main_yogafire.html:42
+#: /templates/detail/main_yogafire.html:31
 msgid "Description"
 msgstr "Beschreibung"
 
-#: /templates/detail/main_yogafire.html:58
+#: /templates/detail/main_yogafire.html:47
 msgid "Support Email"
 msgstr "Hilfe-E-Mail-Adresse"
 
-#: /templates/detail/main_yogafire.html:64
+#: /templates/detail/main_yogafire.html:53
 msgid "Support Site"
 msgstr "Hilfe-Website"
 
-#: /templates/detail/main_yogafire.html:69
+#: /templates/detail/main_yogafire.html:58
 msgid "Homepage"
 msgstr "Homepage"
 
-#: /templates/detail/main_yogafire.html:81
+#: /templates/detail/main_yogafire.html:70
 msgid "Statistics"
 msgstr "Statistiken"
 
@@ -262,20 +262,12 @@ msgstr "Ihr Browser oder Ihr Gerät sind nicht mit Web-Apps kompatibel."
 msgid "This app is unavailable for your platform."
 msgstr "Diese App ist für Ihre Plattform nicht verfügbar."
 
-#: /media/js/apps_iframe_installer.js:60
+#: /media/js/apps_iframe_installer.js:63
 msgid "App install error: {error}"
 msgstr "Fehler bei der App-Installation: {error}"
 
-#: /media/js/buttons.js:61 /media/js/buttons.js:88
-msgid "Payment cancelled."
-msgstr "Zahlung abgebrochen."
-
-#. The app's installation has failed, but the problem is temporary.
-#: /media/js/buttons.js:159
-msgid "Install failed. Please try again later."
-msgstr "Installation fehlgeschlagen. Bitte versuchen Sie es später erneut."
-
-#: /media/js/buttons.js:249
+#. "Open" as in "Open the app"
+#: /media/js/buttons.js:155
 msgid "Open"
 msgstr "Öffnen"
 
@@ -592,113 +584,117 @@ msgstr "Persona-Anmeldung fehlgeschlagen. Es ist ein Server-Fehler aufgetreten."
 msgid "Persona cannot be reached. Try again later."
 msgstr "Persona kann nicht erreicht werden. Versuchen Sie es später erneut."
 
-#: /media/js/settings.js:106
+#: /media/js/settings.js:103
 msgid "Rest of World"
 msgstr "Rest der Welt"
 
-#: /media/js/settings.js:107
+#: /media/js/settings.js:104
 msgid "Argentina"
 msgstr "Argentinien"
 
-#: /media/js/settings.js:108
+#: /media/js/settings.js:105
 msgid "Brazil"
 msgstr "Brasilien"
 
-#: /media/js/settings.js:109
+#: /media/js/settings.js:106
 msgid "Chile"
 msgstr "Chile"
 
-#: /media/js/settings.js:110
+#: /media/js/settings.js:107
 msgid "China"
 msgstr "China"
 
-#: /media/js/settings.js:111
+#: /media/js/settings.js:108
 msgid "Colombia"
 msgstr "Kolumbien"
 
-#: /media/js/settings.js:112
+#: /media/js/settings.js:109
 msgid "Costa Rica"
 msgstr "Costa Rica"
 
-#: /media/js/settings.js:113
+#: /media/js/settings.js:110
 msgid "Ecuador"
 msgstr "Ecuador"
 
-#: /media/js/settings.js:114
+#: /media/js/settings.js:111
 msgid "El Salvador"
 msgstr "El Salvador"
 
-#: /media/js/settings.js:115
+#: /media/js/settings.js:112
 msgid "Germany"
 msgstr "Deutschland"
 
-#: /media/js/settings.js:116
+#: /media/js/settings.js:113
 msgid "Greece"
 msgstr "Griechenland"
 
-#: /media/js/settings.js:117
+#: /media/js/settings.js:114
 msgid "Guatemala"
 msgstr "Guatemala"
 
-#: /media/js/settings.js:118
+#: /media/js/settings.js:115
 msgid "Hungary"
 msgstr "Ungarn"
 
-#: /media/js/settings.js:119
+#: /media/js/settings.js:116
 msgid "Italy"
 msgstr "Italien"
 
-#: /media/js/settings.js:120
+#: /media/js/settings.js:117
 msgid "Mexico"
 msgstr "Mexiko"
 
-#: /media/js/settings.js:121
+#: /media/js/settings.js:118
 msgid "Montenegro"
 msgstr "Montenegro"
 
-#: /media/js/settings.js:122
+#: /media/js/settings.js:119
 msgid "Nicaragua"
 msgstr "Nicaragua"
 
-#: /media/js/settings.js:123
+#: /media/js/settings.js:120
 msgid "Panama"
 msgstr "Panama"
 
-#: /media/js/settings.js:124
+#: /media/js/settings.js:121
 msgid "Peru"
 msgstr "Peru"
 
-#: /media/js/settings.js:125
+#: /media/js/settings.js:122
 msgid "Poland"
 msgstr "Polen"
 
-#: /media/js/settings.js:126
+#: /media/js/settings.js:123
 msgid "Serbia"
 msgstr "Serbien"
 
-#: /media/js/settings.js:127
+#: /media/js/settings.js:124
 msgid "Spain"
 msgstr "Spanien"
 
-#: /media/js/settings.js:128
+#: /media/js/settings.js:125
 msgid "United Kingdom"
 msgstr "Vereinigtes Königreich"
 
-#: /media/js/settings.js:129
+#: /media/js/settings.js:126
 msgid "United States"
 msgstr "Vereinigte Staaten"
 
-#: /media/js/settings.js:130
+#: /media/js/settings.js:127
 msgid "Uruguay"
 msgstr "Uruguay"
 
-#: /media/js/settings.js:131
+#: /media/js/settings.js:128
 msgid "Venezuela"
 msgstr "Venezuela"
 
-#: /media/js/settings.js:132
+#: /media/js/settings.js:129
 msgid "No region in search"
 msgstr "Keine Region in Suche"
+
+#: /media/js/settings.js:167
+msgid "Sorry, you are currently offline. Please try again later."
+msgstr ""
 
 #. {n} is the number of characters left.
 #: /media/js/utils.js:28
@@ -715,20 +711,16 @@ msgstr "App-Details"
 msgid "Feedback submitted. Thanks!"
 msgstr "Rückmeldung abgesendet. Vielen Dank!"
 
-#: /media/js/views/feedback.js:27
-msgid "There was a problem submitting your feedback. Try again soon."
-msgstr "Beim Übermitteln Ihrer Rückmeldung ist ein Fehler aufgetreten. Bitte versuchen Sie es in Kürze erneut."
+#: /media/js/views/feedback.js:28
+msgid "Sorry, there was an issue submitting your feedback. Please try again later."
+msgstr ""
 
 #. Page not found (404)
 #: /media/js/views/not_found.js:9
 msgid "Not Found"
 msgstr "Nicht gefunden"
 
-#: /media/js/views/search.js:28
-msgid "Sorry, you must be connected to the Internet to search Marketplace."
-msgstr "Es tut uns Leid, Sie benötigen eine Internetverbindung, um im Marketplace zu suchen."
-
-#: /media/js/views/search.js:199
+#: /media/js/views/search.js:197
 msgid "Search Results"
 msgstr "Suchergebnisse"
 
