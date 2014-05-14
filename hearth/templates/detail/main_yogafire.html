@@ -7,16 +7,7 @@
     {% localforage (key='app', slug=slug, id='app-data') %}
       {{ market_tile(this, src='detail') }}
     {% placeholder %}
-      <div class="product mkt-tile">
-        <div class="info">
-          <h3>{{ _('Loading...') }}</h3>
-          <div class="price vital">{{ _('Loading...') }}</div>
-          <div class="rating vital unrated">
-            {{ stars(0) }}
-          </div>
-        </div>
-      </div>
-      <div class="tray previews full"></div>
+      <p class="spinner padded alt"></p>
     {% except %}
       <div class="detailed-error">
         <h2>{{ _('Oh no!') }}</h2>
@@ -32,10 +23,6 @@
       <h3>{{ _('Description') }}</h3>
       {{ this.description|translate(this)|summarise('market-tile-description', true)|safe }}
     </div>
-  </div>
-{% placeholder %}
-  <div class="main blurbs prose infobox detail">
-    <p class="spinner alt"></p>
   </div>
 {% except %}
 {% end %}
