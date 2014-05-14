@@ -1,20 +1,12 @@
 define('views/category',
-    ['models', 'settings', 'tracking', 'urls', 'utils', 'z'],
-    function(models, settings, tracking, urls, utils, z) {
+    ['settings', 'tracking', 'urls', 'utils', 'z'],
+    function(settings, tracking, urls, utils, z) {
     'use strict';
-
-    var cat_models = models('category');
 
     return function(builder, args, params) {
         var category = args[0];
         console.log('category found:', category);
         params = params || {};
-
-        var model = cat_models.lookup(category);
-        var name = model && model.name;
-        if (name) {
-            builder.z('title', name);
-        }
 
         builder.z('type', 'root ' + category);
         builder.z('show_cats', true);
