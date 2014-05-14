@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-07T16:18:37.753Z\n"
+"POT-Creation-Date: 2014-05-14T16:32:02.721Z\n"
 "PO-Revision-Date: 2013-06-19 22:09+0100\n"
 "Last-Translator: Saša Teković <sasa@tekovic.com>\n"
 "Language-Team: none\n"
@@ -78,14 +78,22 @@ msgstr ""
 msgid "Download."
 msgstr ""
 
-#: /templates/privacy.html:2 /templates/category_yogafire/main.html:52 /templates/detail/main_yogafire.html:75 /templates/detail/privacy.html:3 /media/js/views/privacy.js:10
+#: /templates/privacy.html:2 /templates/category_yogafire/main.html:47 /templates/detail/main_yogafire.html:64 /templates/detail/privacy.html:3 /media/js/views/privacy.js:10
 #: /media/js/views/app/privacy.js:10
 msgid "Privacy Policy"
 msgstr "Politika privatnosti"
 
-#: /templates/terms.html:2 /templates/category_yogafire/main.html:49 /media/js/views/terms.js:10
+#: /templates/terms.html:2 /templates/category_yogafire/main.html:44 /media/js/views/terms.js:10
 msgid "Terms of Use"
 msgstr "Uvjeti korištenja"
+
+#: /templates/_includes/offline.html:2
+msgid "Sorry, you need to be connected to the Internet to access Marketplace."
+msgstr ""
+
+#: /templates/_includes/offline.html:4
+msgid "Go Online"
+msgstr ""
 
 #: /templates/_includes/truncated.html:4
 msgid "...more"
@@ -100,7 +108,7 @@ msgstr ""
 msgid "Free"
 msgstr "Besplatno"
 
-#: /templates/_macros/market_button.html:14 /media/js/buttons.js:270
+#: /templates/_macros/market_button.html:14 /media/js/buttons.js:176
 msgid "Install"
 msgstr "Instaliraj"
 
@@ -124,7 +132,7 @@ msgstr[2] "{n} recenzija"
 msgid "Not yet rated"
 msgstr "Još nije ocijenjeno"
 
-#: /templates/_macros/more_button.html:2
+#: /templates/_macros/more_button.html:2 /templates/_macros/more_button.html:10
 msgid "More"
 msgstr "Više"
 
@@ -132,29 +140,21 @@ msgstr "Više"
 msgid "Rated {stars} out of {maxstars} stars"
 msgstr "Ocijenjeno sa {stars} od {maxstars} zvijezdica"
 
-#: /templates/category_yogafire/main.html:43
+#: /templates/category_yogafire/main.html:38
 msgid "Get Help"
 msgstr "Potražite pomoć"
 
-#: /templates/category_yogafire/main.html:46 /media/js/views/feedback.js:60
+#: /templates/category_yogafire/main.html:41 /media/js/views/feedback.js:64
 msgid "Feedback"
 msgstr "Povratne informacije"
 
-#: /templates/category_yogafire/main.html:10
+#: /templates/category_yogafire/main.html:9
 msgid "Featured Apps"
 msgstr "Izdvojene aplikacije"
 
-#: /templates/category_yogafire/main.html:28
+#: /templates/category_yogafire/main.html:27 /templates/category_yogafire/main.html:31
 msgid "No apps in this category"
 msgstr "U ovoj kategoriji nema aplikacija"
-
-#: /templates/category_yogafire/main.html:33
-msgid "The category you requested does not exist."
-msgstr ""
-
-#: /templates/category_yogafire/main.html:35
-msgid "An internal server error occurred. Please try again later."
-msgstr ""
 
 #: /templates/errors/404.html:2 /templates/errors/fragment.html:1
 msgid "Oh no!"
@@ -176,7 +176,7 @@ msgstr "Greška pri učitavanju dodanog sadržaja"
 msgid "Try Again"
 msgstr "Pokušajte ponovno"
 
-#: /templates/detail/abuse.html:5 /templates/detail/main_yogafire.html:86 /media/js/views/app/abuse.js:34
+#: /templates/detail/abuse.html:5 /templates/detail/main_yogafire.html:75 /media/js/views/app/abuse.js:34
 msgid "Report Abuse"
 msgstr "Prijava zloporabe"
 
@@ -192,27 +192,27 @@ msgstr ""
 msgid "Content Rating Details"
 msgstr ""
 
-#: /templates/detail/main_yogafire.html:13 /templates/detail/main_yogafire.html:14 /media/js/views/app.js:68
+#: /templates/detail/main_yogafire.html:11 /templates/detail/main_yogafire.html:12 /media/js/views/app.js:68
 msgid "Loading..."
 msgstr "Učitavanje..."
 
-#: /templates/detail/main_yogafire.html:42
+#: /templates/detail/main_yogafire.html:31
 msgid "Description"
 msgstr ""
 
-#: /templates/detail/main_yogafire.html:58
+#: /templates/detail/main_yogafire.html:47
 msgid "Support Email"
 msgstr "E-pošta podrške"
 
-#: /templates/detail/main_yogafire.html:64
+#: /templates/detail/main_yogafire.html:53
 msgid "Support Site"
 msgstr "Stranica podrške"
 
-#: /templates/detail/main_yogafire.html:69
+#: /templates/detail/main_yogafire.html:58
 msgid "Homepage"
 msgstr "Web stranica"
 
-#: /templates/detail/main_yogafire.html:81
+#: /templates/detail/main_yogafire.html:70
 msgid "Statistics"
 msgstr "Statistike"
 
@@ -263,20 +263,12 @@ msgstr ""
 msgid "This app is unavailable for your platform."
 msgstr ""
 
-#: /media/js/apps_iframe_installer.js:60
+#: /media/js/apps_iframe_installer.js:63
 msgid "App install error: {error}"
 msgstr ""
 
-#: /media/js/buttons.js:61 /media/js/buttons.js:88
-msgid "Payment cancelled."
-msgstr "Plaćanje otkazano."
-
-#. The app's installation has failed, but the problem is temporary.
-#: /media/js/buttons.js:159
-msgid "Install failed. Please try again later."
-msgstr "Instalacija nije uspjela. Molim pokušajte ponovno."
-
-#: /media/js/buttons.js:249
+#. "Open" as in "Open the app"
+#: /media/js/buttons.js:155
 msgid "Open"
 msgstr ""
 
@@ -593,112 +585,116 @@ msgstr "Prijava Personom nije uspjela. Došlo je do greške na poslužitelju."
 msgid "Persona cannot be reached. Try again later."
 msgstr ""
 
-#: /media/js/settings.js:106
+#: /media/js/settings.js:103
 msgid "Rest of World"
 msgstr ""
 
-#: /media/js/settings.js:107
+#: /media/js/settings.js:104
 msgid "Argentina"
 msgstr ""
 
-#: /media/js/settings.js:108
+#: /media/js/settings.js:105
 msgid "Brazil"
 msgstr ""
 
-#: /media/js/settings.js:109
+#: /media/js/settings.js:106
 msgid "Chile"
 msgstr ""
 
-#: /media/js/settings.js:110
+#: /media/js/settings.js:107
 msgid "China"
 msgstr ""
 
-#: /media/js/settings.js:111
+#: /media/js/settings.js:108
 msgid "Colombia"
 msgstr ""
 
-#: /media/js/settings.js:112
+#: /media/js/settings.js:109
 msgid "Costa Rica"
 msgstr ""
 
-#: /media/js/settings.js:113
+#: /media/js/settings.js:110
 msgid "Ecuador"
 msgstr ""
 
-#: /media/js/settings.js:114
+#: /media/js/settings.js:111
 msgid "El Salvador"
 msgstr ""
 
-#: /media/js/settings.js:115
+#: /media/js/settings.js:112
 msgid "Germany"
 msgstr ""
 
-#: /media/js/settings.js:116
+#: /media/js/settings.js:113
 msgid "Greece"
 msgstr ""
 
-#: /media/js/settings.js:117
+#: /media/js/settings.js:114
 msgid "Guatemala"
 msgstr ""
 
-#: /media/js/settings.js:118
+#: /media/js/settings.js:115
 msgid "Hungary"
 msgstr ""
 
-#: /media/js/settings.js:119
+#: /media/js/settings.js:116
 msgid "Italy"
 msgstr ""
 
-#: /media/js/settings.js:120
+#: /media/js/settings.js:117
 msgid "Mexico"
 msgstr ""
 
-#: /media/js/settings.js:121
+#: /media/js/settings.js:118
 msgid "Montenegro"
 msgstr ""
 
-#: /media/js/settings.js:122
+#: /media/js/settings.js:119
 msgid "Nicaragua"
 msgstr ""
 
-#: /media/js/settings.js:123
+#: /media/js/settings.js:120
 msgid "Panama"
 msgstr ""
 
-#: /media/js/settings.js:124
+#: /media/js/settings.js:121
 msgid "Peru"
 msgstr ""
 
-#: /media/js/settings.js:125
+#: /media/js/settings.js:122
 msgid "Poland"
 msgstr ""
 
-#: /media/js/settings.js:126
+#: /media/js/settings.js:123
 msgid "Serbia"
 msgstr ""
 
-#: /media/js/settings.js:127
+#: /media/js/settings.js:124
 msgid "Spain"
 msgstr ""
 
-#: /media/js/settings.js:128
+#: /media/js/settings.js:125
 msgid "United Kingdom"
 msgstr ""
 
-#: /media/js/settings.js:129
+#: /media/js/settings.js:126
 msgid "United States"
 msgstr ""
 
-#: /media/js/settings.js:130
+#: /media/js/settings.js:127
 msgid "Uruguay"
 msgstr ""
 
-#: /media/js/settings.js:131
+#: /media/js/settings.js:128
 msgid "Venezuela"
 msgstr ""
 
-#: /media/js/settings.js:132
+#: /media/js/settings.js:129
 msgid "No region in search"
+msgstr ""
+
+#: /media/js/settings.js:167
+msgid "Sorry, you are currently offline. Please try again later."
 msgstr ""
 
 #. {n} is the number of characters left.
@@ -717,20 +713,16 @@ msgstr "Detalji aplikacije"
 msgid "Feedback submitted. Thanks!"
 msgstr "Povratna informacija je poslana. Hvala!"
 
-#: /media/js/views/feedback.js:27
-msgid "There was a problem submitting your feedback. Try again soon."
-msgstr "Došlo je do greške pri slanju vaše povratne informacije. Pokušajte ponovno kasnije."
+#: /media/js/views/feedback.js:28
+msgid "Sorry, there was an issue submitting your feedback. Please try again later."
+msgstr ""
 
 #. Page not found (404)
 #: /media/js/views/not_found.js:9
 msgid "Not Found"
 msgstr "Nije pronađeno"
 
-#: /media/js/views/search.js:28
-msgid "Sorry, you must be connected to the Internet to search Marketplace."
-msgstr ""
-
-#: /media/js/views/search.js:199
+#: /media/js/views/search.js:197
 msgid "Search Results"
 msgstr "Rezultati pretraživanja"
 
