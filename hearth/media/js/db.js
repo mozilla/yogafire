@@ -8,6 +8,8 @@ define('db', ['defer', 'format', 'log', 'requests', 'urls', 'settings', 'undersc
     function category_key(slug, page) { return 'category_' + slug + '_' + page; }
     var HOMEPAGE_KEY = 'homepage';
     var PRELOADED_KEY = 'has_preloaded';
+    var FEATURED_APPS = 'featured_cached';
+    var FEATURED_UPDATED = 'featured_updated';
 
     function preload() {
         console.log('Checking if data is already preloaded');
@@ -107,7 +109,7 @@ define('db', ['defer', 'format', 'log', 'requests', 'urls', 'settings', 'undersc
         call will be stored with localforage.
         */
         if (!slug) {
-            return getHomepage();
+            return getHomepageToday();
         }
 
         var def = defer.Deferred();
@@ -137,7 +139,7 @@ define('db', ['defer', 'format', 'log', 'requests', 'urls', 'settings', 'undersc
         return def.promise();
     }
 
-    function getHomepage() {
+    function getHomepageAll() {
         /*
         Returns a promise that resolves to the tarako-featured collection.
 
@@ -148,8 +150,6 @@ define('db', ['defer', 'format', 'log', 'requests', 'urls', 'settings', 'undersc
         Whichever task completes first will resolve the data. Regardless of which
         task does the resolution, the API call will complete and the data from the
         call will be stored with localforage.
-
-        TODO: Make featured.js read from this function.
         */
         var def = defer.Deferred();
         var resolved = false;
@@ -173,6 +173,79 @@ define('db', ['defer', 'format', 'log', 'requests', 'urls', 'settings', 'undersc
         });
 
         return def.promise();
+    }
+
+    function regenerateHomepage() {
+        /*
+        Returns a promise that regenerates a selection of 6 apps for use in the
+        homepage 'Featured Apps' selection. These apps are a subset of the apps in the
+        tarako-featured collection, as returned by getHomepageAll, chosen at random and
+        weighted by their overall popularity.
+        */
+        var def = defer.Deferred();
+
+        getHomepageAll().then(function(response) {
+            var apps = response.apps;
+
+            // Create a weighted array of all the available items' indexes in `apps`.
+            var weighted_index = [];
+            for (var i = 0; i < apps.length; i++) {
+                for (var n = 0; n < Math.ceil(apps[i].weight); n++) {
+                    weighted_index.push(i);
+                }
+            }
+
+            // Choose the appropriate number of random unique indexes from the weighted array.
+            var chosen_items = [];
+            while (chosen_items.length < 6 && chosen_items.length < apps.length) {
+                var random = weighted_index[Math.floor(Math.random() * weighted_index.length)];
+                if (chosen_items.indexOf(random) === -1) {
+                    chosen_items.push(random);
+                }
+            }
+
+            // Map the chosen indexes back to their original objects.
+            response.apps = chosen_items.map(function(item) {
+                return apps[item];
+            });
+
+            localforage.setItem(FEATURED_UPDATED, today);
+            localforage.setItem(FEATURED_APPS, response);
+            def.resolve(response);
+
+        });
+
+        return def.promise();
+
+    };
+
+    function getHomepageToday() {
+        /*
+        Returns apps for use in the homepage 'Featured Apps' category.
+
+        If the selection of featured apps has already been made today, return those
+        directly out of localforage. If not, generate a new selection, then return
+        and store them.
+        */
+        var def = defer.Deferred();
+        var today = new Date().toDateString();
+
+        localforage.getItem(FEATURED_UPDATED).then(function(last) {
+            if(last === today) {
+                console.log('Using featured apps from cache: ' + today);
+                localforage.getItem(FEATURED_APPS).then(function(featured) {
+                    def.resolve(featured);
+                });
+            } else {
+                console.log('Generating a new selection of featured apps');
+                regenerateHomepage().then(function(featured) {
+                    def.resolve(featured);
+                });
+            }
+        });
+
+        return def.promise();
+
     }
 
     function storeApp(data) {
@@ -215,7 +288,7 @@ define('db', ['defer', 'format', 'log', 'requests', 'urls', 'settings', 'undersc
         get: {
             app: getApp,
             category: getCategory,
-            homepage: getHomepage
+            homepage: getHomepageToday
         },
         store: {
             app: storeApp,
