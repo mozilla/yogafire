@@ -6,7 +6,7 @@ define('buttons',
 
     var apps = require('apps');
     var cache = require('cache');
-    var notify = require('notification').notification;
+    var notification = require('notification');
     var requests = require('requests');
     var tracking = require('tracking');
     var urls = require('urls');
@@ -88,7 +88,7 @@ define('buttons',
                 def.resolve(installer, product, $this);
             }).fail(function(error) {
                 if (error) {
-                    notify({message: error});
+                    notificiation.notification({message: error});
                 }
                 console.log('App install deferred was rejected for ', product.name);
                 def.reject();

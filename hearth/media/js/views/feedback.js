@@ -3,7 +3,6 @@ define('views/feedback',
        function(buckets, caps, forms, l10n, notification, requests, settings, nunjucks, urls, utils, z) {
 
     var gettext = l10n.gettext;
-    var notify = notification.notification;
 
     z.page.on('submit', '.feedback-form', function(e) {
         e.preventDefault();
@@ -20,15 +19,15 @@ define('views/feedback',
             $this.find('textarea').val('');
             forms.toggleSubmitFormState($this, true);
             $('.cloak').trigger('dismiss');
-            notify({message: gettext('Feedback submitted. Thanks!')});
+            notification.notification({message: gettext('Feedback submitted. Thanks!')});
         }).fail(function() {
             forms.toggleSubmitFormState($this, true);
             if (z.onLine) {
-                notify({
+                notification.notification({
                     message: gettext('Sorry, there was an issue submitting your feedback. Please try again later.')
                 });
             } else {
-                notify({message: settings.offline_msg});
+                notification.notification({message: settings.offline_msg});
             }
         });
     });

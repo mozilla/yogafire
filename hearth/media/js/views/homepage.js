@@ -13,7 +13,7 @@ define('views/homepage',
         if (!z.onLine) {
             e.preventDefault();
             e.stopImmediatePropagation();
-            notify({message: settings.offline_msg});
+            notification.notification({message: settings.offline_msg});
         }
     });
 

@@ -3,7 +3,6 @@ define('views/app/abuse',
        function(forms, l10n, notification, requests, urls, utils, z) {
 
     var gettext = l10n.gettext;
-    var notify = notification.notification;
 
     z.page.on('submit', '.abuse-form', function(e) {
         e.preventDefault();
@@ -15,11 +14,11 @@ define('views/app/abuse',
         forms.toggleSubmitFormState($this);
 
         requests.post(urls.api.url('app_abuse'), data).done(function(data) {
-            notify({message: gettext('Abuse reported')});
+            notification.notification({message: gettext('Abuse reported')});
             z.page.trigger('navigate', urls.reverse('app', [slug]));
         }).fail(function() {
             forms.toggleSubmitFormState($this, true);
-            notify({message: gettext('Error while submitting report')});
+            notification.notification({message: gettext('Error while submitting report')});
         });
     });
 
