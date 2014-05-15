@@ -30,6 +30,7 @@ define('settings', ['l10n', 'settings_local', 'underscore'],
         // The version number for localStorage data. Bump when the schema for
         // storing data in localStorage changes.
         storage_version: '0',
+        lf_storage_version: '0',
 
         // Set to true to simulate navigator.mozPay.
         simulate_nav_pay: false,
