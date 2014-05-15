@@ -18,7 +18,13 @@ define('views/app/abuse',
             z.page.trigger('navigate', urls.reverse('app', [slug]));
         }).fail(function() {
             forms.toggleSubmitFormState($this, true);
-            notification.notification({message: gettext('Error while submitting report')});
+            if (z.onLine) {
+                notification.notification({
+                    message: gettext('Sorry, there was an issue submitting your feedback. Please try again later.')
+                });
+            } else {
+                notification.notification({message: settings.offline_msg});
+            }
         });
     });
 

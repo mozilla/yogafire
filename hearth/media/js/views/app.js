@@ -1,6 +1,6 @@
 define('views/app',
-    ['capabilities', 'content-ratings', 'l10n', 'log', 'settings', 'tracking', 'utils', 'z', 'overflow'],
-    function(caps, iarc, l10n, log, settings, tracking, utils, z) {
+    ['capabilities', 'content-ratings', 'l10n', 'log', 'notification', 'settings', 'tracking', 'utils', 'z', 'overflow'],
+    function(caps, iarc, l10n, log, notification, settings, tracking, utils, z) {
     'use strict';
 
     var gettext = l10n.gettext;
@@ -28,7 +28,25 @@ define('views/app',
         // When I click on the icon, append `#id=<id>` to the URL.
         window.location.hash = 'id=' + $('.product').data('id');
         e.stopPropagation();
-    }));
+
+    })).on('click', '.abuse .button', function(e) {
+        // Init desktop abuse form modal trigger.
+        // The modal is responsive even if this handler isn't removed.
+        if (caps.widescreen()) {
+            e.preventDefault();
+            e.stopPropagation();
+            z.body.trigger('decloak');
+            $('.report-abuse.modal').addClass('show');
+        }
+
+    }).on('click', '.support .online', function(e) {
+        var $this = $(this);
+        if (!z.onLine) {
+            e.preventDefault();
+            e.stopImmediatePropagation();
+            notification.notification({message: settings.offline_msg});
+        }
+    });
 
     if (tracking.actions_enabled) {
         z.page.on('click', '.detail .support li a.button', function(e) {
@@ -39,17 +57,6 @@ define('views/app',
             );
         });
     }
-
-    // Init desktop abuse form modal trigger.
-    // The modal is responsive even if this handler isn't removed.
-    z.page.on('click', '.abuse .button', function(e) {
-        if (caps.widescreen()) {
-            e.preventDefault();
-            e.stopPropagation();
-            z.body.trigger('decloak');
-            $('.report-abuse.modal').addClass('show');
-        }
-    });
 
     return function(builder, args) {
         var slug = args[0];
