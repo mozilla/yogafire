@@ -111,8 +111,8 @@ define('builder',
                 // visible page.
                 var key = el.getAttribute('data-key');
                 var slug = el.getAttribute('data-slug');
-                var page = el.getAttribute('data-page');
-                injector(key, slug, page, el.parentNode, target).done(function() {
+                var page_num = el.getAttribute('data-page');
+                injector(key, slug, page_num, el.parentNode, target).done(function() {
                     console.log('Pagination completed');
                     fire(page, 'loaded_more');
                 });
@@ -306,8 +306,8 @@ define('builder',
                 var uid = 'ph_' + counter++;
                 var out;
 
-                var injector = function(key, slug, page, replace, extract) {
-                    var lf_request = db.get[key](slug, page);
+                var injector = function(key, slug, page_num, replace, extract) {
+                    var lf_request = db.get[key](slug, page_num);
 
                     if ('id' in signature) {
                         result_handlers[signature.id] = lf_request;
