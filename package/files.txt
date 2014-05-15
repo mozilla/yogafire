@@ -4,10 +4,10 @@ app-icons/60.png
 app-icons/90.png
 app-icons/120.png
 app-icons/128.png
-db/home.json
-db/games.json
-db/lifestyle.json
-db/tools.json
+db/tarako-featured.json
+db/tarako-games.json
+db/tarako-lifestyle.json
+db/tarako-tools.json
 # Disabled icons. See bug 1007216.
 #downloads/icons/
 downloads/screenshots/

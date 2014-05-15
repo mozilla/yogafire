@@ -8,6 +8,7 @@ define('db', ['defer', 'format', 'log', 'requests', 'urls', 'settings', 'undersc
     function category_key(slug, page) { return 'category_' + slug + '_' + page; }
     var HOMEPAGE_KEY = 'homepage';
     var PRELOADED_KEY = 'has_preloaded';
+    var STORAGE_VERSION = 'storage_version';
 
     function preload() {
         console.log('Checking if data is already preloaded');
@@ -29,10 +30,11 @@ define('db', ['defer', 'format', 'log', 'requests', 'urls', 'settings', 'undersc
                 }));
 
                 // Preload category pages from the package.
+                // Category slugs must match category slug in the views.
                 var categories = [
-                    {slug: 'games', url: settings['offline_tarako-games']},
-                    {slug: 'tools', url: settings['offline_tarako-tools']},
-                    {slug: 'lifestyle', url: settings['offline_tarako-lifestyle']}
+                    {slug: 'tarako-games', url: settings['offline_tarako-games']},
+                    {slug: 'tarako-tools', url: settings['offline_tarako-tools']},
+                    {slug: 'tarako-lifestyle', url: settings['offline_tarako-lifestyle']}
                 ];
                 _.each(categories, function(category) {
                     promises.push(new Promise(function(resolve, reject) {
@@ -49,6 +51,8 @@ define('db', ['defer', 'format', 'log', 'requests', 'urls', 'settings', 'undersc
                     localforage.setItem(PRELOADED_KEY, true);
                     z.body.trigger('lf_preloaded_finished');
                 });
+
+                localforage.setItem(STORAGE_VERSION, settings.lf_storage_version);
             }
         });
     }
@@ -62,31 +66,27 @@ define('db', ['defer', 'format', 'log', 'requests', 'urls', 'settings', 'undersc
         1) An attempt to retrieve to the data from localforage.
         2) An HTTP request to fetch the data from the API.
 
-        Whichever task completes first will resolve the data. Regardless of which
-        task does the resolution, the API call will complete and the data from the
-        call will be stored with localforage.
+        Resolves to whatever finishes first, localForage or API.
         */
         var def = defer.Deferred();
         var resolved = false;
 
         localforage.getItem(app_key(slug)).then(function(data) {
             if (data && !resolved) {
-                // localForage request finished first.
-                console.log('Returned', slug, 'from localforage.');
                 resolved = true;
                 def.resolve(data);
+                console.log('Returned', slug, 'from localforage.');
             }
         });
 
+        // Update in background.
         var url = urls.api.url('app', slug);
         requests.get(url, true).done(function(data) {
             if (!resolved) {
-                // API request finished first.
-                console.log('Returned', data['slug'], 'from API.');
                 resolved = true;
                 def.resolve(data);
+                console.log('Returned', slug, 'from API.');
             }
-            // Background update localForage.
             storeApp(data);
         });
 
@@ -102,9 +102,7 @@ define('db', ['defer', 'format', 'log', 'requests', 'urls', 'settings', 'undersc
         1) An attempt to retrieve to the data from localforage.
         2) An HTTP request to fetch the data from the API.
 
-        Whichever task completes first will resolve the data. Regardless of which
-        task does the resolution, the API call will complete and the data from the
-        call will be stored with localforage.
+        Resolves to whatever finishes first, localForage or API.
         */
         if (!slug) {
             return getHomepage();
@@ -113,23 +111,26 @@ define('db', ['defer', 'format', 'log', 'requests', 'urls', 'settings', 'undersc
         var def = defer.Deferred();
         var resolved = false;
 
+        page = page || 0;
         localforage.getItem(category_key(slug, page)).then(function(data) {
             if (data && !resolved) {
-                console.log('Returned page', page, 'of', slug, 'category from localforage.');
-                def.resolve(data);
                 resolved = true;
+                def.resolve(data);
+                console.log('Returned page', page, 'of', slug, 'category from localforage.');
             }
         });
 
-        page = page || 0;
+        // Update in background.
         var url = urls.api.url('category', slug, {
             limit: settings.num_per_page,
             offset: page * settings.num_per_page
         });
         requests.get(url, true).done(function(data) {
+            data = normalize_apps(data);
             if (!resolved) {
-                console.log('Returned page', page, 'of', slug, 'category from API.');
+                resolved = true;
                 def.resolve(data);
+                console.log('Returned page', page, 'of', slug, 'category from API.');
             }
             storeCategory(slug, data, page);
         });
@@ -145,29 +146,27 @@ define('db', ['defer', 'format', 'log', 'requests', 'urls', 'settings', 'undersc
         1) An attempt to retrieve to the data from localforage.
         2) An HTTP request to fetch the data from the API.
 
-        Whichever task completes first will resolve the data. Regardless of which
-        task does the resolution, the API call will complete and the data from the
-        call will be stored with localforage.
-
-        TODO: Make featured.js read from this function.
+        Resolves to whatever finishes first, localForage or API.
         */
         var def = defer.Deferred();
         var resolved = false;
 
         localforage.getItem(HOMEPAGE_KEY).then(function(data) {
             if (data && !resolved) {
-                console.log('Returned homepage from localforage.');
-                def.resolve(data);
                 resolved = true;
+                def.resolve(data);
+                console.log('Returned homepage from localforage.');
             }
         });
 
+        // Update in background.
         var url = urls.api.url('collection', 'tarako-featured');
         requests.get(url, true).done(function(data) {
+            data = normalize_apps(data);
             if (!resolved) {
-                console.log('Returned homepage from API.');
-                def.resolve(data);
                 resolved = true;
+                def.resolve(data);
+                console.log('Returned homepage from API.');
             }
             storeHomepage(data);
         });
@@ -195,8 +194,9 @@ define('db', ['defer', 'format', 'log', 'requests', 'urls', 'settings', 'undersc
         2) Saves each app in that category.
         */
         console.log('Storing page', page, 'of', name, 'category in localforage');
+        data = normalize_apps(data);
         localforage.setItem(category_key(name, page), data);
-        storeApps(data.objects);
+        storeApps(data.apps);
     }
 
     function storeHomepage(data) {
@@ -206,8 +206,18 @@ define('db', ['defer', 'format', 'log', 'requests', 'urls', 'settings', 'undersc
         2) Saves each app in that response.
         */
         console.log('Storing homepage in localforage');
+        data = normalize_apps(data);
         localforage.setItem(HOMEPAGE_KEY, data);
         storeApps(data.apps);
+    }
+
+    function normalize_apps(data) {
+        // Normalize to data.apps.
+        if (data.objects) {
+            data.apps = data.objects;
+            delete data['objects'];
+        }
+        return data;
     }
 
     return {

@@ -36,29 +36,23 @@
       </li>
     {% endif %}
     {% if this.support_url %}
-      <li class="support-url" data-tracking="Support site">
+      <li class="support-url online" data-tracking="Support site">
         <a class="button" rel="external" {{ this.support_url|external_href }}>
           {{ _('Support Site') }}</a>
       </li>
     {% endif %}
     {% if this.homepage %}
-      <li class="homepage" data-tracking="Homepage">
+      <li class="homepage online" data-tracking="Homepage">
         <a class="button" rel="external" {{ this.homepage|external_href }}>{{ _('Homepage') }}</a>
       </li>
     {% endif %}
     {% if this.privacy_policy %}
-      <li class="privacy-policy" data-tracking="Privacy policy">
+      <li class="privacy-policy online" data-tracking="Privacy policy">
         <a class="button" href="{{ url('app/privacy', [slug]) }}">
         {{ _('Privacy Policy') }}</a>
       </li>
     {% endif %}
-    {% if this.public_stats or user.has_developed(this.id) %}
-      <li class="statistics" data-tracking="Statistics">
-        <a class="button view-stats" rel="external" href="/statistics/app/{{ slug }}">
-        {{ _('Statistics') }}</a>
-      </li>
-    {% endif %}
-    <li class="abuse" data-tracking="Report abuse">
+    <li class="abuse online" data-tracking="Report abuse">
       <a class="button" href="{{ url('app/abuse', [slug]) }}">
       {{ _('Report Abuse') }}</a>
     </li>

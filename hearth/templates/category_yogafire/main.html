@@ -3,7 +3,7 @@
 
 {% set source = category or 'all' %}
 
-{% localforage (key='category', slug=category, pluck='objects' if category else 'apps', paginate='ol.listing') %}
+{% localforage (key='category', slug=category, pluck='apps', paginate='ol.listing') %}
   <ol class="container listing search-listing c">
     {% if not category %}
       <header class="featured-header c">

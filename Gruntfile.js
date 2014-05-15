@@ -7,24 +7,24 @@ module.exports = function(grunt) {
     fetchdb: {
       options: [
         {
-          data_dest: settings.db_dir + '/home.json',
+          data_dest: settings.db_dir + '/tarako-featured.json',
           data_src: 'https://marketplace.firefox.com/api/v1/fireplace/collection/tarako-featured/?region=restofworld',
-          slug: 'home',
+          slug: 'tarako-featured',
         },
         {
-          data_dest: settings.db_dir + '/games.json',
+          data_dest: settings.db_dir + '/tarako-games.json',
           data_src: 'https://marketplace.firefox.com/api/v1/fireplace/search/featured/?cat=tarako-games&limit=10',
-          slug: 'games',
+          slug: 'tarako-games',
         },
         {
-          data_dest: settings.db_dir + '/tools.json',
+          data_dest: settings.db_dir + '/tarako-tools.json',
           data_src: 'https://marketplace.firefox.com/api/v1/fireplace/search/featured/?cat=tarako-tools&limit=10',
-          slug: 'tools',
+          slug: 'tarako-tools',
         },
         {
-          data_dest: settings.db_dir + '/lifestyle.json',
+          data_dest: settings.db_dir + '/tarako-lifestyle.json',
           data_src: 'https://marketplace.firefox.com/api/v1/fireplace/search/featured/?cat=tarako-lifestyle&limit=10',
-          slug: 'lifestyle',
+          slug: 'tarako-lifestyle',
         },
       ]
     }

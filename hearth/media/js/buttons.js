@@ -88,7 +88,7 @@ define('buttons',
                 def.resolve(installer, product, $this);
             }).fail(function(error) {
                 if (error) {
-                    notificiation.notification({message: error});
+                    notification.notification({message: error});
                 }
                 console.log('App install deferred was rejected for ', product.name);
                 def.reject();

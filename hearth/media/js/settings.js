@@ -30,6 +30,7 @@ define('settings', ['l10n', 'settings_local', 'underscore'],
         // The version number for localStorage data. Bump when the schema for
         // storing data in localStorage changes.
         storage_version: '0',
+        lf_storage_version: '0',
 
         // Set to true to simulate navigator.mozPay.
         simulate_nav_pay: false,
@@ -157,10 +158,10 @@ define('settings', ['l10n', 'settings_local', 'underscore'],
         localforage_driver: 'localStorageWrapper',
 
         // URLs to API responses preloaded with the package.
-        offline_homepage: '/db/home.json',
-        'offline_tarako-games': '/db/games.json',
-        'offline_tarako-tools': '/db/tools.json',
-        'offline_tarako-lifestyle': '/db/lifestyle.json',
+        offline_homepage: '/db/tarako-featured.json',
+        'offline_tarako-games': '/db/tarako-games.json',
+        'offline_tarako-tools': '/db/tarako-tools.json',
+        'offline_tarako-lifestyle': '/db/tarako-lifestyle.json',
 
         iframe_installer_src: 'https://marketplace.firefox.com/iframe-install.html',
 
