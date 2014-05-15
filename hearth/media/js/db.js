@@ -8,6 +8,7 @@ define('db', ['defer', 'format', 'log', 'requests', 'urls', 'settings', 'undersc
     function category_key(slug, page) { return 'category_' + slug + '_' + page; }
     var HOMEPAGE_KEY = 'homepage';
     var PRELOADED_KEY = 'has_preloaded';
+    var STORAGE_VERSION = 'storage_version';
 
     function preload() {
         console.log('Checking if data is already preloaded');
@@ -50,6 +51,8 @@ define('db', ['defer', 'format', 'log', 'requests', 'urls', 'settings', 'undersc
                     localforage.setItem(PRELOADED_KEY, true);
                     z.body.trigger('lf_preloaded_finished');
                 });
+
+                localforage.setItem(STORAGE_VERSION, settings.lf_storage_version);
             }
         });
     }
