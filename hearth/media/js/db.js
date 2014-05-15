@@ -65,18 +65,28 @@ define('db', ['defer', 'format', 'log', 'requests', 'urls', 'settings', 'undersc
         It fetches that data by kicking off two asynchronous tasks:
         1) An attempt to retrieve to the data from localforage.
         2) An HTTP request to fetch the data from the API.
+
+        Resolves to whatever finishes first, localForage or API.
         */
         var def = defer.Deferred();
         var resolved = false;
 
         localforage.getItem(app_key(slug)).then(function(data) {
-            console.log('Returned', slug, 'from localforage.');
-            def.resolve(data);
+            if (data && !resolved) {
+                resolved = true;
+                def.resolve(data);
+                console.log('Returned', slug, 'from localforage.');
+            }
         });
 
         // Update in background.
         var url = urls.api.url('app', slug);
         requests.get(url, true).done(function(data) {
+            if (!resolved) {
+                resolved = true;
+                def.resolve(data);
+                console.log('Returned', slug, 'from API.');
+            }
             storeApp(data);
         });
 
@@ -91,6 +101,8 @@ define('db', ['defer', 'format', 'log', 'requests', 'urls', 'settings', 'undersc
         It fetches that data by kicking off two asynchronous tasks:
         1) An attempt to retrieve to the data from localforage.
         2) An HTTP request to fetch the data from the API.
+
+        Resolves to whatever finishes first, localForage or API.
         */
         if (!slug) {
             return getHomepage();
@@ -101,8 +113,11 @@ define('db', ['defer', 'format', 'log', 'requests', 'urls', 'settings', 'undersc
 
         page = page || 0;
         localforage.getItem(category_key(slug, page)).then(function(data) {
-            console.log('Returned page', page, 'of', slug, 'category from localforage.');
-            def.resolve(data);
+            if (data && !resolved) {
+                resolved = true;
+                def.resolve(data);
+                console.log('Returned page', page, 'of', slug, 'category from localforage.');
+            }
         });
 
         // Update in background.
@@ -111,6 +126,12 @@ define('db', ['defer', 'format', 'log', 'requests', 'urls', 'settings', 'undersc
             offset: page * settings.num_per_page
         });
         requests.get(url, true).done(function(data) {
+            data = normalize_apps(data);
+            if (!resolved) {
+                resolved = true;
+                def.resolve(data);
+                console.log('Returned page', page, 'of', slug, 'category from API.');
+            }
             storeCategory(slug, data, page);
         });
 
@@ -125,19 +146,28 @@ define('db', ['defer', 'format', 'log', 'requests', 'urls', 'settings', 'undersc
         1) An attempt to retrieve to the data from localforage.
         2) An HTTP request to fetch the data from the API.
 
-        TODO: Make featured.js read from this function.
+        Resolves to whatever finishes first, localForage or API.
         */
         var def = defer.Deferred();
         var resolved = false;
 
         localforage.getItem(HOMEPAGE_KEY).then(function(data) {
-            console.log('Returned homepage from localforage.');
-            def.resolve(data);
+            if (data && !resolved) {
+                resolved = true;
+                def.resolve(data);
+                console.log('Returned homepage from localforage.');
+            }
         });
 
         // Update in background.
         var url = urls.api.url('collection', 'tarako-featured');
         requests.get(url, true).done(function(data) {
+            data = normalize_apps(data);
+            if (!resolved) {
+                resolved = true;
+                def.resolve(data);
+                console.log('Returned homepage from API.');
+            }
             storeHomepage(data);
         });
 
@@ -164,11 +194,7 @@ define('db', ['defer', 'format', 'log', 'requests', 'urls', 'settings', 'undersc
         2) Saves each app in that category.
         */
         console.log('Storing page', page, 'of', name, 'category in localforage');
-        // Normalize to data.apps.
-        if (data.objects) {
-            data.apps = data.objects;
-            delete data['objects'];
-        }
+        data = normalize_apps(data);
         localforage.setItem(category_key(name, page), data);
         storeApps(data.apps);
     }
@@ -180,8 +206,18 @@ define('db', ['defer', 'format', 'log', 'requests', 'urls', 'settings', 'undersc
         2) Saves each app in that response.
         */
         console.log('Storing homepage in localforage');
+        data = normalize_apps(data);
         localforage.setItem(HOMEPAGE_KEY, data);
         storeApps(data.apps);
+    }
+
+    function normalize_apps(data) {
+        // Normalize to data.apps.
+        if (data.objects) {
+            data.apps = data.objects;
+            delete data['objects'];
+        }
+        return data;
     }
 
     return {
