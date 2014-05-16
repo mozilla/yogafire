@@ -337,23 +337,33 @@ define('builder',
                     }
 
                     lf_request.done(function(data) {
-                        result_map[key] = data;
+                        result_map[signature.id || key] = data;
 
-                        var el = document.getElementById(uid);
-                        if (!el) {
-                            return;
+                        function inject_response() {
+                            var el = document.getElementById(uid);
+                            if (!el) {
+                                return;
+                            }
+                            context.ctx.response = data;
+                            var content = get_result(data);
+                            if (replace) {
+                                parse_and_replace(content, replace);
+                            } else {
+                                el.innerHTML = content;
+                            }
+                            if (signature.paginate) {
+                                make_paginatable_localforage(injector, el, signature.paginate);
+                            }
+                            trigger_fragment_loaded(signature.id || null);
                         }
-                        context.ctx.response = data;
-                        var content = get_result(data);
-                        if (replace) {
-                            parse_and_replace(content, replace);
+
+                        if (key == 'search') {
+                            // Search page needs time for the placeholder to render for some reason.
+                            // Race condition solver.
+                            setTimeout(inject_response);
                         } else {
-                            el.innerHTML = content;
+                            inject_response();
                         }
-                        if (signature.paginate) {
-                            make_paginatable_localforage(injector, el, signature.paginate);
-                        }
-                        trigger_fragment_loaded(signature.id || null);
                     }).fail(function(error) {
                         if (!replace) {
                             var el = document.getElementById(uid);
