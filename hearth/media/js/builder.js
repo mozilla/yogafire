@@ -357,7 +357,7 @@ define('builder',
                             trigger_fragment_loaded(signature.id || null);
                         }
 
-                        if (key == 'search') {
+                        if (key == 'search' && !page_num) {
                             // Search page needs time for the placeholder to render for some reason.
                             // Race condition solver.
                             setTimeout(inject_response);
