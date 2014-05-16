@@ -131,8 +131,6 @@ active_category() {
 }
 
 .listing .mkt-tile {
-    z-index: 6;
-
     .button {
         bottom: 8px;
     }
@@ -189,6 +187,7 @@ active_category() {
         .mkt-tile {
             border-radius: 10px;
             box-shadow: 0px 1px 1px $cement-gray;
+            z-index: 6;
         }
         .tray.previews {
             height: auto;
@@ -302,16 +301,16 @@ button.ssnav {
 
 .slider {
     &:before, &:after {
-        content: "";
-        position: absolute;
         background: $salt-flat-white;
+        content: "";
+        height: 200px;
+        position: absolute;
         width: 60px;
-        height: 150px;
         z-index: 5;
     }
     &:after {
-        top: 15px;
         right: 0;
+        top: 15px;
     }
 }
 
