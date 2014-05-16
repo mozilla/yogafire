@@ -119,15 +119,20 @@ active_category() {
     }
 }
 
-[data-page-type~="root"] .listing .mkt-tile {
-    .subdetail.content-rating {
-        margin-bottom: -4px;
-        position: relative;
-        padding: 3px 0 0;
+[data-page-type~="root"],
+[data-page-type~="search"] {
+     .listing .mkt-tile {
+        .subdetail.content-rating {
+            margin-bottom: -4px;
+            position: relative;
+            padding: 3px 0 0;
+        }
     }
 }
 
 .listing .mkt-tile {
+    z-index: 6;
+
     .button {
         bottom: 8px;
     }
@@ -184,7 +189,6 @@ active_category() {
         .mkt-tile {
             border-radius: 10px;
             box-shadow: 0px 1px 1px $cement-gray;
-            z-index: 6;
         }
         .tray.previews {
             height: auto;
