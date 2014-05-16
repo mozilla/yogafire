@@ -56,6 +56,7 @@ define('buttons',
         var def = require('defer').Deferred();
         // Create a reference to the button.
         var $this = $button || $(this);
+        var _timeout;
 
         // There's no payment required, just start install.
         console.log('Starting app installation for', product_name);
@@ -79,6 +80,19 @@ define('buttons',
                  .html('<span class="spin"></span>')
                  .addClass('spinning');
 
+            // HACK.
+            // Temporary timeout for hosted apps until we catch the appropriate
+            // download error event for hosted apps (in iframe).
+            if (!product.is_packaged) {
+                _timeout = setTimeout(function() {
+                    if ($this.hasClass('spinning')) {
+                        console.log('Spinner timeout for ', product_name);
+                        revertButton($this);
+                        notification.notification({message: settings.offline_msg});
+                    }
+                }, 20000);
+            }
+
             return apps.install(product, {}).done(function(installer) {
                 // Update the cache to show that the user installed the app.
                 user.update_install(product.id);
@@ -97,6 +111,11 @@ define('buttons',
 
         // After everything has completed, carry out post-install logic.
         def.then(function(installer) {
+            // Clear the spinner timeout if one was set.
+            if (_timeout) {
+                clearTimeout(_timeout);
+            }
+
             // Show the box on how to run the app.
             var $installed = $('#installed');
             var $how = $installed.find('.' + require('utils').browser());
