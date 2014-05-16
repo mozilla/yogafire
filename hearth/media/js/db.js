@@ -81,7 +81,9 @@ define('db', ['defer', 'format', 'log', 'requests', 'urls', 'settings', 'undersc
 
         // Update in background.
         var url = urls.api.url('app', slug);
-        requests.get(url, true).done(function(data) {
+        // Request-cache app requests in memory by not passing in true since
+        // app detail page calls the localForage tag multiple times at once.
+        requests.get(url).done(function(data) {
             if (!resolved) {
                 resolved = true;
                 def.resolve(data);
