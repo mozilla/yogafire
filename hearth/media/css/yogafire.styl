@@ -1,6 +1,7 @@
 @import 'lib';
 
 $yoga-blue = #4CB1FF;
+$yoga-gray = #E0E0E0;
 
 .featured-header {
     padding-top: 18px;
@@ -20,7 +21,7 @@ $yoga-blue = #4CB1FF;
 }
 
 .category-nav {
-    background: #e0e0e0;
+    background: $yoga-gray;
     font-size: 0;
     list-style: none;
     text-align: center;
@@ -318,4 +319,24 @@ button.ssnav {
     background-color: #fff;
     border-width: 1px;
     border-radius: 5px;
+}
+
+[data-page-type~="search"] {
+    .mkt-tile {
+        padding-bottom: 20px;
+    }
+    .mkt-tile + .tray {
+        background: $yoga-gray;
+        height: 215px;
+        padding-top: 0;
+
+        button.ssnav {
+        }
+        .slider {
+            &:before,
+            &:after {
+                background: $yoga-gray;
+            }
+        }
+    }
 }

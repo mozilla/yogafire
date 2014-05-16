@@ -469,42 +469,20 @@ ratings-sidebar() {
         position: absolute;
         right: 10px;
     }
-    &.expanded .mkt-tile + .tray {
-        &:before, &:after {
-            border-bottom: $triangle-size solid $salt-flat-white;
-            bottom: 0;
-            content: "";
-            display: block;
-            height: 0;
-            position: absolute;
-            top: 0;
-            width: 50%;
-            z-index: 5;
-        }
-        &:before {
-            // dotted gets rid of strange edge rendering in b2g.
-            border-right: $triangle-size dotted transparent;
-            left: -($triangle-size);
-        }
-        &:after {
-            border-left: $triangle-size dotted transparent;
-            right: -($triangle-size);
-        }
-    }
-
     &.expanded .mkt-tile + .tray:before,
     &.expanded .mkt-tile + .tray:after,
     &.product-details .mkt-tile {
-        //background: #f4f4f4;
         background: #fff;
     }
 
     &.product-details {
         background: #fff;
         border-radius: 10px 10px 0 0;
+
         .mkt-tile {
             border-radius: 10px 10px 0 0;
             ratings-sidebar();
+
             + .tray {
                 border-radius: 0;
             }
