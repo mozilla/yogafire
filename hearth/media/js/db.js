@@ -1,5 +1,5 @@
-define('db', ['defer', 'format', 'log', 'requests', 'urls', 'settings', 'underscore', 'z'],
-    function(defer, format, log, requests, urls, settings, _, z) {
+define('db', ['defer', 'format', 'log', 'requests', 'urls', 'utils', 'settings', 'underscore', 'z'],
+    function(defer, format, log, requests, urls, utils, settings, _, z) {
 
     var console = log('db');
 
@@ -81,7 +81,9 @@ define('db', ['defer', 'format', 'log', 'requests', 'urls', 'settings', 'undersc
 
         // Update in background.
         var url = urls.api.url('app', slug);
-        requests.get(url, true).done(function(data) {
+        // Request-cache app requests in memory by not passing in true since
+        // app detail page calls the localForage tag multiple times at once.
+        requests.get(url).done(function(data) {
             if (!resolved) {
                 resolved = true;
                 def.resolve(data);
@@ -174,6 +176,29 @@ define('db', ['defer', 'format', 'log', 'requests', 'urls', 'settings', 'undersc
         return def.promise();
     }
 
+    function getSearch(endpoint, page) {
+        /*
+        Returns the API response, but stores all of the apps.
+        */
+        var def = defer.Deferred();
+
+        if (page) {
+            endpoint = utils.urlparams(endpoint, {
+                limit: settings.num_per_page,
+                offset: page * settings.num_per_page
+            });
+        }
+
+        requests.get(endpoint).done(function(data) {
+            data = normalize_apps(data);
+            def.resolve(data);
+            storeAppsFromSearch(data);
+            console.log('Returned search from API.');
+        });
+
+        return def.promise();
+    }
+
     function storeApp(data) {
         // Passed an app, stores that app with localforage.
         console.log('Storing', data.slug, 'in localforage');
@@ -211,6 +236,16 @@ define('db', ['defer', 'format', 'log', 'requests', 'urls', 'settings', 'undersc
         storeApps(data.apps);
     }
 
+    function storeAppsFromSearch(data) {
+        /*
+        Store the apps from the search response, but don't store the search
+        response itself for now.
+        */
+        console.log('Storing search in localforage');
+        data = normalize_apps(data);
+        storeApps(data.apps);
+    }
+
     function normalize_apps(data) {
         // Normalize to data.apps.
         if (data.objects) {
@@ -225,12 +260,14 @@ define('db', ['defer', 'format', 'log', 'requests', 'urls', 'settings', 'undersc
         get: {
             app: getApp,
             category: getCategory,
-            homepage: getHomepage
+            homepage: getHomepage,
+            search: getSearch
         },
         store: {
             app: storeApp,
             category: storeCategory,
-            homepage: storeHomepage
+            homepage: storeHomepage,
+            search: storeAppsFromSearch
         },
         keys: {
             app: app_key,

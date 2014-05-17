@@ -201,15 +201,14 @@ define('views/search',
             (new Audio(urls.media('fireplace/hampster.ogg'))).play();
         }
 
-        builder.start('search/main.html', {
-            params: _.extend({}, params),
-        }).done(function() {
+        // TODO: make LF work with requests.pool so builder.done triggers at the right time.
+        z.page.on('fragment_loaded', function() {
             var results = builder.results.searchresults;
-            if (params.manifest_url && results.objects.length === 1) {
-                z.page.trigger('divert', [urls.reverse('app', [results.objects[0].slug]) + '?src=' + params.src]);
+            if (params.manifest_url && results.apps.length === 1) {
+                z.page.trigger('divert', [urls.reverse('app', [results.apps[0].slug]) + '?src=' + params.src]);
             }
             // When there are no results, tell GA (bug 890314)
-            if (!results.objects.length) {
+            if (!results.apps.length) {
                 tracking.trackEvent(
                     'No results found',
                     'Search',
@@ -217,6 +216,9 @@ define('views/search',
                 );
             }
         });
-    };
 
+        builder.start('search/main.html', {
+            params: _.extend({}, params),
+        });
+    };
 });
