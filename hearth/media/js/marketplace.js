@@ -168,7 +168,9 @@ function(_) {
         console.log('Reloading chrome');
         var context = {z: z};
         $('#site-header').html(nunjucks.env.render('header.html', context));
-        $('.offline-screen').html(nunjucks.env.render('_includes/offline.html'));
+        $('.offline-screen').html(nunjucks.env.render('_includes/offline.html', {
+            settings: settings
+        }));
         z.body.toggleClass('logged-in', require('user').logged_in());
         z.page.trigger('reloaded_chrome');
     }).trigger('reload_chrome');
