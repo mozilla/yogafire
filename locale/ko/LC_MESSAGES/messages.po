@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-14T16:32:02.721Z\n"
+"POT-Creation-Date: 2014-05-19T21:13:49.451Z\n"
 "PO-Revision-Date: 2014-05-12 07:50+0000\n"
 "Last-Translator: Channy <channy@mozilla.or.kr>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -79,7 +79,7 @@ msgstr "Firefox 앱을 설치하려면 Firefox를 사용해야 합니다."
 msgid "Download."
 msgstr "다운로드"
 
-#: /templates/privacy.html:2 /templates/category_yogafire/main.html:47 /templates/detail/main_yogafire.html:64 /templates/detail/privacy.html:3 /media/js/views/privacy.js:10
+#: /templates/privacy.html:2 /templates/category_yogafire/main.html:47 /templates/detail/main_yogafire.html:51 /templates/detail/privacy.html:3 /media/js/views/privacy.js:10
 #: /media/js/views/app/privacy.js:10
 msgid "Privacy Policy"
 msgstr "개인 정보 보호 정책"
@@ -109,7 +109,7 @@ msgstr "유효하지 않음"
 msgid "Free"
 msgstr "무료"
 
-#: /templates/_macros/market_button.html:14 /media/js/buttons.js:176
+#: /templates/_macros/market_button.html:14 /media/js/buttons.js:195
 msgid "Install"
 msgstr "설치"
 
@@ -127,10 +127,6 @@ msgid "{n} Review"
 msgid_plural "{n} Reviews"
 msgstr[0] "{n} 리뷰"
 
-#: /templates/_macros/market_tile.html:70
-msgid "Not yet rated"
-msgstr "아직 평가 안함"
-
 #: /templates/_macros/more_button.html:2 /templates/_macros/more_button.html:10
 msgid "More"
 msgstr "더보기"
@@ -143,7 +139,7 @@ msgstr "{maxstars}점 만점 중 {stars}점으로 평가됨"
 msgid "Get Help"
 msgstr "도움 받기"
 
-#: /templates/category_yogafire/main.html:41 /media/js/views/feedback.js:64
+#: /templates/category_yogafire/main.html:41 /media/js/views/feedback.js:63
 msgid "Feedback"
 msgstr "사용자 의견"
 
@@ -154,6 +150,46 @@ msgstr "추천 앱"
 #: /templates/category_yogafire/main.html:27 /templates/category_yogafire/main.html:31
 msgid "No apps in this category"
 msgstr "이 카테고리에 앱 없음"
+
+#: /templates/detail/abuse.html:5 /templates/detail/main_yogafire.html:56 /media/js/views/app/abuse.js:39
+msgid "Report Abuse"
+msgstr "오용 신고"
+
+#: /templates/detail/abuse.html:15
+msgid "Send Report"
+msgstr "신고 보내기"
+
+#: /templates/detail/content_ratings.html:4
+msgid "Content Rating"
+msgstr "콘텐츠 등급"
+
+#: /templates/detail/content_ratings.html:73
+msgid "Content Rating Details"
+msgstr "콘텐츠 등급 소개"
+
+#: /templates/detail/main_yogafire.html:22
+msgid "Description"
+msgstr "설명"
+
+#: /templates/detail/main_yogafire.html:34
+msgid "Support Email"
+msgstr "지원 이메일"
+
+#: /templates/detail/main_yogafire.html:40
+msgid "Support Site"
+msgstr "지원 사이트"
+
+#: /templates/detail/main_yogafire.html:45
+msgid "Homepage"
+msgstr "홈페이지"
+
+#: /templates/detail/privacy.html:5
+msgid "Back to app"
+msgstr "앱으로 돌아가기"
+
+#: /templates/detail/privacy.html:11
+msgid "Loading Privacy Policy..."
+msgstr "개인 정보 보호 정책 로딩중..."
 
 #: /templates/errors/404.html:2 /templates/errors/fragment.html:1
 msgid "Oh no!"
@@ -175,68 +211,20 @@ msgstr "더 불러오는 중 오류 발생"
 msgid "Try Again"
 msgstr "다시 시도"
 
-#: /templates/detail/abuse.html:5 /templates/detail/main_yogafire.html:75 /media/js/views/app/abuse.js:34
-msgid "Report Abuse"
-msgstr "오용 신고"
-
-#: /templates/detail/abuse.html:15
-msgid "Send Report"
-msgstr "신고 보내기"
-
-#: /templates/detail/content_ratings.html:4
-msgid "Content Rating"
-msgstr "콘텐츠 등급"
-
-#: /templates/detail/content_ratings.html:73
-msgid "Content Rating Details"
-msgstr "콘텐츠 등급 소개"
-
-#: /templates/detail/main_yogafire.html:11 /templates/detail/main_yogafire.html:12 /media/js/views/app.js:68
-msgid "Loading..."
-msgstr "로딩중"
-
-#: /templates/detail/main_yogafire.html:31
-msgid "Description"
-msgstr "설명"
-
-#: /templates/detail/main_yogafire.html:47
-msgid "Support Email"
-msgstr "지원 이메일"
-
-#: /templates/detail/main_yogafire.html:53
-msgid "Support Site"
-msgstr "지원 사이트"
-
-#: /templates/detail/main_yogafire.html:58
-msgid "Homepage"
-msgstr "홈페이지"
-
-#: /templates/detail/main_yogafire.html:70
-msgid "Statistics"
-msgstr "통계"
-
-#: /templates/detail/privacy.html:5
-msgid "Back to app"
-msgstr "앱으로 돌아가기"
-
-#: /templates/detail/privacy.html:11
-msgid "Loading Privacy Policy..."
-msgstr "개인 정보 보호 정책 로딩중..."
-
-#: /templates/search/main.html:15
+#: /templates/search/main.html:16
 msgid "<b>{n}</b> Result"
 msgid_plural "<b>{n}</b> Results"
 msgstr[0] "결과 <b>{n}</b>개"
 
-#: /templates/search/main.html:17
+#: /templates/search/main.html:18
 msgid "Expand"
 msgstr "확장"
 
-#: /templates/search/main.html:35
+#: /templates/search/main.html:36
 msgid "No results found"
 msgstr "결과 없음"
 
-#: /templates/search/main.html:40
+#: /templates/search/main.html:41
 msgid "No results found, try again later"
 msgstr "결과가 없습니다. 나중에 다시 시도해 주세요."
 
@@ -260,14 +248,14 @@ msgstr "사용하는 브라우저나 기기가 웹앱호환이 아닙니다."
 msgid "This app is unavailable for your platform."
 msgstr "사용하는 플랫폼에서 이 앱을 사용할 수 없습니다."
 
+#. "Open" as in "Open the app"
+#: /media/js/buttons.js:174
+msgid "Open"
+msgstr "공개"
+
 #: /media/js/apps_iframe_installer.js:63
 msgid "App install error: {error}"
 msgstr "앱 설치 오류: {error}"
-
-#. "Open" as in "Open the app"
-#: /media/js/buttons.js:155
-msgid "Open"
-msgstr "공개"
 
 #. For ages {0} and higher. (de) `ab {0} Jahren`.
 #: /media/js/content-ratings.js:97
@@ -582,115 +570,115 @@ msgstr "Persona 로그인에 실패했습니다. 서버 오류가 발생했습�
 msgid "Persona cannot be reached. Try again later."
 msgstr "Persona 연결이 안됩니다. 다시 시도해 보세요."
 
-#: /media/js/settings.js:103
+#: /media/js/settings.js:104
 msgid "Rest of World"
 msgstr "나머지 부분"
 
-#: /media/js/settings.js:104
+#: /media/js/settings.js:105
 msgid "Argentina"
 msgstr "아르헨티나"
 
-#: /media/js/settings.js:105
+#: /media/js/settings.js:106
 msgid "Brazil"
 msgstr "브라질"
 
-#: /media/js/settings.js:106
+#: /media/js/settings.js:107
 msgid "Chile"
 msgstr "칠레"
 
-#: /media/js/settings.js:107
+#: /media/js/settings.js:108
 msgid "China"
 msgstr "중국"
 
-#: /media/js/settings.js:108
+#: /media/js/settings.js:109
 msgid "Colombia"
 msgstr "콜롬비아"
 
-#: /media/js/settings.js:109
+#: /media/js/settings.js:110
 msgid "Costa Rica"
 msgstr "코스타리카"
 
-#: /media/js/settings.js:110
+#: /media/js/settings.js:111
 msgid "Ecuador"
 msgstr "에쿠아도르"
 
-#: /media/js/settings.js:111
+#: /media/js/settings.js:112
 msgid "El Salvador"
 msgstr "엘살바드로"
 
-#: /media/js/settings.js:112
+#: /media/js/settings.js:113
 msgid "Germany"
 msgstr "독일"
 
-#: /media/js/settings.js:113
+#: /media/js/settings.js:114
 msgid "Greece"
 msgstr "그리스"
 
-#: /media/js/settings.js:114
+#: /media/js/settings.js:115
 msgid "Guatemala"
 msgstr "과테말라"
 
-#: /media/js/settings.js:115
+#: /media/js/settings.js:116
 msgid "Hungary"
 msgstr "헝가리"
 
-#: /media/js/settings.js:116
+#: /media/js/settings.js:117
 msgid "Italy"
 msgstr "이탈리아"
 
-#: /media/js/settings.js:117
+#: /media/js/settings.js:118
 msgid "Mexico"
 msgstr "멕시코"
 
-#: /media/js/settings.js:118
+#: /media/js/settings.js:119
 msgid "Montenegro"
 msgstr "몬테네그로"
 
-#: /media/js/settings.js:119
+#: /media/js/settings.js:120
 msgid "Nicaragua"
 msgstr "니카라과"
 
-#: /media/js/settings.js:120
+#: /media/js/settings.js:121
 msgid "Panama"
 msgstr "파나마"
 
-#: /media/js/settings.js:121
+#: /media/js/settings.js:122
 msgid "Peru"
 msgstr "페루"
 
-#: /media/js/settings.js:122
+#: /media/js/settings.js:123
 msgid "Poland"
 msgstr "폴란드"
 
-#: /media/js/settings.js:123
+#: /media/js/settings.js:124
 msgid "Serbia"
 msgstr "세르비아"
 
-#: /media/js/settings.js:124
+#: /media/js/settings.js:125
 msgid "Spain"
 msgstr "스페인"
 
-#: /media/js/settings.js:125
+#: /media/js/settings.js:126
 msgid "United Kingdom"
 msgstr "영국"
 
-#: /media/js/settings.js:126
+#: /media/js/settings.js:127
 msgid "United States"
 msgstr "미국"
 
-#: /media/js/settings.js:127
+#: /media/js/settings.js:128
 msgid "Uruguay"
 msgstr "우르과이"
 
-#: /media/js/settings.js:128
+#: /media/js/settings.js:129
 msgid "Venezuela"
 msgstr "베네주엘라"
 
-#: /media/js/settings.js:129
+#: /media/js/settings.js:130
 msgid "No region in search"
 msgstr "지역 없음"
 
-#: /media/js/settings.js:167
+#: /media/js/settings.js:168
 msgid "Sorry, you are currently offline. Please try again later."
 msgstr ""
 
@@ -700,15 +688,19 @@ msgid "<b>{n}</b> character left."
 msgid_plural "<b>{n}</b> characters left."
 msgstr[0] "<b>{n}</b>자 남았습니다."
 
-#: /media/js/views/app.js:69
+#: /media/js/views/app.js:75
+msgid "Loading..."
+msgstr "로딩중"
+
+#: /media/js/views/app.js:76
 msgid "App Details"
 msgstr "앱 상세"
 
-#: /media/js/views/feedback.js:23
+#: /media/js/views/feedback.js:22
 msgid "Feedback submitted. Thanks!"
 msgstr "사용자 의견이 전성되었습니다. 감사합니다!"
 
-#: /media/js/views/feedback.js:28
+#: /media/js/views/feedback.js:27 /media/js/views/app/abuse.js:23
 msgid "Sorry, there was an issue submitting your feedback. Please try again later."
 msgstr ""
 
@@ -721,10 +713,6 @@ msgstr "없음"
 msgid "Search Results"
 msgstr "검색 결과"
 
-#: /media/js/views/app/abuse.js:18
+#: /media/js/views/app/abuse.js:17
 msgid "Abuse reported"
 msgstr "오용이 신고됨"
-
-#: /media/js/views/app/abuse.js:22
-msgid "Error while submitting report"
-msgstr "리포트 보내는 도중에 오류 발생"

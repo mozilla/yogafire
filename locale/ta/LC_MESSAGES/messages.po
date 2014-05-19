@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-14T16:32:02.721Z\n"
+"POT-Creation-Date: 2014-05-19T21:13:49.451Z\n"
 "PO-Revision-Date: 2014-05-13 18:18+0000\n"
 "Last-Translator: அருண் குமார் - <thangam.arunx@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -79,7 +79,7 @@ msgstr "நீங்கள் பயர்பாக்ஸ் பயன்பா�
 msgid "Download."
 msgstr "பதிவிறக்கம்."
 
-#: /templates/privacy.html:2 /templates/category_yogafire/main.html:47 /templates/detail/main_yogafire.html:64 /templates/detail/privacy.html:3 /media/js/views/privacy.js:10
+#: /templates/privacy.html:2 /templates/category_yogafire/main.html:47 /templates/detail/main_yogafire.html:51 /templates/detail/privacy.html:3 /media/js/views/privacy.js:10
 #: /media/js/views/app/privacy.js:10
 msgid "Privacy Policy"
 msgstr "தனியுரிமை கொள்கை"
@@ -109,7 +109,7 @@ msgstr "இல்லை"
 msgid "Free"
 msgstr "இலவசம்"
 
-#: /templates/_macros/market_button.html:14 /media/js/buttons.js:176
+#: /templates/_macros/market_button.html:14 /media/js/buttons.js:195
 msgid "Install"
 msgstr "நிறுவு"
 
@@ -128,10 +128,6 @@ msgid_plural "{n} Reviews"
 msgstr[0] "{n} மீளாய்வு"
 msgstr[1] "{n} மீளாய்வுகள்"
 
-#: /templates/_macros/market_tile.html:70
-msgid "Not yet rated"
-msgstr "மதிப்பிடப் படவில்லை"
-
 #: /templates/_macros/more_button.html:2 /templates/_macros/more_button.html:10
 msgid "More"
 msgstr "மேலும்"
@@ -144,7 +140,7 @@ msgstr "{maxstars} க்கு {stars} நட்டசத்திரங்க�
 msgid "Get Help"
 msgstr "உதவியை பெறுக"
 
-#: /templates/category_yogafire/main.html:41 /media/js/views/feedback.js:64
+#: /templates/category_yogafire/main.html:41 /media/js/views/feedback.js:63
 msgid "Feedback"
 msgstr "கருத்து தெரிவி"
 
@@ -155,6 +151,46 @@ msgstr "சிறந்த பயன்பாடுகள்"
 #: /templates/category_yogafire/main.html:27 /templates/category_yogafire/main.html:31
 msgid "No apps in this category"
 msgstr "இந்த வகை பயன்பாடுகள் ஏதுமில்லை"
+
+#: /templates/detail/abuse.html:5 /templates/detail/main_yogafire.html:56 /media/js/views/app/abuse.js:39
+msgid "Report Abuse"
+msgstr "புகார் அளி"
+
+#: /templates/detail/abuse.html:15
+msgid "Send Report"
+msgstr "அறிக்கையை சமர்ப்பி"
+
+#: /templates/detail/content_ratings.html:4
+msgid "Content Rating"
+msgstr "உள்ளடக்க மதிப்பிடல்"
+
+#: /templates/detail/content_ratings.html:73
+msgid "Content Rating Details"
+msgstr "உள்ளடக்க மதிப்பிடலின் விவரங்கள்"
+
+#: /templates/detail/main_yogafire.html:22
+msgid "Description"
+msgstr "விளக்கம்"
+
+#: /templates/detail/main_yogafire.html:34
+msgid "Support Email"
+msgstr "மின்னஞ்சல் ஆதரவு"
+
+#: /templates/detail/main_yogafire.html:40
+msgid "Support Site"
+msgstr "ஆதிரித்த தளம்"
+
+#: /templates/detail/main_yogafire.html:45
+msgid "Homepage"
+msgstr "முகப்பு பக்கம்"
+
+#: /templates/detail/privacy.html:5
+msgid "Back to app"
+msgstr "பயன்பாட்டுக்கு செல்லவும்"
+
+#: /templates/detail/privacy.html:11
+msgid "Loading Privacy Policy..."
+msgstr "தனியுரிமை கொள்கையை ஏற்றுகிறது..."
 
 #: /templates/errors/404.html:2 /templates/errors/fragment.html:1
 msgid "Oh no!"
@@ -176,69 +212,21 @@ msgstr "கூடுதலாக ஏற்றும்பொது பிழ�
 msgid "Try Again"
 msgstr "மீண்டும் முயற்சி செய்"
 
-#: /templates/detail/abuse.html:5 /templates/detail/main_yogafire.html:75 /media/js/views/app/abuse.js:34
-msgid "Report Abuse"
-msgstr "புகார் அளி"
-
-#: /templates/detail/abuse.html:15
-msgid "Send Report"
-msgstr "அறிக்கையை சமர்ப்பி"
-
-#: /templates/detail/content_ratings.html:4
-msgid "Content Rating"
-msgstr "உள்ளடக்க மதிப்பிடல்"
-
-#: /templates/detail/content_ratings.html:73
-msgid "Content Rating Details"
-msgstr "உள்ளடக்க மதிப்பிடலின் விவரங்கள்"
-
-#: /templates/detail/main_yogafire.html:11 /templates/detail/main_yogafire.html:12 /media/js/views/app.js:68
-msgid "Loading..."
-msgstr "ஏற்றுகிறது..."
-
-#: /templates/detail/main_yogafire.html:31
-msgid "Description"
-msgstr "விளக்கம்"
-
-#: /templates/detail/main_yogafire.html:47
-msgid "Support Email"
-msgstr "மின்னஞ்சல் ஆதரவு"
-
-#: /templates/detail/main_yogafire.html:53
-msgid "Support Site"
-msgstr "ஆதிரித்த தளம்"
-
-#: /templates/detail/main_yogafire.html:58
-msgid "Homepage"
-msgstr "முகப்பு பக்கம்"
-
-#: /templates/detail/main_yogafire.html:70
-msgid "Statistics"
-msgstr "புள்ளி நிலவரம்"
-
-#: /templates/detail/privacy.html:5
-msgid "Back to app"
-msgstr "பயன்பாட்டுக்கு செல்லவும்"
-
-#: /templates/detail/privacy.html:11
-msgid "Loading Privacy Policy..."
-msgstr "தனியுரிமை கொள்கையை ஏற்றுகிறது..."
-
-#: /templates/search/main.html:15
+#: /templates/search/main.html:16
 msgid "<b>{n}</b> Result"
 msgid_plural "<b>{n}</b> Results"
 msgstr[0] "<b>{n}</b> முடிவு"
 msgstr[1] "<b>{n}</b> முடிவுகள்"
 
-#: /templates/search/main.html:17
+#: /templates/search/main.html:18
 msgid "Expand"
 msgstr "விரிவுபடுத்து"
 
-#: /templates/search/main.html:35
+#: /templates/search/main.html:36
 msgid "No results found"
 msgstr "முடிவுகள் காணப்படவில்லை"
 
-#: /templates/search/main.html:40
+#: /templates/search/main.html:41
 msgid "No results found, try again later"
 msgstr "எந்த முடிவுகளும் காணப்படவில்லை, பிறகு மீண்டும் முயற்சி செய்"
 
@@ -262,14 +250,14 @@ msgstr "இணையப்பயன்பாட்டுடன் உங்க�
 msgid "This app is unavailable for your platform."
 msgstr "இந்த பயன்பாடு உங்களுடைய இயங்குதளத்திற்கு ஒத்துவராது."
 
+#. "Open" as in "Open the app"
+#: /media/js/buttons.js:174
+msgid "Open"
+msgstr "திறக்கவும்"
+
 #: /media/js/apps_iframe_installer.js:63
 msgid "App install error: {error}"
 msgstr "பயன்பாடு நிறுவல் பிழை: {error}"
-
-#. "Open" as in "Open the app"
-#: /media/js/buttons.js:155
-msgid "Open"
-msgstr "திறக்கவும்"
 
 #. For ages {0} and higher. (de) `ab {0} Jahren`.
 #: /media/js/content-ratings.js:97
@@ -584,115 +572,115 @@ msgstr "பர்சோன உள்நுழைவு தோல்வி�
 msgid "Persona cannot be reached. Try again later."
 msgstr "பர்சோனவை அனுக முடியவில்லை. பிறகு மீண்டும் முயற்சி செய்."
 
-#: /media/js/settings.js:103
+#: /media/js/settings.js:104
 msgid "Rest of World"
 msgstr "உலகின் மற்ற பகுதி"
 
-#: /media/js/settings.js:104
+#: /media/js/settings.js:105
 msgid "Argentina"
 msgstr "அர்ஜென்டீனா"
 
-#: /media/js/settings.js:105
+#: /media/js/settings.js:106
 msgid "Brazil"
 msgstr "பிரேசில்"
 
-#: /media/js/settings.js:106
+#: /media/js/settings.js:107
 msgid "Chile"
 msgstr "சிலி"
 
-#: /media/js/settings.js:107
+#: /media/js/settings.js:108
 msgid "China"
 msgstr "சீனா"
 
-#: /media/js/settings.js:108
+#: /media/js/settings.js:109
 msgid "Colombia"
 msgstr "கொலம்பியா"
 
-#: /media/js/settings.js:109
+#: /media/js/settings.js:110
 msgid "Costa Rica"
 msgstr "கோஸ்டா ரிகா"
 
-#: /media/js/settings.js:110
+#: /media/js/settings.js:111
 msgid "Ecuador"
 msgstr "எக்குவடோர்"
 
-#: /media/js/settings.js:111
+#: /media/js/settings.js:112
 msgid "El Salvador"
 msgstr "எல் சல்வடோர்"
 
-#: /media/js/settings.js:112
+#: /media/js/settings.js:113
 msgid "Germany"
 msgstr "ஜெர்மனி"
 
-#: /media/js/settings.js:113
+#: /media/js/settings.js:114
 msgid "Greece"
 msgstr "கிரீஸ்"
 
-#: /media/js/settings.js:114
+#: /media/js/settings.js:115
 msgid "Guatemala"
 msgstr "குவாத்தமாலா"
 
-#: /media/js/settings.js:115
+#: /media/js/settings.js:116
 msgid "Hungary"
 msgstr "ஹங்கேரி"
 
-#: /media/js/settings.js:116
+#: /media/js/settings.js:117
 msgid "Italy"
 msgstr "இத்தாலி"
 
-#: /media/js/settings.js:117
+#: /media/js/settings.js:118
 msgid "Mexico"
 msgstr "மெக்ஸிக்கோ"
 
-#: /media/js/settings.js:118
+#: /media/js/settings.js:119
 msgid "Montenegro"
 msgstr "மொண்டெனேகுரோ"
 
-#: /media/js/settings.js:119
+#: /media/js/settings.js:120
 msgid "Nicaragua"
 msgstr "நிகரகுவா"
 
-#: /media/js/settings.js:120
+#: /media/js/settings.js:121
 msgid "Panama"
 msgstr "பனாமா"
 
-#: /media/js/settings.js:121
+#: /media/js/settings.js:122
 msgid "Peru"
 msgstr "பெரு"
 
-#: /media/js/settings.js:122
+#: /media/js/settings.js:123
 msgid "Poland"
 msgstr "போலந்து"
 
-#: /media/js/settings.js:123
+#: /media/js/settings.js:124
 msgid "Serbia"
 msgstr "செர்பியா"
 
-#: /media/js/settings.js:124
+#: /media/js/settings.js:125
 msgid "Spain"
 msgstr "ஸ்பெயின்"
 
-#: /media/js/settings.js:125
+#: /media/js/settings.js:126
 msgid "United Kingdom"
 msgstr "ஐக்கிய இராஜ்யம்"
 
-#: /media/js/settings.js:126
+#: /media/js/settings.js:127
 msgid "United States"
 msgstr "அமெரிக்கா"
 
-#: /media/js/settings.js:127
+#: /media/js/settings.js:128
 msgid "Uruguay"
 msgstr "உருகுவே"
 
-#: /media/js/settings.js:128
+#: /media/js/settings.js:129
 msgid "Venezuela"
 msgstr "வெனிசுலா"
 
-#: /media/js/settings.js:129
+#: /media/js/settings.js:130
 msgid "No region in search"
 msgstr "தேடலில் எந்த பகுதியும் இல்லை"
 
-#: /media/js/settings.js:167
+#: /media/js/settings.js:168
 msgid "Sorry, you are currently offline. Please try again later."
 msgstr ""
 
@@ -703,15 +691,19 @@ msgid_plural "<b>{n}</b> characters left."
 msgstr[0] "<b>{n}</b> எழுத்துக்கள் விடுப்பட்டுள்ளது."
 msgstr[1] "<b>{n}</b> எழுத்துக்கள் விடுப்பட்டுள்ளன."
 
-#: /media/js/views/app.js:69
+#: /media/js/views/app.js:75
+msgid "Loading..."
+msgstr "ஏற்றுகிறது..."
+
+#: /media/js/views/app.js:76
 msgid "App Details"
 msgstr "பயன்பாட்டு விவரங்கள்"
 
-#: /media/js/views/feedback.js:23
+#: /media/js/views/feedback.js:22
 msgid "Feedback submitted. Thanks!"
 msgstr "உங்களுடைய கருத்து சமர்பிக்கப்பட்டது. நன்றி!"
 
-#: /media/js/views/feedback.js:28
+#: /media/js/views/feedback.js:27 /media/js/views/app/abuse.js:23
 msgid "Sorry, there was an issue submitting your feedback. Please try again later."
 msgstr ""
 
@@ -724,10 +716,6 @@ msgstr "காணப்படவில்லைல"
 msgid "Search Results"
 msgstr "தேடல் முடிவுகள்"
 
-#: /media/js/views/app/abuse.js:18
+#: /media/js/views/app/abuse.js:17
 msgid "Abuse reported"
 msgstr "புகார் அளித்துவிட்டீர்கள்"
-
-#: /media/js/views/app/abuse.js:22
-msgid "Error while submitting report"
-msgstr "அறிக்கையை சமர்ப்பிக்கும்போது பிழை நேர்ந்தது"

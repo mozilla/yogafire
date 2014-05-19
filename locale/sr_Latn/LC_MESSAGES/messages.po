@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-14T16:32:02.721Z\n"
+"POT-Creation-Date: 2014-05-19T21:13:49.451Z\n"
 "PO-Revision-Date: 2014-02-10 10:37+0000\n"
 "Last-Translator: Vanja <vtumbas@mozilla.rs>\n"
 "Language-Team: none\n"
@@ -79,7 +79,7 @@ msgstr "Morate koristiti Firefox kako bi instalirali Firefox aplikacije."
 msgid "Download."
 msgstr "Preuzmi."
 
-#: /templates/privacy.html:2 /templates/category_yogafire/main.html:47 /templates/detail/main_yogafire.html:64 /templates/detail/privacy.html:3 /media/js/views/privacy.js:10
+#: /templates/privacy.html:2 /templates/category_yogafire/main.html:47 /templates/detail/main_yogafire.html:51 /templates/detail/privacy.html:3 /media/js/views/privacy.js:10
 #: /media/js/views/app/privacy.js:10
 msgid "Privacy Policy"
 msgstr "Polisa o privatnosti"
@@ -109,7 +109,7 @@ msgstr "Nedostupna"
 msgid "Free"
 msgstr "Besplatno"
 
-#: /templates/_macros/market_button.html:14 /media/js/buttons.js:176
+#: /templates/_macros/market_button.html:14 /media/js/buttons.js:195
 msgid "Install"
 msgstr "Instaliraj"
 
@@ -129,10 +129,6 @@ msgstr[0] "{n} pregled"
 msgstr[1] "{n} pregleda"
 msgstr[2] "{n} pregleda"
 
-#: /templates/_macros/market_tile.html:70
-msgid "Not yet rated"
-msgstr "Nije ocenjena"
-
 #: /templates/_macros/more_button.html:2 /templates/_macros/more_button.html:10
 msgid "More"
 msgstr "Još"
@@ -145,7 +141,7 @@ msgstr "Ocenjeno sa {stars} od {maxstars} zvezdica"
 msgid "Get Help"
 msgstr "Dobavi pomoć"
 
-#: /templates/category_yogafire/main.html:41 /media/js/views/feedback.js:64
+#: /templates/category_yogafire/main.html:41 /media/js/views/feedback.js:63
 msgid "Feedback"
 msgstr "Kritika"
 
@@ -156,6 +152,46 @@ msgstr "Istaknute"
 #: /templates/category_yogafire/main.html:27 /templates/category_yogafire/main.html:31
 msgid "No apps in this category"
 msgstr "Nema aplikacija u ovoj kategoriji"
+
+#: /templates/detail/abuse.html:5 /templates/detail/main_yogafire.html:56 /media/js/views/app/abuse.js:39
+msgid "Report Abuse"
+msgstr "Prijavi zloupotrebu"
+
+#: /templates/detail/abuse.html:15
+msgid "Send Report"
+msgstr "Pošalji izveštaj"
+
+#: /templates/detail/content_ratings.html:4
+msgid "Content Rating"
+msgstr "Ocena sadržaja"
+
+#: /templates/detail/content_ratings.html:73
+msgid "Content Rating Details"
+msgstr "Detalji ocene sadržaja"
+
+#: /templates/detail/main_yogafire.html:22
+msgid "Description"
+msgstr "Opis"
+
+#: /templates/detail/main_yogafire.html:34
+msgid "Support Email"
+msgstr "E-pošta podrške"
+
+#: /templates/detail/main_yogafire.html:40
+msgid "Support Site"
+msgstr "Sajt podrške"
+
+#: /templates/detail/main_yogafire.html:45
+msgid "Homepage"
+msgstr "Početna strana"
+
+#: /templates/detail/privacy.html:5
+msgid "Back to app"
+msgstr "Nazad na aplikaciju"
+
+#: /templates/detail/privacy.html:11
+msgid "Loading Privacy Policy..."
+msgstr "Učitavanje polise o privatnosti..."
 
 #: /templates/errors/404.html:2 /templates/errors/fragment.html:1
 msgid "Oh no!"
@@ -177,70 +213,22 @@ msgstr "Greška pri učitavanju"
 msgid "Try Again"
 msgstr "Pokušaj ponovo"
 
-#: /templates/detail/abuse.html:5 /templates/detail/main_yogafire.html:75 /media/js/views/app/abuse.js:34
-msgid "Report Abuse"
-msgstr "Prijavi zloupotrebu"
-
-#: /templates/detail/abuse.html:15
-msgid "Send Report"
-msgstr "Pošalji izveštaj"
-
-#: /templates/detail/content_ratings.html:4
-msgid "Content Rating"
-msgstr "Ocena sadržaja"
-
-#: /templates/detail/content_ratings.html:73
-msgid "Content Rating Details"
-msgstr "Detalji ocene sadržaja"
-
-#: /templates/detail/main_yogafire.html:11 /templates/detail/main_yogafire.html:12 /media/js/views/app.js:68
-msgid "Loading..."
-msgstr "Učitavanje..."
-
-#: /templates/detail/main_yogafire.html:31
-msgid "Description"
-msgstr "Opis"
-
-#: /templates/detail/main_yogafire.html:47
-msgid "Support Email"
-msgstr "E-pošta podrške"
-
-#: /templates/detail/main_yogafire.html:53
-msgid "Support Site"
-msgstr "Sajt podrške"
-
-#: /templates/detail/main_yogafire.html:58
-msgid "Homepage"
-msgstr "Početna strana"
-
-#: /templates/detail/main_yogafire.html:70
-msgid "Statistics"
-msgstr "Statistika"
-
-#: /templates/detail/privacy.html:5
-msgid "Back to app"
-msgstr "Nazad na aplikaciju"
-
-#: /templates/detail/privacy.html:11
-msgid "Loading Privacy Policy..."
-msgstr "Učitavanje polise o privatnosti..."
-
-#: /templates/search/main.html:15
+#: /templates/search/main.html:16
 msgid "<b>{n}</b> Result"
 msgid_plural "<b>{n}</b> Results"
 msgstr[0] "<b>{n}</b> rezultat"
 msgstr[1] "<b>{n}</b> rezultata"
 msgstr[2] "<b>{n}</b> rezultata"
 
-#: /templates/search/main.html:17
+#: /templates/search/main.html:18
 msgid "Expand"
 msgstr "Proširi"
 
-#: /templates/search/main.html:35
+#: /templates/search/main.html:36
 msgid "No results found"
 msgstr "Nema rezultata"
 
-#: /templates/search/main.html:40
+#: /templates/search/main.html:41
 msgid "No results found, try again later"
 msgstr "Nema rezultata - pokušajte kasnije"
 
@@ -264,14 +252,14 @@ msgstr "Vaš pregledač ili uređaj nije kompatibilan sa veb aplikacijama."
 msgid "This app is unavailable for your platform."
 msgstr "Ova aplikacija nije dostupna za Vašu platformu."
 
+#. "Open" as in "Open the app"
+#: /media/js/buttons.js:174
+msgid "Open"
+msgstr ""
+
 #: /media/js/apps_iframe_installer.js:63
 msgid "App install error: {error}"
 msgstr "Greška tokom instalacije aplikacije: {error}"
-
-#. "Open" as in "Open the app"
-#: /media/js/buttons.js:155
-msgid "Open"
-msgstr ""
 
 #. For ages {0} and higher. (de) `ab {0} Jahren`.
 #: /media/js/content-ratings.js:97
@@ -586,115 +574,115 @@ msgstr "Prijava preko sistema Persona nije uspešna. Došlo je do greške na ser
 msgid "Persona cannot be reached. Try again later."
 msgstr ""
 
-#: /media/js/settings.js:103
+#: /media/js/settings.js:104
 msgid "Rest of World"
 msgstr "Ostatak sveta"
 
-#: /media/js/settings.js:104
+#: /media/js/settings.js:105
 msgid "Argentina"
 msgstr "Argentina"
 
-#: /media/js/settings.js:105
+#: /media/js/settings.js:106
 msgid "Brazil"
 msgstr "Brazil"
 
-#: /media/js/settings.js:106
+#: /media/js/settings.js:107
 msgid "Chile"
 msgstr "Čile"
 
-#: /media/js/settings.js:107
+#: /media/js/settings.js:108
 msgid "China"
 msgstr "Kina"
 
-#: /media/js/settings.js:108
+#: /media/js/settings.js:109
 msgid "Colombia"
 msgstr "Kolumbija"
 
-#: /media/js/settings.js:109
+#: /media/js/settings.js:110
 msgid "Costa Rica"
 msgstr ""
 
-#: /media/js/settings.js:110
+#: /media/js/settings.js:111
 msgid "Ecuador"
 msgstr ""
 
-#: /media/js/settings.js:111
+#: /media/js/settings.js:112
 msgid "El Salvador"
 msgstr ""
 
-#: /media/js/settings.js:112
+#: /media/js/settings.js:113
 msgid "Germany"
 msgstr "Nemačka"
 
-#: /media/js/settings.js:113
+#: /media/js/settings.js:114
 msgid "Greece"
 msgstr "Grčka"
 
-#: /media/js/settings.js:114
+#: /media/js/settings.js:115
 msgid "Guatemala"
 msgstr ""
 
-#: /media/js/settings.js:115
+#: /media/js/settings.js:116
 msgid "Hungary"
 msgstr "Mađarska"
 
-#: /media/js/settings.js:116
+#: /media/js/settings.js:117
 msgid "Italy"
 msgstr "Italija"
 
-#: /media/js/settings.js:117
+#: /media/js/settings.js:118
 msgid "Mexico"
 msgstr "Meksiko"
 
-#: /media/js/settings.js:118
+#: /media/js/settings.js:119
 msgid "Montenegro"
 msgstr "Crna Gora"
 
-#: /media/js/settings.js:119
+#: /media/js/settings.js:120
 msgid "Nicaragua"
 msgstr ""
 
-#: /media/js/settings.js:120
+#: /media/js/settings.js:121
 msgid "Panama"
 msgstr ""
 
-#: /media/js/settings.js:121
+#: /media/js/settings.js:122
 msgid "Peru"
 msgstr "Peru"
 
-#: /media/js/settings.js:122
+#: /media/js/settings.js:123
 msgid "Poland"
 msgstr "Poljska"
 
-#: /media/js/settings.js:123
+#: /media/js/settings.js:124
 msgid "Serbia"
 msgstr "Srbija"
 
-#: /media/js/settings.js:124
+#: /media/js/settings.js:125
 msgid "Spain"
 msgstr "Španija"
 
-#: /media/js/settings.js:125
+#: /media/js/settings.js:126
 msgid "United Kingdom"
 msgstr "Ujedinjeno Kraljevstvo"
 
-#: /media/js/settings.js:126
+#: /media/js/settings.js:127
 msgid "United States"
 msgstr "Sjedinjene Američke Države"
 
-#: /media/js/settings.js:127
+#: /media/js/settings.js:128
 msgid "Uruguay"
 msgstr "Urugvaj"
 
-#: /media/js/settings.js:128
+#: /media/js/settings.js:129
 msgid "Venezuela"
 msgstr "Venecuela"
 
-#: /media/js/settings.js:129
+#: /media/js/settings.js:130
 msgid "No region in search"
 msgstr "Nema regiona u pretrazi"
 
-#: /media/js/settings.js:167
+#: /media/js/settings.js:168
 msgid "Sorry, you are currently offline. Please try again later."
 msgstr ""
 
@@ -706,15 +694,19 @@ msgstr[0] "Ostao je <b>{n}</b> karakter."
 msgstr[1] "Ostalo je <b>{n}</b> karaktera."
 msgstr[2] "Ostalo je <b>{n}</b> karaktera."
 
-#: /media/js/views/app.js:69
+#: /media/js/views/app.js:75
+msgid "Loading..."
+msgstr "Učitavanje..."
+
+#: /media/js/views/app.js:76
 msgid "App Details"
 msgstr "Detalji o aplikaciji"
 
-#: /media/js/views/feedback.js:23
+#: /media/js/views/feedback.js:22
 msgid "Feedback submitted. Thanks!"
 msgstr "Povratne informacije su poslate. Hvala!"
 
-#: /media/js/views/feedback.js:28
+#: /media/js/views/feedback.js:27 /media/js/views/app/abuse.js:23
 msgid "Sorry, there was an issue submitting your feedback. Please try again later."
 msgstr ""
 
@@ -727,10 +719,6 @@ msgstr "Nije nađeno"
 msgid "Search Results"
 msgstr "Rezultat pretrage"
 
-#: /media/js/views/app/abuse.js:18
+#: /media/js/views/app/abuse.js:17
 msgid "Abuse reported"
 msgstr "Zloupotreba prijavljena"
-
-#: /media/js/views/app/abuse.js:22
-msgid "Error while submitting report"
-msgstr "Greška pri slanju izveštaja"
