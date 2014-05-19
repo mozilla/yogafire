@@ -86,7 +86,10 @@ define('previews',
         e.preventDefault();
     }).on('populatetray', function() {
         console.log('Populating trays');
-        $('.listing.expanded .mkt-tile + .tray').each(populateTray);
+        // setTimeout to let placeholder render.
+        setTimeout(function() {
+            $('.listing.expanded .mkt-tile + .tray').each(populateTray);
+        });
     });
 
 });

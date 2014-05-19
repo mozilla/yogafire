@@ -357,13 +357,10 @@ define('builder',
                             trigger_fragment_loaded(signature.id || null);
                         }
 
-                        if (key == 'search' && !page_num) {
-                            // Search page needs time for the placeholder to render for some reason.
-                            // Race condition solver.
-                            setTimeout(inject_response);
-                        } else {
-                            inject_response();
-                        }
+                        // Race condition solver with setTimeout.
+                        // localForage is returning the data too fast, before the placeholder
+                        // is rendered.
+                        setTimeout(inject_response);
                     }).fail(function(error) {
                         if (!replace) {
                             var el = document.getElementById(uid);
