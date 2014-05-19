@@ -38,7 +38,7 @@ define('previews',
         $tray.addClass('init');
         var slider = Flipsnap(
             $tray.find('.content')[0],
-            {distance: THUMB_PADDED}
+            {disableTouch: true, distance: THUMB_PADDED}
         );
         this.slider = slider;
         var $pointer = $tray.find('.dots .dot');
