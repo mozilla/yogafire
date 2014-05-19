@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Fireplace\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-19T21:13:49.451Z\n"
+"POT-Creation-Date: 2014-05-19T21:42:04.153Z\n"
 "PO-Revision-Date: 2014-04-30 02:06+0000\n"
 "Last-Translator: Shen <steekid@icloud.com>\n"
 "Language-Team: Chinese Simplified, China <LL@li.org>\n"
@@ -89,13 +89,9 @@ msgstr "隐私条款"
 msgid "Terms of Use"
 msgstr "使用条款"
 
-#: /templates/_includes/offline.html:2
-msgid "Sorry, you need to be connected to the Internet to access Marketplace."
-msgstr ""
-
-#: /templates/_includes/offline.html:4
-msgid "Go Online"
-msgstr ""
+#: /templates/_includes/offline.html:2 /templates/errors/pagination.html:2
+msgid "Try Again"
+msgstr "重试"
 
 #: /templates/_includes/truncated.html:4
 msgid "...more"
@@ -128,13 +124,13 @@ msgid "{n} Review"
 msgid_plural "{n} Reviews"
 msgstr[0] "{n} 条评论"
 
-#: /templates/_macros/more_button.html:2 /templates/_macros/more_button.html:10
-msgid "More"
-msgstr "更多"
-
 #: /templates/_macros/stars.html:5
 msgid "Rated {stars} out of {maxstars} stars"
 msgstr "评{stars}星（满分{maxstars}星）"
+
+#: /templates/_macros/more_button.html:2 /templates/_macros/more_button.html:10
+msgid "More"
+msgstr "更多"
 
 #: /templates/category_yogafire/main.html:38
 msgid "Get Help"
@@ -208,10 +204,6 @@ msgstr "出错了。"
 msgid "Error loading more"
 msgstr "错误地加载过多"
 
-#: /templates/errors/pagination.html:2
-msgid "Try Again"
-msgstr "重试"
-
 #: /templates/search/main.html:16
 msgid "<b>{n}</b> Result"
 msgid_plural "<b>{n}</b> Results"
@@ -233,6 +225,10 @@ msgstr "未找到结果，请稍后再试"
 msgid "Send"
 msgstr "发送"
 
+#: /media/js/apps_iframe_installer.js:63
+msgid "App install error: {error}"
+msgstr "应用安装出错：{error}"
+
 #: /media/js/apps.js:87
 msgid "Your device does not support payments."
 msgstr "您的设备不支持付款。"
@@ -253,10 +249,6 @@ msgstr "此应用无法在您的系统平台上运行。"
 #: /media/js/buttons.js:174
 msgid "Open"
 msgstr "打开"
-
-#: /media/js/apps_iframe_installer.js:63
-msgid "App install error: {error}"
-msgstr "应用安装出错：{error}"
 
 #. For ages {0} and higher. (de) `ab {0} Jahren`.
 #: /media/js/content-ratings.js:97

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-19T21:13:49.451Z\n"
+"POT-Creation-Date: 2014-05-19T21:42:04.153Z\n"
 "PO-Revision-Date: 2013-12-20 17:51+0000\n"
 "Last-Translator: Chengings <chengings@gmail.com>\n"
 "Language-Team: none\n"
@@ -88,13 +88,9 @@ msgstr "นโยบายความเป็นส่วนตัว"
 msgid "Terms of Use"
 msgstr "เงื่อนไขการใช้งาน"
 
-#: /templates/_includes/offline.html:2
-msgid "Sorry, you need to be connected to the Internet to access Marketplace."
-msgstr ""
-
-#: /templates/_includes/offline.html:4
-msgid "Go Online"
-msgstr ""
+#: /templates/_includes/offline.html:2 /templates/errors/pagination.html:2
+msgid "Try Again"
+msgstr "ลองใหม่"
 
 #: /templates/_includes/truncated.html:4
 msgid "...more"
@@ -127,13 +123,13 @@ msgid "{n} Review"
 msgid_plural "{n} Reviews"
 msgstr[0] "{n} บทวิจารณ์"
 
-#: /templates/_macros/more_button.html:2 /templates/_macros/more_button.html:10
-msgid "More"
-msgstr "เพิ่มเติม"
-
 #: /templates/_macros/stars.html:5
 msgid "Rated {stars} out of {maxstars} stars"
 msgstr "ถูกจัดอันดับ {stars} จาก {maxstars} ดาว"
+
+#: /templates/_macros/more_button.html:2 /templates/_macros/more_button.html:10
+msgid "More"
+msgstr "เพิ่มเติม"
 
 #: /templates/category_yogafire/main.html:38
 msgid "Get Help"
@@ -207,10 +203,6 @@ msgstr "เกิดข้อผิดพลาด"
 msgid "Error loading more"
 msgstr "เกิดข้อผิดพลาดขณะโหลดเพิ่มเติม"
 
-#: /templates/errors/pagination.html:2
-msgid "Try Again"
-msgstr "ลองใหม่"
-
 #: /templates/search/main.html:16
 msgid "<b>{n}</b> Result"
 msgid_plural "<b>{n}</b> Results"
@@ -232,6 +224,10 @@ msgstr "ไม่พบผลลัพธ์ ลองใหม่อีกค�
 msgid "Send"
 msgstr "ส่ง"
 
+#: /media/js/apps_iframe_installer.js:63
+msgid "App install error: {error}"
+msgstr "การติดตั้งแอพผิดพลาด: {error}"
+
 #: /media/js/apps.js:87
 msgid "Your device does not support payments."
 msgstr "อุปกรณ์ของคุณไม่รองรับการชำระเงิน"
@@ -252,10 +248,6 @@ msgstr "แอพนี้ไม่สามารถใช้งานได้
 #: /media/js/buttons.js:174
 msgid "Open"
 msgstr ""
-
-#: /media/js/apps_iframe_installer.js:63
-msgid "App install error: {error}"
-msgstr "การติดตั้งแอพผิดพลาด: {error}"
 
 #. For ages {0} and higher. (de) `ab {0} Jahren`.
 #: /media/js/content-ratings.js:97

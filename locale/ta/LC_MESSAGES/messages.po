@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-19T21:13:49.451Z\n"
+"POT-Creation-Date: 2014-05-19T21:42:04.153Z\n"
 "PO-Revision-Date: 2014-05-13 18:18+0000\n"
 "Last-Translator: அருண் குமார் - <thangam.arunx@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -88,13 +88,9 @@ msgstr "தனியுரிமை கொள்கை"
 msgid "Terms of Use"
 msgstr "பயன்பாட்டு நிபந்தனைகள்"
 
-#: /templates/_includes/offline.html:2
-msgid "Sorry, you need to be connected to the Internet to access Marketplace."
-msgstr ""
-
-#: /templates/_includes/offline.html:4
-msgid "Go Online"
-msgstr ""
+#: /templates/_includes/offline.html:2 /templates/errors/pagination.html:2
+msgid "Try Again"
+msgstr "மீண்டும் முயற்சி செய்"
 
 #: /templates/_includes/truncated.html:4
 msgid "...more"
@@ -128,13 +124,13 @@ msgid_plural "{n} Reviews"
 msgstr[0] "{n} மீளாய்வு"
 msgstr[1] "{n} மீளாய்வுகள்"
 
-#: /templates/_macros/more_button.html:2 /templates/_macros/more_button.html:10
-msgid "More"
-msgstr "மேலும்"
-
 #: /templates/_macros/stars.html:5
 msgid "Rated {stars} out of {maxstars} stars"
 msgstr "{maxstars} க்கு {stars} நட்டசத்திரங்கள் மதிப்பிடப்பட்டது"
+
+#: /templates/_macros/more_button.html:2 /templates/_macros/more_button.html:10
+msgid "More"
+msgstr "மேலும்"
 
 #: /templates/category_yogafire/main.html:38
 msgid "Get Help"
@@ -208,10 +204,6 @@ msgstr "ஒரு பிழை நேர்ந்தது."
 msgid "Error loading more"
 msgstr "கூடுதலாக ஏற்றும்பொது பிழை"
 
-#: /templates/errors/pagination.html:2
-msgid "Try Again"
-msgstr "மீண்டும் முயற்சி செய்"
-
 #: /templates/search/main.html:16
 msgid "<b>{n}</b> Result"
 msgid_plural "<b>{n}</b> Results"
@@ -234,6 +226,10 @@ msgstr "எந்த முடிவுகளும் காணப்படவ�
 msgid "Send"
 msgstr "அனுப்பு"
 
+#: /media/js/apps_iframe_installer.js:63
+msgid "App install error: {error}"
+msgstr "பயன்பாடு நிறுவல் பிழை: {error}"
+
 #: /media/js/apps.js:87
 msgid "Your device does not support payments."
 msgstr "உங்களுடைய சாதனம் பணம் செலுத்தலை முறைகளை ஆதரிக்கவில்லை."
@@ -254,10 +250,6 @@ msgstr "இந்த பயன்பாடு உங்களுடைய இய
 #: /media/js/buttons.js:174
 msgid "Open"
 msgstr "திறக்கவும்"
-
-#: /media/js/apps_iframe_installer.js:63
-msgid "App install error: {error}"
-msgstr "பயன்பாடு நிறுவல் பிழை: {error}"
 
 #. For ages {0} and higher. (de) `ab {0} Jahren`.
 #: /media/js/content-ratings.js:97

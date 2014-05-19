@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-19T21:13:49.451Z\n"
+"POT-Creation-Date: 2014-05-19T21:42:04.153Z\n"
 "PO-Revision-Date: 2014-05-17 19:33-0400\n"
 "Last-Translator: Kohei Yoshino <kohei.yoshino@gmail.com>\n"
 "Language-Team: Japanese\n"
@@ -87,13 +87,9 @@ msgstr "プライバシーポリシー"
 msgid "Terms of Use"
 msgstr "利用規約"
 
-#: /templates/_includes/offline.html:2
-msgid "Sorry, you need to be connected to the Internet to access Marketplace."
-msgstr "申し訳ありません。Marketplace を利用するにはインターネットへ接続する必要があります。"
-
-#: /templates/_includes/offline.html:4
-msgid "Go Online"
-msgstr "オンラインにする"
+#: /templates/_includes/offline.html:2 /templates/errors/pagination.html:2
+msgid "Try Again"
+msgstr "再読み込み"
 
 #: /templates/_includes/truncated.html:4
 msgid "...more"
@@ -127,13 +123,13 @@ msgid_plural "{n} Reviews"
 msgstr[0] "{n} 件のレビュー"
 msgstr[1] "{n} 件のレビュー"
 
-#: /templates/_macros/more_button.html:2 /templates/_macros/more_button.html:10
-msgid "More"
-msgstr "もっと見る"
-
 #: /templates/_macros/stars.html:5
 msgid "Rated {stars} out of {maxstars} stars"
 msgstr "評価: {maxstars} つ星のうち {stars}"
+
+#: /templates/_macros/more_button.html:2 /templates/_macros/more_button.html:10
+msgid "More"
+msgstr "もっと見る"
 
 #: /templates/category_yogafire/main.html:38
 msgid "Get Help"
@@ -207,10 +203,6 @@ msgstr "問題が発生しました。"
 msgid "Error loading more"
 msgstr "読み込み中に問題が発生しました"
 
-#: /templates/errors/pagination.html:2
-msgid "Try Again"
-msgstr "再読み込み"
-
 #: /templates/search/main.html:16
 msgid "<b>{n}</b> Result"
 msgid_plural "<b>{n}</b> Results"
@@ -233,6 +225,10 @@ msgstr "該当するアプリはありません。また後日見に来てくだ
 msgid "Send"
 msgstr "送信"
 
+#: /media/js/apps_iframe_installer.js:63
+msgid "App install error: {error}"
+msgstr "アプリのインストールエラー: {error}"
+
 #: /media/js/apps.js:87
 msgid "Your device does not support payments."
 msgstr "あなたの端末は決済に対応していません。"
@@ -253,10 +249,6 @@ msgstr "このアプリはお使いの OS には対応していません。"
 #: /media/js/buttons.js:174
 msgid "Open"
 msgstr "開く"
-
-#: /media/js/apps_iframe_installer.js:63
-msgid "App install error: {error}"
-msgstr "アプリのインストールエラー: {error}"
 
 #. For ages {0} and higher. (de) `ab {0} Jahren`.
 #: /media/js/content-ratings.js:97

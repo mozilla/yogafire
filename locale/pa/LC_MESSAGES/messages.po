@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-19T21:13:49.451Z\n"
+"POT-Creation-Date: 2014-05-19T21:42:04.153Z\n"
 "PO-Revision-Date: 2014-04-01 23:16+0000\n"
 "Last-Translator: Aman <amanpreet.alam@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -88,13 +88,9 @@ msgstr "ਨਿੱਜਤਾ ਨੀਤੀ"
 msgid "Terms of Use"
 msgstr "ਵਰਤੋ ਦਿਆ ਸ਼ਰਤਾ"
 
-#: /templates/_includes/offline.html:2
-msgid "Sorry, you need to be connected to the Internet to access Marketplace."
-msgstr ""
-
-#: /templates/_includes/offline.html:4
-msgid "Go Online"
-msgstr ""
+#: /templates/_includes/offline.html:2 /templates/errors/pagination.html:2
+msgid "Try Again"
+msgstr "ਫੇਰ ਕੋਸ਼ਿਸ਼ ਕਰੋ"
 
 #: /templates/_includes/truncated.html:4
 msgid "...more"
@@ -128,13 +124,13 @@ msgid_plural "{n} Reviews"
 msgstr[0] "{n} ਸਮੀਖਿਆ"
 msgstr[1] "{n} ਸਮੀਖਿਆ"
 
-#: /templates/_macros/more_button.html:2 /templates/_macros/more_button.html:10
-msgid "More"
-msgstr "ਹੋਰ"
-
 #: /templates/_macros/stars.html:5
 msgid "Rated {stars} out of {maxstars} stars"
 msgstr "ਤਾਰਿਆ ਵਿਚੋ{maxstars} Rated {ਤਾਰੇ}"
+
+#: /templates/_macros/more_button.html:2 /templates/_macros/more_button.html:10
+msgid "More"
+msgstr "ਹੋਰ"
 
 #: /templates/category_yogafire/main.html:38
 msgid "Get Help"
@@ -208,10 +204,6 @@ msgstr "ਇੱਕ ਗਲਤੀ ਆਈ ਹੈ।"
 msgid "Error loading more"
 msgstr "ਹੋਰ ਲੋਡ ਕਰਨ ਦੋਰਾਨ ਗਲਤੀ"
 
-#: /templates/errors/pagination.html:2
-msgid "Try Again"
-msgstr "ਫੇਰ ਕੋਸ਼ਿਸ਼ ਕਰੋ"
-
 #: /templates/search/main.html:16
 msgid "<b>{n}</b> Result"
 msgid_plural "<b>{n}</b> Results"
@@ -234,6 +226,10 @@ msgstr "ਕੋਈ ਨਤੀਜਾ ਨਹੀਂ ਲੱਭਿਆ, ਬਾਅਦ ਵ
 msgid "Send"
 msgstr "ਭੇਜੋ"
 
+#: /media/js/apps_iframe_installer.js:63
+msgid "App install error: {error}"
+msgstr "ਐਪ ਇੰਸਟਾਲ  ਗਲਤੀ: {ਗਲਤੀ}"
+
 #: /media/js/apps.js:87
 msgid "Your device does not support payments."
 msgstr "ਤੁਹਾਡਾ ਜੰਤਰ ਅਦਾਇਗੀ ਨੂੰ ਸਹਿਯੋਗ ਨਹੀ ਕਰਦਾ।"
@@ -254,10 +250,6 @@ msgstr "ਇਹ ਐਪਲੀਕੇਸ਼ ਤੁਹਾਡੇ ਪਲੇਟਫਾਰ
 #: /media/js/buttons.js:174
 msgid "Open"
 msgstr ""
-
-#: /media/js/apps_iframe_installer.js:63
-msgid "App install error: {error}"
-msgstr "ਐਪ ਇੰਸਟਾਲ  ਗਲਤੀ: {ਗਲਤੀ}"
 
 #. For ages {0} and higher. (de) `ab {0} Jahren`.
 #: /media/js/content-ratings.js:97

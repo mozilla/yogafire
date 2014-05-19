@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Fireplace\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-19T21:13:49.451Z\n"
+"POT-Creation-Date: 2014-05-19T21:42:04.153Z\n"
 "PO-Revision-Date: 2014-05-02 07:15+0000\n"
 "Last-Translator: Sara <sara.todaro@mozillaitalia.org>\n"
 "Language-Team: gialloporpora <gialloporpora@yahoo.it>\n"
@@ -89,13 +89,9 @@ msgstr "Informativa sulla privacy"
 msgid "Terms of Use"
 msgstr "Termini d'uso"
 
-#: /templates/_includes/offline.html:2
-msgid "Sorry, you need to be connected to the Internet to access Marketplace."
-msgstr ""
-
-#: /templates/_includes/offline.html:4
-msgid "Go Online"
-msgstr ""
+#: /templates/_includes/offline.html:2 /templates/errors/pagination.html:2
+msgid "Try Again"
+msgstr "Riprova"
 
 #: /templates/_includes/truncated.html:4
 msgid "...more"
@@ -129,13 +125,13 @@ msgid_plural "{n} Reviews"
 msgstr[0] "{n} commento"
 msgstr[1] "{n} commenti"
 
-#: /templates/_macros/more_button.html:2 /templates/_macros/more_button.html:10
-msgid "More"
-msgstr "Altro"
-
 #: /templates/_macros/stars.html:5
 msgid "Rated {stars} out of {maxstars} stars"
 msgstr "Assegnate {stars} su {maxstars} stelle"
+
+#: /templates/_macros/more_button.html:2 /templates/_macros/more_button.html:10
+msgid "More"
+msgstr "Altro"
 
 #: /templates/category_yogafire/main.html:38
 msgid "Get Help"
@@ -209,10 +205,6 @@ msgstr "Si è verificato un errore."
 msgid "Error loading more"
 msgstr "Errore durante il caricamento di contenuti extra"
 
-#: /templates/errors/pagination.html:2
-msgid "Try Again"
-msgstr "Riprova"
-
 #: /templates/search/main.html:16
 msgid "<b>{n}</b> Result"
 msgid_plural "<b>{n}</b> Results"
@@ -235,6 +227,10 @@ msgstr "Nessun risultato trovato. Riprova più tardi."
 msgid "Send"
 msgstr "Invia"
 
+#: /media/js/apps_iframe_installer.js:63
+msgid "App install error: {error}"
+msgstr "Errore di installazione dell'app: {error}"
+
 #: /media/js/apps.js:87
 msgid "Your device does not support payments."
 msgstr "Il dispositivo in uso non supporta i pagamenti."
@@ -255,10 +251,6 @@ msgstr "Questa app non è disponibile per la piattaforma in uso."
 #: /media/js/buttons.js:174
 msgid "Open"
 msgstr "Apri"
-
-#: /media/js/apps_iframe_installer.js:63
-msgid "App install error: {error}"
-msgstr "Errore di installazione dell'app: {error}"
 
 #. For ages {0} and higher. (de) `ab {0} Jahren`.
 #: /media/js/content-ratings.js:97

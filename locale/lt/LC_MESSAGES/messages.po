@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-19T21:13:49.451Z\n"
+"POT-Creation-Date: 2014-05-19T21:42:04.153Z\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -87,12 +87,8 @@ msgstr ""
 msgid "Terms of Use"
 msgstr ""
 
-#: /templates/_includes/offline.html:2
-msgid "Sorry, you need to be connected to the Internet to access Marketplace."
-msgstr ""
-
-#: /templates/_includes/offline.html:4
-msgid "Go Online"
+#: /templates/_includes/offline.html:2 /templates/errors/pagination.html:2
+msgid "Try Again"
 msgstr ""
 
 #: /templates/_includes/truncated.html:4
@@ -127,12 +123,12 @@ msgid_plural "{n} Reviews"
 msgstr[0] ""
 msgstr[1] ""
 
-#: /templates/_macros/more_button.html:2 /templates/_macros/more_button.html:10
-msgid "More"
-msgstr ""
-
 #: /templates/_macros/stars.html:5
 msgid "Rated {stars} out of {maxstars} stars"
+msgstr ""
+
+#: /templates/_macros/more_button.html:2 /templates/_macros/more_button.html:10
+msgid "More"
 msgstr ""
 
 #: /templates/category_yogafire/main.html:38
@@ -207,10 +203,6 @@ msgstr ""
 msgid "Error loading more"
 msgstr ""
 
-#: /templates/errors/pagination.html:2
-msgid "Try Again"
-msgstr ""
-
 #: /templates/search/main.html:16
 msgid "<b>{n}</b> Result"
 msgid_plural "<b>{n}</b> Results"
@@ -233,6 +225,10 @@ msgstr ""
 msgid "Send"
 msgstr ""
 
+#: /media/js/apps_iframe_installer.js:63
+msgid "App install error: {error}"
+msgstr ""
+
 #: /media/js/apps.js:87
 msgid "Your device does not support payments."
 msgstr ""
@@ -252,10 +248,6 @@ msgstr ""
 #. "Open" as in "Open the app"
 #: /media/js/buttons.js:174
 msgid "Open"
-msgstr ""
-
-#: /media/js/apps_iframe_installer.js:63
-msgid "App install error: {error}"
 msgstr ""
 
 #. For ages {0} and higher. (de) `ab {0} Jahren`.

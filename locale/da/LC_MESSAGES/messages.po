@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fireplace\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-19T21:13:49.451Z\n"
+"POT-Creation-Date: 2014-05-19T21:42:04.153Z\n"
 "PO-Revision-Date: 2013-10-25 14:52+0100\n"
 "Last-Translator: Jørgen Rasmussen <joergenr@stofanet.dk>\n"
 "Language-Team: MozillaDanmark\n"
@@ -87,13 +87,9 @@ msgstr "Privatlivspolitik"
 msgid "Terms of Use"
 msgstr "Betingelser for brug"
 
-#: /templates/_includes/offline.html:2
-msgid "Sorry, you need to be connected to the Internet to access Marketplace."
-msgstr ""
-
-#: /templates/_includes/offline.html:4
-msgid "Go Online"
-msgstr ""
+#: /templates/_includes/offline.html:2 /templates/errors/pagination.html:2
+msgid "Try Again"
+msgstr "Prøv igen"
 
 #: /templates/_includes/truncated.html:4
 msgid "...more"
@@ -127,13 +123,13 @@ msgid_plural "{n} Reviews"
 msgstr[0] "{n} anmeldelse"
 msgstr[1] "{n} anmeldelser"
 
-#: /templates/_macros/more_button.html:2 /templates/_macros/more_button.html:10
-msgid "More"
-msgstr "Flere"
-
 #: /templates/_macros/stars.html:5
 msgid "Rated {stars} out of {maxstars} stars"
 msgstr "Bedømmelse: {stars} ud af {maxstars} stjerner"
+
+#: /templates/_macros/more_button.html:2 /templates/_macros/more_button.html:10
+msgid "More"
+msgstr "Flere"
 
 #: /templates/category_yogafire/main.html:38
 msgid "Get Help"
@@ -207,10 +203,6 @@ msgstr "Der opstod en fejl."
 msgid "Error loading more"
 msgstr "Fejl under indlæsning af mere"
 
-#: /templates/errors/pagination.html:2
-msgid "Try Again"
-msgstr "Prøv igen"
-
 #: /templates/search/main.html:16
 msgid "<b>{n}</b> Result"
 msgid_plural "<b>{n}</b> Results"
@@ -233,6 +225,10 @@ msgstr "Ingen resultater fundet, prøv igen senere"
 msgid "Send"
 msgstr "Send"
 
+#: /media/js/apps_iframe_installer.js:63
+msgid "App install error: {error}"
+msgstr "App-installationsfejl: {error}"
+
 #: /media/js/apps.js:87
 msgid "Your device does not support payments."
 msgstr "Din enhed understøtter ikke betalinger."
@@ -253,10 +249,6 @@ msgstr "Denne app er ikke tilgængelig til din platform."
 #: /media/js/buttons.js:174
 msgid "Open"
 msgstr ""
-
-#: /media/js/apps_iframe_installer.js:63
-msgid "App install error: {error}"
-msgstr "App-installationsfejl: {error}"
 
 #. For ages {0} and higher. (de) `ab {0} Jahren`.
 #: /media/js/content-ratings.js:97

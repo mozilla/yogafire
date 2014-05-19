@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marketplace\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-19T21:13:49.451Z\n"
+"POT-Creation-Date: 2014-05-19T21:42:04.153Z\n"
 "PO-Revision-Date: 2014-05-02 08:43+0000\n"
 "Last-Translator: Pavel <jasnapaka@jasnapaka.com>\n"
 "Language-Team: Czech <info@mozilla.cz>\n"
@@ -88,13 +88,9 @@ msgstr "Zásady ochrany soukromí"
 msgid "Terms of Use"
 msgstr "Podmínky použití"
 
-#: /templates/_includes/offline.html:2
-msgid "Sorry, you need to be connected to the Internet to access Marketplace."
-msgstr ""
-
-#: /templates/_includes/offline.html:4
-msgid "Go Online"
-msgstr ""
+#: /templates/_includes/offline.html:2 /templates/errors/pagination.html:2
+msgid "Try Again"
+msgstr "Zkusit znovu"
 
 #: /templates/_includes/truncated.html:4
 msgid "...more"
@@ -129,13 +125,13 @@ msgstr[0] "{n} recenze"
 msgstr[1] "{n} recenze"
 msgstr[2] "{n} recenzí"
 
-#: /templates/_macros/more_button.html:2 /templates/_macros/more_button.html:10
-msgid "More"
-msgstr "Více"
-
 #: /templates/_macros/stars.html:5
 msgid "Rated {stars} out of {maxstars} stars"
 msgstr "Hodnocení {stars} z {maxstars} hvězdiček"
+
+#: /templates/_macros/more_button.html:2 /templates/_macros/more_button.html:10
+msgid "More"
+msgstr "Více"
 
 #: /templates/category_yogafire/main.html:38
 msgid "Get Help"
@@ -209,10 +205,6 @@ msgstr "Nastala chyba"
 msgid "Error loading more"
 msgstr "Chyba při načítání"
 
-#: /templates/errors/pagination.html:2
-msgid "Try Again"
-msgstr "Zkusit znovu"
-
 #: /templates/search/main.html:16
 msgid "<b>{n}</b> Result"
 msgid_plural "<b>{n}</b> Results"
@@ -236,6 +228,10 @@ msgstr "Nebyly nalezeny žádné výsledky. Zkuste to znovu později."
 msgid "Send"
 msgstr "Odeslat"
 
+#: /media/js/apps_iframe_installer.js:63
+msgid "App install error: {error}"
+msgstr "Chyba při instalaci aplikace: {error}"
+
 #: /media/js/apps.js:87
 msgid "Your device does not support payments."
 msgstr "Vaše zařízení nepodporuje platby."
@@ -256,10 +252,6 @@ msgstr "Aplikace není dostupná pro vaši platformu."
 #: /media/js/buttons.js:174
 msgid "Open"
 msgstr "Otevřít"
-
-#: /media/js/apps_iframe_installer.js:63
-msgid "App install error: {error}"
-msgstr "Chyba při instalaci aplikace: {error}"
 
 #. For ages {0} and higher. (de) `ab {0} Jahren`.
 #: /media/js/content-ratings.js:97

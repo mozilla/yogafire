@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-19T21:13:49.451Z\n"
+"POT-Creation-Date: 2014-05-19T21:42:04.153Z\n"
 "PO-Revision-Date: 2014-04-29 22:10+0000\n"
 "Last-Translator: Gábor <kelemeng@ubuntu.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -89,13 +89,9 @@ msgstr "Adatvédelmi irányelvek"
 msgid "Terms of Use"
 msgstr "Felhasználási feltételek"
 
-#: /templates/_includes/offline.html:2
-msgid "Sorry, you need to be connected to the Internet to access Marketplace."
-msgstr ""
-
-#: /templates/_includes/offline.html:4
-msgid "Go Online"
-msgstr ""
+#: /templates/_includes/offline.html:2 /templates/errors/pagination.html:2
+msgid "Try Again"
+msgstr "Próbálja újra"
 
 #: /templates/_includes/truncated.html:4
 msgid "...more"
@@ -129,13 +125,13 @@ msgid_plural "{n} Reviews"
 msgstr[0] "{n} értékelés"
 msgstr[1] "{n} értékelés"
 
-#: /templates/_macros/more_button.html:2 /templates/_macros/more_button.html:10
-msgid "More"
-msgstr "Több"
-
 #: /templates/_macros/stars.html:5
 msgid "Rated {stars} out of {maxstars} stars"
 msgstr "Értékelés: {stars} / {maxstars}"
+
+#: /templates/_macros/more_button.html:2 /templates/_macros/more_button.html:10
+msgid "More"
+msgstr "Több"
 
 #: /templates/category_yogafire/main.html:38
 msgid "Get Help"
@@ -209,10 +205,6 @@ msgstr "Hiba történt."
 msgid "Error loading more"
 msgstr "Hiba történt a továbbiak betöltése közben"
 
-#: /templates/errors/pagination.html:2
-msgid "Try Again"
-msgstr "Próbálja újra"
-
 #: /templates/search/main.html:16
 msgid "<b>{n}</b> Result"
 msgid_plural "<b>{n}</b> Results"
@@ -235,6 +227,10 @@ msgstr "Nincs találat, próbálja újra később"
 msgid "Send"
 msgstr "Küldés"
 
+#: /media/js/apps_iframe_installer.js:63
+msgid "App install error: {error}"
+msgstr "App telepítési hiba: {error}"
+
 #: /media/js/apps.js:87
 msgid "Your device does not support payments."
 msgstr "Az eszköz nem támogatja a fizetést."
@@ -255,10 +251,6 @@ msgstr "Ez az app nem érhető el erre a platformra."
 #: /media/js/buttons.js:174
 msgid "Open"
 msgstr "Megnyitás"
-
-#: /media/js/apps_iframe_installer.js:63
-msgid "App install error: {error}"
-msgstr "App telepítési hiba: {error}"
 
 #. For ages {0} and higher. (de) `ab {0} Jahren`.
 #: /media/js/content-ratings.js:97

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-19T21:13:49.451Z\n"
+"POT-Creation-Date: 2014-05-19T21:42:04.153Z\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -87,13 +87,9 @@ msgstr "Πολιτική απορρήτου"
 msgid "Terms of Use"
 msgstr "Όροι χρήσης"
 
-#: /templates/_includes/offline.html:2
-msgid "Sorry, you need to be connected to the Internet to access Marketplace."
-msgstr ""
-
-#: /templates/_includes/offline.html:4
-msgid "Go Online"
-msgstr ""
+#: /templates/_includes/offline.html:2 /templates/errors/pagination.html:2
+msgid "Try Again"
+msgstr "Δοκιμάστε ξανά"
 
 #: /templates/_includes/truncated.html:4
 msgid "...more"
@@ -127,13 +123,13 @@ msgid_plural "{n} Reviews"
 msgstr[0] "{n} κριτική"
 msgstr[1] "{n} κριτικές"
 
-#: /templates/_macros/more_button.html:2 /templates/_macros/more_button.html:10
-msgid "More"
-msgstr "Περισσότερα"
-
 #: /templates/_macros/stars.html:5
 msgid "Rated {stars} out of {maxstars} stars"
 msgstr "Βαθμολογήθηκε με {stars} αστέρια από μέγιστο {maxstars}"
+
+#: /templates/_macros/more_button.html:2 /templates/_macros/more_button.html:10
+msgid "More"
+msgstr "Περισσότερα"
 
 #: /templates/category_yogafire/main.html:38
 msgid "Get Help"
@@ -207,10 +203,6 @@ msgstr "Παρουσιάστηκε κάποιο σφάλμα."
 msgid "Error loading more"
 msgstr "Σφάλμα κατά τη φόρτωση περισσότερων"
 
-#: /templates/errors/pagination.html:2
-msgid "Try Again"
-msgstr "Δοκιμάστε ξανά"
-
 #: /templates/search/main.html:16
 msgid "<b>{n}</b> Result"
 msgid_plural "<b>{n}</b> Results"
@@ -233,6 +225,10 @@ msgstr "Δε βρέθηκαν αποτελέσματα, προσπαθήστε �
 msgid "Send"
 msgstr "Αποστολή"
 
+#: /media/js/apps_iframe_installer.js:63
+msgid "App install error: {error}"
+msgstr "Σφάλμα εγκατάστασης εφαρμογής: {error}"
+
 #: /media/js/apps.js:87
 msgid "Your device does not support payments."
 msgstr "Η συσκευή σας δεν υποστηρίζει πληρωμές."
@@ -253,10 +249,6 @@ msgstr "Αυτή η εφαρμογή δεν είναι διαθέσιμη για
 #: /media/js/buttons.js:174
 msgid "Open"
 msgstr ""
-
-#: /media/js/apps_iframe_installer.js:63
-msgid "App install error: {error}"
-msgstr "Σφάλμα εγκατάστασης εφαρμογής: {error}"
 
 #. For ages {0} and higher. (de) `ab {0} Jahren`.
 #: /media/js/content-ratings.js:97

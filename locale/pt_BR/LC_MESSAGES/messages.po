@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: marketplace-fireplace\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-19T21:13:49.451Z\n"
+"POT-Creation-Date: 2014-05-19T21:42:04.153Z\n"
 "PO-Revision-Date: 2014-04-29 20:36+0000\n"
 "Last-Translator: Marco Aurélio <ouesten@me.com>\n"
 "Language-Team: Português (Brasil) <dev-l10n-pt-br@lists.mozilla.org>\n"
@@ -91,13 +91,9 @@ msgstr "Política de privacidade"
 msgid "Terms of Use"
 msgstr "Termos de uso"
 
-#: /templates/_includes/offline.html:2
-msgid "Sorry, you need to be connected to the Internet to access Marketplace."
-msgstr ""
-
-#: /templates/_includes/offline.html:4
-msgid "Go Online"
-msgstr ""
+#: /templates/_includes/offline.html:2 /templates/errors/pagination.html:2
+msgid "Try Again"
+msgstr "Tentar novamente"
 
 #: /templates/_includes/truncated.html:4
 msgid "...more"
@@ -131,13 +127,13 @@ msgid_plural "{n} Reviews"
 msgstr[0] "{n} análise"
 msgstr[1] "{n} análises"
 
-#: /templates/_macros/more_button.html:2 /templates/_macros/more_button.html:10
-msgid "More"
-msgstr "Mais"
-
 #: /templates/_macros/stars.html:5
 msgid "Rated {stars} out of {maxstars} stars"
 msgstr "Avaliado em {stars} de {maxstars} estrelas"
+
+#: /templates/_macros/more_button.html:2 /templates/_macros/more_button.html:10
+msgid "More"
+msgstr "Mais"
 
 #: /templates/category_yogafire/main.html:38
 msgid "Get Help"
@@ -211,10 +207,6 @@ msgstr "Ocorreu um erro."
 msgid "Error loading more"
 msgstr "Erro ao carregar mais"
 
-#: /templates/errors/pagination.html:2
-msgid "Try Again"
-msgstr "Tentar novamente"
-
 #: /templates/search/main.html:16
 msgid "<b>{n}</b> Result"
 msgid_plural "<b>{n}</b> Results"
@@ -237,6 +229,10 @@ msgstr "Nenhum resultado encontrado, tente novamente mais tarde"
 msgid "Send"
 msgstr "Enviar"
 
+#: /media/js/apps_iframe_installer.js:63
+msgid "App install error: {error}"
+msgstr "Erro ao instalar o aplicativo: {error}"
+
 #: /media/js/apps.js:87
 msgid "Your device does not support payments."
 msgstr "Seu dispositivo não é compatível com estes pagamentos."
@@ -257,10 +253,6 @@ msgstr "Este aplicativo não está disponível para sua plataforma."
 #: /media/js/buttons.js:174
 msgid "Open"
 msgstr "Abrir"
-
-#: /media/js/apps_iframe_installer.js:63
-msgid "App install error: {error}"
-msgstr "Erro ao instalar o aplicativo: {error}"
 
 #. For ages {0} and higher. (de) `ab {0} Jahren`.
 #: /media/js/content-ratings.js:97

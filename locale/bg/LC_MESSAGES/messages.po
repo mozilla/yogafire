@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: AMO Fireplace\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-19T21:13:49.451Z\n"
+"POT-Creation-Date: 2014-05-19T21:42:04.153Z\n"
 "PO-Revision-Date: 2013-07-27 13:46+0200\n"
 "Last-Translator: Mihail Chilyashev <m@chilyashev.com>\n"
 "Language-Team: Bulgarian (bg)\n"
@@ -87,13 +87,9 @@ msgstr "Декларация за поверителност"
 msgid "Terms of Use"
 msgstr "Условия за ползване"
 
-#: /templates/_includes/offline.html:2
-msgid "Sorry, you need to be connected to the Internet to access Marketplace."
-msgstr ""
-
-#: /templates/_includes/offline.html:4
-msgid "Go Online"
-msgstr ""
+#: /templates/_includes/offline.html:2 /templates/errors/pagination.html:2
+msgid "Try Again"
+msgstr "Опитай отново"
 
 #: /templates/_includes/truncated.html:4
 msgid "...more"
@@ -127,13 +123,13 @@ msgid_plural "{n} Reviews"
 msgstr[0] "{n} отзив"
 msgstr[1] "{n} отзива"
 
-#: /templates/_macros/more_button.html:2 /templates/_macros/more_button.html:10
-msgid "More"
-msgstr "Още"
-
 #: /templates/_macros/stars.html:5
 msgid "Rated {stars} out of {maxstars} stars"
 msgstr "Оценено с {stars} от {maxstars} звезди"
+
+#: /templates/_macros/more_button.html:2 /templates/_macros/more_button.html:10
+msgid "More"
+msgstr "Още"
 
 #: /templates/category_yogafire/main.html:38
 msgid "Get Help"
@@ -207,10 +203,6 @@ msgstr "Възникна грешна"
 msgid "Error loading more"
 msgstr "Грешка при зареждането"
 
-#: /templates/errors/pagination.html:2
-msgid "Try Again"
-msgstr "Опитай отново"
-
 #: /templates/search/main.html:16
 msgid "<b>{n}</b> Result"
 msgid_plural "<b>{n}</b> Results"
@@ -233,6 +225,10 @@ msgstr "Няма намерени резултати, моля опитайте 
 msgid "Send"
 msgstr "Изпрати"
 
+#: /media/js/apps_iframe_installer.js:63
+msgid "App install error: {error}"
+msgstr "Грешка при инсталацията на приложението: {error}"
+
 #: /media/js/apps.js:87
 msgid "Your device does not support payments."
 msgstr "Устройството ви не поддържа плащания."
@@ -253,10 +249,6 @@ msgstr "Това приложение не е достъпно за вашата
 #: /media/js/buttons.js:174
 msgid "Open"
 msgstr ""
-
-#: /media/js/apps_iframe_installer.js:63
-msgid "App install error: {error}"
-msgstr "Грешка при инсталацията на приложението: {error}"
 
 #. For ages {0} and higher. (de) `ab {0} Jahren`.
 #: /media/js/content-ratings.js:97

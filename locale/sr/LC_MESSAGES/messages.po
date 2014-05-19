@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-19T21:13:49.451Z\n"
+"POT-Creation-Date: 2014-05-19T21:42:04.153Z\n"
 "PO-Revision-Date: 2014-05-14 19:24+0000\n"
 "Last-Translator: Aleksandra <auzelac91@gmail.com>\n"
 "Language-Team: none\n"
@@ -88,13 +88,9 @@ msgstr "Полиса о приватности"
 msgid "Terms of Use"
 msgstr "Правила коришћења"
 
-#: /templates/_includes/offline.html:2
-msgid "Sorry, you need to be connected to the Internet to access Marketplace."
-msgstr ""
-
-#: /templates/_includes/offline.html:4
-msgid "Go Online"
-msgstr ""
+#: /templates/_includes/offline.html:2 /templates/errors/pagination.html:2
+msgid "Try Again"
+msgstr "Покушај поново"
 
 #: /templates/_includes/truncated.html:4
 msgid "...more"
@@ -129,13 +125,13 @@ msgstr[0] "{n} преглед"
 msgstr[1] "{n} прегледа"
 msgstr[2] "{n} прегледа"
 
-#: /templates/_macros/more_button.html:2 /templates/_macros/more_button.html:10
-msgid "More"
-msgstr "Још"
-
 #: /templates/_macros/stars.html:5
 msgid "Rated {stars} out of {maxstars} stars"
 msgstr "Оцењено са {stars} од {maxstars} звездица"
+
+#: /templates/_macros/more_button.html:2 /templates/_macros/more_button.html:10
+msgid "More"
+msgstr "Још"
 
 #: /templates/category_yogafire/main.html:38
 msgid "Get Help"
@@ -209,10 +205,6 @@ msgstr "Дошло је до грешке."
 msgid "Error loading more"
 msgstr "Грешка при учитавању"
 
-#: /templates/errors/pagination.html:2
-msgid "Try Again"
-msgstr "Покушај поново"
-
 #: /templates/search/main.html:16
 msgid "<b>{n}</b> Result"
 msgid_plural "<b>{n}</b> Results"
@@ -236,6 +228,10 @@ msgstr "Нема резултата - покушајте касније"
 msgid "Send"
 msgstr "Пошаљи"
 
+#: /media/js/apps_iframe_installer.js:63
+msgid "App install error: {error}"
+msgstr "Грешка током инсталације апликације: {error}"
+
 #: /media/js/apps.js:87
 msgid "Your device does not support payments."
 msgstr "Ваш уређај не подржава плаћање."
@@ -256,10 +252,6 @@ msgstr "Ова апликација није доступна за Вашу пл
 #: /media/js/buttons.js:174
 msgid "Open"
 msgstr "Отвори"
-
-#: /media/js/apps_iframe_installer.js:63
-msgid "App install error: {error}"
-msgstr "Грешка током инсталације апликације: {error}"
 
 #. For ages {0} and higher. (de) `ab {0} Jahren`.
 #: /media/js/content-ratings.js:97

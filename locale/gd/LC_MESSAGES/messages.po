@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-19T21:13:49.451Z\n"
+"POT-Creation-Date: 2014-05-19T21:42:04.153Z\n"
 "PO-Revision-Date: 2013-12-30 16:50+0000\n"
 "Last-Translator: Michael <fios@akerbeltz.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -88,13 +88,9 @@ msgstr "Am poileasaidh prìobhaideachd"
 msgid "Terms of Use"
 msgstr "Teirmichean a' chleachdaidh"
 
-#: /templates/_includes/offline.html:2
-msgid "Sorry, you need to be connected to the Internet to access Marketplace."
-msgstr ""
-
-#: /templates/_includes/offline.html:4
-msgid "Go Online"
-msgstr ""
+#: /templates/_includes/offline.html:2 /templates/errors/pagination.html:2
+msgid "Try Again"
+msgstr "Feuch ris a-rithist"
 
 #: /templates/_includes/truncated.html:4
 msgid "...more"
@@ -130,13 +126,13 @@ msgstr[1] "{n} lèirmheas"
 msgstr[2] "{n} lèirmheasan"
 msgstr[3] "{n} lèirmheas"
 
-#: /templates/_macros/more_button.html:2 /templates/_macros/more_button.html:10
-msgid "More"
-msgstr "Barrachd"
-
 #: /templates/_macros/stars.html:5
 msgid "Rated {stars} out of {maxstars} stars"
 msgstr "Le rangachadh {stars} à {maxstars} rionnagan"
+
+#: /templates/_macros/more_button.html:2 /templates/_macros/more_button.html:10
+msgid "More"
+msgstr "Barrachd"
 
 #: /templates/category_yogafire/main.html:38
 msgid "Get Help"
@@ -210,10 +206,6 @@ msgstr "Thachair mearachd."
 msgid "Error loading more"
 msgstr "Mearachd le luchdadh a' chorr"
 
-#: /templates/errors/pagination.html:2
-msgid "Try Again"
-msgstr "Feuch ris a-rithist"
-
 #: /templates/search/main.html:16
 msgid "<b>{n}</b> Result"
 msgid_plural "<b>{n}</b> Results"
@@ -238,6 +230,10 @@ msgstr "Cha deach toradh a lorg, feuch ris a-rithist an ceann greis"
 msgid "Send"
 msgstr "Cuir"
 
+#: /media/js/apps_iframe_installer.js:63
+msgid "App install error: {error}"
+msgstr "Mearachd le stàladh na h-aplacaid: {error}"
+
 #: /media/js/apps.js:87
 msgid "Your device does not support payments."
 msgstr "Chan eil an t-uidheam agad a' cur taic ri pàigheadh."
@@ -258,10 +254,6 @@ msgstr "Chan eil an aplacaid seo ri fhaighinn dhan ùrlar agad."
 #: /media/js/buttons.js:174
 msgid "Open"
 msgstr ""
-
-#: /media/js/apps_iframe_installer.js:63
-msgid "App install error: {error}"
-msgstr "Mearachd le stàladh na h-aplacaid: {error}"
 
 #. For ages {0} and higher. (de) `ab {0} Jahren`.
 #: /media/js/content-ratings.js:97

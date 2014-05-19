@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-19T21:13:49.451Z\n"
+"POT-Creation-Date: 2014-05-19T21:42:04.153Z\n"
 "PO-Revision-Date: 2014-05-01 13:38+0000\n"
 "Last-Translator: Ton <tonnes.mb@gmail.com>\n"
 "Language-Team: none\n"
@@ -88,13 +88,9 @@ msgstr "Privacybeleid"
 msgid "Terms of Use"
 msgstr "Gebruiksvoorwaarden"
 
-#: /templates/_includes/offline.html:2
-msgid "Sorry, you need to be connected to the Internet to access Marketplace."
-msgstr ""
-
-#: /templates/_includes/offline.html:4
-msgid "Go Online"
-msgstr ""
+#: /templates/_includes/offline.html:2 /templates/errors/pagination.html:2
+msgid "Try Again"
+msgstr "Probeer het opnieuw"
 
 #: /templates/_includes/truncated.html:4
 msgid "...more"
@@ -128,13 +124,13 @@ msgid_plural "{n} Reviews"
 msgstr[0] "{n} beoordeling"
 msgstr[1] "{n} beoordelingen"
 
-#: /templates/_macros/more_button.html:2 /templates/_macros/more_button.html:10
-msgid "More"
-msgstr "Meer"
-
 #: /templates/_macros/stars.html:5
 msgid "Rated {stars} out of {maxstars} stars"
 msgstr "Waardering {stars} van {maxstars} sterren"
+
+#: /templates/_macros/more_button.html:2 /templates/_macros/more_button.html:10
+msgid "More"
+msgstr "Meer"
 
 #: /templates/category_yogafire/main.html:38
 msgid "Get Help"
@@ -208,10 +204,6 @@ msgstr "Er is een fout opgetreden."
 msgid "Error loading more"
 msgstr "Fout bij laden van meer"
 
-#: /templates/errors/pagination.html:2
-msgid "Try Again"
-msgstr "Probeer het opnieuw"
-
 #: /templates/search/main.html:16
 msgid "<b>{n}</b> Result"
 msgid_plural "<b>{n}</b> Results"
@@ -234,6 +226,10 @@ msgstr "Geen resultaten, probeer het later nog eens"
 msgid "Send"
 msgstr "Verzenden"
 
+#: /media/js/apps_iframe_installer.js:63
+msgid "App install error: {error}"
+msgstr "App-installatiefout: {error}"
+
 #: /media/js/apps.js:87
 msgid "Your device does not support payments."
 msgstr "Uw apparaat ondersteunt geen betalingen."
@@ -254,10 +250,6 @@ msgstr "Deze app is niet beschikbaar voor uw platform."
 #: /media/js/buttons.js:174
 msgid "Open"
 msgstr "Openen"
-
-#: /media/js/apps_iframe_installer.js:63
-msgid "App install error: {error}"
-msgstr "App-installatiefout: {error}"
 
 #. For ages {0} and higher. (de) `ab {0} Jahren`.
 #: /media/js/content-ratings.js:97

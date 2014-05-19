@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-19T21:13:49.451Z\n"
+"POT-Creation-Date: 2014-05-19T21:42:04.153Z\n"
 "PO-Revision-Date: 2014-05-09 17:00+0400\n"
 "Last-Translator: Alexander L. Slovesnik <unghost@mozilla-russia.org>\n"
 "Language-Team: none\n"
@@ -88,13 +88,9 @@ msgstr "Политика приватности"
 msgid "Terms of Use"
 msgstr "Условия использования"
 
-#: /templates/_includes/offline.html:2
-msgid "Sorry, you need to be connected to the Internet to access Marketplace."
-msgstr ""
-
-#: /templates/_includes/offline.html:4
-msgid "Go Online"
-msgstr ""
+#: /templates/_includes/offline.html:2 /templates/errors/pagination.html:2
+msgid "Try Again"
+msgstr "Попробовать снова"
 
 #: /templates/_includes/truncated.html:4
 msgid "...more"
@@ -129,13 +125,13 @@ msgstr[0] "{n} отзыв"
 msgstr[1] "{n} отзыва"
 msgstr[2] "{n} отзывов"
 
-#: /templates/_macros/more_button.html:2 /templates/_macros/more_button.html:10
-msgid "More"
-msgstr "Ещё"
-
 #: /templates/_macros/stars.html:5
 msgid "Rated {stars} out of {maxstars} stars"
 msgstr "Оценено в {stars} из {maxstars} звёзд"
+
+#: /templates/_macros/more_button.html:2 /templates/_macros/more_button.html:10
+msgid "More"
+msgstr "Ещё"
 
 #: /templates/category_yogafire/main.html:38
 msgid "Get Help"
@@ -209,10 +205,6 @@ msgstr "Произошла ошибка."
 msgid "Error loading more"
 msgstr "Ошибка загрузки других"
 
-#: /templates/errors/pagination.html:2
-msgid "Try Again"
-msgstr "Попробовать снова"
-
 #: /templates/search/main.html:16
 msgid "<b>{n}</b> Result"
 msgid_plural "<b>{n}</b> Results"
@@ -236,6 +228,10 @@ msgstr "Результатов не найдено, повторите попы�
 msgid "Send"
 msgstr "Отправить"
 
+#: /media/js/apps_iframe_installer.js:63
+msgid "App install error: {error}"
+msgstr "Ошибка установки приложения: {error}"
+
 #: /media/js/apps.js:87
 msgid "Your device does not support payments."
 msgstr "Ваше устройство не поддерживает покупки."
@@ -256,10 +252,6 @@ msgstr "Это приложение недоступно для вашей пл�
 #: /media/js/buttons.js:174
 msgid "Open"
 msgstr "Открыть"
-
-#: /media/js/apps_iframe_installer.js:63
-msgid "App install error: {error}"
-msgstr "Ошибка установки приложения: {error}"
 
 #. For ages {0} and higher. (de) `ab {0} Jahren`.
 #: /media/js/content-ratings.js:97

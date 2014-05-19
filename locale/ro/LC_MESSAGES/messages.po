@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Fireplace\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-19T21:13:49.451Z\n"
+"POT-Creation-Date: 2014-05-19T21:42:04.153Z\n"
 "PO-Revision-Date: 2013-07-29 12:37+0200\n"
 "Last-Translator: Cristian Silaghi <cristian.silaghi@mozilla.ro>\n"
 "Language-Team: Română\n"
@@ -87,13 +87,9 @@ msgstr "Politica de confidențialitate"
 msgid "Terms of Use"
 msgstr "Termenii de utilizare"
 
-#: /templates/_includes/offline.html:2
-msgid "Sorry, you need to be connected to the Internet to access Marketplace."
-msgstr ""
-
-#: /templates/_includes/offline.html:4
-msgid "Go Online"
-msgstr ""
+#: /templates/_includes/offline.html:2 /templates/errors/pagination.html:2
+msgid "Try Again"
+msgstr "Reîncearcă"
 
 #: /templates/_includes/truncated.html:4
 msgid "...more"
@@ -128,13 +124,13 @@ msgstr[0] "{n} recenzie"
 msgstr[1] "{n} recenzii"
 msgstr[2] "{n} de recenzii"
 
-#: /templates/_macros/more_button.html:2 /templates/_macros/more_button.html:10
-msgid "More"
-msgstr "Mai multe"
-
 #: /templates/_macros/stars.html:5
 msgid "Rated {stars} out of {maxstars} stars"
 msgstr "Evaluat cu {stars} din {maxstars} stele"
+
+#: /templates/_macros/more_button.html:2 /templates/_macros/more_button.html:10
+msgid "More"
+msgstr "Mai multe"
 
 #: /templates/category_yogafire/main.html:38
 msgid "Get Help"
@@ -208,10 +204,6 @@ msgstr "A intervenit o eroare"
 msgid "Error loading more"
 msgstr "Eroare la încărcare"
 
-#: /templates/errors/pagination.html:2
-msgid "Try Again"
-msgstr "Reîncearcă"
-
 #: /templates/search/main.html:16
 msgid "<b>{n}</b> Result"
 msgid_plural "<b>{n}</b> Results"
@@ -235,6 +227,10 @@ msgstr "Niciun rezultat găsit, reîncearcă mai târziu"
 msgid "Send"
 msgstr "Trimite"
 
+#: /media/js/apps_iframe_installer.js:63
+msgid "App install error: {error}"
+msgstr ""
+
 #: /media/js/apps.js:87
 msgid "Your device does not support payments."
 msgstr ""
@@ -254,10 +250,6 @@ msgstr ""
 #. "Open" as in "Open the app"
 #: /media/js/buttons.js:174
 msgid "Open"
-msgstr ""
-
-#: /media/js/apps_iframe_installer.js:63
-msgid "App install error: {error}"
 msgstr ""
 
 #. For ages {0} and higher. (de) `ab {0} Jahren`.
