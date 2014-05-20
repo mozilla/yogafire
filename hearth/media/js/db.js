@@ -8,6 +8,7 @@ define('db', ['defer', 'format', 'log', 'requests', 'urls', 'utils', 'settings',
     function category_key(slug, page) { return 'category_' + slug + '_' + page; }
     var HOMEPAGE_KEY = 'homepage';
     var PRELOADED_KEY = 'has_preloaded';
+    var INSTALLED_KEY = 'installed';
     var STORAGE_VERSION = 'storage_version';
 
     function preload() {
@@ -199,6 +200,17 @@ define('db', ['defer', 'format', 'log', 'requests', 'urls', 'utils', 'settings',
         return def.promise();
     }
 
+    function getInstalled() {
+        var def = defer.Deferred();
+
+        localforage.getItem(INSTALLED_KEY).then(function(installed) {
+            z.apps = installed || [];
+            def.resolve(installed || []);
+        });
+
+        return def.promise();
+    }
+
     function storeApp(data) {
         // Passed an app, stores that app with localforage.
         console.log('Storing', data.slug, 'in localforage');
@@ -246,6 +258,11 @@ define('db', ['defer', 'format', 'log', 'requests', 'urls', 'utils', 'settings',
         storeApps(data.apps);
     }
 
+    function storeInstalled(installed) {
+        z.apps = installed;
+        localforage.setItem(INSTALLED_KEY, installed || []);
+    }
+
     function normalize_apps(data) {
         // Normalize to data.apps.
         if (data.objects) {
@@ -261,13 +278,15 @@ define('db', ['defer', 'format', 'log', 'requests', 'urls', 'utils', 'settings',
             app: getApp,
             category: getCategory,
             homepage: getHomepage,
-            search: getSearch
+            search: getSearch,
+            installed: getInstalled,
         },
         store: {
             app: storeApp,
             category: storeCategory,
             homepage: storeHomepage,
-            search: storeAppsFromSearch
+            search: storeAppsFromSearch,
+            installed: storeInstalled,
         },
         keys: {
             app: app_key,

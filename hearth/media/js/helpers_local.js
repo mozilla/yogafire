@@ -24,8 +24,13 @@ define('helpers_local', ['nunjucks', 'z'], function(nunjucks, z) {
         });
     };
 
+    function has_installed(manifestURL) {
+        return z.apps.indexOf(manifestURL) !== -1;
+    }
+
     // Functions provided in the default context.
     var helpers = {
+        has_installed: has_installed
     };
 
     // Put the helpers into the nunjucks global.

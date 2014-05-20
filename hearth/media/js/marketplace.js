@@ -94,6 +94,7 @@ function(_) {
     nunjucks_globals.REGIONS = settings.REGION_CHOICES_SLUG;
     nunjucks_globals.user_helpers = require('user_helpers');
     nunjucks_globals.iarc_names = require('content-ratings').names;
+    nunjucks_globals.installed_apps = z.apps;
 
     // Jank hack because Persona doesn't allow scripts in the doc iframe.
     // Please just delete it when they don't do that anymore.
@@ -114,6 +115,7 @@ function(_) {
         // Remove the splash screen once it's hidden.
         var splash = $('#splash-overlay').addClass('hide');
         z.body.removeClass('overlayed').addClass('loaded');
+        require('apps').getInstalled().done(require('buttons').mark_installeds);
         setTimeout(function() {
             splash.remove();
         }, 1500);
@@ -129,37 +131,16 @@ function(_) {
     }
 
     var buttons = require('buttons');
-    var get_installed = function() {
-        // Don't getInstalled if the page isn't visible.
-        if (document.hidden) {
-            return;
-        }
-        // Get list of installed apps and mark as such.
-        setTimeout(function() {
-            require('apps').getInstalled().done(function(results) {
-                z.apps = {};
-                _.each(results, function(manifestURL) {
-                    buttons.buttonInstalled(
-                        require('utils').baseurl(manifestURL), {manifestURL: manifestURL});
-                });
-            });
-        });
-    };
     if (capabilities.webApps) {
-        z.page.on('loaded fragment_loaded loaded_more', get_installed);
         document.addEventListener('visibilitychange', function() {
-            if (document.hidden) {
-                return;
+            // Refresh list of installed apps in case user uninstalled apps
+            // and switched back.
+            if (!document.hidden) {
+                if (require('user').logged_in()) {
+                    consumer_info.fetch(true);
+                }
+                require('apps').getInstalled().done(buttons.mark_uninstalleds);
             }
-            // We switched away from Marketplace, and now we are back and
-            // visible. The user might have installed/uninstalled apps during
-            // that time, so refresh the list of installed/purchased/developed
-            // apps, and check if apps were uninstalled since switching away,
-            // refreshing Install buttons if any were.
-            if (require('user').logged_in()) {
-                consumer_info.fetch(true);
-            }
-            buttons.revertUninstalled();
         }, false);
     }
 
@@ -229,7 +210,7 @@ function(_) {
 
     function startPage() {
         console.log('Triggering initial navigation');
-        consumer_info.fetch()
+        consumer_info.fetch();
         if (!z.spaceheater) {
             z.page.trigger('navigate', [window.location.pathname + window.location.search]);
         } else {

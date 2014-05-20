@@ -1,21 +1,14 @@
 define('buttons',
     ['apps', 'cache', 'capabilities', 'db', 'defer', 'l10n', 'log', 'login',
      'models', 'notification', 'requests', 'settings',
-     'tracking', 'tracking_helpers', 'urls', 'user', 'utils', 'views', 'z'],
-    function() {
+     'tracking', 'tracking_helpers', 'urls', 'user', 'utils', 'utils_local',
+     'views', 'z'],
+    function(apps, cache, capabilites, db, defer, l10n, log, login, models,
+             notification, requests, settings, tracking, tracking_helpers, urls,
+             user, utils, utils_local, views, z) {
 
-    var apps = require('apps');
-    var cache = require('cache');
-    var notification = require('notification');
-    var requests = require('requests');
-    var tracking = require('tracking');
-    var urls = require('urls');
-    var user = require('user');
-    var utils_local = require('utils_local');
-    var z = require('z');
-
-    var console = require('log')('buttons');
-    var gettext = require('l10n').gettext;
+    var console = log('buttons');
+    var gettext = l10n.gettext;
 
     function setButton($button, text, cls) {
         revertButton($button, text);
@@ -33,7 +26,7 @@ define('buttons',
             e.preventDefault();
             e.stopPropagation();
             var that = this;
-            require('db').get.app($(this).closest('[data-slug]').data('slug')).done(function(product) {
+            db.get.app($(this).closest('[data-slug]').data('slug')).done(function(product) {
                 func.call(that, product);
             });
         };
@@ -53,7 +46,7 @@ define('buttons',
         console.log('Install requested for', product_name);
 
         // Create a master deferred for the button action.
-        var def = require('defer').Deferred();
+        var def = defer.Deferred();
         // Create a reference to the button.
         var $this = $button || $(this);
         var _timeout;
@@ -65,7 +58,7 @@ define('buttons',
 
         function start_install() {
             // Track the search term used to find this app, if applicable.
-            require('tracking_helpers').track_search_term();
+            tracking_helpers.track_search_term();
 
             // Track that an install was started.
             tracking.trackEvent(
@@ -118,7 +111,7 @@ define('buttons',
 
             // Show the box on how to run the app.
             var $installed = $('#installed');
-            var $how = $installed.find('.' + require('utils').browser());
+            var $how = $installed.find('.' + utils.browser());
             if ($how.length) {
                 $installed.show();
                 $how.show();
@@ -132,8 +125,7 @@ define('buttons',
                 $('.button.product').index($button)
             );
 
-            buttonInstalled(product.manifest_url, installer, $this);
-
+            mark_installed(product.manifest_url);
             console.log('Successful install for', product_name);
 
         }, function() {
@@ -160,49 +152,44 @@ define('buttons',
         return $('.button[data-manifest_url="' + manifest_url.replace(/"/, '\\"') + '"]');
     }
 
-    function buttonInstalled(manifest_url, installer, $button) {
-        // If the button wasn't passed, look it up.
-        if (!$button || !$button.length) {
-            $button = get_button(manifest_url);
-            if (!$button.length) {
-                return;
-            }
-        }
-        z.apps[manifest_url] = installer;
-
-        // L10n: "Open" as in "Open the app"
-        setButton($button, gettext('Open'), 'launch install');
+    function mark_installed(manifest_url, $button) {
+        setButton($button || get_button(manifest_url), gettext('Open'), 'launch install');
+        apps.getInstalled();
     }
 
-    function revertUninstalled() {
+    function mark_installeds() {
+        /* For each installed app, look for respective buttons and mark as
+           ready to launch ("Open"). */
+        setTimeout(function() {
+            for (var i = 0; i < z.apps.length; i++) {
+                $button = get_button(z.apps[i]);
+                if ($button.length) {
+                    // L10n: "Open" as in "Open the app".
+                    mark_installed(null, $button);
+                }
+            }
+        });
+    }
+
+    function mark_uninstalleds() {
         /* If an app was uninstalled, revert state of install buttons from
            "Launch" to "Install". */
-
-        // Get installed apps to know which apps may have been uninstalled.
-        var r = apps.getInstalled().done(function(results) {
-            // Build an array of manifests that match the button's data-manifest.
-            var installed = [];
-            _.each(results, function(manifestURL) {
-                installed.push(require('utils').baseurl(manifestURL));
-            });
-
-            $('.button.product').each(function(i, button) {
-                var $button = $(button);
-                // For each install button, check if its respective app is installed.
-                if (installed.indexOf($button.data('manifest_url')) === -1) {
-                    // If it is no longer installed, revert button.
-                    if ($button.hasClass('launch')) {
-                        revertButton($button, gettext('Install'));
-                    }
-                    $button.removeClass('launch');
+        $('.button.product').each(function(i, button) {
+            var $button = $(button);
+            // For each install button, check if its respective app is installed.
+            if (z.apps.indexOf($button.data('manifest_url')) === -1) {
+                // If it is no longer installed, revert button.
+                if ($button.hasClass('launch')) {
+                    revertButton($button, gettext('Install'));
                 }
-            });
+                $button.removeClass('launch');
+            }
         });
     }
 
     return {
-        buttonInstalled: buttonInstalled,
         install: install,
-        revertUninstalled: revertUninstalled,
+        mark_installeds: mark_installeds,
+        mark_uninstalleds: mark_uninstalleds,
     };
 });

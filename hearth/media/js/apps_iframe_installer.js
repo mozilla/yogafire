@@ -2,8 +2,8 @@
     Interface with mozApps through m.f.c iframe since Yogafire is packaged with different origin.
 */
 define('apps_iframe_installer',
-    ['defer', 'l10n', 'log', 'settings', 'z'],
-    function(defer, l10n, log, settings, z) {
+    ['db', 'defer', 'l10n', 'log', 'settings', 'z'],
+    function(db, defer, l10n, log, settings, z) {
     'use strict';
     var gettext = l10n.gettext;
     var console = log('apps_iframe_installer');
@@ -79,7 +79,8 @@ define('apps_iframe_installer',
         z.page.one('iframe-getInstalled', function(e, data) {
             console.log('Received message from iframe installer (getInstalled).');
             if (data && data.name == 'getInstalled') {
-                console.log("Got installed apps: " + data.result);
+                console.log('Got installed apps: ' + data.result);
+                db.store.installed(data.result);
                 def.resolve(data.result);
             }
         });
