@@ -674,7 +674,7 @@ msgstr "खोज में कोई क्षेत्र नहीं"
 
 #: /media/js/settings.js:168
 msgid "Sorry, you are currently offline. Please try again later."
-msgstr ""
+msgstr "क्षमा करें, आप इस समय ऑफलाइन हैं. बाद में पुन: प्रयास करें."
 
 #. {n} is the number of characters left.
 #: /media/js/utils.js:28
@@ -697,7 +697,7 @@ msgstr "प्रतिक्रिया प्रस्तुत की. ध�
 
 #: /media/js/views/feedback.js:27 /media/js/views/app/abuse.js:23
 msgid "Sorry, there was an issue submitting your feedback. Please try again later."
-msgstr ""
+msgstr "क्षमा करें, आपकी प्रतिक्रिया प्रस्तुत करने में एक समस्या थी. बाद में पुन: प्रयास करें."
 
 #. Page not found (404)
 #: /media/js/views/not_found.js:9
