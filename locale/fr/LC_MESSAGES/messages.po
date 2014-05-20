@@ -6,16 +6,16 @@ msgstr ""
 "Project-Id-Version: Fireplace\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-05-19T21:42:04.153Z\n"
-"PO-Revision-Date: 2014-04-12 11:10+0200\n"
-"Last-Translator: Alexandre Lissy <lissyx@mozfr.org>\n"
+"PO-Revision-Date: 2014-05-20 18:29+0000\n"
+"Last-Translator: Benoit <benoit.leseul@gmail.com>\n"
 "Language-Team: français <>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Gtranslator 2.91.6\n"
-"X-POOTLE-MTIME: 1396129972.0\n"
+"X-Generator: Pootle 2.5.0\n"
+"X-POOTLE-MTIME: 1400610553.0\n"
 
 #: /templates/cat_dropdown.html:2
 msgid "All Categories"
@@ -23,7 +23,7 @@ msgstr "Toutes les catégories"
 
 #: /templates/cat_dropdown.html:17
 msgid "Home"
-msgstr ""
+msgstr "Accueil"
 
 #: /templates/cat_dropdown.html:18
 msgid "Games"
@@ -31,7 +31,7 @@ msgstr "Jeux"
 
 #: /templates/cat_dropdown.html:19
 msgid "Tools"
-msgstr ""
+msgstr "Outils"
 
 #: /templates/cat_dropdown.html:20
 msgid "Lifestyle"
@@ -97,7 +97,7 @@ msgstr "Réessayez"
 
 #: /templates/_includes/truncated.html:4
 msgid "...more"
-msgstr ""
+msgstr "…plus"
 
 #. This app is unavailable for purchase.
 #: /templates/_macros/market_button.html:5
@@ -252,7 +252,7 @@ msgstr "Cette application n'est pas disponible pour votre plateforme."
 #. "Open" as in "Open the app"
 #: /media/js/buttons.js:174
 msgid "Open"
-msgstr ""
+msgstr "Ouvrir"
 
 #. For ages {0} and higher. (de) `ab {0} Jahren`.
 #: /media/js/content-ratings.js:97
@@ -593,15 +593,15 @@ msgstr "Colombie"
 
 #: /media/js/settings.js:110
 msgid "Costa Rica"
-msgstr ""
+msgstr "Costa Rica"
 
 #: /media/js/settings.js:111
 msgid "Ecuador"
-msgstr ""
+msgstr "Équateur"
 
 #: /media/js/settings.js:112
 msgid "El Salvador"
-msgstr ""
+msgstr "El Salvador"
 
 #: /media/js/settings.js:113
 msgid "Germany"
@@ -613,7 +613,7 @@ msgstr "Grèce"
 
 #: /media/js/settings.js:115
 msgid "Guatemala"
-msgstr ""
+msgstr "Guatemala"
 
 #: /media/js/settings.js:116
 msgid "Hungary"
@@ -633,11 +633,11 @@ msgstr "Monténégro"
 
 #: /media/js/settings.js:120
 msgid "Nicaragua"
-msgstr ""
+msgstr "Nicaragua"
 
 #: /media/js/settings.js:121
 msgid "Panama"
-msgstr ""
+msgstr "Panama"
 
 #: /media/js/settings.js:122
 msgid "Peru"
@@ -677,7 +677,7 @@ msgstr "Aucune région dans la recherche"
 
 #: /media/js/settings.js:168
 msgid "Sorry, you are currently offline. Please try again later."
-msgstr ""
+msgstr "Vous êtes temporairement hors-ligne. Veuillez réessayer plus tard."
 
 #. {n} is the number of characters left.
 #: /media/js/utils.js:28
@@ -701,6 +701,8 @@ msgstr "Réaction envoyée, merci !"
 #: /media/js/views/feedback.js:27 /media/js/views/app/abuse.js:23
 msgid "Sorry, there was an issue submitting your feedback. Please try again later."
 msgstr ""
+"Une erreur s'est produite lors de l'envoi de votre réaction. Veuillez "
+"réessayer plus tard."
 
 #. Page not found (404)
 #: /media/js/views/not_found.js:9
