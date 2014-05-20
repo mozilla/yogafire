@@ -20,41 +20,41 @@ define('db', ['defer', 'format', 'log', 'requests', 'urls', 'utils', 'settings',
                 z.body.trigger('lf_preloaded_finished');
             } else {
                 console.log('Data not preloaded, preloading now');
-                var promises = [];
 
                 // Preload homepage.
-                promises.push(new Promise(function(resolve, reject) {
-                    requests.get(settings.offline_homepage, true).done(function(data) {
-                        console.log('Homepage finished preloading');
-                        z.body.trigger('lf_preloaded_finished');
-                        storeHomepage(data);
-                        resolve();
-                    });
-                }));
+                requests.get(settings.offline_homepage, true).done(function(data) {
+                    console.log('Homepage finished preloading');
+                    z.body.trigger('lf_preloaded_finished');
+                    storeHomepage(data);
+                });
 
                 // Preload category pages from the package.
                 // Category slugs must match category slug in the views.
-                var categories = [
-                    {slug: 'tarako-games', url: settings['offline_tarako-games']},
-                    {slug: 'tarako-tools', url: settings['offline_tarako-tools']},
-                    {slug: 'tarako-lifestyle', url: settings['offline_tarako-lifestyle']}
-                ];
-                _.each(categories, function(category) {
-                    promises.push(new Promise(function(resolve, reject) {
-                        requests.get(category.url, true).done(function(data) {
-                            storeCategory(category.slug, data, 0);  // 0 because we preload the first page.
-                            resolve();
-                        });
-                    }));
-                });
+                z.page.on('loaded', function() {
+                    var promises = [];
 
-                // Trigger event after everything is done.
-                Promise.all(promises).then(function() {
-                    console.log('Preload finished');
-                    localforage.setItem(PRELOADED_KEY, true);
-                });
+                    var categories = [
+                        {slug: 'tarako-games', url: settings['offline_tarako-games']},
+                        {slug: 'tarako-tools', url: settings['offline_tarako-tools']},
+                        {slug: 'tarako-lifestyle', url: settings['offline_tarako-lifestyle']}
+                    ];
+                    _.each(categories, function(category) {
+                        promises.push(new Promise(function(resolve, reject) {
+                            requests.get(category.url, true).done(function(data) {
+                                storeCategory(category.slug, data, 0);  // 0 because we preload the first page.
+                                resolve();
+                            });
+                        }));
+                    });
 
-                localforage.setItem(STORAGE_VERSION, settings.lf_storage_version);
+                    // Trigger event after everything is done.
+                    Promise.all(promises).then(function() {
+                        console.log('Preload finished');
+                        localforage.setItem(PRELOADED_KEY, true);
+                    });
+
+                    localforage.setItem(STORAGE_VERSION, settings.lf_storage_version);
+                });
             }
         });
     }
