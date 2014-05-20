@@ -71,28 +71,22 @@ define('db', ['defer', 'format', 'log', 'requests', 'urls', 'utils', 'settings',
         Resolves to whatever finishes first, localForage or API.
         */
         var def = defer.Deferred();
-        var resolved = false;
 
         localforage.getItem(app_key(slug)).then(function(data) {
-            if (data && !resolved) {
-                resolved = true;
-                def.resolve(data);
-                console.log('Returned', slug, 'from localforage.');
-            }
+            def.resolve(data);
+            console.log('Returned', slug, 'from localforage.');
+            background();
         });
 
-        // Update in background.
-        var url = urls.api.url('app', slug);
-        // Request-cache app requests in memory by not passing in true since
-        // app detail page calls the localForage tag multiple times at once.
-        requests.get(url).done(function(data) {
-            if (!resolved) {
-                resolved = true;
-                def.resolve(data);
-                console.log('Returned', slug, 'from API.');
-            }
-            storeApp(data);
-        });
+        function background() {
+            // Update in background.
+            var url = urls.api.url('app', slug);
+            // Request-cache app requests in memory by not passing in true since
+            // app detail page calls the localForage tag multiple times at once.
+            requests.get(url).done(function(data) {
+                storeApp(data);
+            });
+        }
 
         return def.promise();
     }
@@ -113,31 +107,33 @@ define('db', ['defer', 'format', 'log', 'requests', 'urls', 'utils', 'settings',
         }
 
         var def = defer.Deferred();
-        var resolved = false;
 
         page = page || 0;
         localforage.getItem(category_key(slug, page)).then(function(data) {
-            if (data && !resolved) {
-                resolved = true;
+            if (data) {
                 def.resolve(data);
                 console.log('Returned page', page, 'of', slug, 'category from localforage.');
+                background();
+            } else {
+                requests.get(offline_categories[slug], true).done(function(data) {
+                    console.log('Returned from package ' + slug);
+                    def.resolve(data);
+                    storeCategory(slug, data, page);
+                    background();
+                });
             }
         });
 
-        // Update in background.
-        var url = urls.api.url('category', slug, {
-            limit: settings.num_per_page,
-            offset: page * settings.num_per_page
-        });
-        requests.get(url, true).done(function(data) {
-            data = normalize_apps(data);
-            if (!resolved) {
-                resolved = true;
-                def.resolve(data);
-                console.log('Returned page', page, 'of', slug, 'category from API.');
-            }
-            storeCategory(slug, data, page);
-        });
+        function background() {
+            // Update in background.
+            var url = urls.api.url('category', slug, {
+                limit: settings.num_per_page,
+                offset: page * settings.num_per_page
+            });
+            requests.get(url, true).done(function(data) {
+                storeCategory(slug, data, page);
+            });
+        }
 
         return def.promise();
     }
@@ -153,27 +149,29 @@ define('db', ['defer', 'format', 'log', 'requests', 'urls', 'utils', 'settings',
         Resolves to whatever finishes first, localForage or API.
         */
         var def = defer.Deferred();
-        var resolved = false;
 
         localforage.getItem(HOMEPAGE_KEY).then(function(data) {
-            if (data && !resolved) {
-                resolved = true;
+            if (data) {
                 def.resolve(data);
                 console.log('Returned homepage from localforage.');
+                background();
+            } else {
+                requests.get(offline_categories['tarako-featured'], true).done(function(data) {
+                    def.resolve(data);
+                    console.log('Homepage first preload');
+                    storeHomepage(data);
+                    background();
+                });
             }
         });
 
-        // Update in background.
-        var url = urls.api.url('collection', 'tarako-featured');
-        requests.get(url, true).done(function(data) {
-            data = normalize_apps(data);
-            if (!resolved) {
-                resolved = true;
-                def.resolve(data);
-                console.log('Returned homepage from API.');
-            }
-            storeHomepage(data);
-        });
+        function background() {
+            // Update in background.
+            var url = urls.api.url('collection', 'tarako-featured');
+            requests.get(url, true).done(function(data) {
+                storeHomepage(data);
+            });
+        }
 
         return def.promise();
     }
