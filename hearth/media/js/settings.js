@@ -157,6 +157,9 @@ define('settings', ['l10n', 'settings_local', 'underscore'],
         // Hard-code string due to require.js circular dependencies.
         localforage_driver: 'localStorageWrapper',
 
+        // Maximum size of localforage database, in KB.
+        localforage_quota: 1024 * 15,
+
         // URLs to API responses preloaded with the package.
         offline_homepage: '/db/tarako-featured.json',
         'offline_tarako-games': '/db/tarako-games.json',
