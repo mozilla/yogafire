@@ -226,25 +226,20 @@ function(_) {
             storeName: 'yogafire',
             version: 1.0
         });
-        localforage.setDriver(settings.localforage_driver).then(function() {
-            db.preload();
-        });
+        localforage.setDriver(settings.localforage_driver);
     });
 
-    // Once database is initialized, kick off page render.
-    z.body.on('lf_preloaded_finished', function() {
-        // Use checkOnline to initialize z.onLine.
-        require('utils_local').checkOnline().done(function() {
-            console.log('Online, initializing page.');
-            z.body.removeClass('offline');
-            require('consumer_info').promise.done(function() {
-                startPage();
-            });
-        }).fail(function() {
-            console.log('Offline, initializing page.');
-            z.body.addClass('offline');
+    // Use checkOnline to initialize z.onLine.
+    require('utils_local').checkOnline().done(function() {
+        console.log('Online, initializing page.');
+        z.body.removeClass('offline');
+        require('consumer_info').promise.done(function() {
             startPage();
         });
+    }).fail(function() {
+        console.log('Offline, initializing page.');
+        z.body.addClass('offline');
+        startPage();
     });
 
     // Set the tracking package version variable (dimension15).

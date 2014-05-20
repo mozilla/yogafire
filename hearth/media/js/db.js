@@ -7,57 +7,14 @@ define('db', ['defer', 'format', 'log', 'requests', 'urls', 'utils', 'settings',
     function app_key(slug) { return 'app_' + slug; }
     function category_key(slug, page) { return 'category_' + slug + '_' + page; }
     var HOMEPAGE_KEY = 'homepage';
-    var PRELOADED_KEY = 'has_preloaded';
     var INSTALLED_KEY = 'installed';
-    var STORAGE_VERSION = 'storage_version';
 
-    function preload() {
-        console.log('Checking if data is already preloaded');
-        localforage.getItem(PRELOADED_KEY, function(is_preloaded) {
-            if (is_preloaded) {
-                // Preload already finished from a previous run.
-                console.log('Data already preloaded');
-                z.body.trigger('lf_preloaded_finished');
-            } else {
-                console.log('Data not preloaded, preloading now');
-                var promises = [];
-
-                // Preload homepage.
-                promises.push(new Promise(function(resolve, reject) {
-                    requests.get(settings.offline_homepage, true).done(function(data) {
-                        console.log('Homepage finished preloading');
-                        z.body.trigger('lf_preloaded_finished');
-                        storeHomepage(data);
-                        resolve();
-                    });
-                }));
-
-                // Preload category pages from the package.
-                // Category slugs must match category slug in the views.
-                var categories = [
-                    {slug: 'tarako-games', url: settings['offline_tarako-games']},
-                    {slug: 'tarako-tools', url: settings['offline_tarako-tools']},
-                    {slug: 'tarako-lifestyle', url: settings['offline_tarako-lifestyle']}
-                ];
-                _.each(categories, function(category) {
-                    promises.push(new Promise(function(resolve, reject) {
-                        requests.get(category.url, true).done(function(data) {
-                            storeCategory(category.slug, data, 0);  // 0 because we preload the first page.
-                            resolve();
-                        });
-                    }));
-                });
-
-                // Trigger event after everything is done.
-                Promise.all(promises).then(function() {
-                    console.log('Preload finished');
-                    localforage.setItem(PRELOADED_KEY, true);
-                });
-
-                localforage.setItem(STORAGE_VERSION, settings.lf_storage_version);
-            }
-        });
-    }
+    var offline_categories = {
+        'tarako-featured': settings.offline_homepage,
+        'tarako-games': settings['offline_tarako-games'],
+        'tarako-tools': settings['offline_tarako-tools'],
+        'tarako-lifestyle': settings['offline_tarako-lifestyle']
+    };
 
     function getApp(slug) {
         /*
@@ -272,7 +229,6 @@ define('db', ['defer', 'format', 'log', 'requests', 'urls', 'utils', 'settings',
     }
 
     return {
-        preload: preload,
         get: {
             app: getApp,
             category: getCategory,
@@ -291,7 +247,6 @@ define('db', ['defer', 'format', 'log', 'requests', 'urls', 'utils', 'settings',
             app: app_key,
             category: category_key,
             homepage: HOMEPAGE_KEY,
-            has_preloaded: PRELOADED_KEY
         }
     };
 
