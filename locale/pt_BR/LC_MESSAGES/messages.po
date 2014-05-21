@@ -6,8 +6,8 @@ msgstr ""
 "Project-Id-Version: marketplace-fireplace\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-05-19T21:42:04.153Z\n"
-"PO-Revision-Date: 2014-04-29 20:36+0000\n"
-"Last-Translator: Marco Aurélio <ouesten@me.com>\n"
+"PO-Revision-Date: 2014-05-21 17:28+0000\n"
+"Last-Translator: Marcelo <mlcaraldi@gmail.com>\n"
 "Language-Team: Português (Brasil) <dev-l10n-pt-br@lists.mozilla.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Pootle 2.5.0\n"
-"X-POOTLE-MTIME: 1398803766.0\n"
+"X-POOTLE-MTIME: 1400693301.0\n"
 
 #: /templates/cat_dropdown.html:2
 msgid "All Categories"
@@ -677,7 +677,7 @@ msgstr "Nenhuma região encontrada"
 
 #: /media/js/settings.js:168
 msgid "Sorry, you are currently offline. Please try again later."
-msgstr ""
+msgstr "Desculpe, mas você está offline no momento. Tente novamente em breve."
 
 #. {n} is the number of characters left.
 #: /media/js/utils.js:28
@@ -701,6 +701,8 @@ msgstr "Opinião enviada. Obrigado!"
 #: /media/js/views/feedback.js:27 /media/js/views/app/abuse.js:23
 msgid "Sorry, there was an issue submitting your feedback. Please try again later."
 msgstr ""
+"Desculpe, houve um problema ao enviar sua opinião. Por favor, tente "
+"novamente em breve, isso é muito importante para nós."
 
 #. Page not found (404)
 #: /media/js/views/not_found.js:9
