@@ -30,9 +30,18 @@ define('db', ['defer', 'format', 'log', 'requests', 'urls', 'utils', 'settings',
         var def = defer.Deferred();
 
         localforage.getItem(app_key(slug)).then(function(data) {
-            def.resolve(data);
-            console.log('Returned', slug, 'from localforage.');
-            background();
+            if (data) {
+                console.log('Returned', slug, 'from localforage.');
+                def.resolve(data);
+                background();
+            } else {
+                // Not in localForage, fetch.
+                var url = urls.api.url('app', slug);
+                requests.get(url).done(function(data) {
+                    def.resolve(data);
+                    storeApp(data);
+                });
+            }
         });
 
         function background() {
@@ -68,15 +77,32 @@ define('db', ['defer', 'format', 'log', 'requests', 'urls', 'utils', 'settings',
         page = page || 0;
         localforage.getItem(category_key(slug, page)).then(function(data) {
             if (data) {
-                def.resolve(data);
+                // Data returned, resolve it from localForage.
                 console.log('Returned page', page, 'of', slug, 'category from localforage.');
-                background();
+                def.resolve(data);
+                z.page.one('fragment_loaded', background);
+            } else if (page) {
+                // Requesting a page we haven't stored yet, get from API.
+                var url = urls.api.url('category', slug, {
+                    limit: settings.num_per_page,
+                    offset: page * settings.num_per_page
+                });
+                requests.get(url).done(function(data) {
+                    data = normalize_apps(data);
+                    def.resolve(data);
+                    z.page.one('fragment_loaded', function() {
+                        storeCategory(slug, data, page);
+                    });
+                });
             } else {
+                // Requesting first page we haven't stored at all, get from package.
                 requests.get(offline_categories[slug], true).done(function(data) {
                     console.log('Returned from package ' + slug);
                     def.resolve(data);
-                    storeCategory(slug, data, page);
-                    background();
+                    z.page.one('fragment_loaded', function() {
+                        storeCategory(slug, data, page);
+                        background();
+                    });
                 });
             }
         });
@@ -109,15 +135,18 @@ define('db', ['defer', 'format', 'log', 'requests', 'urls', 'utils', 'settings',
 
         localforage.getItem(HOMEPAGE_KEY).then(function(data) {
             if (data) {
-                def.resolve(data);
                 console.log('Returned homepage from localforage.');
-                background();
+                def.resolve(data);
+                z.page.one('fragment_loaded', background);
             } else {
+                // Not in localforage, get from package.
                 requests.get(offline_categories['tarako-featured'], true).done(function(data) {
+                    console.log('Returned from package homepage');
                     def.resolve(data);
-                    console.log('Homepage first preload');
-                    storeHomepage(data);
-                    background();
+                    z.page.one('fragment_loaded', function() {
+                        storeHomepage(data);
+                        background();
+                    });
                 });
             }
         });
@@ -147,10 +176,10 @@ define('db', ['defer', 'format', 'log', 'requests', 'urls', 'utils', 'settings',
         }
 
         requests.get(endpoint).done(function(data) {
+            console.log('Returned search from API.');
             data = normalize_apps(data);
             def.resolve(data);
             storeAppsFromSearch(data);
-            console.log('Returned search from API.');
         });
 
         return def.promise();
