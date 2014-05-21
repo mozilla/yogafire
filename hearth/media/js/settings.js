@@ -155,6 +155,7 @@ define('settings', ['l10n', 'settings_local', 'underscore'],
         // LocalForage driver: should be localStorage for dev, indexeddb for production
         // (easier to inspect localStorage in the console).
         // Hard-code string due to require.js circular dependencies.
+        // 'asyncStorage' for IDB.
         localforage_driver: 'localStorageWrapper',
 
         // URLs to API responses preloaded with the package.
