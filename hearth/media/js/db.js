@@ -7,57 +7,14 @@ define('db', ['defer', 'format', 'log', 'requests', 'urls', 'utils', 'settings',
     function app_key(slug) { return 'app_' + slug; }
     function category_key(slug, page) { return 'category_' + slug + '_' + page; }
     var HOMEPAGE_KEY = 'homepage';
-    var PRELOADED_KEY = 'has_preloaded';
     var INSTALLED_KEY = 'installed';
-    var STORAGE_VERSION = 'storage_version';
 
-    function preload() {
-        console.log('Checking if data is already preloaded');
-        localforage.getItem(PRELOADED_KEY, function(is_preloaded) {
-            if (is_preloaded) {
-                // Preload already finished from a previous run.
-                console.log('Data already preloaded');
-                z.body.trigger('lf_preloaded_finished');
-            } else {
-                console.log('Data not preloaded, preloading now');
-                var promises = [];
-
-                // Preload homepage.
-                promises.push(new Promise(function(resolve, reject) {
-                    requests.get(settings.offline_homepage, true).done(function(data) {
-                        console.log('Homepage finished preloading');
-                        z.body.trigger('lf_preloaded_finished');
-                        storeHomepage(data);
-                        resolve();
-                    });
-                }));
-
-                // Preload category pages from the package.
-                // Category slugs must match category slug in the views.
-                var categories = [
-                    {slug: 'tarako-games', url: settings['offline_tarako-games']},
-                    {slug: 'tarako-tools', url: settings['offline_tarako-tools']},
-                    {slug: 'tarako-lifestyle', url: settings['offline_tarako-lifestyle']}
-                ];
-                _.each(categories, function(category) {
-                    promises.push(new Promise(function(resolve, reject) {
-                        requests.get(category.url, true).done(function(data) {
-                            storeCategory(category.slug, data, 0);  // 0 because we preload the first page.
-                            resolve();
-                        });
-                    }));
-                });
-
-                // Trigger event after everything is done.
-                Promise.all(promises).then(function() {
-                    console.log('Preload finished');
-                    localforage.setItem(PRELOADED_KEY, true);
-                });
-
-                localforage.setItem(STORAGE_VERSION, settings.lf_storage_version);
-            }
-        });
-    }
+    var offline_categories = {
+        'tarako-featured': settings.offline_homepage,
+        'tarako-games': settings['offline_tarako-games'],
+        'tarako-tools': settings['offline_tarako-tools'],
+        'tarako-lifestyle': settings['offline_tarako-lifestyle']
+    };
 
     function getApp(slug) {
         /*
@@ -71,28 +28,31 @@ define('db', ['defer', 'format', 'log', 'requests', 'urls', 'utils', 'settings',
         Resolves to whatever finishes first, localForage or API.
         */
         var def = defer.Deferred();
-        var resolved = false;
 
         localforage.getItem(app_key(slug)).then(function(data) {
-            if (data && !resolved) {
-                resolved = true;
-                def.resolve(data);
+            if (data) {
                 console.log('Returned', slug, 'from localforage.');
+                def.resolve(data);
+                background();
+            } else {
+                // Not in localForage, fetch.
+                var url = urls.api.url('app', slug);
+                requests.get(url).done(function(data) {
+                    def.resolve(data);
+                    storeApp(data);
+                });
             }
         });
 
-        // Update in background.
-        var url = urls.api.url('app', slug);
-        // Request-cache app requests in memory by not passing in true since
-        // app detail page calls the localForage tag multiple times at once.
-        requests.get(url).done(function(data) {
-            if (!resolved) {
-                resolved = true;
-                def.resolve(data);
-                console.log('Returned', slug, 'from API.');
-            }
-            storeApp(data);
-        });
+        function background() {
+            // Update in background.
+            var url = urls.api.url('app', slug);
+            // Request-cache app requests in memory by not passing in true since
+            // app detail page calls the localForage tag multiple times at once.
+            requests.get(url).done(function(data) {
+                storeApp(data);
+            });
+        }
 
         return def.promise();
     }
@@ -113,31 +73,50 @@ define('db', ['defer', 'format', 'log', 'requests', 'urls', 'utils', 'settings',
         }
 
         var def = defer.Deferred();
-        var resolved = false;
 
         page = page || 0;
         localforage.getItem(category_key(slug, page)).then(function(data) {
-            if (data && !resolved) {
-                resolved = true;
-                def.resolve(data);
+            if (data) {
+                // Data returned, resolve it from localForage.
                 console.log('Returned page', page, 'of', slug, 'category from localforage.');
+                def.resolve(data);
+                z.page.one('fragment_loaded', background);
+            } else if (page) {
+                // Requesting a page we haven't stored yet, get from API.
+                var url = urls.api.url('category', slug, {
+                    limit: settings.num_per_page,
+                    offset: page * settings.num_per_page
+                });
+                requests.get(url).done(function(data) {
+                    data = normalize_apps(data);
+                    def.resolve(data);
+                    z.page.one('fragment_loaded', function() {
+                        storeCategory(slug, data, page);
+                    });
+                });
+            } else {
+                // Requesting first page we haven't stored at all, get from package.
+                requests.get(offline_categories[slug], true).done(function(data) {
+                    console.log('Returned from package ' + slug);
+                    def.resolve(data);
+                    z.page.one('fragment_loaded', function() {
+                        storeCategory(slug, data, page);
+                        background();
+                    });
+                });
             }
         });
 
-        // Update in background.
-        var url = urls.api.url('category', slug, {
-            limit: settings.num_per_page,
-            offset: page * settings.num_per_page
-        });
-        requests.get(url, true).done(function(data) {
-            data = normalize_apps(data);
-            if (!resolved) {
-                resolved = true;
-                def.resolve(data);
-                console.log('Returned page', page, 'of', slug, 'category from API.');
-            }
-            storeCategory(slug, data, page);
-        });
+        function background() {
+            // Update in background.
+            var url = urls.api.url('category', slug, {
+                limit: settings.num_per_page,
+                offset: page * settings.num_per_page
+            });
+            requests.get(url, true).done(function(data) {
+                storeCategory(slug, data, page);
+            });
+        }
 
         return def.promise();
     }
@@ -153,27 +132,32 @@ define('db', ['defer', 'format', 'log', 'requests', 'urls', 'utils', 'settings',
         Resolves to whatever finishes first, localForage or API.
         */
         var def = defer.Deferred();
-        var resolved = false;
 
         localforage.getItem(HOMEPAGE_KEY).then(function(data) {
-            if (data && !resolved) {
-                resolved = true;
-                def.resolve(data);
+            if (data) {
                 console.log('Returned homepage from localforage.');
+                def.resolve(data);
+                z.page.one('fragment_loaded', background);
+            } else {
+                // Not in localforage, get from package.
+                requests.get(offline_categories['tarako-featured'], true).done(function(data) {
+                    console.log('Returned from package homepage');
+                    def.resolve(data);
+                    z.page.one('fragment_loaded', function() {
+                        storeHomepage(data);
+                        background();
+                    });
+                });
             }
         });
 
-        // Update in background.
-        var url = urls.api.url('collection', 'tarako-featured');
-        requests.get(url, true).done(function(data) {
-            data = normalize_apps(data);
-            if (!resolved) {
-                resolved = true;
-                def.resolve(data);
-                console.log('Returned homepage from API.');
-            }
-            storeHomepage(data);
-        });
+        function background() {
+            // Update in background.
+            var url = urls.api.url('collection', 'tarako-featured');
+            requests.get(url, true).done(function(data) {
+                storeHomepage(data);
+            });
+        }
 
         return def.promise();
     }
@@ -192,10 +176,10 @@ define('db', ['defer', 'format', 'log', 'requests', 'urls', 'utils', 'settings',
         }
 
         requests.get(endpoint).done(function(data) {
+            console.log('Returned search from API.');
             data = normalize_apps(data);
             def.resolve(data);
             storeAppsFromSearch(data);
-            console.log('Returned search from API.');
         });
 
         return def.promise();
@@ -274,7 +258,6 @@ define('db', ['defer', 'format', 'log', 'requests', 'urls', 'utils', 'settings',
     }
 
     return {
-        preload: preload,
         get: {
             app: getApp,
             category: getCategory,
@@ -293,7 +276,6 @@ define('db', ['defer', 'format', 'log', 'requests', 'urls', 'utils', 'settings',
             app: app_key,
             category: category_key,
             homepage: HOMEPAGE_KEY,
-            has_preloaded: PRELOADED_KEY
         }
     };
 

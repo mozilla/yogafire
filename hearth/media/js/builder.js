@@ -313,7 +313,7 @@ define('builder',
                         result_handlers[signature.id] = lf_request;
                     }
 
-                    function get_result(data, dont_cast) {
+                    function get_result(data) {
                         // `pluck` pulls the value out of the response.
                         if ('pluck' in signature) {
                             data = data[signature.pluck];
