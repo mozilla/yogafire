@@ -158,7 +158,7 @@ define('settings', ['l10n', 'settings_local', 'underscore'],
         localforage_driver: 'localStorageWrapper',
 
         // URLs to API responses preloaded with the package.
-        offline_homepage: '/db/tarako-featured.json',
+        'offline_tarako-featured': '/db/tarako-featured.json',
         'offline_tarako-games': '/db/tarako-games.json',
         'offline_tarako-tools': '/db/tarako-tools.json',
         'offline_tarako-lifestyle': '/db/tarako-lifestyle.json',
