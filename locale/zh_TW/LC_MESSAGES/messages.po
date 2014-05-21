@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: 1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-05-19T21:42:04.153Z\n"
-"PO-Revision-Date: 2014-04-30 16:50+0000\n"
+"PO-Revision-Date: 2014-05-21 07:45+0000\n"
 "Last-Translator: Peter <petercpg@mail.moztw.org>\n"
 "Language-Team: MozTW <petercpg@mail.moztw.org>\n"
 "Language: zh_TW\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Pootle 2.5.0\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-POOTLE-MTIME: 1398876616.0\n"
+"X-POOTLE-MTIME: 1400658333.0\n"
 
 #: /templates/cat_dropdown.html:2
 msgid "All Categories"
@@ -673,7 +673,7 @@ msgstr "沒有搜尋區域"
 
 #: /media/js/settings.js:168
 msgid "Sorry, you are currently offline. Please try again later."
-msgstr ""
+msgstr "抱歉，您目前不在線上。請稍後再試。"
 
 #. {n} is the number of characters left.
 #: /media/js/utils.js:28
@@ -695,7 +695,7 @@ msgstr "已送出您的意見回饋，感謝！"
 
 #: /media/js/views/feedback.js:27 /media/js/views/app/abuse.js:23
 msgid "Sorry, there was an issue submitting your feedback. Please try again later."
-msgstr ""
+msgstr "抱歉，送出您的意見回饋時遇到問題。請稍後再試。"
 
 #. Page not found (404)
 #: /media/js/views/not_found.js:9
