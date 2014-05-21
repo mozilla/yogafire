@@ -25,6 +25,8 @@ define('db', ['defer', 'format', 'log', 'requests', 'urls', 'utils', 'settings',
                 // Preload homepage.
                 promises.push(new Promise(function(resolve, reject) {
                     requests.get(settings.offline_homepage, true).done(function(data) {
+                        console.log('Homepage finished preloading');
+                        z.body.trigger('lf_preloaded_finished');
                         storeHomepage(data);
                         resolve();
                     });
@@ -50,7 +52,6 @@ define('db', ['defer', 'format', 'log', 'requests', 'urls', 'utils', 'settings',
                 Promise.all(promises).then(function() {
                     console.log('Preload finished');
                     localforage.setItem(PRELOADED_KEY, true);
-                    z.body.trigger('lf_preloaded_finished');
                 });
 
                 localforage.setItem(STORAGE_VERSION, settings.lf_storage_version);
