@@ -1,6 +1,7 @@
 define('utils_local', ['defer', 'log', 'urls', 'z'], function(defer, log, urls, z) {
     var console = log('utils_local');
-    var timeout = 5000; // 5 seconds.
+    var check_interval;
+    var timeout = 10000;  // 5 seconds.
 
     function checkOnline() {
         // `navigator.onLine` sucks (bug 654579/756364).
@@ -20,7 +21,7 @@ define('utils_local', ['defer', 'log', 'urls', 'z'], function(defer, log, urls, 
                 }
                 def.resolve();
             }
-        }
+        };
 
         xhr.open('GET', url, true);
         xhr.timeout = timeout;
@@ -33,16 +34,16 @@ define('utils_local', ['defer', 'log', 'urls', 'z'], function(defer, log, urls, 
                 z.onLine = false;
             }
             def.reject();
-        }
+        };
 
         xhr.send();
-
         return def.promise();
     }
 
-    clearInterval(z.onlineInterval);
-
-    z.onlineInterval = setInterval(checkOnline, 10000);
+    if (check_interval) {
+        clearInterval(check_interval);
+    }
+    check_interval = setInterval(checkOnline, 10000);
 
     return {
         checkOnline: checkOnline,
