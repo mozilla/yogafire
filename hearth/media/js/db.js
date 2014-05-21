@@ -175,7 +175,14 @@ define('db', ['defer', 'format', 'log', 'requests', 'urls', 'utils', 'settings',
     function storeApp(data) {
         // Passed an app, stores that app with localforage.
         console.log('Storing app', data.slug);
-        localforage.setItem(app_key(data.slug), data);
+        localforage.setItem(app_key(data.slug), data).then(function() {}, function(error) {
+            if (error.name == 'QuotaExceededError' || error.name == 'NS_ERROR_DOM_QUOTA_REACHED') {
+                console.log('Quota exceeded, clearing localforage');
+                localforage.clear().then(function() {
+                    storeApp(data);
+                });
+            }
+        });
         memcache[app_key(data.slug)] = data;
     }
 
@@ -196,7 +203,14 @@ define('db', ['defer', 'format', 'log', 'requests', 'urls', 'utils', 'settings',
         */
         console.log('Storing', slug, page);
         data = normalize_apps(data);
-        localforage.setItem(category_key(slug, page), data);
+        localforage.setItem(category_key(slug, page), data).then(function() {}, function(error) {
+            if (error.name == 'QuotaExceededError' || error.name == 'NS_ERROR_DOM_QUOTA_REACHED') {
+                console.log('Quota exceeded, clearing localforage');
+                localforage.clear().then(function() {
+                    storeCategory(slug, data, page);
+                });
+            }
+        });
         storeApps(data.apps);
     }
 
@@ -213,7 +227,14 @@ define('db', ['defer', 'format', 'log', 'requests', 'urls', 'utils', 'settings',
     function storeInstalled(installed) {
         // Installed apps (manifestURLs).
         z.apps = installed;
-        localforage.setItem(INSTALLED_KEY, installed || []);
+        localforage.setItem(INSTALLED_KEY, installed || []).then(function() {}, function(error) {
+            if (error.name == 'QuotaExceededError' || error.name == 'NS_ERROR_DOM_QUOTA_REACHED') {
+                console.log('Quota exceeded, clearing localforage');
+                localforage.clear().then(function() {
+                    storeInstalled(installed);
+                });
+            }
+        });
     }
 
     function normalize_apps(data) {
