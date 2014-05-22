@@ -44,6 +44,9 @@
     },
     "storage": {
       "description": "To allow caching of over 5MB of app data."
+    },
+    "tcp-socket" : {
+      "description" : "To detect online status."
     }
   },
   "type": "privileged",
