@@ -216,18 +216,7 @@ function(_) {
         } else {
             z.page.trigger('loaded');
         }
-        require('utils_local').checkOnline();
     }
-
-    require('consumer_info').promise.done(function() {
-        console.log('Online, initializing page.');
-        z.body.removeClass('offline');
-        startPage();
-    }).fail(function() {
-        console.log('Offline, initializing page.');
-        z.body.addClass('offline');
-        startPage();
-    });
 
     // Initialize the database when localForage has loaded.
     localforage.ready().then(function() {
@@ -238,6 +227,19 @@ function(_) {
             version: 1.0
         });
         localforage.setDriver(settings.localforage_driver);
+    });
+
+    // Use checkOnline to initialize z.onLine.
+    require('utils_local').checkOnline().done(function() {
+        console.log('Online, initializing page.');
+        z.body.removeClass('offline');
+        require('consumer_info').promise.done(function() {
+            startPage();
+        });
+    }).fail(function() {
+        console.log('Offline, initializing page.');
+        z.body.addClass('offline');
+        startPage();
     });
 
     // Set the tracking package version variable (dimension15).
