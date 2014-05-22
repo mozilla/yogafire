@@ -1,7 +1,28 @@
 define('utils_local', ['defer', 'log', 'urls', 'z'], function(defer, log, urls, z) {
     var console = log('utils_local');
     var check_interval;
-    var timeout = 10000;  // 5 seconds.
+    var timeout = 10000;  // 10 seconds.
+
+    function offline(def) {
+        if (z.onLine) {
+            // Fire event for going offline.
+            console.log('Offline detected.');
+            z.win.trigger('offline_detected');
+            z.onLine = false;
+        }
+        def.reject();
+    }
+
+    function online(def) {
+        if (!z.onLine) {
+            // Fire event for going online.
+            // Fire event to start loading images.
+            console.log('Online detected.');
+            z.win.trigger('online_detected image_defer');
+            z.onLine = true;
+        }
+        def.resolve();
+    }
 
     function checkOnline() {
         // `navigator.onLine` sucks (bug 654579/756364).
@@ -12,28 +33,21 @@ define('utils_local', ['defer', 'log', 'urls', 'z'], function(defer, log, urls, 
 
         xhr.onreadystatechange = function() {
             if (xhr.readyState === 4) {
-                if (!z.onLine) {
-                    // Fire event for going online.
-                    // Fire event to start loading images.
-                    console.log('Online detected.');
-                    z.win.trigger('online_detected image_defer');
-                    z.onLine = true;
+                console.log('Got status ' + xhr.status + ' when requesting ' + url);
+                if (xhr.status === 0) {
+                    offline(def);
+                } else {
+                    online(def);
                 }
-                def.resolve();
             }
         };
 
-        xhr.open('GET', url, true);
+        xhr.open('HEAD', url, true);
         xhr.timeout = timeout;
 
         xhr.ontimeout = function() {
-            if (z.onLine) {
-                // Fire event for going offline.
-                console.log('Offline detected.');
-                z.win.trigger('offline_detected');
-                z.onLine = false;
-            }
-            def.reject();
+            console.log('Timeout when requesting ' + url);
+            offline(def);
         };
 
         xhr.send();
