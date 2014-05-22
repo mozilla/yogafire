@@ -9,6 +9,5 @@ define('settings_local', [], function() {
         potatolytics_enabled: true,
         package_version: '{fireplace_package_version}',
         iframe_installer_src:  'https://marketplace.firefox.com/iframe-install.html',
-        localforage_driver: 'asyncStorage'
     };
 });
