@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Marketplace\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-05-19T21:42:04.153Z\n"
-"PO-Revision-Date: 2014-05-02 08:43+0000\n"
+"PO-Revision-Date: 2014-05-23 07:57+0000\n"
 "Last-Translator: Pavel <jasnapaka@jasnapaka.com>\n"
 "Language-Team: Czech <info@mozilla.cz>\n"
 "Language: cs\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Pootle 2.5.0\n"
-"X-POOTLE-MTIME: 1399020196.0\n"
+"X-POOTLE-MTIME: 1400831853.0\n"
 
 #: /templates/cat_dropdown.html:2
 msgid "All Categories"
@@ -676,7 +676,7 @@ msgstr "U vyhledávání nebyl zvolen region"
 
 #: /media/js/settings.js:168
 msgid "Sorry, you are currently offline. Please try again later."
-msgstr ""
+msgstr "Omlouváme se, ale jste offline. Zkuste to znovu později."
 
 #. {n} is the number of characters left.
 #: /media/js/utils.js:28
@@ -701,6 +701,8 @@ msgstr "Reakce byla odeslána. Děkujeme!"
 #: /media/js/views/feedback.js:27 /media/js/views/app/abuse.js:23
 msgid "Sorry, there was an issue submitting your feedback. Please try again later."
 msgstr ""
+"Omlouváme se, ale vyskytl se problém při odesílání vaší reakce. Zkuste to "
+"znovu později."
 
 #. Page not found (404)
 #: /media/js/views/not_found.js:9
