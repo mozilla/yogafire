@@ -91,7 +91,7 @@ media/locales/hi-IN.js
 #media/locales/pl.js
 #media/locales/pt-BR.js
 #media/locales/ro.js
-#media/locales/ru.js
+media/locales/ru.js
 #media/locales/si.js
 #media/locales/sk.js
 #media/locales/sl.js
