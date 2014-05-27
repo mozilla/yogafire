@@ -340,3 +340,22 @@ button.ssnav {
         }
     }
 }
+
+// Fatten the search bar.
+header.site-header,
+header.site-header > nav {
+    height: 58px;
+    max-height: 58px;
+}
+
+body main {
+    padding-top: 58px;
+
+    &:before {
+        top: 57px;
+    }
+}
+
+input#search-q {
+    height: 45px;
+}
