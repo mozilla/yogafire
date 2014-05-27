@@ -1,12 +1,12 @@
 (function() {
 
-// This is a little misleading.  If you're using the Marketplace this is likely
-// overridden below with body_langs.  See bug 892741 for details.
-var languages = ["bn-BD","en-US","fr","hi-IN","ru","ta","dbg"];
-var body_langs;
-if (body_langs = document.body.getAttribute('data-languages')) {
-    languages = JSON.parse(body_langs);
-}
+// Master list of supported languages. If you add a language to this list,
+// don't forget to modify package/files.txt to have it included in the package
+// as well!
+// Note: differs from fireplace, which considers zamboni is the source of
+// truth, at least for the hosted app version. Since we are exclusively a
+// packaged app, it's simpler to just define the list here in yogafire.
+var languages = ['bn-IN', 'en-US', 'fr', 'hi-IN', 'ru', 'ta', 'dbg'];
 
 var lang_expander = {
     'en': 'en-US', 'ga': 'ga-IE',

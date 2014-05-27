@@ -89,6 +89,7 @@ function(_) {
     var nunjucks = require('templates');
     var settings = require('settings');
     var z = require('z');
+    var l10n = require('l10n');
 
     var nunjucks_globals = require('nunjucks').require('globals');
     nunjucks_globals.REGIONS = settings.REGION_CHOICES_SLUG;
@@ -99,13 +100,13 @@ function(_) {
     // Jank hack because Persona doesn't allow scripts in the doc iframe.
     // Please just delete it when they don't do that anymore.
     // Note: If this list changes - please change it in webpay too or let #payments know.
-    var doc_langs = ['bn-IN', 'en-US', 'fr', 'hi', 'ta', 'ru'];
+    var doc_langs = l10n.languages;
     var doc_lang = doc_langs.indexOf(navigator.l10n.language) >= 0 ? navigator.l10n.language : 'en-US';
     var doc_location = require('urls').media('/docs/{type}/' + doc_lang + '.html?20140419');
     settings.persona_tos = format.format(doc_location, {type: 'terms'});
     settings.persona_privacy = format.format(doc_location, {type: 'privacy'});
 
-    z.body.addClass('html-' + require('l10n').getDirection());
+    z.body.addClass('html-' + l10n.getDirection());
     if (settings.body_classes) {
         z.body.addClass(settings.body_classes);
     }
