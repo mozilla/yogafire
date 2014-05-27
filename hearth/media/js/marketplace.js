@@ -116,10 +116,13 @@ function(_) {
         // Remove the splash screen once it's hidden.
         var splash = $('#splash-overlay').addClass('hide');
         z.body.removeClass('overlayed').addClass('loaded');
-        require('apps').getInstalled().done(require('buttons').mark_installeds);
         setTimeout(function() {
             splash.remove();
         }, 1500);
+        setTimeout(function() {
+            // Temporary until we land a loaded trigger for the apps iframe.
+            require('apps').getInstalled().done(require('buttons').mark_installeds);
+        }, 3000);
     });
 
     // This lets you refresh within the app by holding down command + R.
