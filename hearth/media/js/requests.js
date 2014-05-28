@@ -149,6 +149,9 @@ define('requests',
 
     function handle_errors(xhr, type, status) {
         console.log('Request failed:', type, status);
+        if (status === 0) {
+            window.console.log(xhr);
+        }
         if (xhr.responseText) {
             try {
                 var data = JSON.parse(xhr.responseText);
