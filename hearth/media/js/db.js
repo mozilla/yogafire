@@ -105,13 +105,14 @@ define('db', ['defer', 'format', 'log', 'requests', 'urls', 'utils', 'settings',
             if (data) {
                 console.log('Returning from localforage', slug, page);
                 def.resolve(data);
-                memcache[key] = data;
+                memcache_set(data);
                 z.page.one('fragment_loaded', background);
             } else if (page) {
                 console.log('Returning from API', slug, page);
                 requests.get(api_url).done(function(data) {
-                    def.resolve(normalize_apps(data));
-                    memcache[key] = data;
+                    data = normalize_apps(data);
+                    def.resolve(data);
+                    memcache_set(data);
                     z.page.one('fragment_loaded', function() {
                         storeCategory(slug, data, page);
                     });
@@ -120,11 +121,27 @@ define('db', ['defer', 'format', 'log', 'requests', 'urls', 'utils', 'settings',
                 console.log('Returning from package', slug);
                 requests.get(offline_categories[slug]).done(function(data) {
                     def.resolve(data);
-                    memcache[key] = data;
+                    memcache_set(data);
                     z.page.one('fragment_loaded', background);
                 });
             }
         });
+
+        function memcache_set(_data) {
+            /* Update the data in memory of all of the previous pages to be the
+               current page, effectively making it so that when a user tries to
+               go back to a first page, all pages that have already been
+               fetched will be loaded. */
+            var data = JSON.parse(JSON.stringify(_data));
+            if (page > 0) {
+                // Concatenate with previous page.
+                data.apps = memcache[category_key(slug, page - 1)].apps.concat(data.apps);
+            }
+            for (var i = 0; i <= page; i++) {
+                // Update all previous pages.
+                memcache[category_key(slug, i)] = data;
+            }
+        }
 
         function background() {
             // Update in background.
