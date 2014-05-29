@@ -16,6 +16,14 @@ define('db', ['defer', 'format', 'log', 'requests', 'urls', 'utils', 'settings',
         }
         return 'category_' + slug + '_' + page;
     }
+    function search_key(endpoint, page) {
+        // Currently only storing search in memory.
+        endpoint = utils.urlparams(endpoint, {
+            limit: settings.num_per_page,
+            offset: page * settings.num_per_page
+        });
+        return 'search_' + endpoint;
+    }
     var offline_categories = {
         'tarako-featured': settings['offline_tarako-featured'],  // Homepage.
         'tarako-games': settings['offline_tarako-games'],
@@ -105,13 +113,14 @@ define('db', ['defer', 'format', 'log', 'requests', 'urls', 'utils', 'settings',
             if (data) {
                 console.log('Returning from localforage', slug, page);
                 def.resolve(data);
-                memcache[key] = data;
+                memcache_set(data);
                 z.page.one('fragment_loaded', background);
             } else if (page) {
                 console.log('Returning from API', slug, page);
                 requests.get(api_url).done(function(data) {
-                    def.resolve(normalize_apps(data));
-                    memcache[key] = data;
+                    data = normalize_apps(data);
+                    def.resolve(data);
+                    memcache_set(data);
                     z.page.one('fragment_loaded', function() {
                         storeCategory(slug, data, page);
                     });
@@ -120,11 +129,24 @@ define('db', ['defer', 'format', 'log', 'requests', 'urls', 'utils', 'settings',
                 console.log('Returning from package', slug);
                 requests.get(offline_categories[slug]).done(function(data) {
                     def.resolve(data);
-                    memcache[key] = data;
+                    memcache_set(data);
                     z.page.one('fragment_loaded', background);
                 });
             }
         });
+
+        function memcache_set(_data) {
+            // Rewrites previous pages to allow hitting back and retain pos.
+            var data = JSON.parse(JSON.stringify(_data));  // Clone object.
+            if (page > 0) {
+                // Concatenate with previous page.
+                data.apps = memcache[category_key(slug, page - 1)].apps.concat(data.apps);
+            }
+            for (var i = 0; i <= page; i++) {
+                // Update all previous pages.
+                memcache[category_key(slug, i)] = data;
+            }
+        }
 
         function background() {
             // Update in background.
@@ -138,24 +160,43 @@ define('db', ['defer', 'format', 'log', 'requests', 'urls', 'utils', 'settings',
     }
 
     function getSearch(endpoint, page) {
-        /*
-        Returns the API response, but stores all of the apps.
-        */
+        /* Returns the API response (which is cached in memory by requests)
+           Stores the API response into memory (and rewrites when getting pages > 0).
+           Stores all of the apps in localForage. */
         var def = defer.Deferred();
 
-        if (page) {
-            endpoint = utils.urlparams(endpoint, {
-                limit: settings.num_per_page,
-                offset: page * settings.num_per_page
-            });
+        page = page || 0;
+        endpoint = utils.urlparams(endpoint, {
+            limit: settings.num_per_page,
+            offset: page * settings.num_per_page
+        });
+
+        var key = search_key(endpoint, page);
+        if (key in memcache) {
+            console.log('Returning from memory', endpoint);
+            return def.resolve(memcache[key]).promise();
         }
 
         requests.get(endpoint).done(function(data) {
             console.log('Returning search from API', endpoint);
             data = normalize_apps(data);
             def.resolve(data);
+            memcache_set(data);
             storeAppsFromSearch(data);
         });
+
+        function memcache_set(_data) {
+            // Rewrites previous pages to allow hitting back and retain pos.
+            var data = JSON.parse(JSON.stringify(_data));  // Clone object.
+            if (page > 0) {
+                // Concatenate with previous page.
+                data.apps = memcache[search_key(endpoint, page - 1)].apps.concat(data.apps);
+            }
+            for (var i = 0; i <= page; i++) {
+                // Update all previous pages.
+                memcache[search_key(endpoint, i)] = data;
+            }
+        }
 
         return def.promise();
     }
@@ -238,7 +279,7 @@ define('db', ['defer', 'format', 'log', 'requests', 'urls', 'utils', 'settings',
     }
 
     function normalize_apps(data) {
-        // Normalize to data.apps.
+        // Normalize data.objects to data.apps.
         if (data.objects) {
             data.apps = data.objects;
             delete data['objects'];
@@ -262,7 +303,8 @@ define('db', ['defer', 'format', 'log', 'requests', 'urls', 'utils', 'settings',
         keys: {
             app: app_key,
             category: category_key,
-        }
+        },
+        cache: memcache
     };
 
 });
