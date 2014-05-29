@@ -124,16 +124,28 @@ define('requests',
         console.log('GETing', url);
         urls_fetched[url] = null;
 
-        var def_ajax = ajax('GET', url).done(function(data) {
-            console.log('GOT', url);
-            if (!nocache) {
-                data.__time = +(new Date());
-                cache.set(url, data);
-            }
-            if (cached && cache_offline) {
-                console.log('Updating request cache', url);
-            }
-        });
+        var def = defer.Deferred();
+        function do_ajax(retry) {
+            // Request with one retry if it fails.
+            ajax('GET', url).done(function(data) {
+                console.log('GOT', url);
+                if (!nocache) {
+                    data.__time = +(new Date());
+                    cache.set(url, data);
+                }
+                if (cached && cache_offline) {
+                    console.log('Updating request cache', url);
+                }
+                def.resolve(data);
+            }).fail(function(xhr, type, status) {
+                if (status === 0 && retry) {
+                    console.log('Intermittent CORS failure, retrying request once', url);
+                    return do_ajax(false);
+                }
+                def.reject(xhr, type, status);
+            });
+        }
+        do_ajax(true);
 
         if (cached && cache_offline) {
             // If the response was cached, we still want to fire off the
@@ -144,7 +156,7 @@ define('requests',
             return def_cached;
         }
 
-        return def_ajax;
+        return def;
     }
 
     function handle_errors(xhr, type, status) {
