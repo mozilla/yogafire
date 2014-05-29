@@ -46,6 +46,7 @@ if (!window.define) {
     document.write('<script src="/media/' + (repo ? repo + '/' : '') + 'locales/' + locale + '.js"></script>');
     /* jshint ignore:end */
 
+    document.body.setAttribute('data-locale', locale);
 } else {
     define('l10n', ['format'], function(format) {
         var rtlList = ['ar', 'he', 'fa', 'ps', 'ur'];
@@ -89,6 +90,10 @@ if (!window.define) {
 
         window.gettext = get;
         window.ngettext = nget;
+
+        var qs_lang = /[\?&]lang=([\w\-]+)/i.exec(window.location.search);
+        var locale = get_locale((qs_lang && qs_lang[1]) || navigator.language || navigator.userLanguage);
+        document.body.setAttribute('data-locale', locale);
 
         return {
             gettext: get,
