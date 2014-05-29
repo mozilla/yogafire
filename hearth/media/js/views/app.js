@@ -79,7 +79,7 @@ define('views/app',
         builder.onload('app-data', function(app) {
             builder.z('title', utils.translate(app.name));
 
-            z.page.trigger('populatetray');
+            z.page.trigger('inittray');
             require('overflow').init();
 
             // 'truncated' class is applied by default, remove it if it's not

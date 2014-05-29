@@ -300,21 +300,6 @@ button.ssnav {
     }
 }
 
-.slider {
-    &:before, &:after {
-        background: $salt-flat-white;
-        content: "";
-        height: 200px;
-        position: absolute;
-        width: 60px;
-        z-index: 5;
-    }
-    &:after {
-        right: 0;
-        top: 15px;
-    }
-}
-
 #search-q {
     background-color: #fff;
     border-width: 1px;
@@ -330,8 +315,6 @@ button.ssnav {
         height: 215px;
         padding-top: 0;
 
-        button.ssnav {
-        }
         .slider {
             &:before,
             &:after {
@@ -358,4 +341,26 @@ body main {
 
 input#search-q {
     height: 45px;
+}
+
+// Yoga shots!
+.mkt-tile + .tray li {
+    display: inline-block;
+    margin-left: 0;
+    width: 300px;
+
+    img {
+        display: inline;
+        margin: inherit;
+        max-height: 150px;
+        max-width: 260px;
+        position: static;
+    }
+    .thumbnail {
+        display: inline;
+    }
+}
+
+.tray.previews .content {
+    text-align: center;
 }

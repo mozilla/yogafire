@@ -1,6 +1,6 @@
 define('views/search',
-    ['capabilities', 'l10n', 'notification', 'settings', 'storage', 'tracking', 'underscore', 'urls', 'utils', 'utils_local', 'z'],
-    function(capabilities, l10n, notification, settings, storage, tracking, _, urls, utils, utils_local, z) {
+    ['capabilities', 'l10n', 'notification', 'settings', 'storage', 'tracking', 'underscore', 'urls', 'utils', 'utils_local', 'yogashots', 'z'],
+    function(capabilities, l10n, notification, settings, storage, tracking, _, urls, utils, utils_local, yshots, z) {
 
     var _pd = utils._pd;
     var gettext = l10n.gettext;
@@ -44,7 +44,7 @@ define('views/search',
         $('.expand-toggle').toggleClass('active', expand);
         storage.setItem('expand-listings', expanded ? '1' : '');
         if (expanded) {
-            z.page.trigger('populatetray');
+            z.page.trigger('inittray');
             // Set the `src` for hidden images so they get loaded.
             $('img[data-src]:not([src])').each(function () {
                 this.src = $(this).data('src');
@@ -170,7 +170,7 @@ define('views/search',
             setTrays(expand);
         }
     }).on('loaded_more', function() {
-        z.page.trigger('populatetray');
+        z.page.trigger('inittray');
         // Update "Showing 1-{total}" text.
         z.page.find('.total-results').text(z.page.find('.item.app').length);
     }).on('search', function(e, params) {
