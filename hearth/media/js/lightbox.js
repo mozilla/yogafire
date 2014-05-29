@@ -7,7 +7,6 @@ define('lightbox',
     var $content = $lightbox.find('.content');
     var currentApp;
     var previews;
-    var slider;
 
     $lightbox.addClass('shots');
 
@@ -35,7 +34,7 @@ define('lightbox',
         db.get.app($tile.data('slug')).done(function(product) {
             var id = product.id;
 
-            if (id != currentApp || !slider) {
+            if (id != currentApp) {
                 currentApp = id;
                 previews = product.previews;
                 renderPreviews();
@@ -45,38 +44,9 @@ define('lightbox',
 
             // Fade that bad boy in.
             z.body.addClass('overlayed');
-            $lightbox.show();
-            setTimeout(function() {
-                slider.moveToPoint(which);
-                resize();
-                $lightbox.addClass('show');
-            }, 0);
+            $lightbox.show().addClass('show');
         });
     }
-
-    // Set up key bindings.
-    z.win.on('keydown.lightboxDismiss', function(e) {
-        switch (e.which) {
-            case keys.ESCAPE:
-                if ($lightbox.hasClass('show')) {
-                    e.preventDefault();
-                    hideLightbox();
-                }
-                break;
-            case keys.LEFT:
-                if (slider) {
-                    e.preventDefault();
-                    slider.toPrev();
-                }
-                break;
-            case keys.RIGHT:
-                if (slider) {
-                    e.preventDefault();
-                    slider.toNext();
-                }
-                break;
-        }
-    });
 
     function renderPreviews() {
         // Clear out the existing content.
@@ -87,47 +57,20 @@ define('lightbox',
             var $el = $('<li class="loading"><span class="throbber">');
             $content.append($el);
 
-            // Let's fail elegantly when our images don't load.
-            // Videos on the other hand will always be injected.
-            if (p.filetype == 'video/webm') {
-                // We can check for `HTMLMediaElement.NETWORK_NO_SOURCE` on the
-                // video's `networkState` property at some point.
-                var v = $('<video src="' + p.image_url + '" controls></video>');
+            var i = new Image();
+
+            i.onload = function() {
                 $el.removeClass('loading');
-                $el.append(v);
-            } else {
-                var i = new Image();
+                $el.append(i);
+            };
 
-                i.onload = function() {
-                    $el.removeClass('loading');
-                    $el.append(i);
-                };
-                i.onerror = function() {
-                    $el.removeClass('loading');
-                    $el.append('<b class="err">&#x26A0;</b>');
-                };
+            i.onerror = function() {
+                $el.removeClass('loading');
+                $el.append('<b class="err">&#x26A0;</b>');
+            };
 
-                // Attempt to load the image.
-                i.src = p.image_url;
-            }
-        });
-
-        // $section doesn't have its proper width until after a paint.
-        if ($content.length) {
-            slider = Flipsnap($content[0]);
-            slider.element.addEventListener('fsmoveend', pauseVideos, false);
-        }
-    }
-
-    function resize() {
-        if (!slider) return;
-        slider.distance = $section.width();
-        slider.refresh();
-    }
-
-    function pauseVideos() {
-        $('video').each(function() {
-            this.pause();
+            // Attempt to load the image.
+            i.src = p.image_url;
         });
     }
 
@@ -138,21 +81,8 @@ define('lightbox',
 
     function closeLightbox() {
         z.body.removeClass('overlayed');
-        pauseVideos();
         $lightbox.removeClass('show');
-        // We can't trust transitionend to fire in all cases.
-        setTimeout(function() {
-            $lightbox.hide();
-        }, 500);
-        if (slider && slider.element) {
-            slider.element.removeEventListener('fsmoveend', pauseVideos);
-            slider.destroy();
-            slider = null;
-        }
     }
-
-    // We need to adjust the scroll distances on resize.
-    z.win.on('resize', _.debounce(resize, 200));
 
     // If a tray thumbnail is clicked, load up our lightbox.
     z.page.on('click', '.tray ul a', utils._pd(showLightbox));
