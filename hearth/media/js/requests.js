@@ -3,6 +3,7 @@ define('requests',
     function(cache, defer, log, settings, utils) {
 
     var console = log('req');
+    var MAX_RETRIES = 3;  // Retry requests that fail with status 0.
 
     var hooks = {};
     function callHooks(event, data) {
@@ -125,6 +126,7 @@ define('requests',
         urls_fetched[url] = null;
 
         var def = defer.Deferred();
+        var retries = 0;
         function do_ajax(retry) {
             // Request with one retry if it fails.
             ajax('GET', url).done(function(data) {
@@ -140,7 +142,7 @@ define('requests',
             }).fail(function(xhr, type, status) {
                 if (status === 0 && retry) {
                     console.log('Intermittent CORS failure, retrying request once', url);
-                    return do_ajax(false);
+                    return do_ajax(++retries < MAX_RETRIES);
                 }
                 def.reject(xhr, type, status);
             });
