@@ -13,6 +13,10 @@ define('apps_iframe_installer',
             return;
         }
         switch (e.data.name) {
+            case 'loaded':
+                z.page.trigger('iframe-loaded');
+                break;
+
             case 'install-package':
                 z.page.trigger('iframe-install-package', [e.data]);
                 break;

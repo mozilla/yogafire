@@ -110,6 +110,11 @@ function(_) {
         z.body.addClass(settings.body_classes);
     }
 
+    z.page.on('iframe-loaded', function() {
+        // Triggered by apps-iframe-installer.
+        require('apps').getInstalled().done(require('buttons').mark_installeds);
+    });
+
     z.page.one('loaded', function() {
         console.log('Hiding splash screen (' + ((performance.now() - start_time) / 1000).toFixed(6) + 's)');
         // Remove the splash screen once it's hidden.
@@ -119,9 +124,9 @@ function(_) {
             splash.remove();
         }, 1500);
         setTimeout(function() {
-            // Temporary until we land a loaded trigger for the apps iframe.
+            // TODO: remove after 6/4/2014 push.
             require('apps').getInstalled().done(require('buttons').mark_installeds);
-        }, 3000);
+        }, 5000);
     });
 
     // This lets you refresh within the app by holding down command + R.
