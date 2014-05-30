@@ -27,8 +27,7 @@ define('requests',
     }
 
     function _ajax(type, url, data) {
-        // Workaround for strange intermittent CORS Krupa errors.
-        var xhr = new XMLHttpRequest({mozSystem: true});
+        var xhr = new XMLHttpRequest();
         var def = defer.Deferred();
 
         function response(xhr) {
