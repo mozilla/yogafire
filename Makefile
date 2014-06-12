@@ -1,5 +1,5 @@
-REPO = "fireplace"
-UUID = "8af8c763-da9b-444d-a911-206f9e225b55"
+REPO = "yogafire"
+UUID = "f34d3c22-3efe-47ca-803d-6c740da1a851"
 VERSION = `date "+%Y.%m.%d_%H.%M.%S"`
 VERSION_INT = $(shell date "+%Y%m%d%H%M%S")
 TMP = _tmp
