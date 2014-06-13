@@ -54,5 +54,5 @@ def build_package():
 def upload_package():
     with lcd(ZAMBONI):
         local('%s manage.py --settings=settings_local_mkt '
-              'upload_new_marketplace_package --slug=%s %s'
+              'upload_new_marketplace_package %s %s'
               % (ZAMBONI_PYTHON, 'marketplace-package', YOGAFIRE_PACKAGE))
