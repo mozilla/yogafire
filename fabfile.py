@@ -20,6 +20,7 @@ GRUNT = '%s/node_modules/grunt-cli/bin' % YOGAFIRE
 YOGAFIRE_PACKAGE = '%s/package/archives/latest_%s.zip' % (YOGAFIRE,
                                                           settings.ENV)
 
+os.environ['DJANGO_SETTINGS_MODULE'] = 'settings_local_mkt'
 os.environ["PATH"] += os.pathsep + os.pathsep.join([COMMONPLACE, GRUNT])
 
 
@@ -53,6 +54,5 @@ def build_package():
 @task
 def upload_package():
     with lcd(ZAMBONI):
-        local('%s manage.py --settings=settings_local_mkt '
-              'upload_new_marketplace_package %s %s'
+        local('%s manage.py upload_new_marketplace_package %s %s'
               % (ZAMBONI_PYTHON, 'marketplace-package', YOGAFIRE_PACKAGE))
