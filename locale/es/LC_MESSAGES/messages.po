@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-05-19T21:42:04.153Z\n"
-"PO-Revision-Date: 2014-05-04 15:12+0000\n"
-"Last-Translator: Inma <inma.barrios@mozilla-hispano.org>\n"
+"PO-Revision-Date: 2014-06-21 20:41+0000\n"
+"Last-Translator: Paco <pacommozilla@gmail.com>\n"
 "Language-Team: Español (España) <nave@elistas.net>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Pootle 2.5.0\n"
-"X-POOTLE-MTIME: 1399216352.0\n"
+"X-POOTLE-MTIME: 1403383289.0\n"
 
 #: /templates/cat_dropdown.html:2
 msgid "All Categories"
@@ -674,7 +674,7 @@ msgstr "Ningún país en la búsqueda"
 
 #: /media/js/settings.js:168
 msgid "Sorry, you are currently offline. Please try again later."
-msgstr ""
+msgstr "Lo sentimos, pero no estás conectado. Vuelve a intentarlo más tarde."
 
 #. {n} is the number of characters left.
 #: /media/js/utils.js:28
@@ -698,6 +698,8 @@ msgstr "Opinión enviada. ¡Gracias!"
 #: /media/js/views/feedback.js:27 /media/js/views/app/abuse.js:23
 msgid "Sorry, there was an issue submitting your feedback. Please try again later."
 msgstr ""
+"Lo sentimos, hubo un problema al enviar tus comentarios. Por favor, "
+"inténtalo de nuevo más tarde."
 
 #. Page not found (404)
 #: /media/js/views/not_found.js:9
