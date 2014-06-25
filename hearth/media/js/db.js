@@ -152,6 +152,8 @@ define('db', ['defer', 'format', 'log', 'requests', 'urls', 'utils', 'settings',
             // Update in background.
             console.log('Updating', slug);
             requests.get(api_url).done(function(data) {
+                data = normalize_apps(data);
+                memcache_set(data);
                 storeCategory(slug, data, page);
             });
         }
