@@ -19,6 +19,9 @@
     {# Render the more button if there's another page of results and we are dealing with a category #}
     {% if category and response.meta.next %}
       {{ more_button_localforage('category', category, (response.meta.offset / response.meta.limit) + 1) }}
+    {% elif category and not response.meta %}
+      {# Refresh preloaded data. #}
+      {{ more_button_localforage('category', category, 0) }}
     {% endif %}
   </ol>
 {% placeholder %}

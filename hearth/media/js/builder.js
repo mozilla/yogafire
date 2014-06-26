@@ -112,6 +112,7 @@ define('builder',
                 var key = el.getAttribute('data-key');
                 var slug = el.getAttribute('data-slug');
                 var page_num = el.getAttribute('data-page');
+
                 injector(key, slug, page_num, el.parentNode, target).done(function() {
                     console.log('Pagination completed');
                     fire(page, 'loaded_more');
@@ -344,13 +345,22 @@ define('builder',
                             if (!el) {
                                 return;
                             }
+
                             context.ctx.response = data;
                             var content = get_result(data);
-                            if (replace) {
-                                parse_and_replace(content, replace);
+
+                            if (signature.paginate && parseInt(page_num, 10) === 0) {
+                                // On preloaded data, remove the preloaded data after injecting
+                                // the first page.
+                                document.querySelector(signature.paginate).innerHTML = content;
                             } else {
-                                el.innerHTML = content;
+                                if (replace) {
+                                    parse_and_replace(content, replace);
+                                } else {
+                                    el.innerHTML = content;
+                                }
                             }
+
                             if (signature.paginate) {
                                 make_paginatable_localforage(injector, el, signature.paginate);
                             }
