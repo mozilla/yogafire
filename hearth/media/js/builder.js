@@ -353,18 +353,19 @@ define('builder',
                                 // On preloaded data, remove the preloaded data after injecting
                                 // the first page.
                                 document.querySelector(signature.paginate).innerHTML = content;
-                                window.scrollTo(0, 0);
+                                make_paginatable_localforage(injector, el, signature.paginate);
+                                fire(document.querySelector('.loadmore button'), 'click');
                             } else {
                                 if (replace) {
                                     parse_and_replace(content, replace);
                                 } else {
                                     el.innerHTML = content;
                                 }
+                                if (signature.paginate) {
+                                    make_paginatable_localforage(injector, el, signature.paginate);
+                                }
                             }
 
-                            if (signature.paginate) {
-                                make_paginatable_localforage(injector, el, signature.paginate);
-                            }
                             trigger_fragment_loaded(signature.id || null);
                         }
 
