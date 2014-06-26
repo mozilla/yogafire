@@ -353,6 +353,7 @@ define('builder',
                                 // On preloaded data, remove the preloaded data after injecting
                                 // the first page.
                                 document.querySelector(signature.paginate).innerHTML = content;
+                                window.scrollTo(0, 0);
                             } else {
                                 if (replace) {
                                     parse_and_replace(content, replace);
