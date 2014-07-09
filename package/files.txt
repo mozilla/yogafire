@@ -44,7 +44,7 @@ media/js/lib/localforage.js
 #media/locales/ast.js
 #media/locales/be.js
 #media/locales/bg.js
-#media/locales/bn-BD.js
+media/locales/bn-BD.js
 media/locales/bn-IN.js
 #media/locales/bs.js
 #media/locales/ca.js

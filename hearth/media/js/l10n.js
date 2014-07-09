@@ -6,7 +6,7 @@
 // Note: differs from fireplace, which considers zamboni is the source of
 // truth, at least for the hosted app version. Since we are exclusively a
 // packaged app, it's simpler to just define the list here in yogafire.
-var languages = ['bn-IN', 'en-US', 'fr', 'hi-IN', 'ru', 'ta', 'dbg'];
+var languages = ['bn-BD', 'bn-IN', 'en-US', 'fr', 'hi-IN', 'ru', 'ta', 'dbg'];
 
 var lang_expander = {
     'en': 'en-US', 'ga': 'ga-IE',
