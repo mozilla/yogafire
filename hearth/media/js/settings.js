@@ -103,6 +103,7 @@ define('settings', ['l10n', 'settings_local', 'underscore'],
         REGION_CHOICES_SLUG: {
             'restofworld': gettext('Rest of World'),
             'ar': gettext('Argentina'),
+            'bd': gettext('Bangladesh'),
             'br': gettext('Brazil'),
             'cl': gettext('Chile'),
             'cn': gettext('China'),
