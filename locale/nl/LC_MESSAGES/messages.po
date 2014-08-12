@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-05-19T21:42:04.153Z\n"
-"PO-Revision-Date: 2014-05-20 17:20+0000\n"
+"PO-Revision-Date: 2014-08-12 17:15+0000\n"
 "Last-Translator: Ton <tonnes.mb@gmail.com>\n"
 "Language-Team: none\n"
 "Language: nl\n"
@@ -11,8 +11,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Fireplace L10n Tools 1.0\n"
-"X-POOTLE-MTIME: 1400606457.0\n"
+"X-Generator: Pootle 2.5.0\n"
+"X-POOTLE-MTIME: 1407863748.0\n"
 
 #: /templates/cat_dropdown.html:2
 msgid "All Categories"
@@ -181,11 +181,11 @@ msgstr "Rapport verzenden"
 
 #: /templates/detail/content_ratings.html:4
 msgid "Content Rating"
-msgstr "Inhoudswaardering"
+msgstr "Inhoudsbeoordeling"
 
 #: /templates/detail/content_ratings.html:73
 msgid "Content Rating Details"
-msgstr "Details van inhoudswaardering"
+msgstr "Details van inhoudsbeoordeling"
 
 #: /templates/detail/main_yogafire.html:22
 msgid "Description"
@@ -560,7 +560,7 @@ msgstr "Voor alle leeftijden"
 
 #: /media/js/content-ratings.js:237
 msgid "Rating Pending"
-msgstr "Beoordeling in behandeling"
+msgstr "Wacht op beoordeling"
 
 #: /media/js/content-ratings.js:238
 msgid "Rating Refused"
