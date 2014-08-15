@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-05-19T21:42:04.153Z\n"
-"PO-Revision-Date: 2014-05-12 07:50+0000\n"
+"PO-Revision-Date: 2014-08-15 02:26+0000\n"
 "Last-Translator: Channy <channy@mozilla.or.kr>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: ko\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Pootle 2.5.0\n"
-"X-POOTLE-MTIME: 1399881051.0\n"
+"X-POOTLE-MTIME: 1408069609.0\n"
 
 #: /templates/cat_dropdown.html:2
 msgid "All Categories"
@@ -672,7 +672,7 @@ msgstr "지역 없음"
 
 #: /media/js/settings.js:168
 msgid "Sorry, you are currently offline. Please try again later."
-msgstr ""
+msgstr "죄송합니다. 현재 오프라인 상태입니다. 다시 시도해 주십시오."
 
 #. {n} is the number of characters left.
 #: /media/js/utils.js:28
@@ -690,11 +690,11 @@ msgstr "앱 상세"
 
 #: /media/js/views/feedback.js:22
 msgid "Feedback submitted. Thanks!"
-msgstr "사용자 의견이 전성되었습니다. 감사합니다!"
+msgstr "사용자 의견을 전달했습니다. 감사합니다!"
 
 #: /media/js/views/feedback.js:27 /media/js/views/app/abuse.js:23
 msgid "Sorry, there was an issue submitting your feedback. Please try again later."
-msgstr ""
+msgstr "죄송합니다. 피드백 입력에 문제가 있습니다. 다시 시도해 주십시오."
 
 #. Page not found (404)
 #: /media/js/views/not_found.js:9
