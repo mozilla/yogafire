@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-05-19T21:42:04.153Z\n"
-"PO-Revision-Date: 2014-07-01 21:06+0000\n"
-"Last-Translator: Mahay <mahayalamkhan@gmail.com>\n"
+"PO-Revision-Date: 2014-08-18 09:27+0000\n"
+"Last-Translator: Hossain <hossainalikram@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: bn_BD\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Pootle 2.5.0\n"
-"X-POOTLE-MTIME: 1404248786.0\n"
+"X-POOTLE-MTIME: 1408354032.0\n"
 
 #: /templates/cat_dropdown.html:2
 msgid "All Categories"
@@ -57,7 +57,7 @@ msgstr "আপনি ফায়ারফক্স মার্কেটপ্ল�
 
 #: /templates/deprecated.html:5
 msgid "Update Now"
-msgstr "এখন হালনাগাদ করুন"
+msgstr "এখনই হালনাগাদ করুন"
 
 #: /templates/header.html:1
 msgid "Back"
