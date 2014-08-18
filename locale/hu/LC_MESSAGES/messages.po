@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-05-19T21:42:04.153Z\n"
-"PO-Revision-Date: 2014-04-29 22:10+0000\n"
+"PO-Revision-Date: 2014-08-18 07:16+0000\n"
 "Last-Translator: Gábor <kelemeng@ubuntu.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n !=1);\n"
 "X-Generator: Pootle 2.5.0\n"
-"X-POOTLE-MTIME: 1398809455.0\n"
+"X-POOTLE-MTIME: 1408346208.0\n"
 
 #: /templates/cat_dropdown.html:2
 msgid "All Categories"
@@ -675,7 +675,7 @@ msgstr "Nincs régió a keresésben"
 
 #: /media/js/settings.js:168
 msgid "Sorry, you are currently offline. Please try again later."
-msgstr ""
+msgstr "Elnézést, nincs kapcsolat. Próbálja újra később."
 
 #. {n} is the number of characters left.
 #: /media/js/utils.js:28
@@ -699,6 +699,7 @@ msgstr "A visszajelzés elküldve. Köszönjük!"
 #: /media/js/views/feedback.js:27 /media/js/views/app/abuse.js:23
 msgid "Sorry, there was an issue submitting your feedback. Please try again later."
 msgstr ""
+"Elnézést, hiba történt a visszajelzés beküldésekor. Próbálja újra később."
 
 #. Page not found (404)
 #: /media/js/views/not_found.js:9
