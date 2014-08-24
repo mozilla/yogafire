@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-05-19T21:42:04.153Z\n"
-"PO-Revision-Date: 2014-05-21 21:05+0000\n"
-"Last-Translator: Aleksandra <auzelac91@gmail.com>\n"
+"PO-Revision-Date: 2014-08-24 11:01+0000\n"
+"Last-Translator: Vanja <tumbas93@gmail.com>\n"
 "Language-Team: none\n"
 "Language: sr\n"
 "MIME-Version: 1.0\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
 "10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Pootle 2.5.0\n"
-"X-POOTLE-MTIME: 1400706349.0\n"
+"X-POOTLE-MTIME: 1408878115.0\n"
 
 #: /templates/cat_dropdown.html:2
 msgid "All Categories"
@@ -83,7 +83,7 @@ msgstr "Преузми."
 #: /templates/privacy.html:2 /templates/category_yogafire/main.html:47 /templates/detail/main_yogafire.html:51 /templates/detail/privacy.html:3 /media/js/views/privacy.js:10
 #: /media/js/views/app/privacy.js:10
 msgid "Privacy Policy"
-msgstr "Полиса о приватности"
+msgstr "Полиса приватности"
 
 #: /templates/terms.html:2 /templates/category_yogafire/main.html:44 /media/js/views/terms.js:10
 msgid "Terms of Use"
@@ -180,7 +180,7 @@ msgstr "Сајт подршке"
 
 #: /templates/detail/main_yogafire.html:45
 msgid "Homepage"
-msgstr "Почетна страна"
+msgstr "Почетна страница"
 
 #: /templates/detail/privacy.html:5
 msgid "Back to app"
@@ -309,11 +309,11 @@ msgstr "Екстремно насиље"
 
 #: /media/js/content-ratings.js:133
 msgid "Alcohol Reference"
-msgstr "Референца за алкохол"
+msgstr "Референца на алкохол"
 
 #: /media/js/content-ratings.js:134
 msgid "Alcohol and Tobacco Reference"
-msgstr "Референца за алкохол и дуван"
+msgstr "Референца на алкохол и дуван"
 
 #: /media/js/content-ratings.js:135
 msgid "Use of Alcohol and Tobacco"
@@ -349,11 +349,11 @@ msgstr "Груб хумор"
 
 #: /media/js/content-ratings.js:143
 msgid "Drug and Alcohol Reference"
-msgstr "Референца за дрогу и алкохол"
+msgstr "Референца на дрогу и алкохол"
 
 #: /media/js/content-ratings.js:144
 msgid "Drug, Alcohol, and Tobacco Reference"
-msgstr "Референца за дрогу, алкохол и дуван"
+msgstr "Референца на дрогу, алкохол и дуван"
 
 #: /media/js/content-ratings.js:145
 msgid "Use of Drug, Alcohol, and Tobacco"
@@ -365,11 +365,11 @@ msgstr "Употреба дроге и алкохола"
 
 #: /media/js/content-ratings.js:147
 msgid "Drug Reference"
-msgstr "Референца за дрогу"
+msgstr "Референца на дрогу"
 
 #: /media/js/content-ratings.js:148
 msgid "Drug and Tobacco Reference"
-msgstr "Референца за дрогу и дуван"
+msgstr "Референца на дрогу и дуван"
 
 #: /media/js/content-ratings.js:149
 msgid "Use of Drug and Tobacco"
@@ -449,7 +449,7 @@ msgstr "Сугестивне теме"
 
 #: /media/js/content-ratings.js:170
 msgid "Tobacco Reference"
-msgstr "Референца за дуван"
+msgstr "Референца на дуван"
 
 #: /media/js/content-ratings.js:171
 msgid "Use of Tobacco"
@@ -703,7 +703,7 @@ msgstr "Повратне информације су послате. Хвала!
 msgid "Sorry, there was an issue submitting your feedback. Please try again later."
 msgstr ""
 "Жао нам је, дошло је до грешке приликом слања Ваше повратне информације. "
-"Покушајте касније."
+"Покушајте поново касније."
 
 #. Page not found (404)
 #: /media/js/views/not_found.js:9
