@@ -9,5 +9,6 @@ define('settings_local', [], function() {
         potatolytics_enabled: true,
         package_version: '{fireplace_package_version}',
         iframe_installer_src:  'https://marketplace.firefox.com/iframe-install.html',
+        iframe_potatolytics_src: 'https://marketplace.allizom.org/iframe-install.html',
     };
 });
