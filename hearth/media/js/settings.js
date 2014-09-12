@@ -167,6 +167,7 @@ define('settings', ['l10n', 'settings_local', 'underscore'],
         'offline_tarako-lifestyle': '/db/tarako-lifestyle.json',
 
         iframe_installer_src: 'https://marketplace.firefox.com/iframe-install.html',
+        iframe_potatolytics_src: 'https://marketplace.firefox.com/potatolytics.html',
 
         offline_msg: gettext('Sorry, you are currently offline. Please try again later.'),
 
