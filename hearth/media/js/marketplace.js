@@ -251,9 +251,9 @@ function(_) {
         startPage();
     });
 
-    // Set the tracking package version variable (dimension16).
+    // Set the tracking package version variable (dimension15).
     if (z.body.data('build-id')) {
-        require('tracking').setVar(16, 'Package version', z.body.data('build-id'));
+        require('tracking').setVar(15, 'Package version', z.body.data('build-id'));
     }
 
     require('requests').on('deprecated', function() {
