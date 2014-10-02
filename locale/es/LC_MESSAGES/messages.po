@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-05-19T21:42:04.153Z\n"
-"PO-Revision-Date: 2014-06-21 20:41+0000\n"
-"Last-Translator: Paco <pacommozilla@gmail.com>\n"
+"PO-Revision-Date: 2014-10-02 13:53+0000\n"
+"Last-Translator: Inma <inma.barrios@mozilla-hispano.org>\n"
 "Language-Team: Español (España) <nave@elistas.net>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Pootle 2.5.0\n"
-"X-POOTLE-MTIME: 1403383289.0\n"
+"X-POOTLE-MTIME: 1412257989.0\n"
 
 #: /templates/cat_dropdown.html:2
 msgid "All Categories"
@@ -142,11 +142,11 @@ msgstr "Opinión"
 
 #: /templates/category_yogafire/main.html:9
 msgid "Featured Apps"
-msgstr "Aplicaciones destacadas"
+msgstr "Apps destacadas"
 
 #: /templates/category_yogafire/main.html:27 /templates/category_yogafire/main.html:31
 msgid "No apps in this category"
-msgstr "No hay aplicaciones en esta categoría"
+msgstr "No hay apps en esta categoría"
 
 #: /templates/detail/abuse.html:5 /templates/detail/main_yogafire.html:56 /media/js/views/app/abuse.js:39
 msgid "Report Abuse"
@@ -158,11 +158,11 @@ msgstr "Enviar informe"
 
 #: /templates/detail/content_ratings.html:4
 msgid "Content Rating"
-msgstr "Puntuación del contenido"
+msgstr "Valoración del contenido"
 
 #: /templates/detail/content_ratings.html:73
 msgid "Content Rating Details"
-msgstr "Detalles de la puntuación del contenido"
+msgstr "Detalles de la valoración del contenido"
 
 #: /templates/detail/main_yogafire.html:22
 msgid "Description"
@@ -182,7 +182,7 @@ msgstr "Inicio"
 
 #: /templates/detail/privacy.html:5
 msgid "Back to app"
-msgstr "Volver a aplicación"
+msgstr "Volver a app"
 
 #: /templates/detail/privacy.html:11
 msgid "Loading Privacy Policy..."
@@ -228,7 +228,7 @@ msgstr "Enviar"
 
 #: /media/js/apps_iframe_installer.js:63
 msgid "App install error: {error}"
-msgstr "Error en instalación de aplicación: {error}"
+msgstr "Error en instalación de app: {error}"
 
 #: /media/js/apps.js:87
 msgid "Your device does not support payments."
@@ -236,15 +236,15 @@ msgstr "Tu dispositivo no admite pagos."
 
 #: /media/js/apps.js:89
 msgid "This app is unavailable for purchase in your region."
-msgstr "Esta aplicación no está disponible para su adquisición en tu país."
+msgstr "Esta app no está disponible para su adquisición en tu país."
 
 #: /media/js/apps.js:93
 msgid "Your browser or device is not web-app compatible."
-msgstr "Tu navegador o dispositivo no es compatible con aplicaciones web."
+msgstr "Tu navegador o dispositivo no es compatible con apps web."
 
 #: /media/js/apps.js:95
 msgid "This app is unavailable for your platform."
-msgstr "Esta aplicación no está disponible para tu plataforma."
+msgstr "Esta app no está disponible para tu plataforma."
 
 #. "Open" as in "Open the app"
 #: /media/js/buttons.js:174
@@ -482,7 +482,7 @@ msgstr "Compartir datos personales"
 
 #: /media/js/content-ratings.js:201
 msgid "In-app Purchase Option"
-msgstr "Opción compra en la aplicación"
+msgstr "Opción compra en app"
 
 #: /media/js/content-ratings.js:202
 msgid "Location Data Sharing"
@@ -689,7 +689,7 @@ msgstr "Cargando..."
 
 #: /media/js/views/app.js:76
 msgid "App Details"
-msgstr "Detalles de la aplicación"
+msgstr "Detalles de la app"
 
 #: /media/js/views/feedback.js:22
 msgid "Feedback submitted. Thanks!"
