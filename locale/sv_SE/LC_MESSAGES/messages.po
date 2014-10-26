@@ -1,712 +1,740 @@
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: Light 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-05-19T21:42:04.153Z\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2014-10-26 15:45+0100\n"
+"Last-Translator: Andreas Pettersson <az@kth.se>\n"
+"Language-Team: Den svenska L10n-gruppen <community-sweden@lists.mozilla."
+"org>\n"
+"Language: sv_SE\n"
 "MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);Content-Type: text/plain; charset=UTF-8\n"
-"X-Generator: Fireplace L10n Tools 1.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.6.10\n"
+"X-POOTLE-MTIME: 1414222789.0\n"
 
 #: /templates/cat_dropdown.html:2
 msgid "All Categories"
-msgstr ""
+msgstr "Alla kategorier"
 
 #: /templates/cat_dropdown.html:17
 msgid "Home"
-msgstr ""
+msgstr "Hem"
 
 #: /templates/cat_dropdown.html:18
 msgid "Games"
-msgstr ""
+msgstr "Spel"
 
 #: /templates/cat_dropdown.html:19
 msgid "Tools"
-msgstr ""
+msgstr "Verktyg"
 
 #: /templates/cat_dropdown.html:20
 msgid "Lifestyle"
-msgstr ""
+msgstr "Livsstil"
 
-#: /templates/confirmation.html:0 /templates/incompatible.html:3 /templates/detail/abuse.html:6
+#: /templates/confirmation.html:0 /templates/incompatible.html:3
+#: /templates/detail/abuse.html:6
 msgid "Close"
-msgstr ""
+msgstr "Stäng"
 
 #: /templates/confirmation.html:3
 msgid "No"
-msgstr ""
+msgstr "Nej"
 
 #: /templates/confirmation.html:4
 msgid "Yes"
-msgstr ""
+msgstr "Ja"
 
 #. The Marketplace app is out-of-date and needs to be updated.
 #: /templates/deprecated.html:2
 msgid "Out-of-Date Marketplace"
-msgstr ""
+msgstr "Marketplace inaktuell"
 
 #: /templates/deprecated.html:3
-msgid "The version of the Firefox Marketplace that you're using is no longer supported. You will need to perform an update before you can continue enjoying the Marketplace."
+msgid ""
+"The version of the Firefox Marketplace that you're using is no longer "
+"supported. You will need to perform an update before you can continue "
+"enjoying the Marketplace."
 msgstr ""
+"Den version av Firefox Marketplace som du använder stöds inte längre. Du "
+"kommer att behöva göra en uppdatering innan du kan fortsätta njuta av "
+"Marketplace."
 
 #: /templates/deprecated.html:5
 msgid "Update Now"
-msgstr ""
+msgstr "Uppdatera nu"
 
 #: /templates/header.html:1
 msgid "Back"
-msgstr ""
+msgstr "Tillbaka"
 
 #: /templates/header.html:5 /templates/header.html:8
 msgid "Search"
-msgstr ""
+msgstr "Sök"
 
 #: /templates/header.html:10
 msgid "Clear"
-msgstr ""
+msgstr "Rensa"
 
 #: /templates/incompatible.html:1
 msgid "You must use Firefox to install Firefox apps."
-msgstr ""
+msgstr "Du måste använda Firefox för att installera Firefox-appar."
 
 #: /templates/incompatible.html:2
 msgid "Download."
-msgstr ""
+msgstr "Hämta."
 
-#: /templates/privacy.html:2 /templates/category_yogafire/main.html:47 /templates/detail/main_yogafire.html:51 /templates/detail/privacy.html:3 /media/js/views/privacy.js:10
-#: /media/js/views/app/privacy.js:10
+#: /templates/privacy.html:2 /templates/category_yogafire/main.html:47
+#: /templates/detail/main_yogafire.html:51 /templates/detail/privacy.html:3
+#: /media/js/views/privacy.js:10 /media/js/views/app/privacy.js:10
 msgid "Privacy Policy"
-msgstr ""
+msgstr "Sekretesspolicy"
 
-#: /templates/terms.html:2 /templates/category_yogafire/main.html:44 /media/js/views/terms.js:10
+#: /templates/terms.html:2 /templates/category_yogafire/main.html:44
+#: /media/js/views/terms.js:10
 msgid "Terms of Use"
-msgstr ""
+msgstr "Användarvillkor"
 
 #: /templates/_includes/offline.html:2 /templates/errors/pagination.html:2
 msgid "Try Again"
-msgstr ""
+msgstr "Försök igen"
 
 #: /templates/_includes/truncated.html:4
 msgid "...more"
-msgstr ""
+msgstr "...mer"
 
 #. This app is unavailable for purchase.
 #: /templates/_macros/market_button.html:5
 msgid "Unavailable"
-msgstr ""
+msgstr "Otillgänglig"
 
-#: /templates/_macros/market_button.html:7 /templates/_macros/market_tile.html:61
+#: /templates/_macros/market_button.html:7
+#: /templates/_macros/market_tile.html:61
 msgid "Free"
-msgstr ""
+msgstr "Gratis"
 
 #: /templates/_macros/market_button.html:14 /media/js/buttons.js:195
 msgid "Install"
-msgstr ""
+msgstr "Installera"
 
 #: /templates/_macros/market_tile.html:13
 msgid "{app_name} screenshot"
-msgstr ""
+msgstr "{app_name} skärmdump"
 
 #. the IARC rating body/system followed by a name/description of the rating (e.g. "ESRB: Everyone" or "PEGI: For ages 3+").
 #: /templates/_macros/market_tile.html:52
 msgid "{rating_body}: {rating}"
-msgstr ""
+msgstr "{rating_body}: {rating}"
 
 #: /templates/_macros/market_tile.html:66
 msgid "{n} Review"
 msgid_plural "{n} Reviews"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{n} Recension"
+msgstr[1] "{n} Recensioner"
 
 #: /templates/_macros/stars.html:5
 msgid "Rated {stars} out of {maxstars} stars"
-msgstr ""
+msgstr "Betygsatt {stars} av {maxstars} stjärnor"
 
-#: /templates/_macros/more_button.html:2 /templates/_macros/more_button.html:10
+#: /templates/_macros/more_button.html:2
+#: /templates/_macros/more_button.html:10
 msgid "More"
-msgstr ""
+msgstr "Mer"
 
 #: /templates/category_yogafire/main.html:38
 msgid "Get Help"
-msgstr ""
+msgstr "Få hjälp"
 
 #: /templates/category_yogafire/main.html:41 /media/js/views/feedback.js:63
 msgid "Feedback"
-msgstr ""
+msgstr "Återkoppling"
 
 #: /templates/category_yogafire/main.html:9
 msgid "Featured Apps"
-msgstr ""
+msgstr "Utvalda appar"
 
-#: /templates/category_yogafire/main.html:27 /templates/category_yogafire/main.html:31
+#: /templates/category_yogafire/main.html:27
+#: /templates/category_yogafire/main.html:31
 msgid "No apps in this category"
-msgstr ""
+msgstr "Inga appar i denna kategori"
 
-#: /templates/detail/abuse.html:5 /templates/detail/main_yogafire.html:56 /media/js/views/app/abuse.js:39
+#: /templates/detail/abuse.html:5 /templates/detail/main_yogafire.html:56
+#: /media/js/views/app/abuse.js:39
 msgid "Report Abuse"
-msgstr ""
+msgstr "Rapportera missbruk"
 
 #: /templates/detail/abuse.html:15
 msgid "Send Report"
-msgstr ""
+msgstr "Skicka rapport"
 
 #: /templates/detail/content_ratings.html:4
 msgid "Content Rating"
-msgstr ""
+msgstr "Innehållsklassificering"
 
 #: /templates/detail/content_ratings.html:73
 msgid "Content Rating Details"
-msgstr ""
+msgstr "Detaljer innehållsklassificering"
 
 #: /templates/detail/main_yogafire.html:22
 msgid "Description"
-msgstr ""
+msgstr "Beskrivning"
 
 #: /templates/detail/main_yogafire.html:34
 msgid "Support Email"
-msgstr ""
+msgstr "Support e-post"
 
 #: /templates/detail/main_yogafire.html:40
 msgid "Support Site"
-msgstr ""
+msgstr "Support webbplats"
 
 #: /templates/detail/main_yogafire.html:45
 msgid "Homepage"
-msgstr ""
+msgstr "Hemsida"
 
 #: /templates/detail/privacy.html:5
 msgid "Back to app"
-msgstr ""
+msgstr "Tillbaka till app"
 
 #: /templates/detail/privacy.html:11
 msgid "Loading Privacy Policy..."
-msgstr ""
+msgstr "Laddar sekretesspolicy..."
 
 #: /templates/errors/404.html:2 /templates/errors/fragment.html:1
 msgid "Oh no!"
-msgstr ""
+msgstr "Åh nej!"
 
 #: /templates/errors/404.html:3
 msgid "The page you were looking for was not found."
-msgstr ""
+msgstr "Sidan du sökte kunde inte hittas."
 
 #: /templates/errors/fragment.html:2
 msgid "An error occurred."
-msgstr ""
+msgstr "Ett fel uppstod."
 
 #: /templates/errors/pagination.html:1
 msgid "Error loading more"
-msgstr ""
+msgstr "Fel uppstod när mer skulle laddas"
 
 #: /templates/search/main.html:16
 msgid "<b>{n}</b> Result"
 msgid_plural "<b>{n}</b> Results"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "<b>{n}</b> träff"
+msgstr[1] "<b>{n}</b> träffar"
 
 #: /templates/search/main.html:18
 msgid "Expand"
-msgstr ""
+msgstr "Expandera"
 
 #: /templates/search/main.html:36
 msgid "No results found"
-msgstr ""
+msgstr "Inga träffar"
 
 #: /templates/search/main.html:41
 msgid "No results found, try again later"
-msgstr ""
+msgstr "Inga träffar, försök igen senare"
 
 #: /templates/settings/feedback.html:11
 msgid "Send"
-msgstr ""
+msgstr "Skicka"
 
 #: /media/js/apps_iframe_installer.js:63
 msgid "App install error: {error}"
-msgstr ""
+msgstr "App-installationsfel: {error}"
 
 #: /media/js/apps.js:87
 msgid "Your device does not support payments."
-msgstr ""
+msgstr "Din enhet stödjer inte betalningar."
 
 #: /media/js/apps.js:89
 msgid "This app is unavailable for purchase in your region."
-msgstr ""
+msgstr "Denna app är inte tillgänglig för köp i din region."
 
 #: /media/js/apps.js:93
 msgid "Your browser or device is not web-app compatible."
-msgstr ""
+msgstr "Din webbläsare eller enhet är inte web-app kompatibel."
 
 #: /media/js/apps.js:95
 msgid "This app is unavailable for your platform."
-msgstr ""
+msgstr "Denna app är inte tillgänglig för din plattform."
 
 #. "Open" as in "Open the app"
 #: /media/js/buttons.js:174
 msgid "Open"
-msgstr ""
+msgstr "Öppen"
 
 #. For ages {0} and higher. (de) `ab {0} Jahren`.
 #: /media/js/content-ratings.js:97
 msgid "For ages {0}+"
-msgstr ""
+msgstr "För åldrar {0}+"
 
 #: /media/js/content-ratings.js:103
 msgid "Generic"
-msgstr ""
+msgstr "Allmänt"
 
 #: /media/js/content-ratings.js:110
 msgid "Criminal Acts"
-msgstr ""
+msgstr "Kriminella handlingar"
 
-#: /media/js/content-ratings.js:112 /media/js/content-ratings.js:177 /media/js/content-ratings.js:189 /media/js/content-ratings.js:208
+#: /media/js/content-ratings.js:112 /media/js/content-ratings.js:177
+#: /media/js/content-ratings.js:189 /media/js/content-ratings.js:208
 msgid "Drugs"
-msgstr ""
+msgstr "Droger"
 
 #: /media/js/content-ratings.js:114
 msgid "Illegal Drugs"
-msgstr ""
+msgstr "Illegala droger"
 
 #: /media/js/content-ratings.js:116
 msgid "Legal Drugs"
-msgstr ""
+msgstr "Legala droger"
 
 #: /media/js/content-ratings.js:118
 msgid "Inappropriate Language"
-msgstr ""
+msgstr "Olämpligt språk"
 
 #: /media/js/content-ratings.js:120 /media/js/content-ratings.js:160
 msgid "Nudity"
-msgstr ""
+msgstr "Naket"
 
-#: /media/js/content-ratings.js:122 /media/js/content-ratings.js:184 /media/js/content-ratings.js:196
+#: /media/js/content-ratings.js:122 /media/js/content-ratings.js:184
+#: /media/js/content-ratings.js:196
 msgid "Sex"
-msgstr ""
+msgstr "Sex"
 
 #: /media/js/content-ratings.js:124
 msgid "Explicit Sex"
-msgstr ""
+msgstr "Vågat sex"
 
 #: /media/js/content-ratings.js:126
 msgid "Impacting Content"
-msgstr ""
+msgstr "Påverkande innehåll"
 
-#: /media/js/content-ratings.js:128 /media/js/content-ratings.js:172 /media/js/content-ratings.js:185 /media/js/content-ratings.js:197 /media/js/content-ratings.js:216
+#: /media/js/content-ratings.js:128 /media/js/content-ratings.js:172
+#: /media/js/content-ratings.js:185 /media/js/content-ratings.js:197
+#: /media/js/content-ratings.js:216
 msgid "Violence"
-msgstr ""
+msgstr "Våld"
 
 #: /media/js/content-ratings.js:130
 msgid "Extreme Violence"
-msgstr ""
+msgstr "Extremt våld"
 
 #: /media/js/content-ratings.js:133
 msgid "Alcohol Reference"
-msgstr ""
+msgstr "Referenser till alkohol"
 
 #: /media/js/content-ratings.js:134
 msgid "Alcohol and Tobacco Reference"
-msgstr ""
+msgstr "Referenser till alkohol och tobak"
 
 #: /media/js/content-ratings.js:135
 msgid "Use of Alcohol and Tobacco"
-msgstr ""
+msgstr "Användning av alkohol och tobak"
 
 #: /media/js/content-ratings.js:136
 msgid "Use of Alcohol"
-msgstr ""
+msgstr "Användning av alkohol"
 
 #: /media/js/content-ratings.js:137
 msgid "Blood"
-msgstr ""
+msgstr "Blod"
 
 #: /media/js/content-ratings.js:138
 msgid "Blood and Gore"
-msgstr ""
+msgstr "Blod och äckel"
 
 #: /media/js/content-ratings.js:139
 msgid "Comic Mischief"
-msgstr ""
+msgstr "Komiska upptåg"
 
 #: /media/js/content-ratings.js:140
 msgid "Crime"
-msgstr ""
+msgstr "Brott"
 
 #: /media/js/content-ratings.js:141
 msgid "Criminal Instruction"
-msgstr ""
+msgstr "Brottsliga handlingar"
 
 #: /media/js/content-ratings.js:142
 msgid "Crude Humor"
-msgstr ""
+msgstr "Grov humor"
 
 #: /media/js/content-ratings.js:143
 msgid "Drug and Alcohol Reference"
-msgstr ""
+msgstr "Referenser till droger och alkohol"
 
 #: /media/js/content-ratings.js:144
 msgid "Drug, Alcohol, and Tobacco Reference"
-msgstr ""
+msgstr "Referenser till droger, alkohol och tobak"
 
 #: /media/js/content-ratings.js:145
 msgid "Use of Drug, Alcohol, and Tobacco"
-msgstr ""
+msgstr "Användning av droger, alkohol och tobak"
 
 #: /media/js/content-ratings.js:146
 msgid "Use of Drug and Alcohol"
-msgstr ""
+msgstr "Användning av droger och alkohol"
 
 #: /media/js/content-ratings.js:147
 msgid "Drug Reference"
-msgstr ""
+msgstr "Referenser till droger"
 
 #: /media/js/content-ratings.js:148
 msgid "Drug and Tobacco Reference"
-msgstr ""
+msgstr "Referenser till droger och tobak"
 
 #: /media/js/content-ratings.js:149
 msgid "Use of Drug and Tobacco"
-msgstr ""
+msgstr "Användning av droger och tobak"
 
 #: /media/js/content-ratings.js:150
 msgid "Use of Drugs"
-msgstr ""
+msgstr "Användning av droger"
 
 #: /media/js/content-ratings.js:151
 msgid "Fantasy Violence"
-msgstr ""
+msgstr "Fantasy-våld"
 
 #: /media/js/content-ratings.js:152
 msgid "Hate Speech"
-msgstr ""
+msgstr "Hets mot folkgrupp"
 
 #: /media/js/content-ratings.js:153
 msgid "Intense Violence"
-msgstr ""
+msgstr "Intensiv våld"
 
-#: /media/js/content-ratings.js:155 /media/js/content-ratings.js:180 /media/js/content-ratings.js:192
+#: /media/js/content-ratings.js:155 /media/js/content-ratings.js:180
+#: /media/js/content-ratings.js:192
 msgid "Language"
-msgstr ""
+msgstr "Språk"
 
 #: /media/js/content-ratings.js:156
 msgid "Mild Blood"
-msgstr ""
+msgstr "Milt blod"
 
 #: /media/js/content-ratings.js:157
 msgid "Mild Fantasy Violence"
-msgstr ""
+msgstr "Milt fantasy-våld"
 
 #: /media/js/content-ratings.js:158
 msgid "Mild Language"
-msgstr ""
+msgstr "Milt språk"
 
 #: /media/js/content-ratings.js:159
 msgid "Mild Violence"
-msgstr ""
+msgstr "Milt våld"
 
 #: /media/js/content-ratings.js:161
 msgid "Partial Nudity"
-msgstr ""
+msgstr "Viss nakenhet"
 
 #: /media/js/content-ratings.js:162
 msgid "Real Gambling"
-msgstr ""
+msgstr "Riktigt hasardspel"
 
 #: /media/js/content-ratings.js:163
 msgid "Scary Themes"
-msgstr ""
+msgstr "Läskiga teman"
 
 #: /media/js/content-ratings.js:164 /media/js/content-ratings.js:214
 msgid "Sexual Content"
-msgstr ""
+msgstr "Sexuellt innehåll"
 
 #: /media/js/content-ratings.js:165
 msgid "Sexual Themes"
-msgstr ""
+msgstr "Sexuella teman"
 
 #: /media/js/content-ratings.js:166
 msgid "Simulated Gambling"
-msgstr ""
+msgstr "Simulerat hasardspel"
 
 #: /media/js/content-ratings.js:167
 msgid "Strong Language"
-msgstr ""
+msgstr "Grovt språk"
 
 #: /media/js/content-ratings.js:168
 msgid "Strong Sexual Content"
-msgstr ""
+msgstr "Grovt sexuellt innehåll"
 
 #: /media/js/content-ratings.js:169
 msgid "Suggestive Themes"
-msgstr ""
+msgstr "Suggestiva teman"
 
 #: /media/js/content-ratings.js:170
 msgid "Tobacco Reference"
-msgstr ""
+msgstr "Referenser till tobak"
 
 #: /media/js/content-ratings.js:171
 msgid "Use of Tobacco"
-msgstr ""
+msgstr "Användning av tobak"
 
 #: /media/js/content-ratings.js:173
 msgid "Violence References"
-msgstr ""
+msgstr "Referenser till våld"
 
-#: /media/js/content-ratings.js:176 /media/js/content-ratings.js:188 /media/js/content-ratings.js:206
+#: /media/js/content-ratings.js:176 /media/js/content-ratings.js:188
+#: /media/js/content-ratings.js:206
 msgid "Discrimination"
-msgstr ""
+msgstr "Diskriminering"
 
 #: /media/js/content-ratings.js:178 /media/js/content-ratings.js:190
 msgid "Gambling"
-msgstr ""
+msgstr "Hasardspel"
 
 #: /media/js/content-ratings.js:181 /media/js/content-ratings.js:193
 msgid "Online"
-msgstr ""
+msgstr "Online"
 
 #: /media/js/content-ratings.js:182 /media/js/content-ratings.js:194
 msgid "Fear"
-msgstr ""
+msgstr "Skräck"
 
 #: /media/js/content-ratings.js:199
 msgid "Social Interaction Functionality"
-msgstr ""
+msgstr "Funktionalitet för social interaktion"
 
 #: /media/js/content-ratings.js:200
 msgid "Personal Data Sharing"
-msgstr ""
+msgstr "Personlig datadelning"
 
 #: /media/js/content-ratings.js:201
 msgid "In-app Purchase Option"
-msgstr ""
+msgstr "In-app köpalternativ"
 
 #: /media/js/content-ratings.js:202
 msgid "Location Data Sharing"
-msgstr ""
+msgstr "Plats datadelning"
 
 #: /media/js/content-ratings.js:210
 msgid "Explicit Language"
-msgstr ""
+msgstr "Vågat språk"
 
 #: /media/js/content-ratings.js:212
 msgid "Frightening Content"
-msgstr ""
+msgstr "Skrämmande innehåll"
 
 #: /media/js/content-ratings.js:220
 msgid "Digital Purchases"
-msgstr ""
+msgstr "Digitala köp"
 
 #: /media/js/content-ratings.js:221
 msgid "Shares Info"
-msgstr ""
+msgstr "Delar information"
 
 #: /media/js/content-ratings.js:222
 msgid "Shares Location"
-msgstr ""
+msgstr "Delar plats"
 
 #: /media/js/content-ratings.js:223
 msgid "Users Interact"
-msgstr ""
+msgstr "Användarinteraktion"
 
 #: /media/js/content-ratings.js:228
 msgid "For all ages"
-msgstr ""
+msgstr "För alla åldrar"
 
 #: /media/js/content-ratings.js:237
 msgid "Rating Pending"
-msgstr ""
+msgstr "Väntar på betyg"
 
 #: /media/js/content-ratings.js:238
 msgid "Rating Refused"
-msgstr ""
+msgstr "Betyg avslås"
 
 #: /media/js/content-ratings.js:241
 msgid "Everyone"
-msgstr ""
+msgstr "Alla"
 
 #: /media/js/content-ratings.js:242
 msgid "Everyone 10+"
-msgstr ""
+msgstr "Alla 10+"
 
 #: /media/js/content-ratings.js:243
 msgid "Teen"
-msgstr ""
+msgstr "Tonåringar"
 
 #: /media/js/content-ratings.js:244
 msgid "Mature 17+"
-msgstr ""
+msgstr "Vuxen 17+"
 
 #: /media/js/content-ratings.js:245
 msgid "Adults Only 18+"
-msgstr ""
+msgstr "Endast vuxna 18+"
 
 #: /media/js/login.js:11
 msgid "You have been signed out"
-msgstr ""
+msgstr "Du är utloggad"
 
 #: /media/js/login.js:15
 msgid "You have been signed in"
-msgstr ""
+msgstr "Du är inloggad"
 
 #: /media/js/login.js:135
-msgid "Persona login failed. Maybe you don't have an account under that email address?"
+msgid ""
+"Persona login failed. Maybe you don't have an account under that email "
+"address?"
 msgstr ""
+"Persona-inloggning misslyckades. Du kanske inte har ett konto med den e-"
+"postadressen registrerad?"
 
 #: /media/js/login.js:140
 msgid "Persona login failed. A server error was encountered."
-msgstr ""
+msgstr "Persona-inloggning misslyckades. Ett serverfel uppstod."
 
 #: /media/js/login.js:208
 msgid "Persona cannot be reached. Try again later."
-msgstr ""
+msgstr "Persona kan inte nås. Försök igen senare."
 
 #: /media/js/settings.js:104
 msgid "Rest of World"
-msgstr ""
+msgstr "Resten av världen"
 
 #: /media/js/settings.js:105
 msgid "Argentina"
-msgstr ""
+msgstr "Argentina"
 
 #: /media/js/settings.js:106
 msgid "Brazil"
-msgstr ""
+msgstr "Brasilien"
 
 #: /media/js/settings.js:107
 msgid "Chile"
-msgstr ""
+msgstr "Chile"
 
 #: /media/js/settings.js:108
 msgid "China"
-msgstr ""
+msgstr "Kina"
 
 #: /media/js/settings.js:109
 msgid "Colombia"
-msgstr ""
+msgstr "Colombia"
 
 #: /media/js/settings.js:110
 msgid "Costa Rica"
-msgstr ""
+msgstr "Costa Rica"
 
 #: /media/js/settings.js:111
 msgid "Ecuador"
-msgstr ""
+msgstr "Ecuador"
 
 #: /media/js/settings.js:112
 msgid "El Salvador"
-msgstr ""
+msgstr "El Salvador"
 
 #: /media/js/settings.js:113
 msgid "Germany"
-msgstr ""
+msgstr "Tyskland"
 
 #: /media/js/settings.js:114
 msgid "Greece"
-msgstr ""
+msgstr "Grekland"
 
 #: /media/js/settings.js:115
 msgid "Guatemala"
-msgstr ""
+msgstr "Guatemala"
 
 #: /media/js/settings.js:116
 msgid "Hungary"
-msgstr ""
+msgstr "Ungern"
 
 #: /media/js/settings.js:117
 msgid "Italy"
-msgstr ""
+msgstr "Italien"
 
 #: /media/js/settings.js:118
 msgid "Mexico"
-msgstr ""
+msgstr "Mexiko"
 
 #: /media/js/settings.js:119
 msgid "Montenegro"
-msgstr ""
+msgstr "Montenegro"
 
 #: /media/js/settings.js:120
 msgid "Nicaragua"
-msgstr ""
+msgstr "Nicaragua"
 
 #: /media/js/settings.js:121
 msgid "Panama"
-msgstr ""
+msgstr "Panama"
 
 #: /media/js/settings.js:122
 msgid "Peru"
-msgstr ""
+msgstr "Peru"
 
 #: /media/js/settings.js:123
 msgid "Poland"
-msgstr ""
+msgstr "Polen"
 
 #: /media/js/settings.js:124
 msgid "Serbia"
-msgstr ""
+msgstr "Serbien"
 
 #: /media/js/settings.js:125
 msgid "Spain"
-msgstr ""
+msgstr "Spanien"
 
 #: /media/js/settings.js:126
 msgid "United Kingdom"
-msgstr ""
+msgstr "Storbritannien"
 
 #: /media/js/settings.js:127
 msgid "United States"
-msgstr ""
+msgstr "USA"
 
 #: /media/js/settings.js:128
 msgid "Uruguay"
-msgstr ""
+msgstr "Uruguay"
 
 #: /media/js/settings.js:129
 msgid "Venezuela"
-msgstr ""
+msgstr "Venezuela"
 
 #: /media/js/settings.js:130
 msgid "No region in search"
-msgstr ""
+msgstr "Ingen region i sökning"
 
 #: /media/js/settings.js:168
 msgid "Sorry, you are currently offline. Please try again later."
-msgstr ""
+msgstr "Tyvärr, du är inte uppkopplad just nu. Försök igen senare."
 
 #. {n} is the number of characters left.
 #: /media/js/utils.js:28
 msgid "<b>{n}</b> character left."
 msgid_plural "<b>{n}</b> characters left."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "<b>{n}</b> tecken kvar."
+msgstr[1] "<b>{n}</b> tecken kvar."
 
 #: /media/js/views/app.js:75
 msgid "Loading..."
-msgstr ""
+msgstr "Laddar..."
 
 #: /media/js/views/app.js:76
 msgid "App Details"
-msgstr ""
+msgstr "App-detaljer"
 
 #: /media/js/views/feedback.js:22
 msgid "Feedback submitted. Thanks!"
-msgstr ""
+msgstr "Återkoppling inskickad. Tack!"
 
 #: /media/js/views/feedback.js:27 /media/js/views/app/abuse.js:23
-msgid "Sorry, there was an issue submitting your feedback. Please try again later."
+msgid ""
+"Sorry, there was an issue submitting your feedback. Please try again later."
 msgstr ""
+"Tyvärr, det uppstod ett problem med att skicka in din återkoppling. Försök "
+"igen senare."
 
 #. Page not found (404)
 #: /media/js/views/not_found.js:9
 msgid "Not Found"
-msgstr ""
+msgstr "Hittades inte"
 
 #: /media/js/views/search.js:197
 msgid "Search Results"
-msgstr ""
+msgstr "Sökresultat"
 
 #: /media/js/views/app/abuse.js:17
 msgid "Abuse reported"
-msgstr ""
+msgstr "Missbruk rapporterade"
