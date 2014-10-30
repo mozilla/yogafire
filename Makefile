@@ -15,7 +15,7 @@ NAME?=Marketplace
 SERVER?=prod
 
 compile:
-	commonplace compile
+	node_modules/.bin/commonplace compile
 
 test: clean compile
 	cd smokealarm ; \
@@ -29,13 +29,13 @@ package: clean
 	@rm -rf hearth/downloads/screenshots/*
 	@rm -rf hearth/downloads/thumbnails/*
 	@mkdir -p TMP
-	@commonplace langpacks
+	@node_modules/.bin/commonplace langpacks
 	@cp -r hearth TMP/hearth
 
 	@mv TMP/hearth/media/js/settings_package_$(SERVER).js TMP/hearth/media/js/settings_local_package.js
 	@rm -rf TMP/hearth/media/js/{settings_local_hosted.js,settings_package_*.js}
 
-	@pushd TMP && commonplace includes && popd
+	@pushd TMP && ../node_modules/.bin/commonplace includes && popd
 	@pushd TMP && grunt fetchdb && popd
 
 	@cp -r hearth/downloads TMP/hearth/
@@ -71,7 +71,7 @@ fat_package: compile
 	@rm -rf hearth/downloads/screenshots/*
 	@rm -rf hearth/downloads/thumbnails/*
 	@mkdir -p TMP
-	@commonplace langpacks
+	@node_modules/.bin/commonplace langpacks
 	@cp -r hearth TMP/hearth
 
 	@mv TMP/hearth/media/js/settings_package_$(SERVER).js TMP/hearth/media/js/settings_local_package.js
@@ -193,7 +193,7 @@ approve_log_dev:
 
 
 clean:
-	commonplace clean
+	node_modules/.bin/commonplace clean
 
 deploy:
 	git fetch && git reset --hard origin/master && npm install && make includes
