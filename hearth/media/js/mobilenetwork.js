@@ -26,6 +26,9 @@ define('mobilenetwork',
         // Venezuela
         734: 've',
 
+        // Philippines
+        515: 'ph',
+
         // Poland
         260: 'pl',
 
