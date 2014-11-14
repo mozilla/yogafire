@@ -133,7 +133,7 @@ serve_package_dev:
 
 
 submit_package:
-	@open 'https://'$(DOMAIN)'/developers/app/marketplace-package/status#upload-new-version'
+	@open 'https://'$(DOMAIN)'/developers/app/tarako-marketplace/status#upload-new-version'
 submit_package_prod:
 	make submit_package
 submit_package_stage:
@@ -143,7 +143,7 @@ submit_package_dev:
 
 
 approve_package:
-	@open 'https://'$(DOMAIN)'/reviewers/apps/review/marketplace-package#review-actions'
+	@open 'https://'$(DOMAIN)'/reviewers/apps/review/tarako-marketplace#review-actions'
 approve_package_prod:
 	make approve_package
 approve_package_stage:
