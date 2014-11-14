@@ -29,6 +29,9 @@ define('mobilenetwork',
         // Philippines
         515: 'ph',
 
+        // Russia
+        250: 'ru',
+
         // Poland
         260: 'pl',
 
