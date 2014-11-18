@@ -60,7 +60,10 @@ define('mobilenetwork',
         460: 'cn',
 
         // Japan
-        440: 'jp'
+        440: 'jp',
+
+        // South Africa
+        655: 'za'
     };
 
     var carriers = [
@@ -73,6 +76,7 @@ define('mobilenetwork',
         'kddi',
         'kt',
         'megafon',
+        'mtn',
         'qtel',
         'singtel',
         'smart',
@@ -239,6 +243,12 @@ define('mobilenetwork',
         // 7, 8, 49, 50, 51, 52, 53, 54, 55, 56, 70, 71, 72, 73, 74, 75, 76,
         // 77, 79, 88, 89
         440: 'kddi',
+
+        // South Africa
+        655: {
+            10: 'mtn'
+        }
+
     };
 
     function getNetwork(mcc, mnc) {
