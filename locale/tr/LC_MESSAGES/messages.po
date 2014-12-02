@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-05-19T21:42:04.153Z\n"
-"PO-Revision-Date: 2014-11-21 10:11+0000\n"
+"PO-Revision-Date: 2014-12-02 10:19+0000\n"
 "Last-Translator: Selim <selim@sum.lu>\n"
 "Language-Team: none\n"
 "Language: tr\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Pootle 2.5.0\n"
-"X-POOTLE-MTIME: 1416564704.0\n"
+"X-POOTLE-MTIME: 1417515558.0\n"
 
 #: /templates/cat_dropdown.html:2
 msgid "All Categories"
@@ -258,7 +258,7 @@ msgstr "{0}+ yaş ve üstü için"
 
 #: /media/js/content-ratings.js:103
 msgid "Generic"
-msgstr ""
+msgstr "Genel"
 
 #: /media/js/content-ratings.js:110
 msgid "Criminal Acts"
@@ -370,23 +370,23 @@ msgstr ""
 
 #: /media/js/content-ratings.js:149
 msgid "Use of Drug and Tobacco"
-msgstr ""
+msgstr "Uyuşturucu ve tütün kullanımı"
 
 #: /media/js/content-ratings.js:150
 msgid "Use of Drugs"
-msgstr ""
+msgstr "Uyuşturucu kullanımı"
 
 #: /media/js/content-ratings.js:151
 msgid "Fantasy Violence"
-msgstr ""
+msgstr "Fantezi şiddet"
 
 #: /media/js/content-ratings.js:152
 msgid "Hate Speech"
-msgstr ""
+msgstr "Nefret söylemi"
 
 #: /media/js/content-ratings.js:153
 msgid "Intense Violence"
-msgstr ""
+msgstr "Yoğun şiddet"
 
 #: /media/js/content-ratings.js:155 /media/js/content-ratings.js:180 /media/js/content-ratings.js:192
 msgid "Language"
@@ -410,27 +410,27 @@ msgstr ""
 
 #: /media/js/content-ratings.js:161
 msgid "Partial Nudity"
-msgstr ""
+msgstr "Kısmi çıplaklık"
 
 #: /media/js/content-ratings.js:162
 msgid "Real Gambling"
-msgstr ""
+msgstr "Gerçek kumar"
 
 #: /media/js/content-ratings.js:163
 msgid "Scary Themes"
-msgstr ""
+msgstr "Korkucu öğeler"
 
 #: /media/js/content-ratings.js:164 /media/js/content-ratings.js:214
 msgid "Sexual Content"
-msgstr ""
+msgstr "Cinsel içerik"
 
 #: /media/js/content-ratings.js:165
 msgid "Sexual Themes"
-msgstr ""
+msgstr "Cinsel temalar"
 
 #: /media/js/content-ratings.js:166
 msgid "Simulated Gambling"
-msgstr ""
+msgstr "Kumar simülasyonu"
 
 #: /media/js/content-ratings.js:167
 msgid "Strong Language"
@@ -458,7 +458,7 @@ msgstr ""
 
 #: /media/js/content-ratings.js:176 /media/js/content-ratings.js:188 /media/js/content-ratings.js:206
 msgid "Discrimination"
-msgstr ""
+msgstr "Ayrımcılık"
 
 #: /media/js/content-ratings.js:178 /media/js/content-ratings.js:190
 msgid "Gambling"
@@ -478,15 +478,15 @@ msgstr ""
 
 #: /media/js/content-ratings.js:200
 msgid "Personal Data Sharing"
-msgstr ""
+msgstr "Kişisel veri paylaşımı"
 
 #: /media/js/content-ratings.js:201
 msgid "In-app Purchase Option"
-msgstr ""
+msgstr "Uygulama içi satış seçeneği"
 
 #: /media/js/content-ratings.js:202
 msgid "Location Data Sharing"
-msgstr ""
+msgstr "Konum verisi paylaşımı"
 
 #: /media/js/content-ratings.js:210
 msgid "Explicit Language"
@@ -590,11 +590,11 @@ msgstr "Kolombiya"
 
 #: /media/js/settings.js:110
 msgid "Costa Rica"
-msgstr ""
+msgstr "Kosta Rika"
 
 #: /media/js/settings.js:111
 msgid "Ecuador"
-msgstr ""
+msgstr "Ekuador"
 
 #: /media/js/settings.js:112
 msgid "El Salvador"
@@ -674,7 +674,7 @@ msgstr "Aramada bölge yok"
 
 #: /media/js/settings.js:168
 msgid "Sorry, you are currently offline. Please try again later."
-msgstr ""
+msgstr "Üzgünüz, şu anda çevrimdışısınız. Lütfen daha sonra tekrar deneyin."
 
 #. {n} is the number of characters left.
 #: /media/js/utils.js:28
@@ -698,6 +698,8 @@ msgstr "Geri bildiriminiz gönderildi. Teşekkürler!"
 #: /media/js/views/feedback.js:27 /media/js/views/app/abuse.js:23
 msgid "Sorry, there was an issue submitting your feedback. Please try again later."
 msgstr ""
+"Üzgünüz, geri bildiriminiz gönderilirken bir sorun oluştu. Lütfen daha sonra "
+"tekrar deneyin."
 
 #. Page not found (404)
 #: /media/js/views/not_found.js:9
