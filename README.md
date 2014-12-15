@@ -1,9 +1,6 @@
-# Fireplace
+# Marketplace Tarako
 
-Fireplace is a packaged version of the Firefox Marketplace's front-end.
-
-[![Build Status](https://travis-ci.org/mozilla/fireplace.png?branch=master)](https://travis-ci.org/mozilla/fireplace)
-
+The Firefox Marketplace frontend for lower-end devices.
 
 ## Glossary
 
@@ -20,15 +17,8 @@ Fireplace is a packaged version of the Firefox Marketplace's front-end.
   <dt>Hearth</dt>
   <dd>The source code for Fireplace.</dd>
 
-  <dt>Inferno</dt>
-  <dd>A build server which generates a packaged version of the Marketplace.</dd>
-
   <dt>Smoke Alarm</dt>
   <dd>A functional test runner for great justice.</dd>
-
-  <dt>Yule Log</dt>
-  <dd>A fake version of Fireplace to provide the Gaia team with a package that can
-  be shipped and later upgraded to the real Fireplace.</dd>
 </dl>
 
 
@@ -43,12 +33,6 @@ npm install -g commonplace
 
 Comprehensive Flue documentation can be found in
 [Flue's README](https://github.com/mozilla/flue/blob/master/README.md).
-
-
-### Yule Log
-
-Docs can be found in
-[Yule Log's README](https://github.com/mozilla/fireplace/blob/master/yulelog/README.md) and on the [Wiki](https://github.com/mozilla/fireplace/wiki/Creating-a-new-Yulelog-package).
 
 
 ### Packaged App

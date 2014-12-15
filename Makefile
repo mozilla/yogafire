@@ -21,7 +21,6 @@ test: clean compile
 	cd smokealarm ; \
 	casperjs test tests
 
-
 # Fireplace (real packaged app)
 package: clean
 	@rm -rf TMP
@@ -131,7 +130,6 @@ serve_package_stage:
 serve_package_dev:
 	SERVER='dev' make serve_package
 
-
 submit_package:
 	@open 'https://'$(DOMAIN)'/developers/app/tarako-marketplace/status#upload-new-version'
 submit_package_prod:
@@ -141,7 +139,6 @@ submit_package_stage:
 submit_package_dev:
 	DOMAIN='marketplace-dev.allizom.org' make submit_package
 
-
 approve_package:
 	@open 'https://'$(DOMAIN)'/reviewers/apps/review/tarako-marketplace#review-actions'
 approve_package_prod:
@@ -150,47 +147,6 @@ approve_package_stage:
 	DOMAIN='marketplace.allizom.org' make approve_package
 approve_package_dev:
 	DOMAIN='marketplace-dev.allizom.org' make approve_package
-
-
-# Yulelog (iframe'd packaged app)
-log: clean
-	@mkdir -p TMP && cp -pR yulelog/* TMP/.
-	@# We have to have a temp file to work around a bug in Mac's version of sed :(
-	@sed -i'.bak' -e 's/marketplace\.firefox\.com/$(DOMAIN)/g' TMP/{main.js,manifest.webapp}
-	@sed -i'.bak' -e 's/{version}/$(VERSION_INT)/g' TMP/manifest.webapp
-	@sed -i'.bak' -e 's/"Marketplace"/"$(NAME)"/g' TMP/manifest.webapp
-	@rm -f TMP/README.md
-	@rm -f TMP/*.bak
-	@cd TMP && zip -q -r ../yulelog_$(NAME)_$(VERSION_INT).zip * && cd ../
-	@rm -rf TMP
-	@echo "Created file: yulelog_$(NAME)_$(VERSION_INT).zip"
-log_prod:
-	make log
-log_stage:
-	SERVER='stage' NAME='Stage' DOMAIN='marketplace.allizom.org' make log
-log_dev:
-	SERVER='dev' NAME='Dev' DOMAIN='marketplace-dev.allizom.org' make log
-
-
-submit_log:
-	@open 'https://'$(DOMAIN)'/developers/app/marketplace/status#upload-new-version'
-submit_log_prod:
-	make submit_log
-submit_log_stage:
-	DOMAIN='marketplace.allizom.org' make submit_log
-submit_log_dev:
-	DOMAIN='marketplace-dev.allizom.org' make submit_log
-
-
-approve_log:
-	@open 'https://'$(DOMAIN)'/reviewers/apps/review/marketplace#review-actions'
-approve_log_prod:
-	make approve_log
-approve_log_stage:
-	DOMAIN='marketplace.allizom.org' make approve_log
-approve_log_dev:
-	DOMAIN='marketplace-dev.allizom.org' make approve_log
-
 
 clean:
 	node_modules/.bin/commonplace clean
