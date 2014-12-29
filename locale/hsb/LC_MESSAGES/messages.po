@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-05-19T21:42:04.153Z\n"
-"PO-Revision-Date: 2014-12-29 12:16+0000\n"
+"PO-Revision-Date: 2014-12-29 12:43+0000\n"
 "Last-Translator: milupo <milupo@sorbzilla.de>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: hsb\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
 "n%100==4 ? 2 : 3);\n"
 "X-Generator: Pootle 2.5.0\n"
-"X-POOTLE-MTIME: 1419855364.0\n"
+"X-POOTLE-MTIME: 1419857031.0\n"
 
 #: /templates/cat_dropdown.html:2
 msgid "All Categories"
@@ -86,7 +86,7 @@ msgstr "Dyrbiće Firefox wužiwać, zo byšće nałoženja Firefox instalował."
 
 #: /templates/incompatible.html:2
 msgid "Download."
-msgstr "Sćahnyć"
+msgstr "Sćahnyć."
 
 #: /templates/privacy.html:2
 #: /templates/category_yogafire/main.html:47
@@ -268,7 +268,7 @@ msgstr "Tute nałoženje za kup we wašim regionje k dispoziciji njeje."
 
 #: /media/js/apps.js:93
 msgid "Your browser or device is not web-app compatible."
-msgstr "Waš wobhladowak abo grat z webnałoženjami kompatibelny njeje."
+msgstr "Waš wobhladowak abo grat z webnałoženjemi kompatibelny njeje."
 
 #: /media/js/apps.js:95
 msgid "This app is unavailable for your platform."
@@ -735,7 +735,7 @@ msgstr[3] "<b>{n}</b> znamješkow wyše."
 
 #: /media/js/views/app.js:75
 msgid "Loading..."
-msgstr "Začituje so…"
+msgstr "Začituje so..."
 
 #: /media/js/views/app.js:76
 msgid "App Details"
