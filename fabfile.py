@@ -33,6 +33,20 @@ def pre_update(ref):
 
 
 @task
+def build():
+    with lcd(YOGAFIRE):
+        local('npm install')
+        local('npm install --force commonplace@0.3.6')
+
+    build_package()
+
+
+@task
+def deploy_jenkins():
+    upload_package()
+
+
+@task
 def update():
     with lcd(YOGAFIRE):
         local('npm install')
