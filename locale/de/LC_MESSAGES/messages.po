@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: AMO Fireplace\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-05-19T21:42:04.153Z\n"
-"PO-Revision-Date: 2014-11-11 19:53+0000\n"
+"PO-Revision-Date: 2015-01-22 10:11+0000\n"
 "Last-Translator: Michael <michael.koehler1@gmx.de>\n"
 "Language-Team: German (de) <coce@nurfuerspam.de>\n"
 "Language: de\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Pootle 2.5.0\n"
-"X-POOTLE-MTIME: 1415735613.0\n"
+"X-POOTLE-MTIME: 1421921519.0\n"
 
 #: /templates/cat_dropdown.html:2
 msgid "All Categories"
@@ -550,7 +550,7 @@ msgstr "Sie wurden abgemeldet."
 
 #: /media/js/login.js:15
 msgid "You have been signed in"
-msgstr "Sie müssen angemeldet sein."
+msgstr "Sie wurden angemeldet."
 
 #: /media/js/login.js:135
 msgid "Persona login failed. Maybe you don't have an account under that email address?"
